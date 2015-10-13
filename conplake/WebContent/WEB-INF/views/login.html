@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CONPLAKE</title>
+<link href="../css/common.css" rel="stylesheet" type="text/css"/>
+
+<style>
+
+
+body{ background:#eee;}
+
+.card { background-color:#f7f7f7;
+	border-radius:2px; 
+	width:500px; 
+	height:250px; 
+	box-shadow:0 2px 2px rgba(0, 0, 0, 0.3); 
+	margin: 0 auto;
+	position:relative;
+	}
+
+.logoBox {
+	width : 250px;
+	height: 200px;
+	margin: 100px auto 0;
+	background: url(../img/logo.png) no-repeat center center;
+	background-size:contain;
+	}
+
+
+.formBox {
+	width: 292px; height:82px;
+	margin: 0 auto;
+	padding-top: 80px;
+
+}
+
+#loginBox {
+	width:200px; height:82px; float:left;
+	}
+	
+#id, #passwd { background: #fff none repeat scroll 0 0;
+	border-color: #c0c0c0 #d9d9d9 #d9d9d9;
+    border-image: none;
+    border-radius: 1px;
+    border-style: solid;
+    border-width: 1px;
+    box-sizing: border-box;
+    color: #999;
+    display: inline-block;
+    font-size: 12px;
+    width:200px;
+	height: 36px;
+    padding: 0 8px;
+	}
+#id {margin-bottom:10px;}
+
+#loginButtonBox {
+	width:92px; height:82px; float:left;
+	}
+
+input#signIn {
+	width:82px; height:82px;
+	margin-left:10px;
+	background: #C30D22;
+	border:1px solid ;
+	border-radius: 1px;
+	font-size:14px;
+	color:#fff;
+	}
+	
+input#signIn:hover {
+	background: #B70B25;
+	}
+	
+#memberButtonBox {
+	width:500px;
+	height:50px; 
+	margin:0 auto;
+	padding-top:30px;
+	}
+	
+	
+.button { background: #666 none repeat scroll 0 0;
+	border:#666;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    box-sizing: border-box;
+    color: #fff;
+    display: inline-block;
+    font-size: 14px;
+    width:240px;
+	height: 50px;
+    padding: 0 8px;
+	}
+
+.button:hover {
+	background-color:#464646;
+}
+	
+.button#findPasswd {
+	margin-right:10px;
+	}	
+
+</style>
+
+</head>
+
+<body>
+
+<div class="logoBox">
+	
+</div>
+<div class="card">
+  <div class="formBox">
+	  <div id="loginBox">
+          <input id="id" type="email" autofocus spellcheck="false" value="" placeholder="아이디" name="Email">
+          <input id="passwd" type="password" placeholder="비밀번호" name="Passwd">
+      </div>
+      <div id="loginButtonBox">
+      		<input id="signIn" type="submit" value="로그인" name="signIn" onclick="window.location='index.html'">
+      </div>
+      
+  </div>
+
+</div>
+
+<div id="memberButtonBox">
+      		<input id="findPasswd" class="button" type="submit" value="비밀번호 찾기" name="findPasswd">
+            <input id="joinMember" class="button" type="submit" value="회원가입" name="joinMember">
+</div>
+</body>
+</html>

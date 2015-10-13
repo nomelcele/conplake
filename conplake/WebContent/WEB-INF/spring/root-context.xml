@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:beans="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.1.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.1.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.1.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.1.xsd">
+	<aop:aspectj-autoproxy/>
+	
+	<mvc:annotation-driven/>
+	<mvc:default-servlet-handler/>
+	
+	<!-- javascript, jQuery, css, image 사용 -->
+	<context:component-scan base-package="or.conplake.aop"/>
+	<context:component-scan base-package="or.conplake.mvc"/>
+	<mvc:resources location="/resources/" mapping="/resources/**"/>
+
+	<beans:bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+		<beans:property name="jndiName" value="java:comp/env/jdbc/myora"></beans:property>
+	</beans:bean>
+
+	<beans:bean id="factoryBean" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<beans:property name="configLocation" value="classpath:com/sumware/config/config.xml" />
+		<beans:property name="mapperLocations" value="classpath*:com/sumware/mapper/*.xml" />
+		<beans:property name="dataSource" ref="dataSource"></beans:property>
+	</beans:bean>
+
+	<beans:bean id="st" class="org.mybatis.spring.SqlSessionTemplate">
+		<beans:constructor-arg ref="factoryBean" />
+	</beans:bean>
+	
+	<beans:bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<beans:property name="dataSource" ref="dataSource"></beans:property>
+	</beans:bean>
+	<tx:annotation-driven transaction-manager="transactionManager"/> 
+	
+</beans:beans>

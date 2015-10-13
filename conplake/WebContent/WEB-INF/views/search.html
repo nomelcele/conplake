@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>CONPLAKE</title>
+<link href="../css/common.css" rel="stylesheet" type="text/css"/>
+<link href="../css/header.css" rel="stylesheet" type="text/css"/>
+<link href="../css/sideBox.css" rel="stylesheet" type="text/css"/>
+<style>
+
+
+html, body{ width:100%; height:100%; position:relative; }
+.contentWrap{ width:1200px; height:100%; background:#fff;}
+
+
+
+.mainBoxWrap{ width:919px; float:left; border-left:1px solid #ccc; padding-bottom:50px; }
+.mainBox {width:100%; height:100%; padding-left:40px; margin-top:150px; }
+
+h1 {font:20px Arial, Helvetica, sans-serif; font-weight:600; color:#999; padding-bottom:35px; }
+
+.ul_concert {width:880px; height:100%;}
+.ul_concert li {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #d6d6d6 #d6d6d6 #b8b8b8;
+    border-image: none;
+    border-style: solid;
+    border-width: 1px;
+    float: left;
+   	margin-bottom:20px;
+    position: relative;
+    width: 860px;
+}
+
+#search_info {width:725px; height:100px; float:left; background:url(../img/arrow_right.png) no-repeat right center; }
+
+
+.concert_title{
+    color: #333;
+    font-size: 12px;
+    font-weight: normal;
+	height:14px;
+    line-height: 14px;
+    overflow: hidden;
+    padding: 10px 12px 0;
+    text-overflow: ellipsis;
+	font-weight:600;
+}
+
+.concert_place, .concert_date{
+	color:#666;
+	line-height:14px;
+    min-height: 14px;
+    overflow: hidden;
+    padding: 6px 12px 0;
+}
+
+.concert_place {padding-bottom:10px;}
+
+</style>
+
+
+
+</head>
+
+
+<body>
+<header>
+	<div class="util_menu">
+    	<ul>
+        	<li id="mypage"><a href="#">마이페이지</a></li>
+            <li id="logout"><a href="#">로그아웃</a></li>
+        </ul>
+    </div>
+    <div class="gnb">
+    	<a id="logo" href="index.html"><img id="imgLogo" src="../img/logo_main.png" alt="CONPLAKE" /></a>
+    </div>
+</header>
+
+
+<div class="contentWrap">
+    <div class="sideBoxWrap"> 
+    	<div class="sideBox">
+        	<ul>
+            	<li id="text_search"><p>SEARCH</p></li>
+            	<li id="categoryBox">
+                	<p class="text_sub">category</p>
+                	<select class="inputStyle input_category">
+                        <option selected>카테고리</option>
+                        <option>아티스트</option>
+                        <option>공연이름</option>
+                        <option>공연장</option>
+                    </select>
+                </li>
+                <li id="searchBox">
+                	<p class="text_sub">keyword</p>
+                	<input name="input_search" class="inputStyle input_search" type="text" placeholder="검색어를 입력하세요." autocomplete="off" >
+                </li>
+                <li id="calenderBox">
+                	<p class="text_sub">date</p>
+                    <p>
+                        <span class="text_date">from :</span>
+                        <input class="inputStyle input_sday" type="date" name="sday" max="2015-12-31">
+                    </p>
+                    <p>
+                        <span class="text_date">to &nbsp;:</span>
+                        <input class="inputStyle input_eday" type="date" name="eday" min="2000-01-02">
+                    </p>
+                </li>
+                <li id="searchBtnBox">
+                	<input id="searchBtn" class="button" type="submit" value="검색" name="searchBtn">
+                
+                </li>
+            </ul>
+    	</div>
+    
+   </div>
+   <dic class="mainBoxWrap">
+   		<div class="mainBox">
+        	<h1>RESULTS</h1>
+        
+            <ul class="ul_concert">
+            	<li id="list_concert1">
+                    <a href="#"><img width="100" height="100" alt="콘서트이미지1" src="../img/nell0.png"	style="float:left"></a>
+                       	<a href="#"><div id="search_info">
+                            <p class="concert_title">2015 넬 단독콘서트 NELL’S SEASON ‘201509’</p>
+                            <p class="concert_date">2014.09.18 ~ 2015.09.20</p>
+                            <p class="concert_place">올림픽공원 우리금융아트홀</p>
+                        </div></a>
+                </li>
+            
+                <li id="list_concert1">
+                    <a href="#"><img width="100" height="100" alt="콘서트이미지1" src="../img/nell.jpg"	style="float:left"></a>
+                       	<a href="#"><div id="search_info">
+                            <p class="concert_title">넬 콘서트 : NELL'S SEASON 2015 - Beautiful Day</p>
+                            <p class="concert_date">2015.05.22 ~ 2015.06.07</p>
+                            <p class="concert_place">이화여자대학교 삼성홀 </p>
+                        </div></a>
+                </li>
+                
+                                
+                <li id="list_concert1">
+                    <a href="#"><img width="100" height="100" alt="콘서트이미지1" src="../img/nell2.png"	style="float:left"></a>
+                       	<a href="#"><div id="search_info">
+                            <p class="concert_title">2014 넬 크리스마스 콘서트 CHRISTMAS IN NELL＇S ROOM 2014</p>
+                            <p class="concert_date">2014.12.24 ~ 2014.12.25</p>
+                            <p class="concert_place">서울 잠실학생체육관</p>
+                        </div></a>
+                </li>
+                
+                <li id="list_concert1">
+                    <a href="#"><img width="100" height="100" alt="콘서트이미지1" src="../img/nell3.png"	style="float:left"></a>
+                       	<a href="#"><div id="search_info">
+                            <p class="concert_title">NELL＇S SEASON 2014 - NEWTON’S APPLE</p>
+                            <p class="concert_date">2014.04.03 ~ 2014.04.06</p>
+                            <p class="concert_place">블루스퀘어 삼성카드홀</p>
+                        </div></a>
+                </li>
+                
+                <li id="list_concert1">
+                    <a href="#"><img width="100" height="100" alt="콘서트이미지1" src="../img/nell4.png"	style="float:left"></a>
+                       	<a href="#"><div id="search_info">
+                            <p class="concert_title">2013 넬 크리스마스 콘서트 CHRISTMAS IN NELL＇s ROOM 2013</p>
+                            <p class="concert_date">2013.12.24 ~ 2013.12.25</p>
+                            <p class="concert_place">서울 잠실학생체육관</p>
+                        </div></a>
+                </li>
+                
+                 <li id="list_concert1">
+                    <a href="#"><img width="100" height="100" alt="콘서트이미지1" src="../img/nell5.png"	style="float:left"></a>
+                       	<a href="#"><div id="search_info">
+                            <p class="concert_title"> 2012 넬 콘서트 NELL＇s ROOM</p>
+                            <p class="concert_date">2012.12.31</p>
+                            <p class="concert_place">서울 잠실학생체육관</p>
+                        </div></a>
+                </li>          
+            </ul>
+        </div>
+   </div>
+    
+    
+</div>
+</body>
+</html>

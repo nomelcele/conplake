@@ -1,0 +1,57 @@
+@charset "utf-8";
+/* CSS Document */
+
+.sideBoxWrap{ width:249px; float:left; background:#fff; }
+
+.sideBox{ width:225px; padding-left:25px; }
+
+.sideBox ul {width:200px; height:100%;}
+.side ul li{width:200px; display:block; padding-bottom:10px;}
+
+li#text_search{ height:30px; padding-top:150px; padding-bottom:20px;}
+li#text_search p{ font:20px Arial, Helvetica, sans-serif; color:#999; font-weight:600;}
+
+p.text_sub { font:16px Arial, Helvetica, sans-serif; color:#666; font-weight:400; padding:10px 0 10px; }
+
+li#categoryBox {height:92px; display:block; }
+
+li#searchBox {height:92px; display:block; border-top:1px solid #CCC;}
+
+li#calenderBox {height:162px; display:block; border-top:1px solid #CCC;}
+
+li#searchBtnBox {height:50px; display:block;  }
+
+
+/*-------input-------*/
+
+.input_category {
+  width: 200px; /* 원하는 너비설정 */
+  padding: 5px 0 5px 5px;; /* 여백으로 높이 설정 */
+  background: url(../img/arrow_down.png) no-repeat 95% 50%; /* 네이티브 화살표 대체 */  
+  background-size:15px 10px;
+  
+}
+/* IE 10, 11의 네이티브 화살표 숨기기 */
+.input_category::-ms-expand { 
+  display: none;
+}
+
+
+.input_search, .input_sday, .input_eday{
+  width: 193px; /* 원하는 너비설정 */
+  height: 20px;
+  padding: 5px 0 5px 5px; /* 여백으로 높이 설정 */
+}
+
+
+.input_sday, .input_eday {width:147px;}
+
+.text_date { width:40px; height:20px; padding:10px 5px 0 0; overflow:hidden; display:block; float:left; font:14px Arial, Helvetica, sans-serif; color:#999;}
+
+.input_sday{ margin-bottom:10px;}
+
+
+
+.button { background: #666 none repeat scroll 0 0;
+    width:200px;
+	}
