@@ -3,6 +3,9 @@
 "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" 
 "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
 <tiles-definitions>
+	<definition name="login.*" template="/WEB-INF/tiles/template/default/loginTempl.jsp">
+		<put-attribute name="body" value="/WEB-INF/views/login/{1}.jsp"/>
+	</definition>
 	<definition name="*.*" template="/WEB-INF/tiles/template/default/templ.jsp">
 		<put-attribute name="header" value="/WEB-INF/tiles/template/default/header.jsp"/>
 		<put-attribute name="search" value="/WEB-INF/tiles/template/default/search.jsp"/>

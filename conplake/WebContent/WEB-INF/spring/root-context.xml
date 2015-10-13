@@ -26,8 +26,8 @@
 	</beans:bean>
 
 	<beans:bean id="factoryBean" class="org.mybatis.spring.SqlSessionFactoryBean">
-		<beans:property name="configLocation" value="classpath:com/sumware/config/config.xml" />
-		<beans:property name="mapperLocations" value="classpath*:com/sumware/mapper/*.xml" />
+		<beans:property name="configLocation" value="classpath:or/conplake/config/config.xml" />
+		<beans:property name="mapperLocations" value="classpath*:or/conplake/mapper/*.xml" />
 		<beans:property name="dataSource" ref="dataSource"></beans:property>
 	</beans:bean>
 

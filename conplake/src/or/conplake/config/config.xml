@@ -2,4 +2,19 @@
 <!DOCTYPE configuration
   PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-config.dtd">
+  <configuration>
+  	<typeAliases>
+  		<typeAlias type="or.conplake.vo.MemberVO" alias="mvo"/>
+  		<typeAlias type="or.conplake.vo.ArtistVO" alias="avo"/>
+  		<typeAlias type="or.conplake.vo.CommVO" alias="commvo"/>	
+  		<typeAlias type="or.conplake.vo.ConcerthallVO" alias="chvo"/>	
+  		<typeAlias type="or.conplake.vo.ConcertVO" alias="cvo"/>	
+  		<typeAlias type="or.conplake.vo.NoteVO" alias="nvo"/>	
+  		<typeAlias type="or.conplake.vo.PostVO" alias="pvo"/>	
+  		<typeAlias type="or.conplake.vo.SightimgVO" alias="sivo"/>	
+  		<typeAlias type="or.conplake.vo.SongVO" alias="svo"/>	
+  		<typeAlias type="or.conplake.vo.TimelineVO" alias="tlvo"/>	
+  		<typeAlias type="or.conplake.vo.UserinteractionVO" alias="uivo"/>	
+  	</typeAliases>
+  </configuration>
   

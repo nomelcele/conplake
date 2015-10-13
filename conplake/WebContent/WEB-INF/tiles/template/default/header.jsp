@@ -1,12 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
-
-</body>
-</html>
+<header>
+	<div class="util_menu">
+    	<ul>
+        	<li id="mypage"><a href="#">마이페이지</a></li>
+            <li id="logout"><a href="#">로그아웃</a></li>
+        </ul>
+    </div>
+    <div class="gnb">
+    	<a id="logo" href="#"><img id="imgLogo" src="resources/img/logo_main.png" alt="CONPLAKE" /></a>
+    </div>
+</header>
