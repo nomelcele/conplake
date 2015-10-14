@@ -15,6 +15,6 @@
 	</div>
 	<div id="memberButtonBox">
 	   <input id="findPasswd" class="button" type="submit" value="비밀번호 찾기" name="findPasswd">
-	   <input id="joinMember" class="button" type="submit" value="회원가입" name="joinMember">
+	   <input id="joinMember" class="button" type="submit" value="회원가입" name="joinMember" onclick="goJoinForm()">
 	</div>
 

@@ -4,16 +4,19 @@
 
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, form, fieldset, p, button{ margin: 0; padding: 0;}
 
-body, h1, h2, h3, h4, th, td, input, select, textarea, button {
+body, h1, h2, h3, h4, th, td, input, select, textarea, button, p {
     font-size: 12px;
     line-height: 1.5;
     font-family: '돋움',dotum,sans-serif;
     color: #333;
 }
 
+img {border:none;}
 ul li{ list-style:none;}
 
 a {font-family: '나눔고딕', 'Nanum Gothic', sans-serif; text-decoration:none; color:#333;}
+input {font-family: '나눔고딕', 'Nanum Gothic', sans-serif; text-decoration:none; color:#333;}
+
 
 .inputStyle {
 	font-family: inherit;  /* 폰트 상속 */

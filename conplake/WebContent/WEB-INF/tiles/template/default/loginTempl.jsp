@@ -8,7 +8,15 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>CONPLAKE</title>
-<link href="../css/common.css" rel="stylesheet" type="text/css"/>
+<link href="resources/css/common.css" rel="stylesheet" type="text/css"/>
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="js/login.js"></script>
+<script>
+	$(function(){
+		console.log("Login Page");
+	});
+</script>
 <style>
 body{ background:#eee;}
 

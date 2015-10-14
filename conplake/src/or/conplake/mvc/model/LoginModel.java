@@ -7,6 +7,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class LoginModel {
 	@RequestMapping(value={"/login","/"})
 	public String loginForm(){
-		return "login.login";
+		return "login.loginForm";
 	}
 }

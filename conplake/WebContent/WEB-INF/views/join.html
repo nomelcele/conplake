@@ -1,0 +1,199 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CONPLAKE</title>
+<link href="../css/common.css" rel="stylesheet" type="text/css"/>
+
+<style>
+
+
+body{ padding-bottom:100px; background:#eee;}
+
+.card { background-color:#f7f7f7;
+	border-radius:2px; 
+	width:1000px; 
+	height:700px; 
+	box-shadow:0 2px 2px rgba(0, 0, 0, 0.3); 
+	margin: 0 auto;
+	position:relative;
+	}
+
+.logoBox {
+	width : 250px;
+	height: 200px;
+	margin: 30px auto 0;
+	background: url(../img/logo.png) no-repeat center center;
+	background-size:contain;
+	}
+
+
+.formBox {
+	width: 500px; height:620px;
+	float:left;
+	margin-top:30px;
+
+}
+
+#formBoxRight {width:430px; padding-left:45px; border-left:1px solid #ddd;}
+
+
+.profileBox {width:300px; height:460px; margin:50px auto;}
+#profile_img {width:150px; height:150px; margin:0 auto; -moz-border-radius: 50%; -webkit-border-radius: 50%; border-radius: 50%; background:url(../img/profile_img_default.png) }
+
+#labelProfileImg {width:150px; height:150px; display:block; text-indent: -9999px; overflow:hidden;}
+#inputProfileImg {width:150px; height:150px; display:none; }
+
+
+#profile_txt {width:300px; height:220px; margin-top:30px; }
+#inputProfileTxt {width:268px; height:190px; border:1px solid #ddd; border-radius:20px; padding:15px; resize:none;
+overflow-x:hidden; overflow-y:auto;}
+
+	
+	
+.inputLabel {color:#333; font-size:12px; font-family: '나눔고딕', 'Nanum Gothic', sans-serif;}
+
+#inputLabel_name {padding-top:10px;}
+	
+.inputStyle { background: #fff none repeat scroll 0 0;
+	border-color: #c0c0c0 #d9d9d9 #d9d9d9;
+    border-image: none;
+    border-radius: 1px;
+    border-style: solid;
+    border-width: 1px;
+    box-sizing: border-box;
+    color: #999;
+    display: inline-block;
+    font-size: 12px;
+    width:200px;
+	height: 36px;
+    padding: 0 8px;
+	margin-bottom:15px;
+	}
+
+
+
+.inputBox {margin:5px 0 5px;}
+
+#inputBox_gender {margin-bottom:15px;}
+
+
+#email_id {width:90px;}
+.inputBox span {width:10px; height:36px; line-height:36px; display:line-block;}
+.input_category { background: url(../img/arrow_down.png) no-repeat 120px center; /* 네이티브 화살표 대체 */  }
+#email_address, #email_select {width:145px;}
+
+#btnPost {width:100px; height:36px; float:none; margin-left:10px; background:#ddd; color:#666; border:none; font-size:12px;} 
+.input_postCode {width:100px;}
+
+.input_address {width:200px;}
+#adressDetail{ margin-left:10px;}
+	
+	
+#memberButtonBox {
+	width:1000px;
+	height:50px; 
+	margin:0 auto;
+	padding-top:35px;
+	}
+	
+	
+.button { background: #666 none repeat scroll 0 0;
+	border:#666;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    box-sizing: border-box;
+    color: #fff;
+    display: inline-block;
+    font-size: 14px;
+    width:240px;
+	height: 50px;
+    padding: 0 8px;
+	float:right;
+	}
+
+.button:hover {
+	background-color:#464646;
+}
+	
+
+
+</style>
+
+</head>
+
+<body>
+
+<div class="logoBox">
+</div>
+
+<div class="card">
+	<div class="formBox" id="formBoxLeft">
+    	<div class="profileBox">
+    		<div id="profile_img"><label id="labelProfileImg" for="inputProfileImg">profileImg</label><input id="inputProfileImg" type="file" name="mem_img"></div>
+    		<div id="profile_txt"><textarea id="inputProfileTxt" placeholder="자기소개를 입력해주세요." name="mem_intro"></textarea></div>
+    	</div>
+    </div>
+    
+    
+    
+  <div class="formBox" id="formBoxRight">
+  		<p class="inputLabel" id="inputLabel_name"><label>이름</label></p>	  	
+        <p class="inputBox"><input class="inputStyle" id="name" type="text" autofocus spellcheck="false" value="" placeholder="이름" name="mem_name"></p>
+  
+  		<p class="inputLabel"><label>아이디</label></p>	  	
+        <p class="inputBox"><input class="inputStyle" id="id" type="text" maxlength="30" autofocus spellcheck="false" value="" placeholder="아이디" name="mem_id"></p>
+          
+        <p class="inputLabel"><label>비밀번호</label></p>
+        <p class="inputBox"><input class="inputStyle" id="passwd" type="password" placeholder="비밀번호" name="mem_pwd"></p>
+        
+        <p class="inputLabel"><label>이메일</label></p>
+        <p class="inputBox" id="inputBox_email">
+        	<input class="inputStyle" id="email_id" type="text" maxlength="30" name="mem_mail">
+            <span>@</span>
+            <input class="inputStyle" id="email_address" type="text" maxlength="30" name="mem_mail">
+            <select class="inputStyle input_category" id="email_select" autocomplete="off">
+            	<option selected>-직접입력-</option>
+                <option >naver.com</option>
+                <option>hanmail.net</option>
+                <option>nate.com</option>
+                <option>gmail.com</option>
+                <option>hotmail.com</option>
+            </select>
+        </p>
+        
+        <p class="inputLabel"><label>생년월일</label></p>
+        <p class="inputBox"><input class="inputStyle" id="birth" type="date" max="2015-12-31" name="mem_birth"></p>
+        
+        <p class="inputLabel"><label>성별</label></p>
+        <p class="inputBox" id="inputBox_gender">
+        <input id="gender" type="radio" value="male" name="mem_birth" checked><span>남자</span>
+      	<input id="gender" type="radio" value="female" name="mem_birth"><span>여자</span>
+        </p>
+        
+        <p class="inputLabel"><label>우편번호</label></p>	  	
+        <p class="inputBox">
+        	<input class="inputStyle input_postCode" type="number" autofocus spellcheck="false" value="" placeholder="" name="mem_addr">
+            <span>-</span>
+            <input class="inputStyle input_postCode" type="number" autofocus spellcheck="false" value="" placeholder="" name="mem_addr">
+        	<input class="button" id="btnPost" type="button" value="우편번호 찾기" name="btn_post">
+        </p>
+        
+        <p class="inputLabel"><label>주소</label></p>	  	
+        <p class="inputBox">
+        	<input class="inputStyle input_address" type="text" autofocus spellcheck="false" value="" placeholder="주소" name="mem_addr">
+            <input class="inputStyle input_address" id="addressDetail" type="text" autofocus spellcheck="false" value="" placeholder="상세주소" name="mem_addr">
+         </p>
+ 
+      
+  </div>
+
+</div>
+
+<div id="memberButtonBox">
+            <input id="submit" class="button" type="submit" value="확인" name="mem_submit">
+</div>
+
+</body>
+</html>

@@ -8,7 +8,7 @@
 .sideBox ul {width:200px; height:100%;}
 .side ul li{width:200px; display:block; padding-bottom:10px;}
 
-li#text_search{ height:30px; padding-top:150px; padding-bottom:20px;}
+li#text_search{ height:30px; padding-top:35px; padding-bottom:20px;}
 li#text_search p{ font:20px Arial, Helvetica, sans-serif; color:#999; font-weight:600;}
 
 p.text_sub { font:16px Arial, Helvetica, sans-serif; color:#666; font-weight:400; padding:10px 0 10px; }
@@ -26,8 +26,8 @@ li#searchBtnBox {height:50px; display:block;  }
 
 .input_category {
   width: 200px; /* 원하는 너비설정 */
-  padding: 5px 0 5px 5px;; /* 여백으로 높이 설정 */
-  background: url(../img/arrow_down.png) no-repeat 95% 50%; /* 네이티브 화살표 대체 */  
+  padding: 5px 0 5px 5px; /* 여백으로 높이 설정 */
+  background: url(../img/arrow_down.png) no-repeat 175px center; /* 네이티브 화살표 대체 */  
   background-size:15px 10px;
   
 }
