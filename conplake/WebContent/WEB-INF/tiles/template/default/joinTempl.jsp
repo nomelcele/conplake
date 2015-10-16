@@ -94,7 +94,7 @@ overflow-x:hidden; overflow-y:auto;}
 
 #email_id {width:90px;}
 .inputBox span {width:10px; height:36px; line-height:36px; display:line-block;}
-.input_category { background: url(../img/arrow_down.png) no-repeat 120px center; /* 네이티브 화살표 대체 */  }
+.input_category { background: url(resources/img/arrow_down.png) no-repeat 120px center; /* 네이티브 화살표 대체 */  }
 #email_address, #email_select {width:145px;}
 
 #btnPost {width:100px; height:36px; float:none; margin-left:10px; background:#ddd; color:#666; border:none; font-size:12px;} 

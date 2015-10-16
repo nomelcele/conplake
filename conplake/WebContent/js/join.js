@@ -98,8 +98,12 @@ function uploadImg(){
 	// createObjectURL()을 사용해야 한다.
 						
 
-	$('#profile_img').attr('background', blobURL);
+	$('#profile_img').attr('background-image', "url("+blobURL+")");
 	// attr() src 속성에  blobURL을 넣는다.
-	
 	}
 }
+
+function resetFormElement($obj) { // 자바스크립트
+	$obj.val("");
+}
+
