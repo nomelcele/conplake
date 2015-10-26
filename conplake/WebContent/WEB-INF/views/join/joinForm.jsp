@@ -10,7 +10,7 @@
 		<div class="formBox" id="formBoxLeft">
 	    	<div class="profileBox">
 	    		<div id="profile_img">
-            		<img src="resources/img/profile_img_default.png" />
+            		<img src="resources/img/profile_img_default.png" id="target_img"/>
             	</div>
 	    		<div id="inputProfileImgBox">
            			<input id="inputProfileImg" type="file" name="mem_img"/>
