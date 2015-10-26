@@ -12,35 +12,42 @@ footer {width:900px; height:150px;}
 
 h1 {font:20px Arial, Helvetica, sans-serif; font-weight:600; color:#999; padding-bottom:35px; }
 
-#concertTitle {width:900px; height:60px; line-height:30px; font-size:18px; display:inline-block;}
 
-#innerButtonBox {width:215px; height:30px; float:right; display:inline-block;}
-.innerButton {width:100px; height:30px; background:#C30D22; padding:0; margin:0; border:none; border-radius:0; float:right;}
-.innerButton:hover {background:#ae0115;}
+.ul_concert {width:900px; height:100%; display:block;}
+.ul_concert li {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #d6d6d6 #d6d6d6 #b8b8b8;
+    border-image: none;
+    border-style: solid;
+    border-width: 1px;
+    float: left;
+	margin-right:20px;
+   	margin-bottom:30px;
+    position: relative;
+    width: 198px;
+}
 
-#likeToGo {margin-right:15px;}
+.concert_title{
+    color: #333;
+    font-size: 12px;
+    font-weight: normal;
+	height:14px;
+    line-height: 14px;
+    overflow: hidden;
+    padding: 6px 12px 0;
+    text-overflow: ellipsis;
+	font-weight:600;
+}
 
-#concertProfileBox {width:900px; height:300px;}
-#concertPoster {width:225px; height:300px; float:left;}
-#concertProfile {width:625px; height:300px; padding-left:50px; float:left;}
+.concert_place, .concert_date{
+	color:#666;
+	line-height:14px;
+    min-height: 14px;
+    overflow: hidden;
+    padding: 6px 12px 0;
+}
 
-#concertProfile h4, #concertProfile span a {font-size:14px; height:25px; line-height:25px; font-weight:400; }
-h4 a:hover {text-decoration:underline;}
-
-
-h3.concert_subTitle {width:900px; height:30px; line-height:30px; font-size:16px; padding-bottom:10px; display:block; font-weight:700; display:block;}
-#concertIntro {width:900px; padding-top:80px; padding-bottom:80px; }
-
-
-#edit_setList {background:#666;}
-#table_setList {margin-top:10px;}
-.tr_setList { border-bottom:1px solid #ccc;}
-
-.tr_setList th {background:#eee;}
-
-
-.tr_setList th, .tr_setList td{ height:30px;}
-
-.setListNum{ width:100px;}
-.setListTitle{ width:600px;}
-.setListLink{ width:200px;}
+.concert_place {padding-bottom:10px;}
