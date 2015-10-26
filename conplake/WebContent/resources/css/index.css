@@ -2,7 +2,7 @@
 
 
 html, body{ width:100%; height:100%; position:relative; }
-.contentWrap{ width:100%; height:100%; background:#fff; padding-top:110px; }
+.contentWrap{ width:100%; height:100%; background:#fff;}
 
 
 .mainBoxWrap{ width:950px; height:100%; float:left; position:absolute; left:250px; }
