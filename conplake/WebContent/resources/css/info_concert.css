@@ -1,0 +1,45 @@
+@CHARSET "UTF-8";
+
+html, body{ width:100%; height:100%; position:relative; }
+.contentWrap{ width:100%; height:100%; background:#fff; padding-top:110px; }
+
+
+.mainBoxWrap{ width:950px; height:100%; float:left; position:absolute; left:250px; }
+.mainBox {width:900px; height:100%; padding-left:50px; margin-top:35px;  }
+
+footer {width:900px; height:150px;}
+
+h1 {font:20px Arial, Helvetica, sans-serif; font-weight:600; color:#999; padding-bottom:35px; }
+
+#concertTitle {width:900px; height:60px; line-height:30px; font-size:18px; display:inline-block;}
+
+#innerButtonBox {width:215px; height:30px; float:right; display:inline-block;}
+.innerButton {width:100px; height:30px; background:#C30D22; padding:0; margin:0; border:none; border-radius:0; float:right;}
+.innerButton:hover {background:#ae0115;}
+
+#likeToGo {margin-right:15px;}
+
+#concertProfileBox {width:900px; height:300px;}
+#concertPoster {width:225px; height:300px; float:left;}
+#concertProfile {width:625px; height:300px; padding-left:50px; float:left;}
+
+#concertProfile h4, #concertProfile span a {font-size:14px; height:25px; line-height:25px; font-weight:400; }
+h4 a:hover {text-decoration:underline;}
+
+
+h3.concert_subTitle {width:900px; height:30px; line-height:30px; font-size:16px; padding-bottom:10px; display:block; font-weight:700; display:block;}
+#concertIntro {width:900px; padding-top:80px; padding-bottom:80px; }
+
+
+#edit_setList {background:#666;}
+#table_setList {margin-top:10px;}
+.tr_setList { border-bottom:1px solid #ccc;}
+
+.tr_setList th {background:#eee;}
+
+
+.tr_setList th, .tr_setList td{ height:30px;}
+
+.setListNum{ width:100px;}
+.setListTitle{ width:600px;}
+.setListLink{ width:200px;}
