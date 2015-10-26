@@ -11,6 +11,7 @@
 <link href="resources/css/common.css" rel="stylesheet" type="text/css"/>
 <link href="resources/css/header.css" rel="stylesheet" type="text/css"/>
 <link href="resources/css/sideBox.css" rel="stylesheet" type="text/css"/>
+<link href="resources/css/index.css" rel="stylesheet" type="text/css"/>
 <style>
 html, body{ width:100%; height:100%; position:relative; }
 .contentWrap{ width:1200px; height:100%; background:#fff;}
