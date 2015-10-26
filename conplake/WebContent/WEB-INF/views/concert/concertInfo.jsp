@@ -24,15 +24,19 @@
                 </div>
             </div>
             
-            <div id="concertIntro">
-            	<h3 class="concert_subTitle">공연 소개</h3>
+            <div id="tabBox">
+            	<ul class="tabs">
+                  <li><a class="tab" id="tab1" href="#">공연 소개</a></li>
+                  <li><a class="tab" id="tab2" href="#">세트리스트</a></li>
+                  <li><a class="tab" id="tab3" href="#">공연 후기</a></li>
+                </ul>
+            </div>
+            
+            <div class="contentView" id="concertIntro">
             	<img src="resources/img/apple_intro.png" width="900">
             </div>
            
-           <div id="concertSetrist">
-            	<h3 class="concert_subTitle">세트리스트
-                	<input id="edit_setList" class="innerButton button" type="button" value="수정" onclick=""/>
-                </h3>
+           <div class="contentView" id="concertSetList">
             	<Table id="table_setList">
                     <tr class="tr_setList">
                         <th class="setListNum">순서</th>
@@ -55,3 +59,9 @@
             </div>
             
             <footer></footer>
+            
+        </div>
+   </div>
+    
+    
+</div>
