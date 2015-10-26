@@ -4,7 +4,7 @@
 
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, form, fieldset, p, button{ margin: 0; padding: 0;}
 
-body, h1, h2, h3, h4, th, td, input, select, textarea, button, p {
+body, h1, h2, h3, h4, th, td, input, select, textarea, button, p, span {
     font-size: 12px;
     line-height: 1.5;
     font-family: '돋움',dotum,sans-serif;
@@ -14,9 +14,11 @@ body, h1, h2, h3, h4, th, td, input, select, textarea, button, p {
 img {border:none;}
 ul li{ list-style:none;}
 
-a {font-family: '나눔고딕', 'Nanum Gothic', sans-serif; text-decoration:none; color:#333;}
+a, h2, h3, h4, h5, h6, table, tr, td {font-family: '나눔고딕', 'Nanum Gothic', sans-serif; text-decoration:none; color:#333; font-weight:500;}
 input {font-family: '나눔고딕', 'Nanum Gothic', sans-serif; text-decoration:none; color:#333;}
 
+
+table, tr, td {margin:0; padding:0; border-spacing:0; border:0; border-collapse:collapse;}
 
 .inputStyle {
 	font-family: inherit;  /* 폰트 상속 */
@@ -45,4 +47,17 @@ input {font-family: '나눔고딕', 'Nanum Gothic', sans-serif; text-decoration:
 
 .button:hover {
 	background-color:#464646;
+}
+
+
+.input_category {
+  width: 200px; /* 원하는 너비설정 */
+  padding: 5px 0 5px 5px; /* 여백으로 높이 설정 */
+  background: url(../img/arrow_down.png) no-repeat 175px center; /* 네이티브 화살표 대체 */  
+  background-size:15px 10px;
+  
+}
+/* IE 10, 11의 네이티브 화살표 숨기기 */
+.input_category::-ms-expand { 
+  display: none;
 }

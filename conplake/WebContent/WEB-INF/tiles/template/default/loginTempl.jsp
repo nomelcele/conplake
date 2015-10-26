@@ -18,7 +18,7 @@
 	});
 </script>
 <style>
-body{ background:#eee;}
+body{ background:#eee; padding-bottom:100px;}
 
 .card { background-color:#f7f7f7;
 	border-radius:2px; 
@@ -32,7 +32,7 @@ body{ background:#eee;}
 .logoBox {
 	width : 250px;
 	height: 200px;
-	margin: 100px auto 0;
+	margin: 50px auto 0;
 	background: url(resources/img/logo.png) no-repeat center center;
 	background-size:contain;
 	}

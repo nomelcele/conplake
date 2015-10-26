@@ -10,12 +10,11 @@
 		<div class="formBox" id="formBoxLeft">
 	    	<div class="profileBox">
 	    		<div id="profile_img">
-	    			<label id="labelProfileImg" for="inputProfileImg">
-	    				profileImg
-	    			</label>
-	    			<input id="inputProfileImg" type="file" 
-	    			name="mem_img" onchange="uploadImg()">
-	    		</div>
+            		<img src="resources/img/profile_img_default.png" />
+            	</div>
+	    		<div id="inputProfileImgBox">
+           			<input id="inputProfileImg" type="file" name="mem_img"/>
+        		</div>
 	    		<div id="profile_txt">
 	    			<textarea id="inputProfileTxt" placeholder="자기소개를 입력해주세요." 
 	    			name="mem_intro"></textarea>

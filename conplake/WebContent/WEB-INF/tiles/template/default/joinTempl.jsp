@@ -22,6 +22,7 @@
 <style>
 
 
+
 body{ padding-bottom:100px; background:#eee;}
 
 .card { background-color:#f7f7f7;
@@ -53,13 +54,13 @@ body{ padding-bottom:100px; background:#eee;}
 
 
 .profileBox {width:300px; height:460px; margin:50px auto;}
-#profile_img {width:150px; height:150px; margin:0 auto; -moz-border-radius: 50%; -webkit-border-radius: 50%; border-radius: 50%; background:url(resources/img/profile_img_default.png) }
+#profile_img {width:150px; height:150px; -moz-border-radius: 50%; -webkit-border-radius: 50%; border-radius: 50%; margin-left:75px; overflow:hidden; float:left;}
 
-#labelProfileImg {width:150px; height:150px; display:block; text-indent: -9999px; overflow:hidden;}
-#inputProfileImg {width:150px; height:150px; display:none; }
+#inputProfileImgBox {width:25px; height:25px; background:url(resources/img/setting.png) no-repeat center center; display:inline-block; float:left;}
+#inputProfileImg {width:25px; height:25px; opacity:0;}
 
 
-#profile_txt {width:300px; height:220px; margin-top:30px; }
+#profile_txt {width:300px; height:220px; float:left; padding-top:30px; }
 #inputProfileTxt {width:268px; height:190px; border:1px solid #ddd; border-radius:20px; padding:15px; resize:none;
 overflow-x:hidden; overflow-y:auto;}
 
@@ -85,6 +86,7 @@ overflow-x:hidden; overflow-y:auto;}
 	margin-bottom:15px;
 	}
 
+    
 
 
 .inputBox {margin:5px 0 5px;}
@@ -93,14 +95,19 @@ overflow-x:hidden; overflow-y:auto;}
 
 
 #email_id {width:90px;}
-.inputBox span {width:10px; height:36px; line-height:36px; display:line-block;}
+.inputBox span { display:inline-block; width:36px; height:36px; line-height:36px;  }
+.inputBox span#btwSpan {width:10px;}
+
+
+
+
 .input_category { background: url(resources/img/arrow_down.png) no-repeat 120px center; /* 네이티브 화살표 대체 */  }
 #email_address, #email_select {width:145px;}
 
 #btnPost {width:100px; height:36px; float:none; margin-left:10px; background:#ddd; color:#666; border:none; font-size:12px;} 
 .input_postCode {width:100px;}
 
-.input_address {width:200px;}
+.input_address {width:195px;}
 #adressDetail{ margin-left:10px;}
 	
 	
@@ -130,7 +137,7 @@ overflow-x:hidden; overflow-y:auto;}
 .button:hover {
 	background-color:#464646;
 }
-
+	
 </style>
 </head>
 <body>
