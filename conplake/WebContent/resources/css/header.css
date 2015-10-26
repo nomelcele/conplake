@@ -2,7 +2,7 @@
 /* CSS Document */
 
 
-header {width:100%; height:110px;}
+header {width:100%; height:110px; position:fixed; z-index:999;}
 
 .util_menu{ width:100%; height:30px; background :#333;}
 

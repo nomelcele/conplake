@@ -1,7 +1,7 @@
 @charset "utf-8";
 /* CSS Document */
 
-.sideBoxWrap{ width:249px; float:left; background:#fff; }
+.sideBoxWrap{ width:249px; height:100%; float:left; background:#fff; position:fixed;  top:110px; z-index:998; border-right:1px solid #ccc; box-shadow:2px 0 2px #eee;}
 
 .sideBox{ width:225px; padding-left:25px; }
 
