@@ -44,19 +44,7 @@ function searchPostcode(){
 			}).open();
 }
 
-function joinMember(){
-	// 메일
-	var mailAddr = $("#email_id").val()+"@"+$("#email_address").val();
-	$("#mem_mail").attr("value",mailAddr);
-	
-	// 주소
-	var memAddr = $("#postcode1").val()+"-"+$("#postcode2").val()+"/"+$("#addr").val()+"/"+$("#addrDetail").val();
-	$("#mem_addr").attr("value",memAddr);
-	
-	// 회원 가입 폼 제출
-	$("#joinForm").submit();
-}
-
+ 
 function addDomain(){
 	// 메일 주소 select
 	var selectedVal = $("#email_select").val();
@@ -104,8 +92,24 @@ $(function(){
 				'width', '200').css('height', '200');
 		// attr() src 속성에  blobURL을 넣는다.
 		}
-		});
+	});
 
+
+	// 회원 가입 버튼 클릭 시
+	 $("#joinBtn").click(function(){
+		// 메일
+		 var mailAddr = $("#email_id").val()+"@"+$("#email_address").val();
+			$("#mem_mail").attr("value",mailAddr);
+			
+			// 주소
+			var memAddr = $("#postcode1").val()+"-"+$("#postcode2").val()+"/"+$("#addr").val()+"/"+$("#addrDetail").val();
+			$("#mem_addr").attr("value",memAddr);
+			
+			console.log("회원가입~~~~~~~~~~~~~~~");
+			// 회원 가입 폼 제출
+			$("#joinForm").submit();
+	 });
+	 
 });
 
 function resetFormElement($obj) { // 자바스크립트

@@ -3,7 +3,7 @@
 <div class="logoBox">
 	
 </div>
-<form id="joinForm" action="joinMember" method="post">
+<form id="joinForm" action="joinMember" method="post" enctype="multipart/form-data">
 	<input type="hidden" id="mem_mail" name="mem_mail">
 	<input type="hidden" id="mem_addr" name="mem_addr">
 	<div class="card">
@@ -13,7 +13,7 @@
             		<img src="resources/img/profile_img_default.png" id="target_img"/>
             	</div>
 	    		<div id="inputProfileImgBox">
-           			<input id="inputProfileImg" type="file" name="mem_img"/>
+           			<input id="inputProfileImg" name="mem_img" type="file"/>
         		</div>
 	    		<div id="profile_txt">
 	    			<textarea id="inputProfileTxt" placeholder="자기소개를 입력해주세요." 
@@ -75,6 +75,6 @@
 	</div>
 	
 	<div id="memberButtonBox">
-		<input id="submit" class="button" type="submit" value="확인" name="mem_submit" onclick="joinMember()">
+		<input id="joinBtn" class="button" type="submit" value="확인" name="mem_submit">
 	</div>
 </form>
