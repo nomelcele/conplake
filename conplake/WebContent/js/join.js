@@ -1,3 +1,5 @@
+var xhr = null;
+
 function searchPostcode(){
 	new daum.Postcode(
 			{
@@ -57,6 +59,12 @@ function addDomain(){
 }
 
 $(function(){
+	if(window.ActiveXObject){ // IE
+		xhr = new ActivexObject("Microsoft.XMLHTTP");
+	} else { // Cross
+		xhr = new XMLHttpRequest();
+	}
+	
 	$("#inputProfileImg").change(
 		function(){
 		// 변화가 있을 때 function을 호출한다.
@@ -105,7 +113,10 @@ $(function(){
 			var memAddr = $("#postcode1").val()+"-"+$("#postcode2").val()+"/"+$("#addr").val()+"/"+$("#addrDetail").val();
 			$("#mem_addr").attr("value",memAddr);
 			
-			console.log("회원가입~~~~~~~~~~~~~~~");
+			// 이미지 파일 업로드
+			imgUpload();
+			console.log("이미지 파일 업로드 완료");
+			
 			// 회원 가입 폼 제출
 			$("#joinForm").submit();
 	 });
@@ -114,5 +125,28 @@ $(function(){
 
 function resetFormElement($obj) { // 자바스크립트
 	$obj.val("");
+}
+
+function imgUpload(){
+	var imgFile = document.getElementById("inputProfileImg");
+	// 업로드 시작 -> xhr.download..
+	xhr.upload.onloadstart = function (e) {
+		// onloadstart: 감지
+		// display: none인 것을 보이게 한다.
+	};
+	xhr.onreadystatechange = function(){
+		// callback
+		if(xhr.readyState == 4 && xhr.status == 200){
+// 			alert("사진경로"+xhr.responseText.trim());
+//			$('#memprofile').attr("value",xhr.responseText.trim());
+//			alert("사원정보가 업데이트 되었습니다.");
+
+		}
+	};
+	
+	xhr.open("POST","imgUpload",true); // 크로스 도메인으로 데이터를 보내는 것이 가능해졌다.
+	xhr.setRequestHeader("X-File-Name", // 헤더로 파일의 이름이 간다.
+			encodeURIComponent(imgFile.files[0].name));
+	xhr.send(imgFile.files[0]); // post 방식이니까 send로 파라미터 전송
 }
 

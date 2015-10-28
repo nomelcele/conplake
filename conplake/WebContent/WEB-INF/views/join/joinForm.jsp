@@ -3,7 +3,7 @@
 <div class="logoBox">
 	
 </div>
-<form id="joinForm" action="joinMember" method="post" enctype="multipart/form-data">
+<form id="joinForm" action="joinMember" method="post">
 	<input type="hidden" id="mem_mail" name="mem_mail">
 	<input type="hidden" id="mem_addr" name="mem_addr">
 	<div class="card">
