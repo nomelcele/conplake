@@ -4,7 +4,7 @@
 	<div class="util_menu">
     	<ul>
         	<li id="mypage"><a href="#">마이페이지</a></li>
-            <li id="logout"><a href="#">로그아웃</a></li>
+            <li id="logout"><a href="logout">로그아웃</a></li>
         </ul>
     </div>
     <div class="gnb">

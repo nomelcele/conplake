@@ -1,7 +1,13 @@
 package or.conplake.mvc.model;
 
 import java.io.File;
+import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.URLDecoder;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,33 +31,18 @@ public class JoinModel {
 	}
 	
 	@RequestMapping(value="/joinMember")
-	public String joinMember(MemberVO mvo, @RequestParam("mem_img")MultipartFile mem_img, HttpSession session){
-		// 세션 없음
+	public String joinMember(MemberVO mvo){		
 		// 회원 가입
-		System.out.println("회원 가입!!!!!!!!!!!!!");
-		
-		// 이미지 파일 업로드
-		String r_path = session.getServletContext().getRealPath("/");
-		String oriFn = mem_img.getOriginalFilename();
-		StringBuffer path = new StringBuffer();
-		path.append(r_path).append("upload\\").append(oriFn);
-		System.out.println("Member Img Upload Path: "+path.toString());
-		
-		File file = new File(path.toString());
-		if(!file.exists()){
-			file.mkdirs();
-		}
-		
-		try {
-			mem_img.transferTo(file);
-		} catch (Exception e) {
-			e.printStackTrace();
-		} 
+		System.out.println("들어오긴 하니ㅡㅡ");
 
-		
 		// 입력한 정보 회원 데이터베이스에 저장
 		mdao.joinMember(mvo);
 		return "login.loginForm";
+	}
+	
+	@RequestMapping(value="/imgUpload")
+	public String imgUpload(){
+		return "join/imgUpload";
 	}
 	
 }

@@ -1,3 +1,5 @@
-function goJoinForm(){
-	location="joinForm";
-}
+$(function(){
+	$("#joinFormBtn").click(function(){
+		location="joinForm";		
+	});
+});
