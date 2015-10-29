@@ -217,3 +217,15 @@
   create sequence song_seq
   increment by 1
   start with 1;
+  
+  -- 10/30
+  -- concert 테이블의 con_rate, con_time 컬럼 삭제
+  alter table concert drop(con_rate);
+  alter table concert drop(con_time);
+
+  -- concert 테이블의 con_poster, con_detailimg 속성 변경
+  -- 글자수 더 많이 들어갈 수 있게 변경
+  alter table concert modify(con_poster varchar2(400));
+  alter table concert modify(con_detailimg varchar2(800));
+  alter table concert modify(con_tel varchar2(100));
+  commit;
