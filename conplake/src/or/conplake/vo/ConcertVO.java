@@ -3,7 +3,7 @@ package or.conplake.vo;
 public class ConcertVO {
 	private int con_num, con_venue, con_artist;
 	private String con_name, con_poster, con_startdate, con_enddate,
-	con_link, con_detailimg, con_rate, con_time, con_price, con_tel;
+	con_link, con_detailimg, con_price, con_tel;
 	
 	public int getCon_num() {
 		return con_num;
@@ -58,18 +58,6 @@ public class ConcertVO {
 	}
 	public void setCon_detailimg(String con_detailimg) {
 		this.con_detailimg = con_detailimg;
-	}
-	public String getCon_rate() {
-		return con_rate;
-	}
-	public void setCon_rate(String con_rate) {
-		this.con_rate = con_rate;
-	}
-	public String getCon_time() {
-		return con_time;
-	}
-	public void setCon_time(String con_time) {
-		this.con_time = con_time;
 	}
 	public String getCon_price() {
 		return con_price;

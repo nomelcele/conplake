@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="con">
+  <insert id="addConcert" parameterType="cvo">
+	insert into concert values(concert_seq.nextVal,#{con_name},#{con_poster},#{con_startdate},#{con_enddate},null,
+	null,#{con_link},#{con_detailimg},#{con_price},#{con_tel})
+  </insert>
+  </mapper>
