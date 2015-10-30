@@ -16,6 +16,7 @@
 <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script src="js/info_concert.js"></script>
+<script src="js/edit_setList.js"></script>
 
 <style>
 html, body{ width:100%; height:100%; position:relative; }
