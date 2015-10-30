@@ -14,11 +14,6 @@
 <script src="js/join.js"></script>
 <%--우편번호 다음 링크 --%>
 <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
-<script>
-	$(function(){
-		console.log("Join Page");
-	});
-</script>
 <style>
 
 
