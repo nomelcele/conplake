@@ -10,7 +10,7 @@
             
             <div id="concertProfileBox">
             	<div id="concertPoster">
-                	<img src="resources/img/apple.png" width="225" height="300" />
+                	<img src="../img/apple.png" width="225" height="300" />
                 </div>
                 <div id="concertProfile">
                 	<hgroup>
@@ -33,7 +33,7 @@
             </div>
             
             <div class="contentView" id="concertIntro">
-            	<img src="resources/img/apple_intro.png" width="900">
+            	<img src="../img/apple_intro.png" width="900">
             </div>
            
            <div class="contentView" id="concertSetList">
@@ -56,12 +56,7 @@
                     
                   
                 </Table>
+                <p><input id="edit_setList" class="innerButton button" type="button" value="수정"/></p>
             </div>
             
             <footer></footer>
-            
-        </div>
-   </div>
-    
-    
-</div>
