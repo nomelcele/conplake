@@ -21,7 +21,9 @@ h3.concert_subTitle {width:900px; height:30px; line-height:30px; font-size:16px;
 .contentView {width:900px; padding-top:30px; }
 #concertIntro {display:block;}
 #concertSetList {display:none;}
-#concertSetList p{ height:30px; clear:both; display:block;}
+#concertReview {display:none;}
+#concertSetList #p_setList, #p_review { height:30px; padding-top:15px;}
+
 
 #tabBox {padding-top:80px;}
 .tabs {width:900px; height:31px; border-bottom:1px solid #ccc;}
@@ -30,15 +32,24 @@ h3.concert_subTitle {width:900px; height:30px; line-height:30px; font-size:16px;
 .tabs li a:hover {height:31px; background:#fff;}
 
 
+#edit_setList {background:#666;}
+.tr_setList, .tr_review { border-bottom:1px solid #ccc;}
 
-#edit_setList {background:#666; margin-top:15px;}
-.tr_setList { border-bottom:1px solid #ccc;}
+.tr_setList th, .tr_review th {background:#eee;}
 
-.tr_setList th {background:#eee;}
-
-
-.tr_setList th, .tr_setList td{ height:30px;}
+#table_setList, #table_review { table-layout:fixed;}
+#table_setList th, #table_setList td, #table_review th, #table_review td{ height:30px; text-align:center;}
 
 .setListNum{ width:100px;}
 .setListTitle{ width:600px;}
 .setListLink{ width:200px;}
+
+#table_setList p, #table_review p, #table_review th p{ text-align:center; white-space:nowrap; text-overflow:ellipsis; overflow:hidden;}
+.reviewNum p{ width:100px;}
+.reviewTitle p{ width:450px; text-align:left; }
+.reviewId p{ width:100px; text-align:left;}
+.reviewDate p{ width:150px;}
+.reviewHits p{ width:100px;}
+
+
+input#write_review{ background:#666;}
