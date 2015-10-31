@@ -54,8 +54,8 @@
 	        
 	        <p class="inputLabel"><label>성별</label></p>
 	        <p class="inputBox" id="inputBox_gender">
-	        <input id="gender" type="radio" value="male" name="mem_gender" checked><span>남자</span>
-	      	<input id="gender" type="radio" value="female" name="mem_gender"><span>여자</span>
+	        <input id="gender" type="radio" value="male" name="mem_gender" checked><span id="span_gender">남자</span>
+	      	<input id="gender" type="radio" value="female" name="mem_gender"><span id="span_gender">여자</span>
 	        </p>
 	        
 	    <p class="inputLabel"><label>우편번호</label></p>	  	
