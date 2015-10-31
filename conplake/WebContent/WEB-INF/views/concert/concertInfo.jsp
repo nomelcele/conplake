@@ -39,24 +39,103 @@
            <div class="contentView" id="concertSetList">
             	<Table id="table_setList">
                     <tr class="tr_setList">
-                        <th class="setListNum">순서</th>
-                        <th class="setListTitle">곡 제목</th>
-                        <th class="setListLink">링크</th>
+                        <th class="setListNum"><p>순서</p></th>
+                        <th class="setListTitle"><p>곡 제목</p></th>
+                        <th class="setListLink"><p>링크</p></th>
                     </tr>
                     <tr class="tr_setList">
-                        <td class="setListNum"></td>
-                        <td class="setListTitle"></td>
-                        <td class="setListLink"></td>
+                        <td class="setListNum"><p></p></td>
+                        <td class="setListTitle"><p></p></td>
+                        <td class="setListLink"><p></p></td>
                     </tr>
                     <tr class="tr_setList">
-                        <td class="setListNum"></td>
-                        <td class="setListTitle"></td>
-                        <td class="setListLink"></td>
+                        <td class="setListNum"><p></p></td>
+                        <td class="setListTitle"><p></p></td>
+                        <td class="setListLink"><p></p></td>
                     </tr>
                     
                   
                 </Table>
-                <p><input id="edit_setList" class="innerButton button" type="button" value="수정"/></p>
+                <p id="p_setList"><input id="edit_setList" class="innerButton button" type="button" value="수정"/></p>
+            </div>
+            
+            
+            <div class="contentView" id="concertReview">
+            	<Table id="table_review">
+                    <tr class="tr_review">
+                        <th class="reviewNum"><p>번호</p></th>
+                        <th class="reviewTitle"><p>제목</p></th>
+                        <th class="reviewId"><p>작성자</p></th>
+                        <th class="reviewDate"><p>날짜</p></th>
+                        <th class="reviewHits"><p>조회수</p></th>
+                    </tr>
+                    <tr class="tr_review">
+                        <td class="reviewNum"><p>10</p></td>
+                        <td class="reviewTitle"><p>후기제목후기제목후기제목후기제목후기제목후기제목후기제목후기제목후기제목후기제목후기제목12341234</p></td>
+                        <td class="reviewID"><p></p></td>
+                        <td class="reviewDate"><p></p></td>
+                        <td class="reviewHits"><p></p></td>
+                    </tr>
+                    <tr class="tr_review">
+                        <td class="reviewNum"><p>9</p></td>
+                        <td class="reviewTitle"><p></p></td>
+                        <td class="reviewID"><p></p></td>
+                        <td class="reviewDate"><p></p></td>
+                        <td class="reviewHits"><p></p></td>
+                    </tr>
+                    <tr class="tr_review">
+                        <td class="reviewNum"><p>8</p></td>
+                        <td class="reviewTitle"><p></p></td>
+                        <td class="reviewID"><p></p></td>
+                        <td class="reviewDate"><p></p></td>
+                        <td class="reviewHits"><p></p></td>
+                    </tr>
+                    <tr class="tr_review">
+                        <td class="reviewNum"><p>7</p></td>
+                        <td class="reviewTitle"><p></p></td>
+                        <td class="reviewID"><p></p></td>
+                        <td class="reviewDate"><p></p></td>
+                        <td class="reviewHits"><p></p></td>
+                    </tr>
+                    <tr class="tr_review">
+                        <td class="reviewNum"><p>6</p></td>
+                        <td class="reviewTitle"><p></p></td>
+                        <td class="reviewID"><p></p></td>
+                        <td class="reviewDate"><p></p></td>
+                        <td class="reviewHits"><p></p></td>
+                    </tr>
+                    <tr class="tr_review">
+                        <td class="reviewNum"><p>5</p></td>
+                        <td class="reviewTitle"><p></p></td>
+                        <td class="reviewID"><p></p></td>
+                        <td class="reviewDate"><p></p></td>
+                        <td class="reviewHits"><p></p></td>
+                    </tr>
+                    <tr class="tr_review">
+                        <td class="reviewNum"><p>4</p></td>
+                        <td class="reviewTitle"><p></p></td>
+                        <td class="reviewID"><p></p></td>
+                        <td class="reviewDate"><p></p></td>
+                        <td class="reviewHits"><p></p></td>
+                    </tr>
+                    <tr class="tr_review">
+                        <td class="reviewNum"><p>3</p></td>
+                        <td class="reviewTitle"><p></p></td>
+                        <td class="reviewID"><p></p></td>
+                        <td class="reviewDate"><p></p></td>
+                        <td class="reviewHits"><p></p></td>
+                    </tr>
+                    <tr class="tr_review">
+                        <td class="reviewNum"><p>2</p></td>
+                        <td class="reviewTitle"><p></p></td>
+                        <td class="reviewID"><p></p></td>
+                        <td class="reviewDate"><p></p></td>
+                        <td class="reviewHits"><p></p></td>
+                    </tr>
+                    
+                  
+                </Table>
+                <p id="p_review"><input id="write_review" class="innerButton button" type="button" value="후기 작성"/></p>
             </div>
             
             <footer></footer>
