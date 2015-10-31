@@ -90,7 +90,8 @@ overflow-x:hidden; overflow-y:auto;}
 
 
 #email_id {width:90px;}
-.inputBox span { display:inline-block; width:36px; height:36px; line-height:36px;  }
+.inputBox span { display:inline-block; width:10px; text-align:center; height:36px; line-height:36px;  }
+.inputBox span#span_gender { width:30px; }
 .inputBox span#btwSpan {width:10px;}
 
 
