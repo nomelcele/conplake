@@ -4,7 +4,10 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
   <mapper namespace="con">
   <insert id="addConcert" parameterType="cvo">
-	insert into concert values(concert_seq.nextVal,#{con_name},#{con_poster},#{con_startdate},#{con_enddate},null,
-	null,#{con_link},#{con_detailimg},#{con_price},#{con_tel})
+	insert into concert values(#{con_num},#{con_name},#{con_poster},#{con_startdate},#{con_enddate},null,
+	null,#{con_link},#{con_price},#{con_tel},#{con_detailimg})
   </insert>
+  <select id="checkConcert" parameterType="int" resultType="String">
+  	select con_name from concert where con_num=#{con_num}
+  </select>
   </mapper>
