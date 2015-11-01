@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="chall">
+  <insert id="addConcerthall" parameterType="chvo">
+  	insert into concerthall values(#{chall_num},#{chall_name},#{chall_addr},#{chall_tel},#{chall_official},
+  	#{chall_img},null,#{chall_intro},#{chall_gpsx},#{chall_gpsy})
+  </insert>
+  <select id="checkConcerthall" parameterType="int" resultType="String">
+  	select chall_name from concerthall where chall_num=#{chall_num}
+  </select>
+  </mapper>

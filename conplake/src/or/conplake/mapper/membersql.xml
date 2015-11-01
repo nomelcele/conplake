@@ -7,7 +7,7 @@
 	insert into member values(member_seq.nextVal,#{mem_name},#{mem_id},#{mem_pwd},#{mem_mail},
 	#{mem_birth},#{mem_gender},#{mem_addr},#{mem_intro},#{mem_img})
   </insert>
-  <select id="login" parameterType="mvo" resultType="Integer">
-  	select mem_num from member where mem_id=#{mem_id} and mem_pwd=#{mem_pwd}
+  <select id="login" parameterType="mvo" resultType="mvo">
+  	select mem_id, mem_num from member where mem_id=#{mem_id} and mem_pwd=#{mem_pwd}
   </select>
   </mapper>

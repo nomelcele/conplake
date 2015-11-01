@@ -225,7 +225,27 @@
 
   -- concert 테이블의 con_poster, con_detailimg 속성 변경
   -- 글자수 더 많이 들어갈 수 있게 변경
+  alter table concert drop(con_datailimg);
+  alter table concert add(con_detailimg clob);
+  
+  alter table concert modify(con_name varchar2(400));
   alter table concert modify(con_poster varchar2(400));
-  alter table concert modify(con_detailimg varchar2(800));
-  alter table concert modify(con_tel varchar2(100));
+  alter table concert modify(con_link varchar2(700));
+  alter table concert modify(con_price varchar2(500));
+  alter table concert modify(con_tel varchar2(200));
+
   commit;
+  
+  
+  -- 11/1
+  -- concert 테이블 컬럼 데이터 길이 변경
+  -- gpsx, gpsy (공연장 지도 보여주기 위한 컬럼) 추가
+  
+alter table concerthall modify(chall_addr varchar2(400));
+alter table concerthall modify(chall_official varchar2(300));
+alter table concerthall modify(chall_img varchar2(400));
+alter table concerthall drop(chall_intro);
+alter table concerthall add(chall_intro clob);
+alter table concerthall add(chall_gpsx number(33,30));
+alter table concerthall add(chall_gpsy number(33,30));
+commit;

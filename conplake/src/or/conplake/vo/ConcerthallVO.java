@@ -2,6 +2,7 @@ package or.conplake.vo;
 
 public class ConcerthallVO {
 	private int chall_num;
+	private double chall_gpsx, chall_gpsy;
 	private String chall_name, chall_addr, chall_tel, chall_official,
 	chall_img, chall_intro, chall_seatsimg;
 	
@@ -10,6 +11,18 @@ public class ConcerthallVO {
 	}
 	public void setChall_num(int chall_num) {
 		this.chall_num = chall_num;
+	}
+	public double getChall_gpsx() {
+		return chall_gpsx;
+	}
+	public void setChall_gpsx(double chall_gpsx) {
+		this.chall_gpsx = chall_gpsx;
+	}
+	public double getChall_gpsy() {
+		return chall_gpsy;
+	}
+	public void setChall_gpsy(double chall_gpsy) {
+		this.chall_gpsy = chall_gpsy;
 	}
 	public String getChall_name() {
 		return chall_name;

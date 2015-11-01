@@ -15,15 +15,13 @@ public class MemberDao {
 		st.insert("mem.joinMember", mvo);
 	}
 	
-	public int login(MemberVO mvo){		
-		Integer res = st.selectOne("mem.login", mvo);
+	public MemberVO login(MemberVO mvo){		
+		MemberVO memInfo = st.selectOne("mem.login", mvo);
 		
-		if(res == null){ 
-			// 입력한 아이디/비밀번호가 회원 정보와 일치하지 않을 경우(로그인 실패)
-			return 0;
+		if(memInfo == null){
+			return null;
 		} else {
-			// 로그인 성공
-			return res;
+			return memInfo;
 		}
 		
 	}
