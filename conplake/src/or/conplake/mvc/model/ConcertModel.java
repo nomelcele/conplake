@@ -9,5 +9,5 @@ public class ConcertModel {
 	public String concertInfo(){
 		return "concert.concertInfo";
 	}
-
+	
 }

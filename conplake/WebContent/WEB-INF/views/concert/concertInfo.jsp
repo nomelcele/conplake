@@ -61,6 +61,15 @@
             
             
             <div class="contentView" id="concertReview">
+            	<p id="p_searchReview">
+                	<span id="btn_searchReview"><a href="#"></a></span>
+                    <input name="input_searchReview" class="inputStyle input_searchReview" type="text" placeholder="검색어를 입력하세요." autocomplete="off" >
+                	<select class="inputStyle input_categoryReview" >
+                        <option selected>제목</option>
+                        <option>작성자</option>
+                        <option>내용</option>
+                    </select>
+                </p>
             	<Table id="table_review">
                     <tr class="tr_review">
                         <th class="reviewNum"><p>번호</p></th>
@@ -135,7 +144,21 @@
                     
                   
                 </Table>
-                <p id="p_review"><input id="write_review" class="innerButton button" type="button" value="후기 작성"/></p>
+                <p id="p_review">
+                	<span>
+                    	<a href="#" class="page" id="page_prev"><</a>
+                    	<a href="#">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+                        <a href="#">5</a>
+                        <a href="#">6</a>
+                        <a href="#">7</a>
+                        <a href="#">8</a>
+                        <a href="#">9</a>
+                        <a href="#" class="page" id="page_next">></a>
+                    </span>
+                <input id="write_review" class="innerButton button" type="button" value="후기 작성"/></p>
             </div>
             
             <footer></footer>
