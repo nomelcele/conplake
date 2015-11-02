@@ -6,8 +6,9 @@ header {width:100%; height:110px; position:fixed; z-index:999;}
 
 .util_menu{ width:100%; height:30px; background :#333;}
 
-.util_menu ul{ display:block; width:200px; height:30px; float:right;}
-.util_menu ul li { list-style:none; float:left; padding-left:20px; }
+.util_menu ul{ display:block; height:30px; float:right; padding-right:50px;}
+.util_menu ul li { list-style:none; float:left; padding-left:20px; color:#fff; line-height:30px; }
+.util_menu ul li strong {color:#fff;}
 .util_menu ul li a { display:block;  font-size:12px; line-height:30px; color:#CCC;}
 .util_menu ul li a:hover{ color:#fff;}
 
