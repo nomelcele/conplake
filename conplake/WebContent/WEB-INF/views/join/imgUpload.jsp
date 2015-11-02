@@ -25,7 +25,9 @@
 		String uploadFileName = fileName.substring(0,fileName.lastIndexOf(".")) + "_"
 				+ System.currentTimeMillis()+ext; // 중복 방지를 위해 파일 이름에 시간을 추가해줬다.
 		System.out.println("redad"+application.getRealPath("/resources/memberImg"));
-		File uploadDir = new File(application.getRealPath("/resources/memberImg"));
+// 		File uploadDir = new File(application.getRealPath("/resources/memberImg")); // 임시 경로
+		File uploadDir = new File("C:\\conplake\\ws\\conplake\\WebContent\\resources\\memberImg");
+
 		// 업로드하기 위한 파일 객체 생성
 		System.out.println("-------------------------"+uploadDir.getAbsolutePath());
 		if(!uploadDir.exists()){

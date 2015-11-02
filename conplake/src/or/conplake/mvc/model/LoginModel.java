@@ -129,14 +129,11 @@ public class LoginModel {
 					"cPage=1&rows=800&gpsxfrom=&gpsyfrom=&gpsxto=&gpsyto=&keyword=&"+
 					"serviceKey=hrRaabnR27NNLhagFx%2F7JCUqbmimBOXErGAvS2yl%2FDpIAcFMzKnwdueoYXrlysShsP1YB6XOjsZMnTV6yqGhmw%3D%3D");
 					Document challDoc = builder.build(challUrl);
-					List<Element> challs = doc.getRootElement().getChild("msgBody").getChildren("placeList");
+					List<Element> challs = challDoc.getRootElement().getChild("msgBody").getChildren("placeList");
 					Iterator<Element> challIt = challs.iterator();
-					System.out.println("???????????????");
 					
 					while(challIt.hasNext()){
-						System.out.println("????!!!!!!!!!!");
 						Element info = challIt.next();
-						System.out.println(info.getChildText("culName"));
 						URL challDetailUrl = new URL("http://www.culture.go.kr/openapi/rest/cultureartspaces/d/?"+
 						"seq="+info.getChildText("seq")+
 						"&serviceKey=hrRaabnR27NNLhagFx%2F7JCUqbmimBOXErGAvS2yl%2FDpIAcFMzKnwdueoYXrlysShsP1YB6XOjsZMnTV6yqGhmw%3D%3D");
@@ -157,9 +154,16 @@ public class LoginModel {
 							chvo.setChall_img(challDetail.getChildText("culViewImg1")); // 공연장 사진
 							// 공연장 좌석표 사진
 							chvo.setChall_intro(challDetail.getChildText("culCont")); // 공연장 소개
-							chvo.setChall_gpsx(Double.parseDouble(challDetail.getChildText("gpsX"))); // 공연장 gps-x
-							chvo.setChall_gpsy(Double.parseDouble(challDetail.getChildText("gpsY"))); // 공연장 gps-y
 							
+							if(challDetail.getChildText("gpsX") == ""){
+								chvo.setChall_gpsx(0);
+								chvo.setChall_gpsy(0);
+							} else {
+								// 예외 처리 -> 상세 정보 검색 시 gps 데이터가 조회되지 않는 공연장이 있음
+								// 나중에 따로 데이터 넣기
+								chvo.setChall_gpsx(Double.parseDouble(challDetail.getChildText("gpsX"))); // 공연장 gps-x
+								chvo.setChall_gpsy(Double.parseDouble(challDetail.getChildText("gpsY"))); // 공연장 gps-y
+							}
 							chdao.addConcerthall(chvo);
 						}
 					}
@@ -171,6 +175,7 @@ public class LoginModel {
 				
 			}
 			
+			session.setAttribute("mvo", memInfo);
 			return "concert.main";
 		}
 		
