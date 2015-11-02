@@ -39,7 +39,7 @@ body{ padding-bottom:100px; background:#eee;}
 
 
 .formBox {
-	width: 500px; height:700px;
+	width: 500px; height:720px;
 	float:left;
 	margin-top:30px;
 
@@ -86,9 +86,9 @@ overflow-x:hidden; overflow-y:auto;}
 
 .inputBox {height:50px; margin:5px 0 5px;}
 #inputBox_id{ height:75px;}
-#inputBox_idCheck, #inputBox_pwCheck {width:430px; height:25px; line-height:25px; display:block; text-align:left; font-size:11px; color:red;}
+#inputBox_idCheck, #inputBox_pwCheck {width:430px; height:25px; line-height:25px; font-weight:inherit; display:block; text-align:left; font-size:11px; color:red;}
 
-strong{ font-weight:inherit;}
+
 #inputBox_pw {width:430px; height:115px; }
 #inputBox_pwBox {width:430px; height:40px; text-align:left; }
 #inputBox_pwCheckBox {width:430px; height: 75px; text-align:left;}
