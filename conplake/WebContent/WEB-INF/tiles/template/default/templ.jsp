@@ -29,7 +29,7 @@ html, body{ width:100%; height:100%; position:relative; }
 
 h1 {font:20px Arial, Helvetica, sans-serif; font-weight:600; color:#999; padding-bottom:35px; }
 
-.ul_concert {width:880px; height:100%;}
+.ul_concert { height:100%;}
 .ul_concert li {
     -moz-border-bottom-colors: none;
     -moz-border-left-colors: none;
@@ -45,6 +45,7 @@ h1 {font:20px Arial, Helvetica, sans-serif; font-weight:600; color:#999; padding
     position: relative;
     width: 198px;
 }
+.ul_concert li strong{display:block; float:left;}
 
 .concert_title{
     color: #333;
