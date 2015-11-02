@@ -23,7 +23,7 @@ body{ padding-bottom:100px; background:#eee;}
 .card { background-color:#f7f7f7;
 	border-radius:2px; 
 	width:1000px; 
-	height:700px; 
+	height:800px; 
 	box-shadow:0 2px 2px rgba(0, 0, 0, 0.3); 
 	margin: 0 auto;
 	position:relative;
@@ -39,7 +39,7 @@ body{ padding-bottom:100px; background:#eee;}
 
 
 .formBox {
-	width: 500px; height:620px;
+	width: 500px; height:700px;
 	float:left;
 	margin-top:30px;
 
@@ -78,13 +78,17 @@ overflow-x:hidden; overflow-y:auto;}
     width:200px;
 	height: 36px;
     padding: 0 8px;
-	margin-bottom:15px;
+	
 	}
 
     
 
 
-.inputBox {margin:5px 0 5px;}
+.inputBox {height:50px; margin:5px 0 5px;}
+#inputBox_id{ height:75px;}
+#inputBox_idCheck {width:430px; height:12px; display:block; text-align:left; font-size:11px; color:red;}
+#inputBox_pw {width:430px; height:95px; }
+#inputBox_pw span {width:430px; height:40px; text-align:left; }
 
 #inputBox_gender {margin-bottom:15px;}
 
@@ -100,7 +104,8 @@ overflow-x:hidden; overflow-y:auto;}
 .input_category { background: url(resources/img/arrow_down.png) no-repeat 120px center; /* 네이티브 화살표 대체 */  }
 #email_address, #email_select {width:145px;}
 
-#btnPost {width:100px; height:36px; float:none; margin-left:10px; background:#ddd; color:#666; border:none; font-size:12px;} 
+
+#btnPost, #btnId {width:100px; height:36px; float:none; margin-left:10px; background:#ddd; color:#666; border:none; font-size:12px;} 
 .input_postCode {width:100px;}
 
 .input_address {width:195px;}
