@@ -176,7 +176,8 @@ public class LoginModel {
 			}
 			
 			session.setAttribute("mvo", memInfo);
-			return "concert.main";
+//			return "concert.main";
+			return "redirect:main";
 		}
 		
 	}

@@ -10,4 +10,10 @@
   <select id="checkConcert" parameterType="int" resultType="String">
   	select con_name from concert where con_num=#{con_num}
   </select>
+  <select id="concertList" resultType="cvo">
+  	select con_num, con_poster, con_name, con_startdate, con_enddate, con_venue from concert
+  </select>
+  <select id="concertInfo" parameterType="int" resultType="cvo">
+  	select * from concert where con_num=#{con_num}
+  </select>
   </mapper>
