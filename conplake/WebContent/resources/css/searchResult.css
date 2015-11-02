@@ -16,7 +16,9 @@
     width: 860px;
 }
 
-#search_info {width:725px; height:100px; float:left; background:url(../img/arrow_right.png) no-repeat right center; }
+li#list_search a {width:872px; height:100px;}
+
+#search_info {width:760px; height:100px; float:left; background:url(../img/arrow_right.png) no-repeat 725px center; }
 
 
 .concert_title{
@@ -40,3 +42,4 @@
 }
 
 .concert_place {padding-bottom:10px;}
+
