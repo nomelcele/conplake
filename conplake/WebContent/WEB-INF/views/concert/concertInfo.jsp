@@ -26,6 +26,7 @@
                   <li><a class="tab" id="tab1" href="#">공연 소개</a></li>
                   <li><a class="tab" id="tab2" href="#">세트리스트</a></li>
                   <li><a class="tab" id="tab3" href="#">공연 후기</a></li>
+                  <li><a class="tab" id="tab4" href="#">타임라인</a></li>
                 </ul>
             </div>
             
@@ -157,6 +158,11 @@
                     </span>
                 <input id="write_review" class="innerButton button" type="button" value="후기 작성"/></p>
             </div>
+            
+            <div class="contentView" id="concertTimeLine">
+            	<!-- 타임라인 -->
+            </div>
+            
             
             <footer></footer>
     
