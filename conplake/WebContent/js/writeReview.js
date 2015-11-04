@@ -1,6 +1,6 @@
-$( document ).ready(function() {
-	 $("#formBoxRight").height($("#formBoxLeft").height()) ;
-});
+//$( document ).ready(function() {
+//	 $("#formBoxRight").height($("#formBoxLeft").height()) ;
+//});
 
 function ImageButton1_OnClientClick(objImageButton)
         {
@@ -48,10 +48,9 @@ function ImageButton1_OnClientClick(objImageButton)
 	        		// createObjectURL()을 사용해야 한다.
 	        			
 	        		
-	        		var place = document.getElementById('inputReviewContent');
+	        		//위에저거랑 비슷한거같은데 이러케써도되나 - 유라
+	        		var place = document.getElementById('reviewContent');
 	        		var newImage= document.createElement("img");
-	        		
-	        		
 	        		
 	        		
 	        		place.appendChild(newImage);

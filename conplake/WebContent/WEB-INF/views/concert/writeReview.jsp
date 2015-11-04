@@ -3,6 +3,8 @@
 <h1>WRITE REVIEW</h1>
 	<div class="formBox" id="formBoxLeft">
   		
+  		<p class="rinputBox"><label class="inputLabel">글 제목</label><input class="rInputStyle" id="reviewTitle" type="text" autofocus spellcheck="false" value="" placeholder="리뷰 제목을 입력하세요." name="post_title"></p>
+            
   		
         <p class="rinputBox"><label class="inputLabel">공연명</label><input class="rInputStyle" id="id" type="text" maxlength="30" autofocus spellcheck="false" value="그랜드 민트 페스티벌" readonly></p>
           
@@ -93,13 +95,11 @@
 
 
 	<div class="formBox" id="formBoxRight">
-        	<p class="p_write">리뷰 제목</p>
-        	<p class="rinputBox"><input class="rInputStyle" id="reviewTitle" type="text" autofocus spellcheck="false" value="" placeholder="리뷰 제목을 입력하세요." name="post_title"></p>
-            
+        	
             <p class="p_write">공연장 시야 및 음향</p>
     		<div id="profile_txt">
                 <div id="hiddenScroll"></div>
-            	<div class="reviewArea" id="inputReviewContent" contentEditable="true" ></div>
+            	<div class="reviewArea" id="reviewContent" contentEditable="true" ></div>
                 <div id="fileBox"><input type="file" id="imgFile"/></div>
                 
             </div>
@@ -107,7 +107,7 @@
             <p class="p_write">공연장 시설</p>
     		<div id="profile_txt">
                 <div id="hiddenScroll"></div>
-            	<div class="reviewArea" id="inputReviewContent" contentEditable="true" ></div>
+            	<div class="reviewArea" id="reviewContent" contentEditable="true" ></div>
                 <div id="fileBox"><input type="file" id="imgFile"/></div>
                 
             </div>
@@ -115,7 +115,7 @@
             <p class="p_write">공연 내용</p>
     		<div id="profile_txt">
                 <div id="hiddenScroll"></div>
-            	<div class="reviewArea" id="inputReviewContent" contentEditable="true" ></div>
+            	<div class="reviewArea" id="reviewContent" contentEditable="true" ></div>
                 <div id="fileBox"><input type="file" id="imgFile"/></div>
                 
             </div>
