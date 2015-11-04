@@ -33,4 +33,9 @@ public class ConcertModel {
 		return "search.searchResult";
 	}
 	
+	@RequestMapping(value="/writeReview")
+	public String writeReview(){
+		return "concert.writeReview";
+	}
+	
 }
