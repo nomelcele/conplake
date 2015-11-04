@@ -254,3 +254,9 @@ commit;
 -- concerthall 테이블 chall_tel 컬럼 데이터 길이 변경
 alter table concerthall modify(chall_tel varchar2(200));
 commit;
+
+-- 11/4
+-- post 테이블에 컬럼 추가
+-- 리뷰 작성 시, 공연의 관람일 저장
+alter table post add(post_concertdate date);
+commit;
