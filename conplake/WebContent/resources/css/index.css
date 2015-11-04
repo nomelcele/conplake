@@ -14,6 +14,7 @@ h1 {font:20px Arial, Helvetica, sans-serif; font-weight:600; color:#999; padding
 
 
 .ul_concert {width:900px; height:100%; display:block;}
+.ul_concert p{ white-space:nowrap; text-overflow:ellipsis; overflow:hidden;}
 .ul_concert li {
     -moz-border-bottom-colors: none;
     -moz-border-left-colors: none;
