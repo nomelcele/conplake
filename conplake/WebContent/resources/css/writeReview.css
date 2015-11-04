@@ -1,0 +1,99 @@
+@CHARSET "UTF-8";
+
+.formBox {
+	float:left;
+	overflow:auto;
+	width:400px;
+	overflow:auto;
+}
+#formBoxLeft { min-height:820px; width:375px; padding-right:25px; padding-top:30px; }
+#formBoxRight { min-height:850px; padding-left:25px; padding-right:25px; }
+
+
+	
+	
+.inputLabel {color:#333; font-size:12px; font-family: '나눔고딕', 'Nanum Gothic', sans-serif; height:36px; line-height:36px; float:left;}
+#formBoxLeft input {float:right; }
+
+	
+.rInputStyle { background: #fff none repeat scroll 0 0;
+	border-color: #c0c0c0 #d9d9d9 #d9d9d9;
+    border-image: none;
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+    box-sizing: border-box;
+    color: #999;
+    display: inline-block;
+    font-size: 12px;
+    width:330px;
+	height: 36px;
+    padding: 0 8px;
+	
+	}
+
+    
+
+
+.inputBox { width:100%; height:36px; margin:0 0 15px;}
+
+
+#table_setList{ table-layout:fixed;}
+
+#table_setList caption{ text-align:left; height:36px; line-height:36px; padding-top:30px;}
+
+#table_setList th, #table_setList td{ height:30px; }
+
+.tr_setList{ border-bottom:1px solid #eee;}
+.tr_setList p{ white-space:nowrap; text-overflow:ellipsis; overflow:hidden;}
+.tr_setList th{background:#eee; font-weight:normal; text-align:center; border-bottom:1px solid #ccc;}
+.tr_setList td{background:#FCFCFC;}
+
+.setListNum{ width:60px; max-width:60px; text-align:center;}
+.setListTitle{ width:270px; max-width:270px; text-align:left;}
+.setListLink{ width:70px; max-width:70px; text-align:center;}
+
+
+
+
+	
+#memberButtonBox {
+	width:875px;
+	height:100px; 
+	padding-top:35px;
+	}
+#memberButtonBox input {float:right; margin-bottom:50px; }
+	
+	
+.rButton { background: #666 none repeat scroll 0 0;
+	border:#666;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    box-sizing: border-box;
+    color: #fff;
+    display: inline-block;
+    font-size: 14px;
+    width:240px;
+	height: 50px;
+    padding: 0 8px;
+	float:right;
+	}
+
+.rButton:hover {
+	background-color:#464646;
+}
+	
+
+
+#profile_txt {position:relative;}
+#reviewTitle {width:400px;}
+
+
+.p_write {height:30px; line-height:30px; padding-left:3px;}
+#inputProfileTxt {width:378px; height:178px; background:#fff; font-size:12px; color:#333; border:1px solid #ddd; border-radius:3px; padding:10px; resize:none; overflow-x:hidden; overflow-y:auto;}
+
+#hiddenScroll {width:19px; height:170px; position:absolute; z-index:9999; background:#fff; top:1px; right:1px; border-top-right-radius:3px; }
+#fileBox{ width:398px; height:28px; background:#fff; border:1px solid #ddd; border-bottom-left-radius:3px; border-bottom-right-radius:3px; position:absolute; bottom:20px; z-index:9998; }
+
+#fileBox [type="file"] {width:30px; height:30px; float:right; text-indent:-9999px; overflow:hidden; background:url(../img/attach.png) center center no-repeat; background-size:60%;}
