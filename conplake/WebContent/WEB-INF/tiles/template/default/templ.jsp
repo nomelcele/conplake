@@ -8,6 +8,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>CONPLAKE</title>
+<link href="resources/css/writeReview.css" rel="stylesheet" type="text/css"/>
 <link href="resources/css/common.css" rel="stylesheet" type="text/css"/>
 <link href="resources/css/header.css" rel="stylesheet" type="text/css"/>
 <link href="resources/css/sideBox.css" rel="stylesheet" type="text/css"/>
@@ -23,6 +24,8 @@
 <script src="js/edit_setList.js"></script>
 <script src="js/searchResult.js"></script>
 <script src="js/concert.js"></script>
+<script src="js/writeReview.js"></script>
+
 <style>
 html, body{ width:100%; height:100%; position:relative; }
 .contentWrap{ width:1200px; height:100%; background:#fff;}
