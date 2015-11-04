@@ -27,4 +27,10 @@ public class ConcertModel {
 		return "concert.concertInfo";
 	}
 	
+	@RequestMapping(value="/concertSearch")
+	public String concertSearch(ConcertVO cvo, Model model){
+		model.addAttribute("conResult", cdao.concertSearch(cvo));
+		return "search.searchResult";
+	}
+	
 }

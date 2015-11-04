@@ -73,6 +73,7 @@ h1 {font:20px Arial, Helvetica, sans-serif; font-weight:600; color:#999; padding
 </style>
 </head>
 <body>
+	<c:if test="${!empty sessionScope.mvo.mem_name}">
 	<tiles:insertAttribute flush="true" name="header" />
 	<div class="contentWrap">
 		<div class="sideBoxWrap">
@@ -86,5 +87,9 @@ h1 {font:20px Arial, Helvetica, sans-serif; font-weight:600; color:#999; padding
 			</div>
 		</div>	
 	</div>
+	</c:if>
+	<c:if test="${empty sessionScope.mvo.mem_name}">
+		<h1>Unauthorized Access</h1>
+	</c:if>
 </body>
 </html>
