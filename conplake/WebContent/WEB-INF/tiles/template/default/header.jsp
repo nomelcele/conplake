@@ -12,6 +12,6 @@
         </ul>
     </div>
     <div class="gnb">
-    	<a id="logo" href="#"><img id="imgLogo" src="resources/img/logo_main.png" alt="CONPLAKE" /></a>
+    	<a id="logo" href="main"><img id="imgLogo" src="resources/img/logo_main.png" alt="CONPLAKE" /></a>
     </div>
 </header>
