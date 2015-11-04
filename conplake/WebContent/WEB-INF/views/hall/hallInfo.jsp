@@ -74,7 +74,7 @@
             </div>
             
             <div class="contentView" id="seatReview">
-            	<p id="p_searchReview">
+            	<p id="p_searchSeatReview">
                 	<select class="inputStyle input_seatFloor" >
                         <option selected>1층</option>
                         <option>2층</option>

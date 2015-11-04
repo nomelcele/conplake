@@ -60,11 +60,9 @@ div#seatReview {width:900px; height:500px;}
 
 .input_seatStanding{ margin-left:10px;}
 
-#p_searchReview {height:45px; }
-#p_searchReview select, #p_searchReview input{float:left;}
-#p_searchReview select {height:28px;}
-.input_searchReview { width:200px; height:24px; padding-left:5px; margin-left:10px;}
-#btn_searchReview a{ width:24px; height:24px; display:block; background:url(../img/search.png) no-repeat center center; margin-left:5px; float:right;}
+#p_searchSeatReview {height:45px; }
+#p_searchSeatReview select, #p_searchSeatReview input{float:left;}
+#p_searchSeatReview select {height:28px;}
 
 
 .ul_seatReview {width:900px; height:380px; display:block;}

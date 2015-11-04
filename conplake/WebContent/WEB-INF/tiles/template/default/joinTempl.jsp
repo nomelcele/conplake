@@ -86,12 +86,14 @@ overflow-x:hidden; overflow-y:auto;}
 
 .inputBox {height:50px; margin:5px 0 5px;}
 #inputBox_id{ height:75px;}
-#inputBox_idCheck, #inputBox_pwCheck {width:430px; height:25px; line-height:25px; font-weight:inherit; text-align:left; font-size:11px; color:red; display:none;} //숨기기 display:none; 보이기 display:block;
+#inputBox_pw{ height:115px;}
+
+#inputBox_idCheck, #inputBox_pwCheck {width:430px; height:25px; line-height:25px; font-weight:inherit; text-align:left; font-size:11px; color:red; display:block;} //숨기기 display:none; 보이기 display:block;
 
 
-#inputBox_pw {width:430px; height:115px; }
-#inputBox_pwBox {width:430px; height:40px; text-align:left; }
-#inputBox_pwCheckBox {width:430px; height: 75px; text-align:left;}
+#inputBox_pw {width:300px; height:115px; display:block; clear:both;}
+#inputBox_pwBox {width:300px; height:40px; text-align:left;}
+#inputBox_pwCheckBox {width:300px; height:75px; text-align:left; }
 
 
 #inputBox_gender {margin-bottom:15px;}
