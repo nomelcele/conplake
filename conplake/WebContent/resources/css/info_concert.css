@@ -62,7 +62,7 @@ h3.concert_subTitle {width:900px; height:30px; line-height:30px; font-size:16px;
 }
 
 #p_searchReview {height:40px; }
-#p_searchReview select, #p_searchReview input{float:right;}
+#p_searchReview select, #p_searchReview input, #p_searchReview span{float:right;}
 #p_searchReview select {height:28px;}
 .input_searchReview { width:200px; height:24px; padding-left:5px; margin-left:10px;}
 #btn_searchReview a{ width:24px; height:24px; display:block; background:url(../img/search.png) no-repeat center center; margin-left:5px; float:right;}

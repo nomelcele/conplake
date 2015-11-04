@@ -38,7 +38,8 @@
 	        <p class="inputLabel"><label>비밀번호</label></p>
 	        <p class="inputBox" id="inputBox_pw">
 	        	<span id="inputBox_pwBox">
-	        	<input class="inputStyle" id="passwd" type="password" placeholder="비밀번호" name="mem_pwd"></span>
+	        		<input class="inputStyle" id="passwd" type="password" placeholder="비밀번호" name="mem_pwd">
+	        		</span>
 	        	<span id="inputBox_pwCheckBox">
 	        		<input class="inputStyle" id="passwd" type="password" placeholder="비밀번호 재입력" name="">
 	        		<strong id="inputBox_pwCheck">비밀번호가 일치하지 않습니다.</strong>	
