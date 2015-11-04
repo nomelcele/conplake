@@ -99,28 +99,25 @@
             <p class="p_write">공연장 시야 및 음향</p>
     		<div id="profile_txt">
                 <div id="hiddenScroll"></div>
-            	<div class="reviewArea" id="inputProfileTxt" contentEditable="true" ></div>
+            	<div class="reviewArea" id="inputReviewContent" contentEditable="true" ></div>
                 <div id="fileBox"><input type="file" id="imgFile"/></div>
-                <img id="imgView">
-                <img id="imgView2">
+                
             </div>
     		
             <p class="p_write">공연장 시설</p>
     		<div id="profile_txt">
                 <div id="hiddenScroll"></div>
-            	<div class="reviewArea" id="inputProfileTxt" contentEditable="true" ></div>
+            	<div class="reviewArea" id="inputReviewContent" contentEditable="true" ></div>
                 <div id="fileBox"><input type="file" id="imgFile"/></div>
-                <img id="imgView">
-                <img id="imgView2">
+                
             </div>
             
             <p class="p_write">공연 내용</p>
     		<div id="profile_txt">
                 <div id="hiddenScroll"></div>
-            	<div class="reviewArea" id="inputProfileTxt" contentEditable="true" ></div>
+            	<div class="reviewArea" id="inputReviewContent" contentEditable="true" ></div>
                 <div id="fileBox"><input type="file" id="imgFile"/></div>
-                <img id="imgView">
-                <img id="imgView2">
+                
             </div>
     </div>
     

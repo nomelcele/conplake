@@ -46,10 +46,18 @@ function ImageButton1_OnClientClick(objImageButton)
 	        		console.log("blobURL::::", blobURL);
 	        		// 윈도우 자체에서 파일을 불러오는 경로값을 표현하려면
 	        		// createObjectURL()을 사용해야 한다.
-	        							
-	
-	        		$('#imgView').attr('src', blobURL).css(
-	        				'height', '200');
+	        			
+	        		
+	        		var place = document.getElementById('inputReviewContent');
+	        		var newImage= document.createElement("img");
+	        		
+	        		
+	        		
+	        		
+	        		place.appendChild(newImage);
+	        		
+	        		$(newImage).attr('src', blobURL).css(
+	        				'height', '100');
 	        		// attr() src 속성에  blobURL을 넣는다.
         			}
         	});
