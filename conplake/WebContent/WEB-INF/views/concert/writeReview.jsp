@@ -15,10 +15,41 @@
         <p class="rinputBox"><label class="inputLabel">관람일</label><input class="rInputStyle" id="passwd" type="date" max="2015-11-08" min="2015-11-04" name="post_concertdate"></p>
         
       
-        <p class="rinputBox"><label class="inputLabel">좌석</label><input class="rInputStyle" id="email_address" type="text"  name="mem_mail"></p>
+        <p class="rinputBox" id="rinputBox_last"><label class="inputLabel">좌석</label><input class="rInputStyle" id="email_address" type="text"  name="mem_mail"></p>
         
         
- 		<Table id="table_RsetList">
+ 		
+      
+  </div>
+
+
+	<div class="formBox" id="formBoxRight">
+        	
+            <p class="p_write">공연장 시야 및 음향</p>
+    		<div id="profile_txt">
+                <div id="hiddenScroll"></div>
+            	<div class="reviewArea" id="reviewContent" contentEditable="true" ></div>
+                <div id="fileBox"><input type="file" id="imgFile"/></div>
+                
+            </div>
+    		
+            <p class="p_write">공연장 시설</p>
+    		<div id="profile_txt">
+                <div id="hiddenScroll"></div>
+            	<div class="reviewArea" id="reviewContent" contentEditable="true" ></div>
+                <div id="fileBox"><input type="file" id="imgFile"/></div>
+                
+            </div>
+            
+            <p class="p_write">공연 내용</p>
+    		<div id="profile_txt">
+                <div id="hiddenScroll"></div>
+            	<div class="reviewArea" id="reviewContent" contentEditable="true" ></div>
+                <div id="fileBox"><input type="file" id="imgFile"/></div>
+                
+            </div>
+            
+            <Table id="table_RsetList">
         	<caption>세트리스트</caption>
             <tbody>
             <tr class="tr_RsetList">
@@ -74,51 +105,15 @@
                 <td class="rsetListNum"><p>2</p></td>
                 <td class="rsetListTitle"><p>sadfdasfdasfasfdasdfasdfasdf</p></td>
                 <td class="rsetListLink"><p></p></td>
-            </tr><tr class="tr_RsetList">
-                <td class="rsetListNum"><p>1</p></td>
-                <td class="rsetListTitle"><p>asdfasdfasdfasfasfsafsafsadf겁바ㅏ나나나나나나나ㄻㅇㄴㅁㄴㅇㄻㄴㅇㄻㄴ</p></td>
-                <td class="rsetListLink"><p></p></td>
             </tr>
-            <tr class="tr_RsetList">
-                <td class="rsetListNum"><p>2</p></td>
-                <td class="rsetListTitle"><p>sadfdasfdasfasfdasdfasdfasdf</p></td>
-                <td class="rsetListLink"><p></p></td>
-            </tr>
+            
             
             
             
             </tbody>
           
         </Table>
-      
-  </div>
-
-
-	<div class="formBox" id="formBoxRight">
-        	
-            <p class="p_write">공연장 시야 및 음향</p>
-    		<div id="profile_txt">
-                <div id="hiddenScroll"></div>
-            	<div class="reviewArea" id="reviewContent" contentEditable="true" ></div>
-                <div id="fileBox"><input type="file" id="imgFile"/></div>
-                
-            </div>
-    		
-            <p class="p_write">공연장 시설</p>
-    		<div id="profile_txt">
-                <div id="hiddenScroll"></div>
-            	<div class="reviewArea" id="reviewContent" contentEditable="true" ></div>
-                <div id="fileBox"><input type="file" id="imgFile"/></div>
-                
-            </div>
             
-            <p class="p_write">공연 내용</p>
-    		<div id="profile_txt">
-                <div id="hiddenScroll"></div>
-            	<div class="reviewArea" id="reviewContent" contentEditable="true" ></div>
-                <div id="fileBox"><input type="file" id="imgFile"/></div>
-                
-            </div>
     </div>
     
     
