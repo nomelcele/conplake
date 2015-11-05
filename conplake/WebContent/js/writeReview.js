@@ -1,6 +1,6 @@
-//$( document ).ready(function() {
-//	 $("#formBoxRight").height($("#formBoxLeft").height()) ;
-//});
+$( document ).ready(function() {
+	 $("#formBoxRight").height($("#formBoxLeft").height()) ;
+});
 
 function ImageButton1_OnClientClick(objImageButton)
         {
