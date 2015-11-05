@@ -58,11 +58,11 @@
 
 
 
-.p_write {height:30px; line-height:30px; padding-left:3px; padding-top:25px;}
-#reviewContent {width:878px; height:178px; background:#fff; font-size:12px; color:#333; border:1px solid #ddd; border-radius:3px; padding:10px; resize:none; overflow-x:hidden; overflow-y:auto;}
+.p_write {height:30px; line-height:30px; padding-left:3px; padding-top:45px;}
+#reviewContent {width:878px; height:148px; background:#fff; font-size:12px; color:#333; border:1px solid #ddd; border-top-left-radius:3px; border-top-right-radius:3px;  padding:10px; resize:none; overflow-x:hidden; overflow-y:auto;}
 
-#hiddenScroll {width:19px; height:169px; position:absolute; z-index:998; background:#fff; top:1px; right:1px; border-top-right-radius:3px; }
-#fileBox{ width:898px; height:28px; background:#fff; border:1px solid #ddd; border-bottom-left-radius:3px; border-bottom-right-radius:3px; position:absolute; bottom:0; z-index:997; }
+#hiddenScroll {width:19px; height:168px; position:absolute; z-index:998; background:#fff; top:1px; right:1px; border-top-right-radius:3px; }
+#fileBox{ width:898px; height:28px; background:#fff; border:1px solid #ddd; border-bottom-left-radius:3px; border-bottom-right-radius:3px; position:absolute; bottom:-29px; z-index:997; }
 
 #fileBox [type="file"] {width:30px; height:30px; float:right; text-indent:-998px; overflow:hidden; background:url(../img/attach.png) center center no-repeat; background-size:60%;}
 
