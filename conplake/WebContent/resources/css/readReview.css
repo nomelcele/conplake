@@ -1,0 +1,26 @@
+@CHARSET "UTF-8";
+
+
+#table_readReview {width:900px;}
+#table_readReview th {text-align:left; padding-left:10px; font-weight:normal;}
+#table_readReview tr { border-bottom:1px solid #ccc;}
+
+#th_titleReadReview{ height:30px; background:#f3f3f3; border-top:1px solid #ccc; border-bottom:1px solid #ccc;}
+#th_infoReadReview{ height:25px;}
+#th_infoReadReview span{ color:#999;}
+#th_infoReadReview span a{ color:#999;}
+#th_infoReadReview span a:hover{ text-decoration:underline;}
+#th_concertInfoReadReview { height:80px; padding:10px;}
+#th_concertInfoReadReview p { line-height:20px;}
+
+#tr_titleReadReview{ }
+#tr_infoReadReview{ }
+#tr_infoReadReview ul li{ float:right; padding-right:10px;}
+#tr_infoReadReview ul li:first-child{ padding-right:0;}
+#tr_infoReadReview ul li:after{ content:"|"; padding-left:10px; color:#ccc;}
+#tr_infoReadReview ul li:first-child:after{ content:"";}
+
+
+.tr_readReview {height:300px; min-height:300px;}
+.td_readReview {width:109px;  min-height:300px; padding-left:10px; border-right:1px solid #eee;}
+.td2_readReview {width:640px;  min-height:280px; padding:10px 20px; vertical-align:text-top; }
