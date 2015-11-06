@@ -3,8 +3,15 @@ package or.conplake.vo;
 public class ConcertVO {
 	private int con_num, con_venue, con_artist;
 	private String con_name, con_poster, con_startdate, con_enddate,
-	con_link, con_detailimg, con_price, con_tel;
+	con_link, con_detailimg, con_price, con_tel,
+	venuename;
 	
+	public String getVenuename() {
+		return venuename;
+	}
+	public void setVenuename(String venuename) {
+		this.venuename = venuename;
+	}
 	public int getCon_num() {
 		return con_num;
 	}

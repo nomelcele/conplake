@@ -9,25 +9,21 @@
 <body>
 
 <h1>HALL INFORMATION</h1>
-        	<h2 id="concertTitle">쏜애플(THORNAPPLE) 콘서트 ‘한낮’
-            	<div id="innerButtonBox">
-                    <input id="GoTogether" class="innerButton button" type="button" value="함께가요" onclick=""/>
-                    <input id="likeToGo" class="innerButton button" type="button" value="갈거예요" onclick=""/>
-                </div>
-            </h2>
+        	<h2 id="concertTitle">${challInfo.chall_name}</h2>
+<!--             	<div id="innerButtonBox"> -->
+<!--                     <input id="GoTogether" class="innerButton button" type="button" value="함께가요" onclick=""/> -->
+<!--                     <input id="likeToGo" class="innerButton button" type="button" value="갈거예요" onclick=""/> -->
+<!--                 </div> -->
             
             <div id="concertProfileBox">
             	<div id="concertPoster">
-                	<img src="../img/apple.png" width="225" height="300" />
+                	<img src="${challInfo.chall_img}" width="225" height="300" />
                 </div>
                 <div id="concertProfile">
                 	<hgroup>
-                    <h4>장르 : 발라드</h4>
-                    <h4>일시 : 2014/12/24 ~ 2014/12/25</h4>
-                    <h4>장소 : <span><a href="#">서울 잠실 학생체육관</a></span></h4>
-                    <h4>출연 : <span><a href="#">쏜애플</a></span></h4>
-                    <h4>관란등급 : 만 7세 이상</h4>
-                    <h4>관람시간 : 120분</h4>
+                    <h4>주소 : ${challInfo.chall_addr}</h4>
+                    <h4>문의 : ${challInfo.chall_tel}</h4>
+                    <h4>공식 사이트 : <span><a href="${challInfo.chall_official}">${challInfo.chall_official}</a></span></h4>
                     </hgroup>
                 </div>
             </div>
@@ -43,7 +39,8 @@
             </div>
             
             <div class="contentView" id="hallIntro">
-            	<img src="../img/apple_intro.png" width="900">
+            ${challInfo.chall_intro}
+<!--             	<img src="../img/apple_intro.png" width="900"> -->
             </div>
             
             <div class="contentView" id="hallMap">
@@ -70,7 +67,7 @@
             </div>
             
             <div class="contentView" id="hallSeat">
-            	<img src="../img/seat1.png" />
+            	<img src="${challInfo.chall_seatsimg}" />
             </div>
             
             <div class="contentView" id="seatReview">

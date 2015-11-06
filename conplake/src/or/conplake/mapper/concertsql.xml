@@ -4,24 +4,27 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
   <mapper namespace="con">
   <insert id="addConcert" parameterType="cvo">
-	insert into concert values(#{con_num},#{con_name},#{con_poster},#{con_startdate},#{con_enddate},null,
+	insert into concert values(#{con_num},#{con_name},#{con_poster},#{con_startdate},#{con_enddate},#{con_venue},
 	null,#{con_link},#{con_price},#{con_tel},#{con_detailimg})
   </insert>
   <select id="checkConcert" parameterType="int" resultType="String">
   	select con_name from concert where con_num=#{con_num}
   </select>
   <select id="concertList" resultType="cvo">
-  	select con_num, con_poster, con_name, to_char(con_startdate,'yyyy-mm-dd') con_startdate, 
-  	to_char(con_enddate,'yyyy-mm-dd') con_enddate, con_venue from concert 
+  	select c.con_num, c.con_poster, c.con_name, to_char(c.con_startdate, 'yyyy-mm-dd') con_startdate, 
+  	to_char(c.con_enddate, 'yyyy-mm-dd') con_enddate, c.con_venue, ch.chall_name venuename 
+  	from concert c, concerthall ch where c.con_venue = ch.chall_num and c.con_enddate >= sysdate
+  	order by c.con_enddate asc
   </select>
   <select id="concertInfo" parameterType="int" resultType="cvo">
-  	select con_num, con_name, con_poster, to_char(con_startdate,'yyyy-mm-dd') con_startdate, 
-  	to_char(con_enddate,'yyyy-mm-dd') con_enddate, con_venue, con_artist, con_link,
-  	con_price, con_tel, con_detailimg from concert where con_num=#{con_num}
+  	select c.con_num, c.con_name, c.con_poster, to_char(c.con_startdate,'yyyy-mm-dd') con_startdate, 
+  	to_char(c.con_enddate,'yyyy-mm-dd') con_enddate, c.con_venue, ch.chall_name venuename, con_artist, con_link,
+  	con_price, con_tel, con_detailimg from concert c, concerthall ch where con_num=#{con_num} and c.con_venue = ch.chall_num
   </select>
   <select id="concertSearch" parameterType="cvo" resultType="cvo">
-  	select con_num, con_poster, con_name, to_char(con_startdate,'yyyy-mm-dd') con_startdate, 
-  	to_char(con_enddate,'yyyy-mm-dd') con_enddate, con_venue 
-  	from concert where con_name like '%'||#{con_name}||'%'
+  	select c.con_num, c.con_poster, c.con_name, to_char(c.con_startdate,'yyyy-mm-dd') con_startdate, 
+  	to_char(c.con_enddate,'yyyy-mm-dd') con_enddate, c.con_venue, ch.chall_name venuename 
+  	from concert c, concerthall ch where con_name like '%'||#{con_name}||'%' and c.con_venue = ch.chall_num 
+  	order by c.con_name
   </select>
   </mapper>

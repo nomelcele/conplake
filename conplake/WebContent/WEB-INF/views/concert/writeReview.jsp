@@ -36,13 +36,13 @@
 	<div class="formBox" id="formBoxLeft">
   		
   		
-        <p class="rinputBox"><label class="inputLabel">공연명</label><input class="rInputStyle" id="id" type="text" maxlength="30" autofocus spellcheck="false" value="그랜드 민트 페스티벌" readonly></p>
+        <p class="rinputBox"><label class="inputLabel">공연명</label><input class="rInputStyle" id="id" type="text" maxlength="30" autofocus spellcheck="false" value="${conWriteInfo.con_name}" readonly></p>
           
         
-        <p class="rinputBox"><label class="inputLabel">공연 장소</label><input class="rInputStyle" id="passwd" type="text" value="올림픽공원" readonly></p>
+        <p class="rinputBox"><label class="inputLabel">공연 장소</label><input class="rInputStyle" id="passwd" type="text" value="${conWriteInfo.venuename}" readonly></p>
         
         
-        <p class="rinputBox"><label class="inputLabel">관람일</label><input class="rInputStyle" id="passwd" type="date" max="2015-11-08" min="2015-11-04" name="post_concertdate"></p>
+        <p class="rinputBox"><label class="inputLabel">관람일</label><input class="rInputStyle" id="passwd" type="date" max="${conWriteInfo.con_enddate}" min="${conWriteInfo.con_startdate}" name="post_concertdate"></p>
         
       
         <p class="rinputBox"><label class="inputLabel">좌석</label><input class="rInputStyle" id="email_address" type="text"  name="mem_mail"></p>

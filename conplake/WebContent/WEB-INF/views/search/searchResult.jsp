@@ -4,17 +4,33 @@
     <h1>RESULTS</h1>
         
             <ul class="ul_search">
-            	<c:forEach var="conResult" items="#{conResult}">
-	            	<li id="list_search">
-	                    <a href="javascript:concertInfo(${conResult.con_num})"><img width="100" height="100" alt="콘서트이미지1" src="${conResult.con_poster}"	style="float:left">
-	                       	<div id="search_info">
-	                            <p class="concert_title">${conResult.con_name}</p>
-	                            <p class="concert_date">${conResult.con_startdate} ~ ${conResult.con_enddate}</p>
-	                            <p class="concert_place">${conResult.con_venue}</p>
-	                        </div></a>
-	                </li>
-            	</c:forEach>
-            	
+            <c:choose>
+            	<c:when test="${resultType eq 'concert'}">
+	            	<c:forEach var="conResult" items="#{conResult}">
+		            	<li id="list_search">
+		                    <a href="concertInfo?con_num=${conResult.con_num}"><img width="100" height="100" alt="콘서트이미지1" src="${conResult.con_poster}"	style="float:left">
+		                       	<div id="search_info">
+		                            <p class="concert_title">${conResult.con_name}</p>
+		                            <p class="concert_date">${conResult.con_startdate} ~ ${conResult.con_enddate}</p>
+		                            <p class="concert_place">${conResult.venuename}</p>
+		                        </div></a>
+		                </li>
+	            	</c:forEach>
+            	</c:when>
+            	<c:when test="${resultType eq 'concerthall'}">
+            		<c:forEach var="challResult" items="#{challResult}">
+		            	<li id="list_search">
+		                    <a href="concerthallInfo?chall_num=${challResult.chall_num}"><img width="100" height="100" alt="콘서트이미지1" src="${challResult.chall_img}"	style="float:left">
+		                       	<div id="search_info">
+		                            <p class="concert_title">${challResult.chall_name}</p>
+		                            <p class="concert_date">${challResult.chall_addr}</p>
+		                        </div></a>
+		                </li>
+	            	</c:forEach>
+            	</c:when>
+            	<c:otherwise>
+            	</c:otherwise>
+            </c:choose>	
                 
                 
                 

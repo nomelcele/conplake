@@ -6,8 +6,13 @@ $(document).ready( function () {
 		switch(searchOption){
 			case 'artist':
 			case 'concert':
+				$("#searchKeyword").attr("name","con_name");
 				$("#searchForm").attr("action","concertSearch").submit();
+				break;
 			case 'concerthall':
+				$("#searchKeyword").attr("name","chall_name");
+				$("#searchForm").attr("action","concerthallSearch").submit();
+				break;
 		}
 	});
 });

@@ -1,0 +1,28 @@
+package or.conplake.mvc.model;
+
+import or.conplake.mvc.dao.ConcerthallDao;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class ConcerthallModel {
+	@Autowired
+	private ConcerthallDao chdao;
+	
+	@RequestMapping(value="/concerthallSearch")
+	public String concerthallSearch(String chall_name, Model model){
+		model.addAttribute("challResult", chdao.concerthallSearch(chall_name));
+		model.addAttribute("resultType", "concerthall");
+		return "search.searchResult";
+	}
+	
+	@RequestMapping(value="/concerthallInfo")
+	public String concerthallInfo(int chall_num, Model model){
+		model.addAttribute("challInfo", chdao.concerthallInfo(chall_num));
+		return "hall.hallInfo";
+	}
+	
+}

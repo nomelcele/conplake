@@ -12,15 +12,13 @@
             	<div id="concertPoster">
                 	<img src="${conInfo.con_poster}" width="225" height="300" />
                 </div>
-                <div id="concertProfile">
-                	
+                <div id="concertProfile">   	
                     <p>일시 : <span>${conInfo.con_startdate} ~ ${conInfo.con_enddate}</span></p>
-                    <p>장소 : <span><a href="#">${conInfo.con_venue}</a></span></p>
+                    <p>장소 : <span><a href="concerthallInfo?chall_num=${conInfo.con_venue}">${conInfo.venuename}</a></span></p>
                     <p>출연 : <span><a href="#">${conInfo.con_artist}</a></span></p>
-                    <p>관람료 : <span>53152135435</span></p>
-                    <p>문의 : <span>asdfasdfasdffdsfadsfasdsfadsfasdsfadsfasdsfadsfasdsfadsfasdsfadsfasdsfadsfasdsfadsfasdsfadsfasdsfadsfasdsfadsfasdsfadsfasdsfadsfasdsfadsfasdsfadsfasdsfadsfasa</span></p>
-                    <p>공식사이트 : <span>adsfadsfasdsfadsfasdsfadsfasdsfadsfasdsfadsfasdsfadsfasdsfadsfasdsfadsfasdsfadsfasdsfadsfasdsfadsfasdsfadsfasdsfadsfasdsfadsfasdsfadsfasdsfadsfasdsfadsfasdsfadsfasdsfadsfasdsfadsfasdsfadsfasdsfadsfasdsfadsfasdsfadsfasdsfadsfasdsfadsfasdsfadsfasdsfadsfasdsfadsfasdsfadsfasfd</span></p>
-                    
+                    <p>관람료 : <span>${conInfo.con_price}</span></p>
+                    <p>문의 : <span>${conInfo.con_tel}</span></p>
+                    <p>공식 사이트 : <span><a href="${conInfo.con_link}">${conInfo.con_link}</a></span></p>
                 </div>
             </div>
             
@@ -159,8 +157,10 @@
                         <a href="#">9</a>
                         <a href="#" class="page" id="page_next">></a>
                     </span>
-                <input id="write_review" class="innerButton button" type="button" value="후기 작성" onclick="location='writeReview'"/></p>
+                <input id="write_review" class="innerButton button" type="button" value="후기 작성" onclick="location='writeReview?con_num=${conInfo.con_num}'"/></p>
             </div>
+            
+            
             
             <div class="contentView" id="concertTimeLine">
             	<!-- 타임라인 -->

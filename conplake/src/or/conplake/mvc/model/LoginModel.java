@@ -76,9 +76,13 @@ public class LoginModel {
 				String from = new SimpleDateFormat("yyyyMMdd").format(fromDate);
 								
 				try {
-					URL conUrl = new URL("http://www.culture.go.kr/openapi/rest/publicperformancedisplays/period?from="+from+"&to="+to+
-							"&cPage=1&rows=300&place=&gpsxfrom=&gpsyfrom=&gpsxto=&gpsyto=&keyword=&sortStdr=1&"+
-							"serviceKey=hrRaabnR27NNLhagFx%2F7JCUqbmimBOXErGAvS2yl%2FDpIAcFMzKnwdueoYXrlysShsP1YB6XOjsZMnTV6yqGhmw%3D%3D");
+//					URL conUrl = new URL("http://www.culture.go.kr/openapi/rest/publicperformancedisplays/period?from="+from+"&to="+to+
+//							"&cPage=1&rows=300&place=&gpsxfrom=&gpsyfrom=&gpsxto=&gpsyto=&keyword=&sortStdr=1&"+
+//							"serviceKey=hrRaabnR27NNLhagFx%2F7JCUqbmimBOXErGAvS2yl%2FDpIAcFMzKnwdueoYXrlysShsP1YB6XOjsZMnTV6yqGhmw%3D%3D");
+					URL conUrl = new URL("http://www.culture.go.kr/openapi/rest/publicperformancedisplays/realm?realmCode=B000&cPage=1&rows=300&"+
+							"from="+from+"&to="+to+"&sido=&gugun=&place=&gpsxfrom=&gpsyfrom=&gpsxto=&gpsyto=&keyword=&sortStdr=1&"+
+					"serviceKey=hrRaabnR27NNLhagFx%2F7JCUqbmimBOXErGAvS2yl%2FDpIAcFMzKnwdueoYXrlysShsP1YB6XOjsZMnTV6yqGhmw%3D%3D");
+					// 분야별 검색 -> 카테고리가 '음악'인 공연만 검색
 					
 					Document doc = builder.build(conUrl);
 					List<Element> concerts = doc.getRootElement().getChild("msgBody").getChildren("perforList");
@@ -86,7 +90,7 @@ public class LoginModel {
 					
 					while(it.hasNext()){
 						Element info = it.next();
-						if(info.getChildText("realmName").equals("음악")){	
+//						if(info.getChildText("realmName").equals("음악")){	
 							// 분류명이 '음악'인 데이터만 넣기
 							
 							URL detailUrl = new URL("http://www.culture.go.kr/openapi/rest/publicperformancedisplays/d/?"+
@@ -107,10 +111,9 @@ public class LoginModel {
 								cvo.setCon_poster(detail.getChildText("imgUrl")); // 공연 포스터
 								cvo.setCon_startdate(detail.getChildText("startDate")); // 시작일
 								cvo.setCon_enddate(detail.getChildText("endDate")); // 종료일
-							    cvo.setCon_venue(Integer.parseInt(detail.getChildText("placeSeq")));
-								// 공연 장소 => sequence 쓰지 말고 공공 데이터에서 제공하는 고유 번호를 그대로 num에 넣기
+							    cvo.setCon_venue(chdao.searchConcerthallByName(detail.getChildText("place"))); // 공연 장소
 								// cvo.setCon_artist(con_artist); // 아티스트
-							    // 아티스트는 어쩔?
+							    // 아티스트는 어쩔? ---> 수작업..?
 								cvo.setCon_link(detail.getChildText("url")); // 공연 예매 링크
 								cvo.setCon_detailimg(detail.getChildText("contents1")); // 공연 상세 소개
 								cvo.setCon_price(detail.getChildText("price")); // 공연 관람료
@@ -119,54 +122,55 @@ public class LoginModel {
 								cdao.addConcert(cvo);
 							}
 							
-						}
+//						}
 					}
 					
 					////////////////////////////////////
 					////////////////////////////////////
 					// 공연장 정보 업데이트
-					URL challUrl = new URL("http://www.culture.go.kr/openapi/rest/cultureartspaces/performingplace?"+
-					"cPage=1&rows=800&gpsxfrom=&gpsyfrom=&gpsxto=&gpsyto=&keyword=&"+
-					"serviceKey=hrRaabnR27NNLhagFx%2F7JCUqbmimBOXErGAvS2yl%2FDpIAcFMzKnwdueoYXrlysShsP1YB6XOjsZMnTV6yqGhmw%3D%3D");
-					Document challDoc = builder.build(challUrl);
-					List<Element> challs = challDoc.getRootElement().getChild("msgBody").getChildren("placeList");
-					Iterator<Element> challIt = challs.iterator();
-					
-					while(challIt.hasNext()){
-						Element info = challIt.next();
-						URL challDetailUrl = new URL("http://www.culture.go.kr/openapi/rest/cultureartspaces/d/?"+
-						"seq="+info.getChildText("seq")+
-						"&serviceKey=hrRaabnR27NNLhagFx%2F7JCUqbmimBOXErGAvS2yl%2FDpIAcFMzKnwdueoYXrlysShsP1YB6XOjsZMnTV6yqGhmw%3D%3D");
-					
-						Document challDetailDoc = builder.build(challDetailUrl);
-						Element challDetail = challDetailDoc.getRootElement().getChild("msgBody").getChild("placeInfo");
-						
-						if(chdao.checkConcerthall(Integer.parseInt(challDetail.getChildText("seq")))){
-							// 기존에 이미 저장된 데이터인지 체크
-							// 중복된 데이터가 아니면 테이블에 넣는다.
-							System.out.println(challDetail.getChildText("culName"));
-							ConcerthallVO chvo = new ConcerthallVO();
-							chvo.setChall_num(Integer.parseInt(challDetail.getChildText("seq"))); // 공연장 고유 번호
-							chvo.setChall_name(challDetail.getChildText("culName")); // 공연장 이름
-							chvo.setChall_addr(challDetail.getChildText("culAddr")); // 공연장 주소
-							chvo.setChall_tel(challDetail.getChildText("culTel")); // 공연장 연락처
-							chvo.setChall_official(challDetail.getChildText("culHomeUrl")); // 공연장 공식 사이트 주소
-							chvo.setChall_img(challDetail.getChildText("culViewImg1")); // 공연장 사진
-							// 공연장 좌석표 사진
-							chvo.setChall_intro(challDetail.getChildText("culCont")); // 공연장 소개
-							
-							if(challDetail.getChildText("gpsX") == ""){
-								chvo.setChall_gpsx(0);
-								chvo.setChall_gpsy(0);
-							} else {
-								// 예외 처리 -> 상세 정보 검색 시 gps 데이터가 조회되지 않는 공연장이 있음
-								// 나중에 따로 데이터 넣기
-								chvo.setChall_gpsx(Double.parseDouble(challDetail.getChildText("gpsX"))); // 공연장 gps-x
-								chvo.setChall_gpsy(Double.parseDouble(challDetail.getChildText("gpsY"))); // 공연장 gps-y
-							}
-							chdao.addConcerthall(chvo);
-						}
-					}
+//					URL challUrl = new URL("http://www.culture.go.kr/openapi/rest/cultureartspaces/performingplace?"+
+//					"cPage=1&rows=800&gpsxfrom=&gpsyfrom=&gpsxto=&gpsyto=&keyword=&"+
+//					"serviceKey=hrRaabnR27NNLhagFx%2F7JCUqbmimBOXErGAvS2yl%2FDpIAcFMzKnwdueoYXrlysShsP1YB6XOjsZMnTV6yqGhmw%3D%3D");
+//					URL challUrl = new URL("http://www.culture.go.kr/openapi/rest/cultureartspaces/performingplace?cPage=4&rows=200&gpsxfrom=&gpsyfrom=&gpsxto=&gpsyto=&keyword=&serviceKey=hrRaabnR27NNLhagFx%2F7JCUqbmimBOXErGAvS2yl%2FDpIAcFMzKnwdueoYXrlysShsP1YB6XOjsZMnTV6yqGhmw%3D%3D");
+//					Document challDoc = builder.build(challUrl);
+//					List<Element> challs = challDoc.getRootElement().getChild("msgBody").getChildren("placeList");
+//					Iterator<Element> challIt = challs.iterator();
+//					
+//					while(challIt.hasNext()){
+//						Element info = challIt.next();
+//						URL challDetailUrl = new URL("http://www.culture.go.kr/openapi/rest/cultureartspaces/d/?"+
+//						"seq="+info.getChildText("seq")+
+//						"&serviceKey=hrRaabnR27NNLhagFx%2F7JCUqbmimBOXErGAvS2yl%2FDpIAcFMzKnwdueoYXrlysShsP1YB6XOjsZMnTV6yqGhmw%3D%3D");
+//					
+//						Document challDetailDoc = builder.build(challDetailUrl);
+//						Element challDetail = challDetailDoc.getRootElement().getChild("msgBody").getChild("placeInfo");
+//						
+//						if(chdao.checkConcerthall(Integer.parseInt(challDetail.getChildText("seq")))){
+//							// 기존에 이미 저장된 데이터인지 체크
+//							// 중복된 데이터가 아니면 테이블에 넣는다.
+//							System.out.println(challDetail.getChildText("culName"));
+//							ConcerthallVO chvo = new ConcerthallVO();
+//							chvo.setChall_num(Integer.parseInt(challDetail.getChildText("seq"))); // 공연장 고유 번호
+//							chvo.setChall_name(challDetail.getChildText("culName")); // 공연장 이름
+//							chvo.setChall_addr(challDetail.getChildText("culAddr")); // 공연장 주소
+//							chvo.setChall_tel(challDetail.getChildText("culTel")); // 공연장 연락처
+//							chvo.setChall_official(challDetail.getChildText("culHomeUrl")); // 공연장 공식 사이트 주소
+//							chvo.setChall_img(challDetail.getChildText("culViewImg1")); // 공연장 사진
+//							// 공연장 좌석표 사진
+//							chvo.setChall_intro(challDetail.getChildText("culCont")); // 공연장 소개
+//							
+//							if(challDetail.getChildText("gpsX") == ""){
+//								chvo.setChall_gpsx(0);
+//								chvo.setChall_gpsy(0);
+//							} else {
+//								// 예외 처리 -> 상세 정보 검색 시 gps 데이터가 조회되지 않는 공연장이 있음
+//								// 나중에 따로 데이터 넣기
+//								chvo.setChall_gpsx(Double.parseDouble(challDetail.getChildText("gpsX"))); // 공연장 gps-x
+//								chvo.setChall_gpsy(Double.parseDouble(challDetail.getChildText("gpsY"))); // 공연장 gps-y
+//							}
+//							chdao.addConcerthall(chvo);
+//						}
+//					}
 					
 					
 				} catch (Exception e) {
