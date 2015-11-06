@@ -5,7 +5,7 @@
 #table_readReview th {text-align:left; padding-left:10px; font-weight:normal;}
 #table_readReview tr { border-bottom:1px solid #ccc;}
 
-#th_titleReadReview{ height:30px; background:#f3f3f3; border-top:1px solid #ccc; border-bottom:1px solid #ccc;}
+#th_titleReadReview{ height:28px; background:#f3f3f3; border-top:1px solid #ccc; border-bottom:1px solid #ccc;}
 #th_infoReadReview{ height:25px;}
 #th_infoReadReview span{ color:#999;}
 #th_infoReadReview span a{ color:#999;}
@@ -22,5 +22,5 @@
 
 
 .tr_readReview {height:300px; min-height:300px;}
-.td_readReview {width:109px;  min-height:300px; padding-left:10px; border-right:1px solid #eee;}
+.td_readReview {width:109px;  min-height:300px; padding-left:10px; border-right:1px solid #eee; text-align:center;}
 .td2_readReview {width:640px;  min-height:280px; padding:10px 20px; vertical-align:text-top; }
