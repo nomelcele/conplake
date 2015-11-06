@@ -13,11 +13,14 @@
                 	<img src="${conInfo.con_poster}" width="225" height="300" />
                 </div>
                 <div id="concertProfile">
-                	<hgroup>
-                    <h4>일시 : ${conInfo.con_startdate} ~ ${conInfo.con_enddate}</h4>
-                    <h4>장소 : <span><a href="#">${conInfo.con_venue}</a></span></h4>
-                    <h4>출연 : <span><a href="#">${conInfo.con_artist}</a></span></h4>
-                    </hgroup>
+                	
+                    <p>일시 : <span>${conInfo.con_startdate} ~ ${conInfo.con_enddate}</span></p>
+                    <p>장소 : <span><a href="#">${conInfo.con_venue}</a></span></p>
+                    <p>출연 : <span><a href="#">${conInfo.con_artist}</a></span></p>
+                    <p>관람료 : <span>53152135435</span></p>
+                    <p>문의 : <span>asdfasdfasdffdsfadsfasdsfadsfasdsfadsfasdsfadsfasdsfadsfasdsfadsfasdsfadsfasdsfadsfasdsfadsfasdsfadsfasdsfadsfasdsfadsfasdsfadsfasdsfadsfasdsfadsfasdsfadsfasa</span></p>
+                    <p>공식사이트 : <span>adsfadsfasdsfadsfasdsfadsfasdsfadsfasdsfadsfasdsfadsfasdsfadsfasdsfadsfasdsfadsfasdsfadsfasdsfadsfasdsfadsfasdsfadsfasdsfadsfasdsfadsfasdsfadsfasdsfadsfasdsfadsfasdsfadsfasdsfadsfasdsfadsfasdsfadsfasdsfadsfasdsfadsfasdsfadsfasdsfadsfasdsfadsfasdsfadsfasdsfadsfasdsfadsfasfd</span></p>
+                    
                 </div>
             </div>
             
