@@ -14,7 +14,7 @@
                 </li>
                 <li id="searchBox">
                 	<p class="text_sub">keyword</p>
-                	<input name="con_name" class="inputStyle input_search" type="text" placeholder="검색어를 입력하세요." autocomplete="off" >
+                	<input id="searchKeyword" class="inputStyle input_search" type="text" placeholder="검색어를 입력하세요." autocomplete="off" >
                 </li>
                 <li id="calenderBox">
                 	<p class="text_sub">date</p>

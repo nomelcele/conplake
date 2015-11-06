@@ -7,10 +7,10 @@
             <ul class="ul_concert">
             	<c:forEach var="conList" items="${conList}">
             		<li id="list_concert1">
-	                    <a href="javascript:concertInfo(${conList.con_num})"><img width="198" height="248" alt="콘서트이미지1" src="${conList.con_poster}"></a>
-	                        <p class="concert_title"><a href="#">${conList.con_name}</a></p>
+	                    <a href="concertInfo?con_num=${conList.con_num}"><img width="198" height="248" alt="콘서트이미지1" src="${conList.con_poster}"></a>
+	                        <p class="concert_title"><a href="concertInfo?con_num=${conList.con_num}">${conList.con_name}</a></p>
 	                        <p class="concert_date">${conList.con_startdate} ~ ${conList.con_enddate}</p>
-	                        <p class="concert_place"><a href="#">${conList.con_venue}</a></p>
+	                        <p class="concert_place"><a href="concerthallInfo?chall_num=${conList.con_venue}">${conList.venuename}</a></p>
 	                </li>
 <!-- 	                <li id="list_concert1"> -->
 <!-- 	                    <a href="#"><img width="198" height="248" alt="콘서트이미지1" src="resources/img/gmf.png"></a> -->

@@ -30,11 +30,13 @@ public class ConcertModel {
 	@RequestMapping(value="/concertSearch")
 	public String concertSearch(ConcertVO cvo, Model model){
 		model.addAttribute("conResult", cdao.concertSearch(cvo));
+		model.addAttribute("resultType", "concert");
 		return "search.searchResult";
 	}
 	
 	@RequestMapping(value="/writeReview")
-	public String writeReview(){
+	public String writeReview(int con_num, Model model){
+		model.addAttribute("conWriteInfo",cdao.concertInfo(con_num));
 		return "concert.writeReview";
 	}
 	

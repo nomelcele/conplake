@@ -94,6 +94,7 @@ h1 {font:20px Arial, Helvetica, sans-serif; font-weight:600; color:#999; padding
 	</c:if>
 	<c:if test="${empty sessionScope.mvo.mem_name}">
 		<h1>Unauthorized Access</h1>
+		<a href="loginForm">go to login page</a>
 	</c:if>
 </body>
 </html>
