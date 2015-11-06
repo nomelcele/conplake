@@ -10,12 +10,14 @@
 #likeToGo {margin-right:15px;}
 
 #concertProfileBox {width:900px; height:300px;}
+
 #concertPoster {width:225px; height:300px; float:left;}
 #concertProfile {width:625px; height:300px; padding-left:50px; float:left;}
+#concertProfile span {width:625px; height:25px; font-size:13px; line-height:25px; word-break:break-all;}
 
-#concertProfile h4, #concertProfile span a {font-size:14px; height:25px; line-height:25px; font-weight:400; }
-h4 a:hover {text-decoration:underline;}
 
+#concertProfile p, #concertProfile span a {font-size:13px; min-height:25px; line-height:25px; font-weight:400; }
+#concertProfile p a:hover {text-decoration:underline;}
 
 h3.concert_subTitle {width:900px; height:30px; line-height:30px; font-size:16px; padding-bottom:10px; display:block; font-weight:700; display:block;}
 

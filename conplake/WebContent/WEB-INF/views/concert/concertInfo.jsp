@@ -16,9 +16,11 @@
                     <p>일시 : <span>${conInfo.con_startdate} ~ ${conInfo.con_enddate}</span></p>
                     <p>장소 : <span><a href="concerthallInfo?chall_num=${conInfo.con_venue}">${conInfo.venuename}</a></span></p>
                     <p>출연 : <span><a href="#">${conInfo.con_artist}</a></span></p>
+
                     <p>관람료 : <span>${conInfo.con_price}</span></p>
                     <p>문의 : <span>${conInfo.con_tel}</span></p>
                     <p>공식 사이트 : <span><a href="${conInfo.con_link}">${conInfo.con_link}</a></span></p>
+
                 </div>
             </div>
             
