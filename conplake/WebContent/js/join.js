@@ -112,7 +112,16 @@ $(function(){
 				mem_id : $("#userId").val()
 			},
 			success : function(result) {
-				$('#inputBox_idCheck').html(result);
+				console.log(result);
+				var text=""; text=result;
+				if(text=="사용 가능한 아이디입니다."){
+					$('#inputBox_idCheck').css('color','blue');
+					$('#inputBox_idCheck').html(result);
+				}
+				else {
+					$('#inputBox_idCheck').css('color','red');
+					$('#inputBox_idCheck').html(result);
+				}
 			}
 		});
 	});
