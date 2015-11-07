@@ -100,6 +100,7 @@ $(function(){
 				'width', '200').css('height', '200');
 		// attr() src 속성에  blobURL을 넣는다.
 		}
+		
 	});
 
 

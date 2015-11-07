@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <h1>WRITE REVIEW</h1>
-<form id="writeReviewForm" action="writeReview" method="post">
+<form id="writeReviewForm" action="writeReview" method="post" enctype="multipart/form-data">
 	<input type="hidden" name="post_author" value="${sessionScope.mvo.mem_num}">
 	<input type="hidden" name="post_concert" value="${conWriteInfo.con_num}">
 	<input type="hidden" id="post_sightsound" name="post_sightsound">
@@ -17,9 +17,7 @@
                 
 <!--             	<div class="reviewArea" id="reviewContent" contentEditable="true" ></div> -->
                 <div class="reviewContent" id="reviewSightsound" contentEditable="true" ></div>
-                <div id="fileBox"><input type="file" id="imgFile"/></div>
-                <img id="imgView">
-                <img id="imgView2">
+                <div id="fileBox"><input type="file" name="files[0]" class="reviewFile" multiple="multiple"/></div>
             </div>
     		
             <p class="p_write">공연장 시설</p>
@@ -27,9 +25,7 @@
                 
 <!--             	<div class="reviewArea" id="reviewContent" contentEditable="true" ></div> -->
                 <div class="reviewContent" id="reviewFacility" contentEditable="true" ></div>
-                <div id="fileBox"><input type="file" id="imgFile"/></div>
-                <img id="imgView">
-                <img id="imgView2">
+                <div id="fileBox"><input type="file" name="files[1]" class="reviewFile" multiple="multiple"/></div>
             </div>
             
             <p class="p_write">공연 내용</p>
@@ -37,9 +33,7 @@
                 
 <!--             	<div class="reviewArea" id="reviewContent" contentEditable="true" ></div> -->
                 <div class="reviewContent" id="reviewPerform" contentEditable="true" ></div>
-                <div id="fileBox"><input type="file" id="imgFile"/></div>
-                <img id="imgView">
-                <img id="imgView2">
+                <div id="fileBox"><input type="file" name="files[2]" class="reviewFile" multiple="multiple"/></div>
             </div>
     </div>
 
@@ -143,5 +137,5 @@
 
 
 <p id="memberButtonBox">
-            <input id="writeReviewBtn" class="rButton" type="button" value="확인" name="mem_submit">
+            <input id="writeReviewBtn" onclick="writeReview()" class="rButton" type="button" value="확인" name="mem_submit">
 </p>

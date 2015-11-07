@@ -1,11 +1,22 @@
 package or.conplake.vo;
 
+import java.util.List;
+
+import org.springframework.web.multipart.MultipartFile;
+
 public class PostVO {
 	private int post_num, post_author, post_hit, post_concert;
 	private String post_title, post_date, post_type,
-	post_seat, post_sightsound, post_facility, post_perform, post_cont,post_concertdate,
+	post_seat, post_sightsound, post_facility, post_perform, post_cont, post_concertdate,
 	authorname, concertname, concertposter, venuename;
+	private List<MultipartFile> files;
 	
+	public List<MultipartFile> getFiles() {
+		return files;
+	}
+	public void setFiles(List<MultipartFile> files) {
+		this.files = files;
+	}
 	public String getConcertposter() {
 		return concertposter;
 	}

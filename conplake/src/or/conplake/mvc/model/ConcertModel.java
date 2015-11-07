@@ -1,5 +1,8 @@
 package or.conplake.mvc.model;
 
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import or.conplake.mvc.dao.ConcertDao;
@@ -10,7 +13,9 @@ import or.conplake.vo.PostVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.multipart.MultipartFile;
 
 @Controller
 public class ConcertModel {
@@ -47,6 +52,38 @@ public class ConcertModel {
 
 	@RequestMapping(value = "/writeReview")
 	public String writeReview(PostVO pvo) {
+		List<MultipartFile> files = pvo.getFiles();
+		List<String> fileNames = new ArrayList<String>();
+		
+		if(null != files & files.size()>0){
+			for(MultipartFile multipartFile:files){
+//				String fileName = multipartFile.getOriginalFilename();
+//				fileNames.add(fileName);
+//				try {
+//					multipartFile.transferTo(new File("C:\\conplake\\ws\\conplake\\WebContent\\upload\\"+fileName));
+//				} catch (Exception e) {
+//					// TODO Auto-generated catch block
+//					e.printStackTrace();
+//				}
+				
+				String fileName = multipartFile.getOriginalFilename();
+				
+				if(fileName != ""){
+					String path = "C:\\conplake\\ws\\conplake\\WebContent\\upload\\"+fileName;
+					System.out.println("File Upload Path: "+path);
+					File file = new File(path);
+					file.mkdirs();
+					
+					try {
+						multipartFile.transferTo(file);
+					} catch (Exception e) {
+						e.printStackTrace();
+					} 
+				}
+			}
+		}
+		
+		
 		pdao.writeReview(pvo);
 		return "redirect:concertInfo?con_num=" + pvo.getPost_concert();
 	}
