@@ -1,5 +1,6 @@
 package or.conplake.mvc.model;
 
+import or.conplake.mvc.dao.ConcertDao;
 import or.conplake.mvc.dao.ConcerthallDao;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class ConcerthallModel {
 	@Autowired
 	private ConcerthallDao chdao;
+	@Autowired
+	private ConcertDao cdao;
 	
 	@RequestMapping(value="/concerthallSearch")
 	public String concerthallSearch(String chall_name, Model model){
@@ -22,6 +25,7 @@ public class ConcerthallModel {
 	@RequestMapping(value="/concerthallInfo")
 	public String concerthallInfo(int chall_num, Model model){
 		model.addAttribute("challInfo", chdao.concerthallInfo(chall_num));
+		model.addAttribute("ongoingCons", cdao.ongoingConcerts(chall_num));
 		return "hall.hallInfo";
 	}
 	

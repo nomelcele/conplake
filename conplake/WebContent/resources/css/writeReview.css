@@ -58,7 +58,8 @@
 
 .p_write {width:497px; height:30px; line-height:30px; padding-left:3px; padding-top:20px;}
 #p_write_first {padding-top:0;}
-#reviewContent {width:478px; height:228px; background:#fff; font-size:12px; color:#333; border:1px solid #ddd; border-top-left-radius:3px; border-top-right-radius:3px; padding:10px; resize:none; overflow-x:hidden; overflow-y:auto;}
+/* #reviewContent {width:478px; height:228px; background:#fff; font-size:12px; color:#333; border:1px solid #ddd; border-top-left-radius:3px; border-top-right-radius:3px; padding:10px; resize:none; overflow-x:hidden; overflow-y:auto;} */
+.reviewContent {width:478px; height:228px; background:#fff; font-size:12px; color:#333; border:1px solid #ddd; border-top-left-radius:3px; border-top-right-radius:3px; padding:10px; resize:none; overflow-x:hidden; overflow-y:auto;}
 
 
 #fileBox{ width:498px; height:28px; background:#fff; border:1px solid #ddd; border-top:none; border-bottom-left-radius:3px; border-bottom-right-radius:3px;  }

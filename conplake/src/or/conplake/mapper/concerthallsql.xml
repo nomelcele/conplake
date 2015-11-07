@@ -14,7 +14,8 @@
   	select chall_num from concerthall where chall_name=#{chall_name}
   </select>
   <select id="concerthallSearch" parameterType="String" resultType="chvo">
-  	select chall_num, chall_name, chall_addr, chall_img from concerthall where chall_name like '%'||#{chall_name}||'%'
+  	select chall_num, chall_name, chall_addr, chall_img from concerthall 
+  	where chall_name like '%'||#{chall_name}||'%' order by chall_name
   </select>
   <select id="concerthallInfo" parameterType="int" resultType="chvo">
   	select * from concerthall where chall_num=#{chall_num}

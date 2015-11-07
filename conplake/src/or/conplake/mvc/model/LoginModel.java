@@ -128,9 +128,9 @@ public class LoginModel {
 					////////////////////////////////////
 					////////////////////////////////////
 					// 공연장 정보 업데이트
-//					URL challUrl = new URL("http://www.culture.go.kr/openapi/rest/cultureartspaces/performingplace?"+
-//					"cPage=1&rows=800&gpsxfrom=&gpsyfrom=&gpsxto=&gpsyto=&keyword=&"+
-//					"serviceKey=hrRaabnR27NNLhagFx%2F7JCUqbmimBOXErGAvS2yl%2FDpIAcFMzKnwdueoYXrlysShsP1YB6XOjsZMnTV6yqGhmw%3D%3D");
+////					URL challUrl = new URL("http://www.culture.go.kr/openapi/rest/cultureartspaces/performingplace?"+
+////					"cPage=1&rows=800&gpsxfrom=&gpsyfrom=&gpsxto=&gpsyto=&keyword=&"+
+////					"serviceKey=hrRaabnR27NNLhagFx%2F7JCUqbmimBOXErGAvS2yl%2FDpIAcFMzKnwdueoYXrlysShsP1YB6XOjsZMnTV6yqGhmw%3D%3D");
 //					URL challUrl = new URL("http://www.culture.go.kr/openapi/rest/cultureartspaces/performingplace?cPage=4&rows=200&gpsxfrom=&gpsyfrom=&gpsxto=&gpsyto=&keyword=&serviceKey=hrRaabnR27NNLhagFx%2F7JCUqbmimBOXErGAvS2yl%2FDpIAcFMzKnwdueoYXrlysShsP1YB6XOjsZMnTV6yqGhmw%3D%3D");
 //					Document challDoc = builder.build(challUrl);
 //					List<Element> challs = challDoc.getRootElement().getChild("msgBody").getChildren("placeList");
