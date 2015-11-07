@@ -13,7 +13,7 @@
   <select id="concertList" resultType="cvo">
   	select c.con_num, c.con_poster, c.con_name, to_char(c.con_startdate, 'yyyy-mm-dd') con_startdate, 
   	to_char(c.con_enddate, 'yyyy-mm-dd') con_enddate, c.con_venue, ch.chall_name venuename 
-  	from concert c, concerthall ch where c.con_venue = ch.chall_num and c.con_enddate >= sysdate
+  	from concert c, concerthall ch where c.con_venue = ch.chall_num and c.con_enddate <![CDATA[>=]]> sysdate-1
   	order by c.con_enddate asc
   </select>
   <select id="concertInfo" parameterType="int" resultType="cvo">
@@ -24,7 +24,21 @@
   <select id="concertSearch" parameterType="cvo" resultType="cvo">
   	select c.con_num, c.con_poster, c.con_name, to_char(c.con_startdate,'yyyy-mm-dd') con_startdate, 
   	to_char(c.con_enddate,'yyyy-mm-dd') con_enddate, c.con_venue, ch.chall_name venuename 
-  	from concert c, concerthall ch where con_name like '%'||#{con_name}||'%' and c.con_venue = ch.chall_num 
+  	from concert c, concerthall ch where c.con_venue = ch.chall_num 
+  		<if test="con_name != null">
+  			and c.con_name like '%'||#{con_name}||'%'
+  		</if>
+  		<if test="con_startdate != ''">
+  			and #{con_startdate} <![CDATA[<=]]> c.con_enddate 
+  		</if>
+  		<if test="con_enddate != ''">	
+  			and #{con_enddate} <![CDATA[>=]]> c.con_startdate
+  		</if> 
   	order by c.con_name
+  </select>
+  <select id="ongoingConcerts" parameterType="int" resultType="cvo">
+  	select con_num, con_name, to_char(con_startdate,'yyyy-mm-dd') con_startdate, 
+  	to_char(con_enddate,'yyyy-mm-dd') con_enddate from concert c where con_venue = #{chall_num} and con_enddate <![CDATA[>=]]> sysdate-1
+  	order by c.con_enddate asc
   </select>
   </mapper>

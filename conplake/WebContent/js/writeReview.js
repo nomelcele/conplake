@@ -60,4 +60,13 @@ function ImageButton1_OnClientClick(objImageButton)
 	        		// attr() src 속성에  blobURL을 넣는다.
         			}
         	});
+        	
+        	$("#writeReviewBtn").click(function(){
+        		$("#post_sightsound").attr("value",$("#reviewSightsound").html());
+        		$("#post_facility").attr("value",$("#reviewFacility").html());
+        		$("#post_perform").attr("value",$("#reviewPerform").html());
+        		$("#writeReviewForm").submit();
+        	});
+        	
+        	
         });

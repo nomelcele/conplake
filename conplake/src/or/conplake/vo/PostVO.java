@@ -3,8 +3,39 @@ package or.conplake.vo;
 public class PostVO {
 	private int post_num, post_author, post_hit, post_concert;
 	private String post_title, post_date, post_type,
-	post_seat, post_sightsound, post_facility, post_perform, post_cont;
+	post_seat, post_sightsound, post_facility, post_perform, post_cont,post_concertdate,
+	authorname, concertname, concertposter, venuename;
 	
+	public String getConcertposter() {
+		return concertposter;
+	}
+	public void setConcertposter(String concertposter) {
+		this.concertposter = concertposter;
+	}
+	public String getConcertname() {
+		return concertname;
+	}
+	public void setConcertname(String concertname) {
+		this.concertname = concertname;
+	}
+	public String getVenuename() {
+		return venuename;
+	}
+	public void setVenuename(String venuename) {
+		this.venuename = venuename;
+	}
+	public String getAuthorname() {
+		return authorname;
+	}
+	public void setAuthorname(String authorname) {
+		this.authorname = authorname;
+	}
+	public String getPost_concertdate() {
+		return post_concertdate;
+	}
+	public void setPost_concertdate(String post_concertdate) {
+		this.post_concertdate = post_concertdate;
+	}
 	public int getPost_num() {
 		return post_num;
 	}

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%> 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -8,7 +9,7 @@
 </head>
 <body>
 
-<h1>HALL INFORMATION</h1>
+<h1>CONCERTHALL INFORMATION</h1>
         	<h2 id="concertTitle">${challInfo.chall_name}</h2>
 <!--             	<div id="innerButtonBox"> -->
 <!--                     <input id="GoTogether" class="innerButton button" type="button" value="함께가요" onclick=""/> -->
@@ -20,18 +21,16 @@
                 	<img src="${challInfo.chall_img}" width="225" height="300" />
                 </div>
                 <div id="concertProfile">
-                	<hgroup>
-                    <h4>주소 : ${challInfo.chall_addr}</h4>
-                    <h4>문의 : ${challInfo.chall_tel}</h4>
-                    <h4>공식 사이트 : <span><a href="${challInfo.chall_official}">${challInfo.chall_official}</a></span></h4>
-                    </hgroup>
+                    <p>주소 : <span>${challInfo.chall_addr}</span></p>
+                    <p>문의 : <span>${challInfo.chall_tel}</span></p>
+                    <p>공식 사이트 : <span><a href="${challInfo.chall_official}">${challInfo.chall_official}</a></span></p>
                 </div>
             </div>
             
             <div id="tabBox">
             	<ul class="tabs">
                   <li><a class="tab" id="tab1" href="#">공연장 소개</a></li>
-                  <li><a class="tab" id="tab2" href="#">공연장 약도</a></li>
+                  <li><a class="tab" id="tab2" href="#">공연장 지도</a></li>
                   <li><a class="tab" id="tab3" href="#">진행 중인 공연</a></li>
                   <li><a class="tab" id="tab4" href="#">좌석</a></li>
                   <li><a class="tab" id="tab5" href="#">좌석별 시야</a></li>
@@ -53,16 +52,12 @@
                         <th class="ongoingTitle"><p>공연 제목</p></th>
                         <th class="ongoingDate"><p>공연 기간</p></th>
                     </tr>
-                    <tr class="tr_ongoing">
-                        <td class="ongoingTitle"><p></p></td>
-                        <td class="ongoingDate"><p></p></td>
-                    </tr>
-                    <tr class="tr_ongoing">
-                        <td class="ongoingTitle"><p></p></td>
-                        <td class="ongoingDate"><p></p></td>
-                    </tr>
-                    
-                  
+                    <c:forEach var="ongoingCons" items="${ongoingCons}">
+	                    <tr class="tr_ongoing">
+	                        <td class="ongoingTitle"><p><a href="concertInfo?con_num=${ongoingCons.con_num}">${ongoingCons.con_name}</a></p></td>
+	                        <td class="ongoingDate"><p>${ongoingCons.con_startdate} ~ ${ongoingCons.con_enddate}</p></td>
+	                    </tr>     
+                    </c:forEach>
                 </Table>
             </div>
             

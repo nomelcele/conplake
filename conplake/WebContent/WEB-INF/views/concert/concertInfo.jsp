@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>  
     <h1>CONCERT INFORMATION</h1>
         	<h2 id="concertTitle">${conInfo.con_name}
             	<div id="innerButtonBox">
@@ -79,69 +80,31 @@
                         <th class="reviewDate"><p>날짜</p></th>
                         <th class="reviewHits"><p>조회수</p></th>
                     </tr>
-                    <tr class="tr_review">
-                        <td class="reviewNum"><p>10</p></td>
-                        <td class="reviewTitle"><p><a>후기제목후기제목후기제목후기제목후기제목후기제목후기제목후기제목후기제목후기제목후기제목12341234</a></p></td>
-                        <td class="reviewID"><p></p></td>
-                        <td class="reviewDate"><p></p></td>
-                        <td class="reviewHits"><p></p></td>
-                    </tr>
-                    <tr class="tr_review">
-                        <td class="reviewNum"><p>9</p></td>
-                        <td class="reviewTitle"><p><a></a></p></td>
-                        <td class="reviewID"><p></p></td>
-                        <td class="reviewDate"><p></p></td>
-                        <td class="reviewHits"><p></p></td>
-                    </tr>
-                    <tr class="tr_review">
-                        <td class="reviewNum"><p>8</p></td>
-                        <td class="reviewTitle"><p><a></a></p></td>
-                        <td class="reviewID"><p></p></td>
-                        <td class="reviewDate"><p></p></td>
-                        <td class="reviewHits"><p></p></td>
-                    </tr>
-                    <tr class="tr_review">
-                        <td class="reviewNum"><p>7</p></td>
-                        <td class="reviewTitle"><p><a></a></p></td>
-                        <td class="reviewID"><p></p></td>
-                        <td class="reviewDate"><p></p></td>
-                        <td class="reviewHits"><p></p></td>
-                    </tr>
-                    <tr class="tr_review">
-                        <td class="reviewNum"><p>6</p></td>
-                        <td class="reviewTitle"><p><a></a></p></td>
-                        <td class="reviewID"><p></p></td>
-                        <td class="reviewDate"><p></p></td>
-                        <td class="reviewHits"><p></p></td>
-                    </tr>
-                    <tr class="tr_review">
-                        <td class="reviewNum"><p>5</p></td>
-                        <td class="reviewTitle"><p><a></a></p></td>
-                        <td class="reviewID"><p></p></td>
-                        <td class="reviewDate"><p></p></td>
-                        <td class="reviewHits"><p></p></td>
-                    </tr>
-                    <tr class="tr_review">
-                        <td class="reviewNum"><p>4</p></td>
-                        <td class="reviewTitle"><p><a></a></p></td>
-                        <td class="reviewID"><p></p></td>
-                        <td class="reviewDate"><p></p></td>
-                        <td class="reviewHits"><p></p></td>
-                    </tr>
-                    <tr class="tr_review">
-                        <td class="reviewNum"><p>3</p></td>
-                        <td class="reviewTitle"><p><a></a></p></td>
-                        <td class="reviewID"><p></p></td>
-                        <td class="reviewDate"><p></p></td>
-                        <td class="reviewHits"><p></p></td>
-                    </tr>
-                    <tr class="tr_review">
-                        <td class="reviewNum"><p>2</p></td>
-                        <td class="reviewTitle"><p><a></a></p></td>
-                        <td class="reviewID"><p></p></td>
-                        <td class="reviewDate"><p></p></td>
-                        <td class="reviewHits"><p></p></td>
-                    </tr>
+                    <c:forEach var="reviewList" items="${reviewList}">
+	                    <tr class="tr_review">
+	                        <td class="reviewNum"><p>${reviewList.post_num}</p></td>
+	                        <td class="reviewTitle"><p><a href="readReview?post_num=${reviewList.post_num}">${reviewList.post_title}</a></p></td>
+	                        <td class="reviewID"><p>${reviewList.authorname}</p></td>
+	                        <td class="reviewDate"><p>${reviewList.post_date}</p></td>
+	                        <td class="reviewHits"><p>${reviewList.post_hit}</p></td>
+	                    </tr>
+                    </c:forEach>
+                    
+                    
+<!--                     <tr class="tr_review"> -->
+<!--                         <td class="reviewNum"><p>3</p></td> -->
+<!--                         <td class="reviewTitle"><p><a></a></p></td> -->
+<!--                         <td class="reviewID"><p></p></td> -->
+<!--                         <td class="reviewDate"><p></p></td> -->
+<!--                         <td class="reviewHits"><p></p></td> -->
+<!--                     </tr> -->
+<!--                     <tr class="tr_review"> -->
+<!--                         <td class="reviewNum"><p>2</p></td> -->
+<!--                         <td class="reviewTitle"><p><a></a></p></td> -->
+<!--                         <td class="reviewID"><p></p></td> -->
+<!--                         <td class="reviewDate"><p></p></td> -->
+<!--                         <td class="reviewHits"><p></p></td> -->
+<!--                     </tr> -->
                     
                   
                 </Table>
@@ -159,7 +122,7 @@
                         <a href="#">9</a>
                         <a href="#" class="page" id="page_next">></a>
                     </span>
-                <input id="write_review" class="innerButton button" type="button" value="후기 작성" onclick="location='writeReview?con_num=${conInfo.con_num}'"/></p>
+                <input id="write_review" class="innerButton button" type="button" value="후기 작성" onclick="location='writeReviewForm?con_num=${conInfo.con_num}'"/></p>
             </div>
             
             

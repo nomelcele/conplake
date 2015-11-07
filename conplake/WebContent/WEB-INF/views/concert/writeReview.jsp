@@ -1,6 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <h1>WRITE REVIEW</h1>
+<form id="writeReviewForm" action="writeReview" method="post">
+	<input type="hidden" name="post_author" value="${sessionScope.mvo.mem_num}">
+	<input type="hidden" name="post_concert" value="${conWriteInfo.con_num}">
+	<input type="hidden" id="post_sightsound" name="post_sightsound">
+	<input type="hidden" id="post_facility" name="post_facility">
+	<input type="hidden" id="post_perform" name="post_perform">
+	
 	<div class="formBox" id="formBoxRight">
         	<p class="p_write" id="p_write_first">리뷰 제목</p>
         	<p class="rinputBox" id="p_reviewTitle"><input class="rInputStyle" id="reviewTitle" type="text" autofocus spellcheck="false" value="" placeholder="리뷰 제목을 입력하세요." name="post_title"></p>
@@ -8,7 +15,8 @@
             <p class="p_write">공연장 시야 및 음향</p>
     		<div id="profile_txt">
                 
-            	<div class="reviewArea" id="reviewContent" contentEditable="true" ></div>
+<!--             	<div class="reviewArea" id="reviewContent" contentEditable="true" ></div> -->
+                <div class="reviewContent" id="reviewSightsound" contentEditable="true" ></div>
                 <div id="fileBox"><input type="file" id="imgFile"/></div>
                 <img id="imgView">
                 <img id="imgView2">
@@ -17,7 +25,8 @@
             <p class="p_write">공연장 시설</p>
     		<div id="profile_txt">
                 
-            	<div class="reviewArea" id="reviewContent" contentEditable="true" ></div>
+<!--             	<div class="reviewArea" id="reviewContent" contentEditable="true" ></div> -->
+                <div class="reviewContent" id="reviewFacility" contentEditable="true" ></div>
                 <div id="fileBox"><input type="file" id="imgFile"/></div>
                 <img id="imgView">
                 <img id="imgView2">
@@ -26,7 +35,8 @@
             <p class="p_write">공연 내용</p>
     		<div id="profile_txt">
                 
-            	<div class="reviewArea" id="reviewContent" contentEditable="true" ></div>
+<!--             	<div class="reviewArea" id="reviewContent" contentEditable="true" ></div> -->
+                <div class="reviewContent" id="reviewPerform" contentEditable="true" ></div>
                 <div id="fileBox"><input type="file" id="imgFile"/></div>
                 <img id="imgView">
                 <img id="imgView2">
@@ -42,10 +52,10 @@
         <p class="rinputBox"><label class="inputLabel">공연 장소</label><input class="rInputStyle" id="passwd" type="text" value="${conWriteInfo.venuename}" readonly></p>
         
         
-        <p class="rinputBox"><label class="inputLabel">관람일</label><input class="rInputStyle" id="passwd" type="date" max="${conWriteInfo.con_enddate}" min="${conWriteInfo.con_startdate}" name="post_concertdate"></p>
+        <p class="rinputBox"><label class="inputLabel">관람일</label><input class="rInputStyle" type="date" max="${conWriteInfo.con_enddate}" min="${conWriteInfo.con_startdate}" name="post_concertdate"></p>
         
       
-        <p class="rinputBox"><label class="inputLabel">좌석</label><input class="rInputStyle" id="email_address" type="text"  name="mem_mail"></p>
+        <p class="rinputBox"><label class="inputLabel">좌석</label><input class="rInputStyle" type="text"  name="post_seat"></p>
         
         
  		<Table id="table_RsetList">
@@ -122,7 +132,7 @@
         </Table>
       
   </div>
-
+</form>
 
 	
     
@@ -133,5 +143,5 @@
 
 
 <p id="memberButtonBox">
-            <input id="submit" class="rButton" type="submit" value="확인" name="mem_submit">
+            <input id="writeReviewBtn" class="rButton" type="button" value="확인" name="mem_submit">
 </p>

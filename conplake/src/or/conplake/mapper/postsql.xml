@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="post">
+  <insert id="writeReview" parameterType="pvo">
+  	insert into post values(post_seq.nextVal,#{post_title},#{post_author},sysdate,0,#{post_concert},
+  	'review',#{post_seat},#{post_sightsound},#{post_facility},#{post_perform},null,#{post_concertdate})
+  </insert>
+  <select id="reviewList" parameterType="int" resultType="pvo">
+  	select p.post_num, p.post_title, m.mem_name authorname, p.post_date, p.post_hit 
+  	from post p, member m where p.post_author=m.mem_num and p.post_concert=#{con_num} 
+  	order by p.post_num desc
+  </select>
+  <select id="readReview" parameterType="int" resultType="pvo">
+  	select p.post_num, p.post_title, m.mem_name authorname, p.post_date, p.post_hit, c.con_poster concertposter, 
+  	c.con_name concertname, ch.chall_name venuename, to_char(p.post_concertdate,'yyyy-mm-dd') post_concertdate, 
+  	p.post_seat, p.post_sightsound, p.post_facility, p.post_perform from post p, member m, concert c, concerthall ch 
+  	where p.post_num=#{post_num} and m.mem_num=p.post_author and c.con_num=p.post_concert and c.con_venue=ch.chall_num
+  </select>
+  </mapper>
