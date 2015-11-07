@@ -30,9 +30,7 @@
                         </tr>
                         <tr class="tr_readReview">
                             <td class="td_readReview">공연장 시야 및 음향</td>
-                            <td class="td2_readReview" id="sightSoundReview">${reviewDetail.post_sightsound}
-                            <img src="upload/hyde001.jpg">
-											</td>
+                            <td class="td2_readReview" id="sightSoundReview">${reviewDetail.post_sightsound}</td>
                         </tr>
                         <tr class="tr_readReview">
                             <td class="td_readReview">공연장 시설</td>
