@@ -3,24 +3,51 @@
 
 #table_readReview {width:900px;}
 #table_readReview th {text-align:left; padding-left:10px; font-weight:normal;}
-#table_readReview tr { border-bottom:1px solid #ccc;}
+#table_readReview tr, #table_reply tr { border-bottom:1px solid #ccc;}
 
 #th_titleReadReview{ height:28px; background:#f3f3f3; border-top:1px solid #ccc; border-bottom:1px solid #ccc;}
 #th_infoReadReview{ height:25px;}
-#th_infoReadReview span{ color:#999;}
-#th_infoReadReview span a{ color:#999;}
+#th_infoReadReview span{ color:#333;}
+#th_infoReadReview span a{ color:#333;}
 #th_infoReadReview span a:hover{ text-decoration:underline;}
 #th_concertInfoReadReview { height:80px; padding:10px;}
 #th_concertInfoReadReview p { line-height:20px;}
 
 #tr_titleReadReview{ }
 #tr_infoReadReview{ }
-#tr_infoReadReview ul li{ float:right; padding-right:10px;}
+#tr_infoReadReview ul li{ float:right; padding-right:10px; color:#333;}
 #tr_infoReadReview ul li:first-child{ padding-right:0;}
 #tr_infoReadReview ul li:after{ content:"|"; padding-left:10px; color:#ccc;}
 #tr_infoReadReview ul li:first-child:after{ content:"";}
 
 
-.tr_readReview {height:300px; min-height:300px;}
-.td_readReview {width:109px;  min-height:300px; padding-left:10px; border-right:1px solid #eee; text-align:center;}
-.td2_readReview {width:640px;  min-height:280px; padding:10px 20px; vertical-align:text-top; }
+.tr_readReview, .tr_readReply {height:200px; min-height:200px;}
+.td_readReview, .td_readReply {width:128px;  min-height:200px; border-right:1px solid #eee; text-align:center;}
+.td2_readReview, .td2_readReply {width:640px;  min-height:180px; padding:10px 20px; vertical-align:text-top; }
+
+
+#tr_button{ height:50px; }
+#deleteReview, #editReview { background:#fff; border:1px solid #ccc; color:#666; margin-right:10px;}
+#editReview {}
+#editReview:hover, #deleteReview:hover {background:#f5f5f5;}
+
+
+#p_reply{ width:890px; border-top:1px solid #ccc; border-bottom:1px solid #ccc; font: bold 14px Arial, Helvetica, sans-serif;  color:#999; padding-left:10px; line-height:30px;}
+
+#table_readReview { margin-bottom:60px;}
+
+
+.tr_reply { width:900px; height:85px; min-height:70px;}
+.tr_reply #td_replyId { width:71px; border-right:none; padding-left:10px; padding-top:15px; vertical-align:top; }
+.tr_reply #td_replyId img { border-radius:50px; }
+.tr_reply #td_replyContent { width:680px; padding-bottom:20px;} 
+#p_replyId{ height:25px; line-height:25px; font-weight:bold;}
+#p_replyContent { line-height:20px;}
+
+.tr_reply #td_replyDate {width:100px; text-align:right; border-right:none; vertical-align:text-top;}
+.tr_reply #td_replyDate p{height:25px; line-height:20px; padding-right:15px; color:#666;}
+.tr_reply #td_replyDate input {background:#fff; border:1px solid #ccc; width:50px; color:#666;}
+
+#div_inputReply {width:860px; border-right:none; text-align:left; height:100px; padding:15px 20px; background:#f5f5f5; border-bottom:1px solid #ccc;}
+#div_inputReply textarea {float:left; width:725px; height:80px; resize:none; padding:10px; color:#333;}
+#div_inputReply input {float:left; width:100px; height:100px; background:#fff; border:1px solid #ccc; border-radius:3px; color:#666;}
