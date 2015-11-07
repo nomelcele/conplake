@@ -25,4 +25,13 @@ public class MemberDao {
 		}
 		
 	}
+	
+	public boolean idCheck(String mem_id){
+		String id = st.selectOne("mem.idCheck", mem_id);
+		if(id==null){ // 중복된 아이디가 아닌 경우
+			return false; 
+		} else {
+			return true;
+		}
+	}
 }

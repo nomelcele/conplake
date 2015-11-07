@@ -10,4 +10,7 @@
   <select id="login" parameterType="mvo" resultType="mvo">
   	select mem_id, mem_num, mem_name from member where mem_id=#{mem_id} and mem_pwd=#{mem_pwd}
   </select>
+  <select id="idCheck" parameterType="String" resultType="String">
+  	select mem_id from member where mem_id=#{mem_id}
+  </select>
   </mapper>

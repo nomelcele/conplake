@@ -112,14 +112,14 @@
                 	<span>
                     	<a href="#" class="page" id="page_prev"><</a>
                     	<a href="#">1</a>
-                        <a href="#">2</a>
-                        <a href="#">3</a>
-                        <a href="#">4</a>
-                        <a href="#">5</a>
-                        <a href="#">6</a>
-                        <a href="#">7</a>
-                        <a href="#">8</a>
-                        <a href="#">9</a>
+<!--                         <a href="#">2</a> -->
+<!--                         <a href="#">3</a> -->
+<!--                         <a href="#">4</a> -->
+<!--                         <a href="#">5</a> -->
+<!--                         <a href="#">6</a> -->
+<!--                         <a href="#">7</a> -->
+<!--                         <a href="#">8</a> -->
+<!--                         <a href="#">9</a> -->
                         <a href="#" class="page" id="page_next">></a>
                     </span>
                 <input id="write_review" class="innerButton button" type="button" value="후기 작성" onclick="location='writeReviewForm?con_num=${conInfo.con_num}'"/></p>

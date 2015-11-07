@@ -26,7 +26,7 @@
 <script src="js/searchResult.js"></script>
 <script src="js/concert.js"></script>
 <script src="js/writeReview.js"></script>
-
+<script src="js/readReview.js"></script>
 <style>
 html, body{ width:100%; height:100%; position:relative; }
 .contentWrap{ width:1200px; height:100%; background:#fff;}

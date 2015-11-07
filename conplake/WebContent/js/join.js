@@ -102,6 +102,35 @@ $(function(){
 		}
 		
 	});
+	
+	// 아이디 중복 체크
+	$("#idChkBtn").click(function(){
+		$.ajax({
+			type : "POST",
+			url : "idCheck",
+			data : {
+				mem_id : $("#userId").val()
+			},
+			success : function(result) {
+				$('#inputBox_idCheck').html(result);
+			}
+		});
+	});
+	
+	// 비밀번호 일치 여부 체크
+	$("#userPwd2").change(function(){
+		if($('#userPwd').val() != $('#userPwd2').val()){
+			$('#userPwd').val("");
+			$('#userPwd2').val("");
+			$('#userPwd').focus();
+			$('#inputBox_pwCheck').html('비밀번호가 일치하지 않습니다.');
+		} else {
+			$('#inputBox_pwCheck').html('비밀번호가 일치합니다.');
+			setTimeout(function(){
+				$('#inputBox_pwCheck').html('');
+			}, 2000);
+		}
+	});
 
 
 	// 회원 가입 버튼 클릭 시
