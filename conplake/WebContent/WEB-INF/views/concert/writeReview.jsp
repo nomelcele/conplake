@@ -17,7 +17,12 @@
                 
 <!--             	<div class="reviewArea" id="reviewContent" contentEditable="true" ></div> -->
                 <div class="reviewContent" id="reviewSightsound" contentEditable="true" ></div>
-                <div id="fileBox"><input type="file" name="files[0]" class="reviewFile" multiple="multiple"/></div>
+                <div class="fileBox" id="fileBox0">
+                	<div class="fileNameBox" id="fileNameBox0">
+                		<!-- p_fileName 들어갈 자리 -->
+                	</div>
+	                <input type="file" name="files[0]" class="reviewFile" id="reviewFile0" multiple="multiple"/>
+	            </div>
             </div>
     		
             <p class="p_write">공연장 시설</p>
@@ -25,7 +30,12 @@
                 
 <!--             	<div class="reviewArea" id="reviewContent" contentEditable="true" ></div> -->
                 <div class="reviewContent" id="reviewFacility" contentEditable="true" ></div>
-                <div id="fileBox"><input type="file" name="files[1]" class="reviewFile" multiple="multiple"/></div>
+                <div class="fileBox"  id="fileBox1">
+                	<div class="fileNameBox" id="fileNameBox1">
+                		<!-- p_fileName 들어갈 자리 -->
+                	</div>
+                	<input type="file" name="files[1]" class="reviewFile" id="reviewFile1" multiple="multiple"/>
+                </div>
             </div>
             
             <p class="p_write">공연 내용</p>
@@ -33,7 +43,12 @@
                 
 <!--             	<div class="reviewArea" id="reviewContent" contentEditable="true" ></div> -->
                 <div class="reviewContent" id="reviewPerform" contentEditable="true" ></div>
-                <div id="fileBox"><input type="file" name="files[2]" class="reviewFile" multiple="multiple"/></div>
+                <div class="fileBox"  id="fileBox2">
+                	<div class="fileNameBox" id="fileNameBox2">
+                		<!-- p_fileName 들어갈 자리 -->
+                	</div>
+                	<input type="file" name="files[2]" class="reviewFile" id="reviewFile2" multiple="multiple"/>
+                </div>
             </div>
     </div>
 
