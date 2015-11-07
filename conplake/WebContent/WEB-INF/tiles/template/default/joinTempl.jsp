@@ -111,7 +111,7 @@ overflow-x:hidden; overflow-y:auto;}
 #email_address, #email_select {width:145px;}
 
 
-#btnPost, #btnId {width:100px; height:36px; float:none; margin-left:10px; background:#ddd; color:#666; border:none; font-size:12px;} 
+#btnPost, #idChkBtn {width:100px; height:36px; float:none; margin-left:10px; background:#ddd; color:#666; border:none; font-size:12px;} 
 .input_postCode {width:100px;}
 
 .input_address {width:195px;}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="comm">
+  <insert id="writePostComm" parameterType="commvo">
+  	insert into comm values(comm_seq.nextVal,#{comm_cont},#{comm_author},sysdate,#{comm_post},null)
+  </insert>
+  <select id="postCommList" parameterType="int" resultType="commvo">
+  	select m.mem_img authorimg, m.mem_name authorname, cm.comm_cont, cm.comm_date, cm.comm_author, cm.comm_num  
+  	from comm cm, member m where cm.comm_post=#{comm_post} and m.mem_num=cm.comm_author
+  </select>
+  </mapper>

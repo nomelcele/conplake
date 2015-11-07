@@ -182,7 +182,7 @@ var imgArr = new Array(3); // 업로드할 파일 이름을 저장하는 배열
         }
         
         function writeReview(){
-    		console.log("-----imgArr-----");
+        	console.log("-----imgArr-----");
     		for(var i=0; i<imgArr.length; i++){
     			console.log(imgArr[i]);
     			$("#imgView"+i).attr("src","upload/"+imgArr[i]);
@@ -192,6 +192,8 @@ var imgArr = new Array(3); // 업로드할 파일 이름을 저장하는 배열
     		$("#post_sightsound").attr("value",$("#reviewSightsound").html());
     		$("#post_facility").attr("value",$("#reviewFacility").html());
     		$("#post_perform").attr("value",$("#reviewPerform").html());
+    		
+    		
     		$("#writeReviewForm").submit();
         	
         }

@@ -13,7 +13,7 @@
   	order by p.post_num desc
   </select>
   <select id="readReview" parameterType="int" resultType="pvo">
-  	select p.post_num, p.post_title, m.mem_name authorname, p.post_date, p.post_hit, c.con_poster concertposter, 
+  	select p.post_num, p.post_title, p.post_author, m.mem_name authorname, p.post_date, p.post_hit, c.con_poster concertposter, 
   	c.con_name concertname, ch.chall_name venuename, to_char(p.post_concertdate,'yyyy-mm-dd') post_concertdate, 
   	p.post_seat, p.post_sightsound, p.post_facility, p.post_perform from post p, member m, concert c, concerthall ch 
   	where p.post_num=#{post_num} and m.mem_num=p.post_author and c.con_num=p.post_concert and c.con_venue=ch.chall_num

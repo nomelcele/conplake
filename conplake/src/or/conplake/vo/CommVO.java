@@ -2,8 +2,21 @@ package or.conplake.vo;
 
 public class CommVO {
 	private int comm_num, comm_author, comm_post, comm_tl;
-	private String comm_cont, comm_date;
+	private String comm_cont, comm_date,
+	authorimg, authorname;
 	
+	public String getAuthorname() {
+		return authorname;
+	}
+	public void setAuthorname(String authorname) {
+		this.authorname = authorname;
+	}
+	public String getAuthorimg() {
+		return authorimg;
+	}
+	public void setAuthorimg(String authorimg) {
+		this.authorimg = authorimg;
+	}
 	public int getComm_num() {
 		return comm_num;
 	}

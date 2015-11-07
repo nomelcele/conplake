@@ -30,19 +30,19 @@
 	  
 	  		<p class="inputLabel"><label>아이디</label></p>	  	
 	         <p class="inputBox" id="inputBox_id">
-	         	<input class="inputStyle" id="id" type="text" maxlength="30" autofocus spellcheck="false" value="" placeholder="아이디" name="mem_id">
-	         	<input class="button" id="btnId" type="button" value="중복체크" name="btn_post" onclick="">
-	         	<strong id="inputBox_idCheck">이미 존재하는 아이디입니다.</strong>
+	         	<input class="inputStyle" id="userId" type="text" maxlength="30" autofocus spellcheck="false" value="" placeholder="아이디" name="mem_id">
+	         	<input class="button" id="idChkBtn" type="button" value="중복체크" name="btn_post" onclick="">
+	         	<strong id="inputBox_idCheck"></strong>
 	         </p>
 	          
 	        <p class="inputLabel"><label>비밀번호</label></p>
 	        <p class="inputBox" id="inputBox_pw">
 	        	<span id="inputBox_pwBox">
-	        		<input class="inputStyle" id="passwd" type="password" placeholder="비밀번호" name="mem_pwd">
+	        		<input class="inputStyle" id="userPwd" type="password" placeholder="비밀번호" name="mem_pwd">
 	        		</span>
 	        	<span id="inputBox_pwCheckBox">
-	        		<input class="inputStyle" id="passwd" type="password" placeholder="비밀번호 재입력" name="">
-	        		<strong id="inputBox_pwCheck">비밀번호가 일치하지 않습니다.</strong>	
+	        		<input class="inputStyle" id="userPwd2" type="password" placeholder="비밀번호 재입력" name="">
+	        		<strong id="inputBox_pwCheck"></strong>	
 	        	</span>
 	        
 	        </p>

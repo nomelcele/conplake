@@ -5,8 +5,10 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import or.conplake.mvc.dao.CommDao;
 import or.conplake.mvc.dao.ConcertDao;
 import or.conplake.mvc.dao.PostDao;
+import or.conplake.vo.CommVO;
 import or.conplake.vo.ConcertVO;
 import or.conplake.vo.PostVO;
 
@@ -23,6 +25,8 @@ public class ConcertModel {
 	private ConcertDao cdao;
 	@Autowired
 	private PostDao pdao;
+	@Autowired
+	private CommDao cmdao;
 
 	@RequestMapping(value = "/main")
 	public String main(Model model) {
@@ -83,7 +87,6 @@ public class ConcertModel {
 			}
 		}
 		
-		
 		pdao.writeReview(pvo);
 		return "redirect:concertInfo?con_num=" + pvo.getPost_concert();
 	}
@@ -91,7 +94,14 @@ public class ConcertModel {
 	@RequestMapping(value = "/readReview")
 	public String readReview(int post_num, Model model) {
 		model.addAttribute("reviewDetail", pdao.readReview(post_num));
+		model.addAttribute("commList", cmdao.postCommList(post_num));
 		return "concert.readReview";
+	}
+	
+	@RequestMapping(value="/writePostComm")
+	public String writePostComm(CommVO commvo){
+		cmdao.writePostComm(commvo);
+		return "redirect:readReview?post_num="+commvo.getComm_post();
 	}
 
 }
