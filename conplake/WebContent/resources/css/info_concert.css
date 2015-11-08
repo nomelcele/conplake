@@ -52,7 +52,7 @@ h3.concert_subTitle {width:900px; height:30px; line-height:30px; font-size:16px;
 
 .reviewNum p{ width:100px; text-align:center;}
 .reviewTitle p{ width:450px; text-align:left;}
-
+.reviewTitle p a:hover{ text-decoration:underline;}
 .reviewId p{ width:100px; text-align:left;}
 
 .reviewDate p{ width:150px; text-align:center;}
