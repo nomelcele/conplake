@@ -42,7 +42,7 @@ h3.concert_subTitle {width:900px; height:30px; line-height:30px; font-size:16px;
 .tr_ongoing th, .tr_review th {background:#eee;}
 
 #table_ongoing, #table_review { table-layout:fixed;}
-#table_ongoing th, #table_ongoing td, #table_review th, #table_review td{ height:30px; text-align:center;}
+#table_ongoing th, #table_ongoing td, #table_review th, #table_review td{ height:30px;}
 
 .ongoingTitle{ width:600px;}
 .ongoingDate{ width:300px;}

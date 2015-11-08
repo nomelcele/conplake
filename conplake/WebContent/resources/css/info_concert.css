@@ -42,18 +42,21 @@ h3.concert_subTitle {width:900px; height:30px; line-height:30px; font-size:16px;
 .tr_setList th, .tr_review th {background:#eee;}
 
 #table_setList, #table_review { table-layout:fixed;}
-#table_setList th, #table_setList td, #table_review th, #table_review td{ height:30px; text-align:center;}
+#table_setList th, #table_setList td, #table_review th, #table_review td{ height:30px;}
 
 .setListNum{ width:100px;}
 .setListTitle{ width:600px;}
 .setListLink{ width:200px;}
 
-#table_setList p, #table_review p, #table_review th p{ text-align:center; white-space:nowrap; text-overflow:ellipsis; overflow:hidden;}
-.reviewNum p{ width:100px;}
-.reviewTitle p{ width:450px; text-align:left; }
+#table_setList p, #table_review p, #table_review th p{ white-space:nowrap; text-overflow:ellipsis; overflow:hidden;}
+
+.reviewNum p{ width:100px; text-align:center;}
+.reviewTitle p{ width:450px; text-align:left;}
+
 .reviewId p{ width:100px; text-align:left;}
-.reviewDate p{ width:150px;}
-.reviewHits p{ width:100px;}
+
+.reviewDate p{ width:150px; text-align:center;}
+.reviewHits p{ width:100px; text-align:center;}
 
 
 .input_categoryReview {
