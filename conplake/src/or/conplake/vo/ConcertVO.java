@@ -4,8 +4,14 @@ public class ConcertVO {
 	private int con_num, con_venue, con_artist;
 	private String con_name, con_poster, con_startdate, con_enddate,
 	con_link, con_detailimg, con_price, con_tel,
-	venuename;
+	venuename, artistname;
 	
+	public String getArtistname() {
+		return artistname;
+	}
+	public void setArtistname(String artistname) {
+		this.artistname = artistname;
+	}
 	public String getVenuename() {
 		return venuename;
 	}

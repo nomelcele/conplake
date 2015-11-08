@@ -15,7 +15,6 @@
             <p class="p_write">공연장 시야 및 음향</p>
     		<div id="profile_txt">
                 
-<!--             	<div class="reviewArea" id="reviewContent" contentEditable="true" ></div> -->
                 <div class="reviewContent" id="reviewSightsound" contentEditable="true" ></div>
                 <div class="fileBox" id="fileBox0">
                 	<div class="fileNameBox" id="fileNameBox0">
@@ -28,7 +27,6 @@
             <p class="p_write">공연장 시설</p>
     		<div id="profile_txt">
                 
-<!--             	<div class="reviewArea" id="reviewContent" contentEditable="true" ></div> -->
                 <div class="reviewContent" id="reviewFacility" contentEditable="true" ></div>
                 <div class="fileBox"  id="fileBox1">
                 	<div class="fileNameBox" id="fileNameBox1">
@@ -41,7 +39,6 @@
             <p class="p_write">공연 내용</p>
     		<div id="profile_txt">
                 
-<!--             	<div class="reviewArea" id="reviewContent" contentEditable="true" ></div> -->
                 <div class="reviewContent" id="reviewPerform" contentEditable="true" ></div>
                 <div class="fileBox"  id="fileBox2">
                 	<div class="fileNameBox" id="fileNameBox2">
@@ -77,7 +74,7 @@
             </tr>
             <tr class="tr_RsetList">
                 <td class="rsetListNum"><p>1</p></td>
-                <td class="rsetListTitle"><p>asdfasdfasdfasfasfsafsafsadf겁바ㅏ나나나나나나나ㄻㅇㄴㅁㄴㅇㄻㄴㅇㄻㄴ</p></td>
+                <td class="rsetListTitle"><p>asdfasdfasdfasfasfsafsafsadf</p></td>
                 <td class="rsetListLink"><p></p></td>
             </tr>
             <tr class="tr_RsetList">
@@ -86,55 +83,25 @@
                 <td class="rsetListLink"><p></p></td>
             </tr>
             <tr class="tr_RsetList">
-                <td class="rsetListNum"><p>1</p></td>
-                <td class="rsetListTitle"><p>asdfasdfasdfasfasfsafsafsadf겁바ㅏ나나나나나나나ㄻㅇㄴㅁㄴㅇㄻㄴㅇㄻㄴ</p></td>
+                <td class="rsetListNum"><p>3</p></td>
+                <td class="rsetListTitle"><p>asdfasdfasdfasfasfsafsafsadf</p></td>
                 <td class="rsetListLink"><p></p></td>
             </tr>
             <tr class="tr_RsetList">
-                <td class="rsetListNum"><p>2</p></td>
+                <td class="rsetListNum"><p>4</p></td>
+                <td class="rsetListTitle"><p>asdfasdfasdfasfasfsafsafsadf</p></td>
+                <td class="rsetListLink"><p></p></td>
+            </tr>
+            <tr class="tr_RsetList">
+                <td class="rsetListNum"><p>5</p></td>
                 <td class="rsetListTitle"><p>sadfdasfdasfasfdasdfasdfasdf</p></td>
                 <td class="rsetListLink"><p></p></td>
             </tr>
             <tr class="tr_RsetList">
-                <td class="rsetListNum"><p>1</p></td>
-                <td class="rsetListTitle"><p>asdfasdfasdfasfasfsafsafsadf겁바ㅏ나나나나나나나ㄻㅇㄴㅁㄴㅇㄻㄴㅇㄻㄴ</p></td>
+                <td class="rsetListNum"><p>6</p></td>
+                <td class="rsetListTitle"><p>asdfasdfasdfasfasfsafsafsadf</p></td>
                 <td class="rsetListLink"><p></p></td>
             </tr>
-            <tr class="tr_RsetList">
-                <td class="rsetListNum"><p>2</p></td>
-                <td class="rsetListTitle"><p>sadfdasfdasfasfdasdfasdfasdf</p></td>
-                <td class="rsetListLink"><p></p></td>
-            </tr>
-            <tr class="tr_RsetList">
-                <td class="rsetListNum"><p>1</p></td>
-                <td class="rsetListTitle"><p>asdfasdfasdfasfasfsafsafsadf겁바ㅏ나나나나나나나ㄻㅇㄴㅁㄴㅇㄻㄴㅇㄻㄴ</p></td>
-                <td class="rsetListLink"><p></p></td>
-            </tr>
-            <tr class="tr_RsetList">
-                <td class="rsetListNum"><p>2</p></td>
-                <td class="rsetListTitle"><p>sadfdasfdasfasfdasdfasdfasdf</p></td>
-                <td class="rsetListLink"><p></p></td>
-            </tr><tr class="tr_RsetList">
-                <td class="rsetListNum"><p>1</p></td>
-                <td class="rsetListTitle"><p>asdfasdfasdfasfasfsafsafsadf겁바ㅏ나나나나나나나ㄻㅇㄴㅁㄴㅇㄻㄴㅇㄻㄴ</p></td>
-                <td class="rsetListLink"><p></p></td>
-            </tr>
-            <tr class="tr_RsetList">
-                <td class="rsetListNum"><p>2</p></td>
-                <td class="rsetListTitle"><p>sadfdasfdasfasfdasdfasdfasdf</p></td>
-                <td class="rsetListLink"><p></p></td>
-            </tr><tr class="tr_RsetList">
-                <td class="rsetListNum"><p>1</p></td>
-                <td class="rsetListTitle"><p>asdfasdfasdfasfasfsafsafsadf겁바ㅏ나나나나나나나ㄻㅇㄴㅁㄴㅇㄻㄴㅇㄻㄴ</p></td>
-                <td class="rsetListLink"><p></p></td>
-            </tr>
-            <tr class="tr_RsetList">
-                <td class="rsetListNum"><p>2</p></td>
-                <td class="rsetListTitle"><p>sadfdasfdasfasfdasdfasdfasdf</p></td>
-                <td class="rsetListLink"><p></p></td>
-            </tr>
-            
-            
             
             </tbody>
           

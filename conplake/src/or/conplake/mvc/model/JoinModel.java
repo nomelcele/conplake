@@ -49,10 +49,12 @@ public class JoinModel {
 	
 	@RequestMapping(value="/idCheck")
 	public void idCheck(String mem_id, HttpServletResponse response) throws IOException{
+		// 요청명이 'idCheck'인 경우 메서드 실행
 		PrintWriter pw = response.getWriter();
 		if(mdao.idCheck(mem_id)){
+			// DB를 조회하여 중복된 아이디가 있는지 확인
 			// 중복된 아이디가 존재하는 경우
-			pw.write("이미 사용 중인 아이디입니다.");
+			pw.write("이미 사용 중인 아이디입니다."); // 클라이언트에게 보낼 응답 메시지 입력
 			pw.flush();
 		} else {
 			pw.write("사용 가능한 아이디입니다.");

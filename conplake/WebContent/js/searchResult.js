@@ -8,13 +8,13 @@ $(document).ready( function () {
 	
 	$("#searchBtn").click(function(){
 		var searchOption = $("#searchCategory").val();
-//		alert($("#searchFrom").val());
-//		alert($("#searchTo").val());
 		if(searchOption=="default"){
 			alert("카테고리를 선택해 주세요.");
 		} else {
 			switch(searchOption){
 				case 'artist':
+					$("#searchKeyword").attr("name","art_name");
+					$("#searchForm").attr("action","artistSearch").submit();
 				case 'concert':
 					$("#searchKeyword").attr("name","con_name");
 					$("#searchForm").attr("action","concertSearch").submit();

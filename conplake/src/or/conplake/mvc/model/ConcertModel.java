@@ -56,30 +56,21 @@ public class ConcertModel {
 
 	@RequestMapping(value = "/writeReview")
 	public String writeReview(PostVO pvo) {
-		List<MultipartFile> files = pvo.getFiles();
-		List<String> fileNames = new ArrayList<String>();
+		List<MultipartFile> files = pvo.getFiles(); // 업로드할 파일들이 저장된 List
 		
 		if(null != files & files.size()>0){
-			for(MultipartFile multipartFile:files){
-//				String fileName = multipartFile.getOriginalFilename();
-//				fileNames.add(fileName);
-//				try {
-//					multipartFile.transferTo(new File("C:\\conplake\\ws\\conplake\\WebContent\\upload\\"+fileName));
-//				} catch (Exception e) {
-//					// TODO Auto-generated catch block
-//					e.printStackTrace();
-//				}
-				
-				String fileName = multipartFile.getOriginalFilename();
+			for(MultipartFile multipartFile:files){ // List에서 파일을 읽어서 하나씩 업로드
+				String fileName = multipartFile.getOriginalFilename(); // 파일의 이름
 				
 				if(fileName != ""){
 					String path = "C:\\conplake\\ws\\conplake\\WebContent\\upload\\"+fileName;
+					// 파일을 저장할 경로
 					System.out.println("File Upload Path: "+path);
 					File file = new File(path);
-					file.mkdirs();
+					file.mkdirs(); // File 객체 생성 후 지정한 경로에 파일 업로드
 					
 					try {
-						multipartFile.transferTo(file);
+						multipartFile.transferTo(file); // 업로드된 파일 데이터를 지정한 파일에 저장 
 					} catch (Exception e) {
 						e.printStackTrace();
 					} 
