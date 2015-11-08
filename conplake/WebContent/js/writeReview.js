@@ -103,7 +103,7 @@ var imgArr = new Array(1); // 업로드할 파일 이름을 저장하는 배열
 	        		reviewArea.append("<br/>").append("<img id='imgView"+imgNum+"'>");
 	        		
 	        		$("#imgView"+imgNum).attr('src', blobURL).css(
-	        				'height', '100');
+	        				'width', '350');
 	        		// attr() src 속성에  blobURL을 넣는다.
 	        		
 	        		imgArr[imgNum] = $(this).val().split("\\")[2];
@@ -165,7 +165,7 @@ var imgArr = new Array(1); // 업로드할 파일 이름을 저장하는 배열
 	        		reviewArea.append("<br/>").append("<img id='imgView"+imgNum+"'>");
 	        		
 	        		$("#imgView"+imgNum).attr('src', blobURL).css(
-	        				'height', '100');
+	        				'width', '350');
 	        		// attr() src 속성에  blobURL을 넣는다.
 	        		
 	        		imgArr[imgNum] = $(this).val().split("\\")[2];
@@ -228,7 +228,7 @@ var imgArr = new Array(1); // 업로드할 파일 이름을 저장하는 배열
 	        		reviewArea.append("<br/>").append("<img id='imgView"+imgNum+"'>");
 	        		
 	        		$("#imgView"+imgNum).attr('src', blobURL).css(
-	        				'height', '100');
+	        				'width', '350');
 	        		// attr() src 속성에  blobURL을 넣는다.
 	        		
 	        		imgArr[imgNum] = $(this).val().split("\\")[2];
@@ -303,7 +303,7 @@ var imgArr = new Array(1); // 업로드할 파일 이름을 저장하는 배열
     		reviewArea.append("<br/>").append("<img id='imgView"+imgNum+"'>");
     		
     		$("#imgView"+imgNum).attr('src', blobURL).css(
-    				'height', '100');
+    				'width', '350');
     		// attr() src 속성에  blobURL을 넣는다.
     		
     		imgArr[imgNum] = obj.val().split("\\")[2];

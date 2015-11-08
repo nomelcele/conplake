@@ -18,8 +18,9 @@
   </select>
   <select id="concertInfo" parameterType="int" resultType="cvo">
   	select c.con_num, c.con_name, c.con_poster, to_char(c.con_startdate,'yyyy-mm-dd') con_startdate, 
-  	to_char(c.con_enddate,'yyyy-mm-dd') con_enddate, c.con_venue, ch.chall_name venuename, con_artist, con_link,
-  	con_price, con_tel, con_detailimg from concert c, concerthall ch where con_num=#{con_num} and c.con_venue = ch.chall_num
+  	to_char(c.con_enddate,'yyyy-mm-dd') con_enddate, c.con_venue, ch.chall_name venuename, a.art_name artistname, con_link,
+  	con_price, con_tel, con_detailimg from concert c, concerthall ch, artist a 
+  	where con_num=#{con_num} and c.con_venue = ch.chall_num and c.con_artist = a.art_num
   </select>
   <select id="concertSearch" parameterType="cvo" resultType="cvo">
   	select c.con_num, c.con_poster, c.con_name, to_char(c.con_startdate,'yyyy-mm-dd') con_startdate, 
@@ -28,12 +29,16 @@
   		<if test="con_name != null">
   			and c.con_name like '%'||#{con_name}||'%'
   		</if>
-  		<if test="con_startdate != ''">
-  			and #{con_startdate} <![CDATA[<=]]> c.con_enddate 
+  		<if test="con_startdate != null">
+	  		<if test="con_startdate != ''">
+	  			and #{con_startdate} <![CDATA[<=]]> c.con_enddate 
+	  		</if>
   		</if>
-  		<if test="con_enddate != ''">	
-  			and #{con_enddate} <![CDATA[>=]]> c.con_startdate
-  		</if> 
+  		<if test="con_enddate != null">
+	  		<if test="con_enddate != ''">	
+	  			and #{con_enddate} <![CDATA[>=]]> c.con_startdate
+	  		</if> 
+  		</if>
   	order by c.con_name
   </select>
   <select id="ongoingConcerts" parameterType="int" resultType="cvo">

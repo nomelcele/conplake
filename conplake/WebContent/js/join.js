@@ -21,7 +21,7 @@ function searchPostcode(){
 
 					// 사용자가 선택한 주소가 도로명 타입일 때 조합한다.
 					if (data.userSelectedType === 'R') {
-						//법정동명이 있을 경우 추가한다.
+						// 법정동명이 있을 경우 추가한다.
 						if (data.bname !== '') {
 							extraAddr += data.bname;
 						}
@@ -67,21 +67,21 @@ $(function(){
 	
 	$("#inputProfileImg").change(
 		function(){
-		// 변화가 있을 때 function을 호출한다.
-		// 확장자 . 기준으로 다음 요소를 선택해서 소문자로 변경한 후에 ext에 저장한다.
+		// 파일이 업로드 되었을 때 함수 호출
+		// 확장자 . 기준으로 다음 요소를 선택해서 소문자로 변경한 후에 ext에 저장
 		var ext = $(this).val().split('.').pop()
 			.toLowerCase();
-		// pop(): 배열만 취급. 
+		// pop(): 배열만 취급
 		// 마지막 index의 value를 pop()이 리턴
 		// ex) $(this).val() => img.jpg
-		// pop()하면 jpg가 리턴됨!
-		// toLowerCase(): String을 모두 소문자로 만들어준다.
+		// pop()하면 jpg가 리턴
+		// toLowerCase(): String을 모두 소문자로 만든다.
 
 		// 추출한 확장자가 배열에 존재하는지 체크
 		if ($.inArray(ext, [ 'gif', 'png', 'jpg', 'jpeg' ]) == -1) {
-		// 첫번째에 있는 인자값이 두번째에 있는 배열에 있는지 확인 후, 
+		// 첫번째에 있는 인자값이 두번째에 있는 배열에 있는지 확인 후
 		// 있으면 1, 없으면 -1을 리턴
-		// inArray는 jQuery에서 제공하는 메서드
+		
 		resetFormElement($(this)); // 폼 초기화
 			window.alert('이미지 파일이 아닙니다. gif, png, jpg, jpeg만 업로드 가능합니다.');
 		} else {
@@ -93,32 +93,36 @@ $(function(){
 		blobURL = window.URL.createObjectURL(file);
 		console.log("blobURL::::", blobURL);
 		// 윈도우 자체에서 파일을 불러오는 경로값을 표현하려면
-		// createObjectURL()을 사용해야 한다.
+		// createObjectURL()을 사용
 							
 
 		$('#target_img').attr('src', blobURL).css(
 				'width', '200').css('height', '200');
-		// attr() src 속성에  blobURL을 넣는다.
+		// attr() src 속성에  blobURL 넣기
 		}
 		
 	});
 	
-	// 아이디 중복 체크
+	// 아이디 중복 검사
 	$("#idChkBtn").click(function(){
-		$.ajax({
+		// '중복 체크' 버튼을 클릭했을 때 함수 동작
+		$.ajax({ 
+			// 비동기식으로 통신하기 때문에
+			// 같은 페이지 내에서 다른 작업을 함께 할 수 있다.
+			// 페이지를 새로 로드하지 않고, 서버로부터 응답을 받는다.
 			type : "POST",
-			url : "idCheck",
-			data : {
-				mem_id : $("#userId").val()
+			url : "idCheck", // 요청명
+			data : { // 요청 시 보내는 파라미터
+				mem_id : $("#userId").val() // 사용자가 입력한 아이디
 			},
 			success : function(result) {
 				console.log(result);
 				var text=""; text=result;
-				if(text=="사용 가능한 아이디입니다."){
+				if(text=="사용 가능한 아이디입니다."){ // 중복된 아이디가 없을 경우 메시지 출력
 					$('#inputBox_idCheck').css('color','blue');
 					$('#inputBox_idCheck').html(result);
 				}
-				else {
+				else { // 중복된 아이디가 있을 경우 메시지 출력
 					$('#inputBox_idCheck').css('color','red');
 					$('#inputBox_idCheck').html(result);
 				}
