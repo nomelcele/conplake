@@ -37,7 +37,7 @@
 #table_readReview { margin-bottom:60px;}
 
 
-.tr_reply { width:900px; height:85px; min-height:70px;}
+.tr_reply { width:900px; height:100px; min-height:100px;}
 .tr_reply #td_replyId { width:71px; border-right:none; padding-left:10px; padding-top:15px; vertical-align:top; }
 .tr_reply #td_replyId img { border-radius:50px; }
 .tr_reply #td_replyContent { width:680px; padding-bottom:20px;} 
@@ -45,7 +45,7 @@
 #p_replyContent { line-height:20px;}
 
 .tr_reply #td_replyDate {width:100px; text-align:right; border-right:none; vertical-align:text-top;}
-.tr_reply #td_replyDate p{height:25px; line-height:20px; padding-right:15px; color:#666;}
+.tr_reply #td_replyDate p{height:50px; line-height:20px; padding-right:15px; color:#666; font-size:11px;}
 .tr_reply #td_replyDate input {background:#fff; border:1px solid #ccc; width:50px; color:#666;}
 
 #div_inputReply {width:860px; border-right:none; text-align:left; height:100px; padding:15px 20px; background:#f5f5f5; border-bottom:1px solid #ccc;}
