@@ -16,8 +16,14 @@
                 <div id="concertProfile">   	
                     <p>일시 : <span>${conInfo.con_startdate} ~ ${conInfo.con_enddate}</span></p>
                     <p>장소 : <span><a href="concerthallInfo?chall_num=${conInfo.con_venue}">${conInfo.venuename}</a></span></p>
-                    <p>출연 : <span><a href="#">${conInfo.artistname}</a></span></p>
-
+                    <p>출연 : <span><a href="#">
+                    	<c:if test="${!empty conInfo.artistname}">
+                    	${conInfo.artistname}
+                    	</c:if>
+                    	<c:if test="${empty conInfo.artistname}">
+                    	${conInfo.con_artist}
+                    	</c:if>
+                    </a></span></p>
                     <p>관람료 : <span>${conInfo.con_price}</span></p>
                     <p>문의 : <span>${conInfo.con_tel}</span></p>
                     <p>공식 사이트 : <span><a href="${conInfo.con_link}">${conInfo.con_link}</a></span></p>
@@ -89,24 +95,8 @@
 	                        <td class="reviewHits"><p>${reviewList.post_hit}</p></td>
 	                    </tr>
                     </c:forEach>
-                    
-                    
-<!--                     <tr class="tr_review"> -->
-<!--                         <td class="reviewNum"><p>3</p></td> -->
-<!--                         <td class="reviewTitle"><p><a></a></p></td> -->
-<!--                         <td class="reviewID"><p></p></td> -->
-<!--                         <td class="reviewDate"><p></p></td> -->
-<!--                         <td class="reviewHits"><p></p></td> -->
-<!--                     </tr> -->
-<!--                     <tr class="tr_review"> -->
-<!--                         <td class="reviewNum"><p>2</p></td> -->
-<!--                         <td class="reviewTitle"><p><a></a></p></td> -->
-<!--                         <td class="reviewID"><p></p></td> -->
-<!--                         <td class="reviewDate"><p></p></td> -->
-<!--                         <td class="reviewHits"><p></p></td> -->
-<!--                     </tr> -->
-                    
-                  
+
+                                      
                 </Table>
                 <p id="p_review">
                 	<span>
