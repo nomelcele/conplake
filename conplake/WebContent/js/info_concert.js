@@ -136,4 +136,52 @@ $( document ).ready(function() {
 	
 	
 	//----------------------------tab3-----------------------------//
-})
+	
+	$("#btn_searchReview").click(function(){
+		// 리뷰 검색
+		var searchOption = $("#reviewSearchCategory").val();
+		switch(searchOption){
+			case 'title':
+				$.ajax({
+					type : "POST",
+					url : "reviewSearch",
+					data : {
+						post_title: $("#reviewSearchKeyword").val(),
+						con_num: $("#reviewConNum").val()
+					},
+					success : function(result) {
+						$('#concertReview').html(result);
+					}
+				});
+				break;
+			case 'author':
+				$.ajax({
+					type : "POST",
+					url : "reviewSearch",
+					data : {
+						authorname: $("#reviewSearchKeyword").val(),
+						con_num: $("#reviewConNum").val() 
+					},
+					success : function(result) {
+						$('#concertReview').html(result);
+					}
+				});
+				break;
+			case 'cont':
+				$.ajax({
+					type : "POST",
+					url : "reviewSearch",
+					data : {
+						reviewcont: $("#reviewSearchKeyword").val(),
+						con_num: $("#reviewConNum").val()
+					},
+					success : function(result) {
+						$('#concertReview').html(result);
+					}
+				});
+				break;
+		}
+		
+		
+	});
+});

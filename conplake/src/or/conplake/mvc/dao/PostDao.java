@@ -1,5 +1,6 @@
 package or.conplake.mvc.dao;
 
+import java.util.HashMap;
 import java.util.List;
 
 import or.conplake.vo.PostVO;
@@ -17,8 +18,8 @@ public class PostDao {
 		st.insert("post.writeReview", pvo);
 	}
 	
-	public List<PostVO> reviewList(int con_num){
-		return st.selectList("post.reviewList", con_num);
+	public List<PostVO> reviewList(HashMap<String, String> map){
+		return st.selectList("post.reviewList", map);
 	}
 	
 	public PostVO readReview(int post_num){
