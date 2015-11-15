@@ -1,5 +1,15 @@
 var page=1;
 
+function loadMap(gpsy,gpsx){
+	var container = document.getElementById('concerthallMap'); //지도를 담을 영역의 DOM 레퍼런스
+	var options = { //지도를 생성할 때 필요한 기본 옵션
+		center: new daum.maps.LatLng(gpsx, gpsy), //지도의 중심좌표.
+		level: 3 //지도의 레벨(확대, 축소 정도)
+	};
+
+	var map = new daum.maps.Map(container, options); //지도 생성 및 객체 리턴
+}
+
 $( document ).ready(function() {
 	$("#tab1").height("31");
 	$("#tab1").css("background-color","#fff");
@@ -43,6 +53,9 @@ $( document ).ready(function() {
 		$("#tab4").css("background-color","#eee");
 		$("#tab5").height("30");
 		$("#tab5").css("background-color","#eee"); 
+		
+		console.log($("#gpsx").val(),$("#gpsy").val());
+		loadMap($("#gpsx").val(),$("#gpsy").val());
 		
 	});
 	
@@ -186,3 +199,4 @@ $( document ).ready(function() {
 	
 	//----------------------------tab3-----------------------------//
 });
+
