@@ -3,6 +3,7 @@ package or.conplake.mvc.model;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import or.conplake.mvc.dao.CommDao;
@@ -15,8 +16,10 @@ import or.conplake.vo.PostVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 @Controller
@@ -35,10 +38,13 @@ public class ConcertModel {
 	}
 
 	@RequestMapping(value = "/concertInfo")
-	public String concertInfo(int con_num, Model model) {
-		model.addAttribute("conInfo", cdao.concertInfo(con_num));
-		model.addAttribute("reviewList", pdao.reviewList(con_num));
+	public String concertInfo(@RequestParam HashMap<String,String> map,Model model) {
+		model.addAttribute("conInfo", cdao.concertInfo(Integer.parseInt(map.get("con_num"))));
+		model.addAttribute("reviewList", pdao.reviewList(map));
 		return "concert.concertInfo";
+//		model.addAttribute("conInfo", cdao.concertInfo(con_num));
+//		model.addAttribute("reviewList", pdao.reviewList(con_num));
+//		return "concert.concertInfo";
 	}
 
 	@RequestMapping(value = "/concertSearch")
@@ -93,6 +99,11 @@ public class ConcertModel {
 	public String writePostComm(CommVO commvo){
 		cmdao.writePostComm(commvo);
 		return "redirect:readReview?post_num="+commvo.getComm_post();
+	}
+	
+	@RequestMapping(value="/reviewSearch")
+	public String reviewSearch(@RequestParam HashMap<String,String> map,Model model){
+		return "";
 	}
 
 }
