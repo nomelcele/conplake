@@ -1,26 +1,37 @@
 @CHARSET "UTF-8";
 
-#concertSetlist {width:700px; margin:0 auto; padding-top:50px; padding-bottom:100px;}
+p.concert_subTitle {width:900px; height:30px; line-height:30px; font-size:16px; padding-bottom:10px; display:block; font-weight:700; display:block;}
 
-h3.concert_subTitle {width:700px; height:30px; line-height:30px; font-size:16px; padding-bottom:10px; display:block; font-weight:700; display:block;}
+.innerButton {width:100px; height:30px; background:#fff; padding:0; margin:0; border:1px solid #ccc; border-radius:0; float:right; color:#333; font-size:12px;}
 
-.innerButton {width:100px; height:30px; background:#555; padding:0; margin:0; border:none; border-radius:0; float:right; color:#fff; font-size:12px;}
-h3 input#edit_setList:hover {background:#333;}
-h3 input#submit_setList{ margin-left:15px; background:#C30D22; }
-h3 input#submit_setList:hover {background:#ae0115;}
+p input#edit_setList:hover {background:#eee;}
+p input#remove_setList{ margin-left:15px; background:#fff; border:1px solid #ccc; }
+p input#remove_setList:hover {background:#eee;}
 
 #table_setList {}
 .tr_setList { border-bottom:1px solid #ccc;}
 
-.tr_setList th {background:#999;}
+.tr_setList th {background:#eee;}
 
 
 .tr_setList th{ height:30px;} 
 .tr_setList td{ height:50px;}
 
+.setListCheck{ width:50px; text-align:center;}
 .setListNum{ width:100px;}
-.setListTitle{ width:600px;}
+.setListTitle{ width:750px;}
 
-.input_setList{ height:25px; border:1px solid #ddd; padding-left:5px;}
+
+.input_check {display:none;}
+.label_check { display:inline-block; background:#fff; width:15px; height:15px; border:1px solid #ccc; border-radius:0; font-weight:100; vertical-align:middle; text-align:center; cursor:pointer; }
+input[class="input_check"]:checked + label:after{ content:'\2716'; }
+
+
+
+
+.input_setList{ height:25px; border:1px solid #ddd; padding-left:5px; display:inline-block; cursor: pointer;}
 #input_setListNum{ width:70px; margin-left:10px;}
-#input_setListTitle{ width:570px; margin-left:10px;}
+#input_setListTitle{ width:720px; margin-left:10px;}
+
+
+#setList_submit { float:right; margin-top:30px;}
