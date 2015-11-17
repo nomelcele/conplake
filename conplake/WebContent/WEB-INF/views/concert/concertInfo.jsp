@@ -65,7 +65,7 @@
                     
                   
                 </Table>
-                <p id="p_setList"><input id="edit_setList" class="innerButton button" type="button" value="수정"/></p>
+                <p id="p_setList"><input id="edit_setListBtn" class="innerButton button" type="button" value="수정"/></p>
             </div>
             
             
