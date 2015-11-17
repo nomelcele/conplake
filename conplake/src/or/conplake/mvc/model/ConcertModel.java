@@ -105,5 +105,10 @@ public class ConcertModel {
 	public String reviewSearch(@RequestParam HashMap<String,String> map,Model model){
 		return "";
 	}
+	
+	@RequestMapping(value="/editSetlist")
+	public String editSetlist(){
+		return "concert/editSetlist";
+	}
 
 }

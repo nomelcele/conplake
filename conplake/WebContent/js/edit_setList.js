@@ -18,7 +18,12 @@ $('document').ready(function(){
 	});
 	
 	
-	 
+	$("#edit_setListBtn").click(function(){
+		alert("셋리수정");
+		var option = "width=1200, height=550, scrollbars=yes";
+		window.open("editSetlist","Edit Setlist",option);
+		
+	});
 	 
 })
 
@@ -87,3 +92,4 @@ function removeRow(){
 	$("#input_check0").prop("checked",false);  
 
 }
+
