@@ -34,4 +34,4 @@ input[class="input_check"]:checked + label:after{ content:'\2716'; }
 #input_setListTitle{ width:720px; margin-left:10px;}
 
 
-#setList_submit { float:right; margin-top:30px;}
+#setList_saveBtn { float:right; margin-top:30px;}

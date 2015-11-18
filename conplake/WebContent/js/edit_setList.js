@@ -20,15 +20,55 @@ $('document').ready(function(){
 	
 	$("#edit_setListBtn").click(function(){
 		alert("셋리수정");
-		var option = "width=1200, height=550, scrollbars=yes";
-		window.open("editSetlist","Edit Setlist",option);
+		$.ajax({
+			type : "POST",
+			url : "editSetlist",
+			data : {
+				con_num: $("#concertNumber").val(),
+				con_artist: $("#concertArtist").val()
+			},
+			success : function(result) {
+				$('#concertSetList').html(result);
+			}
+		});
+	});
+	
+	// ajax 데이터로 배열을 보내기 위한 설정
+	$.ajaxSettings.traditional = true;
+	
+	$("#setList_saveBtn").click(function(){
+		alert("셋리저장");
+		var titleArr = document.getElementsByName("input_setListTitle");
+		var orderArr = document.getElementsByName("input_setListNum");
 		
+		var songs_title = [];
+		var songs_order = [];
+
+		for(var i=0; i<titleArr.length; i++){
+			songs_title.push(titleArr[i].value);
+			songs_order.push(orderArr[i].value);
+		}
+		
+		$.ajax({
+			type : "POST",
+			url : "saveSetlist",
+			data : {
+				songs_title: songs_title,
+				con_artist: $("#setList_con_artist").val(),
+				con_num: $("#setList_con_num").val(),
+				songs_order: songs_order 
+			},
+			success : function(result) {
+				$('#concertSetList').html(result);
+			}
+		});
 	});
 	 
 })
 
 
 function createRow(){ 
+	alert("행 추가");
     rowNum+=1;
 
 	
@@ -60,13 +100,15 @@ function createRow(){
 	var input1= document.createElement("INPUT");
 	input1.setAttribute("type", "number");
    	input1.className = "input_setList";
-	input1.id = "input_setListNum"
+	input1.id = "input_setListNum";
+	input1.name = "input_setListNum"
 	cell1.appendChild(input1);
 	
 	var input2= document.createElement("INPUT");
 	input2.setAttribute("type", "text");
 	input2.className = "input_setList";
 	input2.id = "input_setListTitle";
+	input2.name = "input_setListTitle";
 	cell2.appendChild(input2);
 	
 	
@@ -85,7 +127,7 @@ function createRow(){
 } 
 
 function removeRow(){ 
-	
+	alert("행 삭제");
 	$(".input_check:checked").not($("#input_check0")).parent().siblings().remove();
 	$(".input_check:checked").not($("#input_check0")).parent().remove();
 	

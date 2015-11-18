@@ -1,12 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
-<link href="resources/css/edit_setList.css" rel="stylesheet" type="text/css"/>
-<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>  
 <script src="js/edit_setList.js"></script>
 <h1>EDIT SETLIST</h1>
+	<input type="hidden" id="setList_con_num" value="${concertInfo.con_num}">
+	<input type="hidden" id="setList_con_artist" value="${concertInfo.con_artist}">
             	<p class="concert_subTitle">
                 	<input id="remove_setList" class="innerButton button" type="button" value="행 삭제" onclick="removeRow()"/>
                     <input id="edit_setList" class="innerButton button" type="button" value="행 추가" onclick="createRow()"/>
@@ -21,22 +19,40 @@
                         <th class="setListNum">순서</th>
                         <th class="setListTitle">곡 제목</th>
                     </tr>
+                    <c:forEach var="setlist" items="${setlist}">
+	                    <tr class="tr_setList">
+		                    <td class="setListCheck">
+	                        	<input class="input_check" id="input_check1" name="s_check" type="checkbox"/>
+	                            <label class="label_check" for="input_check1"></label>
+	                        </td>
+	                        <td class="setListNum">
+	                        	<input class="input_setList" id="input_setListNum" name="input_setListNum" type="number" value="${setlist.song_order}"/>
+	                        </td>
+	                        <td class="setListTitle">
+	                        	<input class="input_setList" id="input_setListTitle" name="input_setListTitle" type="text" value="${setlist.song_title}"/>
+	                        </td>
+	                    </tr>
+                    </c:forEach>
                     <tr class="tr_setList">
                     	<td class="setListCheck">
                         	<input class="input_check" id="input_check1" name="s_check" type="checkbox"/>
                             <label class="label_check" for="input_check1"></label>
                         </td>
                         <td class="setListNum">
-                        	<input class="input_setList" id="input_setListNum" type="number" />
+                        	<input class="input_setList" id="input_setListNum" name="input_setListNum" type="number" />
                         </td>
                         <td class="setListTitle">
-                        	<input class="input_setList" id="input_setListTitle" type="text" />
+                        	<input class="input_setList" id="input_setListTitle" name="input_setListTitle" type="text" />
                         </td>
                       
                     </tr>
                     
+                    
+                    
+                    
+                    
                 </Table>
                 
-                <input id="setList_submit" class="button" type="submit" value="저장" name="setList_submit">
+                <input id="setList_saveBtn" class="button" type="submit" value="저장" name="setList_submit">
                 
                 <footer></footer>    

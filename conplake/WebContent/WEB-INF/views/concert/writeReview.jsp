@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>  
 <h1>WRITE REVIEW</h1>
 <form id="writeReviewForm" action="writeReview" method="post" enctype="multipart/form-data">
 	<input type="hidden" name="post_author" value="${sessionScope.mvo.mem_num}">
@@ -72,36 +73,19 @@
                 <th class="rsetListTitle"><p>곡 제목</p></th>
                 <th class="rsetListLink"><p>링크</p></th>
             </tr>
+            <c:forEach var="setlist" items="${setlist}">
             <tr class="tr_RsetList">
-                <td class="rsetListNum"><p>1</p></td>
-                <td class="rsetListTitle"><p>asdfasdfasdfasfasfsafsafsadf</p></td>
+                <td class="rsetListNum"><p>${setlist.song_order}</p></td>
+                <td class="rsetListTitle"><p>${setlist.song_title}</p></td>
                 <td class="rsetListLink"><p></p></td>
             </tr>
-            <tr class="tr_RsetList">
-                <td class="rsetListNum"><p>2</p></td>
-                <td class="rsetListTitle"><p>sadfdasfdasfasfdasdfasdfasdf</p></td>
-                <td class="rsetListLink"><p></p></td>
-            </tr>
-            <tr class="tr_RsetList">
-                <td class="rsetListNum"><p>3</p></td>
-                <td class="rsetListTitle"><p>asdfasdfasdfasfasfsafsafsadf</p></td>
-                <td class="rsetListLink"><p></p></td>
-            </tr>
-            <tr class="tr_RsetList">
-                <td class="rsetListNum"><p>4</p></td>
-                <td class="rsetListTitle"><p>asdfasdfasdfasfasfsafsafsadf</p></td>
-                <td class="rsetListLink"><p></p></td>
-            </tr>
-            <tr class="tr_RsetList">
-                <td class="rsetListNum"><p>5</p></td>
-                <td class="rsetListTitle"><p>sadfdasfdasfasfdasdfasdfasdf</p></td>
-                <td class="rsetListLink"><p></p></td>
-            </tr>
-            <tr class="tr_RsetList">
-                <td class="rsetListNum"><p>6</p></td>
-                <td class="rsetListTitle"><p>asdfasdfasdfasfasfsafsafsadf</p></td>
-                <td class="rsetListLink"><p></p></td>
-            </tr>
+			</c:forEach>
+<!-- 	                    <tr class="tr_setList"> -->
+<%-- 	                        <td class="setListNum"><p>${setlist.song_order}</p></td> --%>
+<%-- 	                        <td class="setListTitle"><p>${setlist.song_title}</p></td> --%>
+<!-- 	                        <td class="setListLink"><p></p></td> -->
+<!-- 	                    </tr> -->
+                    
             
             </tbody>
           
