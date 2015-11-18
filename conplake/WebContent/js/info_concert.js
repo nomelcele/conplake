@@ -147,7 +147,7 @@ $( document ).ready(function() {
 					url : "reviewSearch",
 					data : {
 						post_title: $("#reviewSearchKeyword").val(),
-						con_num: $("#reviewConNum").val()
+						con_num: $("#concertNumber").val()
 					},
 					success : function(result) {
 						$('#concertReview').html(result);
@@ -160,7 +160,7 @@ $( document ).ready(function() {
 					url : "reviewSearch",
 					data : {
 						authorname: $("#reviewSearchKeyword").val(),
-						con_num: $("#reviewConNum").val() 
+						con_num: $("#concertNumber").val() 
 					},
 					success : function(result) {
 						$('#concertReview').html(result);
@@ -173,7 +173,7 @@ $( document ).ready(function() {
 					url : "reviewSearch",
 					data : {
 						reviewcont: $("#reviewSearchKeyword").val(),
-						con_num: $("#reviewConNum").val()
+						con_num: $("#concertNumber").val()
 					},
 					success : function(result) {
 						$('#concertReview').html(result);

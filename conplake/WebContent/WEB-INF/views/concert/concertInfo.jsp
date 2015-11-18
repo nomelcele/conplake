@@ -2,7 +2,8 @@
     pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>  
     <h1>CONCERT INFORMATION</h1>
-    <input type="hidden" id="reviewConNum" value="${conInfo.con_num}">
+    <input type="hidden" id="concertNumber" value="${conInfo.con_num}">
+    <input type="hidden" id="concertArtist" value="${conInfo.con_artist}">
         	<h2 id="concertTitle">${conInfo.con_name}
             	<div id="innerButtonBox">
                     <input id="GoTogether" class="innerButton button" type="button" value="함께가요" onclick=""/>
@@ -52,16 +53,13 @@
                         <th class="setListTitle"><p>곡 제목</p></th>
                         <th class="setListLink"><p>링크</p></th>
                     </tr>
-                    <tr class="tr_setList">
-                        <td class="setListNum"><p></p></td>
-                        <td class="setListTitle"><p></p></td>
-                        <td class="setListLink"><p></p></td>
-                    </tr>
-                    <tr class="tr_setList">
-                        <td class="setListNum"><p></p></td>
-                        <td class="setListTitle"><p></p></td>
-                        <td class="setListLink"><p></p></td>
-                    </tr>
+                    <c:forEach var="setlist" items="${setlist}">
+	                    <tr class="tr_setList">
+	                        <td class="setListNum"><p>${setlist.song_order}</p></td>
+	                        <td class="setListTitle"><p>${setlist.song_title}</p></td>
+	                        <td class="setListLink"><p></p></td>
+	                    </tr>
+                    </c:forEach>
                     
                   
                 </Table>

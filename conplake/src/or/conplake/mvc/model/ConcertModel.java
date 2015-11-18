@@ -5,13 +5,16 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import or.conplake.mvc.dao.CommDao;
 import or.conplake.mvc.dao.ConcertDao;
 import or.conplake.mvc.dao.PostDao;
+import or.conplake.mvc.dao.SongDao;
 import or.conplake.vo.CommVO;
 import or.conplake.vo.ConcertVO;
 import or.conplake.vo.PostVO;
+import or.conplake.vo.SongVO;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -30,6 +33,8 @@ public class ConcertModel {
 	private PostDao pdao;
 	@Autowired
 	private CommDao cmdao;
+	@Autowired
+	private SongDao sdao;
 
 	@RequestMapping(value = "/main")
 	public String main(Model model) {
@@ -38,13 +43,16 @@ public class ConcertModel {
 	}
 
 	@RequestMapping(value = "/concertInfo")
-	public String concertInfo(@RequestParam HashMap<String,String> map,Model model) {
-		model.addAttribute("conInfo", cdao.concertInfo(Integer.parseInt(map.get("con_num"))));
+	public String concertInfo(@RequestParam HashMap<String, String> map,
+			Model model) {
+		model.addAttribute("conInfo",
+				cdao.concertInfo(Integer.parseInt(map.get("con_num"))));
 		model.addAttribute("reviewList", pdao.reviewList(map));
+		model.addAttribute("setlist", sdao.setlist(Integer.parseInt(map.get("con_num"))));
 		return "concert.concertInfo";
-//		model.addAttribute("conInfo", cdao.concertInfo(con_num));
-//		model.addAttribute("reviewList", pdao.reviewList(con_num));
-//		return "concert.concertInfo";
+		// model.addAttribute("conInfo", cdao.concertInfo(con_num));
+		// model.addAttribute("reviewList", pdao.reviewList(con_num));
+		// return "concert.concertInfo";
 	}
 
 	@RequestMapping(value = "/concertSearch")
@@ -57,33 +65,37 @@ public class ConcertModel {
 	@RequestMapping(value = "/writeReviewForm")
 	public String writeReviewForm(int con_num, Model model) {
 		model.addAttribute("conWriteInfo", cdao.concertInfo(con_num));
+		model.addAttribute("setlist", sdao.setlist(con_num));
 		return "concert.writeReview";
 	}
 
 	@RequestMapping(value = "/writeReview")
 	public String writeReview(PostVO pvo) {
 		List<MultipartFile> files = pvo.getFiles(); // 업로드할 파일들이 저장된 List
-		
-		if(null != files & files.size()>0){
-			for(MultipartFile multipartFile:files){ // List에서 파일을 읽어서 하나씩 업로드
+
+		if (null != files & files.size() > 0) {
+			for (MultipartFile multipartFile : files) { // List에서 파일을 읽어서 하나씩
+														// 업로드
 				String fileName = multipartFile.getOriginalFilename(); // 파일의 이름
-				
-				if(fileName != ""){
-					String path = "C:\\conplake\\ws\\conplake\\WebContent\\upload\\"+fileName;
+
+				if (fileName != "") {
+					String path = "C:\\conplake\\ws\\conplake\\WebContent\\upload\\"
+							+ fileName;
 					// 파일을 저장할 경로
-					System.out.println("File Upload Path: "+path);
+					System.out.println("File Upload Path: " + path);
 					File file = new File(path);
 					file.mkdirs(); // File 객체 생성 후 지정한 경로에 파일 업로드
-					
+
 					try {
-						multipartFile.transferTo(file); // 업로드된 파일 데이터를 지정한 파일에 저장 
+						multipartFile.transferTo(file); // 업로드된 파일 데이터를 지정한 파일에
+														// 저장
 					} catch (Exception e) {
 						e.printStackTrace();
-					} 
+					}
 				}
 			}
 		}
-		
+
 		pdao.writeReview(pvo);
 		return "redirect:concertInfo?con_num=" + pvo.getPost_concert();
 	}
@@ -94,21 +106,48 @@ public class ConcertModel {
 		model.addAttribute("commList", cmdao.postCommList(post_num));
 		return "concert.readReview";
 	}
-	
-	@RequestMapping(value="/writePostComm")
-	public String writePostComm(CommVO commvo){
+
+	@RequestMapping(value = "/writePostComm")
+	public String writePostComm(CommVO commvo) {
 		cmdao.writePostComm(commvo);
-		return "redirect:readReview?post_num="+commvo.getComm_post();
+		return "redirect:readReview?post_num=" + commvo.getComm_post();
 	}
-	
-	@RequestMapping(value="/reviewSearch")
-	public String reviewSearch(@RequestParam HashMap<String,String> map,Model model){
+
+	@RequestMapping(value = "/reviewSearch")
+	public String reviewSearch(@RequestParam HashMap<String, String> map,
+			Model model) {
 		return "";
 	}
-	
-	@RequestMapping(value="/editSetlist")
-	public String editSetlist(){
+
+	@RequestMapping(value = "/editSetlist")
+	public String editSetlist(ConcertVO cvo, Model model) {
+		model.addAttribute("concertInfo", cvo);
+		model.addAttribute("setlist", sdao.setlist(cvo.getCon_num()));
 		return "concert/editSetlist";
 	}
+
+	@RequestMapping(value = "/saveSetlist")
+	public String saveSetlist(ConcertVO cvo, String[] songs_title, int[] songs_order, Model model) {
+		for(int i=0; i<songs_title.length; i++){
+			SongVO svo = new SongVO();
+			svo.setSong_artist(cvo.getCon_artist());
+			svo.setSong_concert(cvo.getCon_num());
+			svo.setSong_order(songs_order[i]);
+			svo.setSong_title(songs_title[i]);
+			sdao.addSetlist(svo);
+		}
+		
+//		return "redirect:setlist?con_num="+cvo.getCon_num();
+		model.addAttribute("setlist", sdao.setlist(cvo.getCon_num()));
+		return "concert/setlist";
+	}
+	
+//	@RequestMapping(value="/setlist")
+//	public String setlist(int con_num, Model model){
+//		model.addAttribute("setlist", sdao.setlist(con_num));
+//		return "concert/setlist";
+//	}
+	
+	
 
 }
