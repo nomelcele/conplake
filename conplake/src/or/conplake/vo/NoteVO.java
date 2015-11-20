@@ -2,8 +2,21 @@ package or.conplake.vo;
 
 public class NoteVO {
 	private int note_num, note_from, note_to;
-	private String note_cont, note_date;
+	private String note_cont, note_date,
+	fromname, toname;
 	
+	public String getFromname() {
+		return fromname;
+	}
+	public void setFromname(String fromname) {
+		this.fromname = fromname;
+	}
+	public String getToname() {
+		return toname;
+	}
+	public void setToname(String toname) {
+		this.toname = toname;
+	}
 	public int getNote_num() {
 		return note_num;
 	}

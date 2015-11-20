@@ -13,4 +13,8 @@
   <select id="idCheck" parameterType="String" resultType="String">
   	select mem_id from member where mem_id=#{mem_id}
   </select>
+  <update id="modifyInfo" parameterType="mvo">
+  	update member set mem_pwd=#{mem_pwd}, mem_addr=#{mem_addr}, mem_intro=#{mem_intro}, mem_img=#{mem_img} 
+  	where mem_num=#{mem_num}
+  </update>
   </mapper>

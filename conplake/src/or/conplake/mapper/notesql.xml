@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="note">
+  	<insert id="writeNote" parameterType="nvo">
+  		insert into note values(note_seq.nextVal,#{note_cont},#{note_from},#{note_to},sysdate,1,1)
+  	</insert>
+  	<select id="inbox" parameterType="int" resultType="nvo">
+  		select n.note_num, n.note_cont, n.note_from, n.note_date, m.mem_name fromname  
+  		from note n, member m where n.note_to=#{mem_num} and n.note_todelete=1 
+  		and m.mem_num=n.note_from order by n.note_date desc
+  	</select>
+  	<select id="readNote" parameterType="int" resultType="nvo">
+  		select n.note_num, n.note_cont, n.note_from, n.note_to, n.note_date,
+  		m1.mem_name fromname, m2.mem_name toname from note n, member m1, member m2 
+  		where n.note_num=#{note_num} and n.note_from=m1.mem_num and n.note_to=m2.mem_num 
+  	</select>
+  	<select id="sent" parameterType="int" resultType="nvo">
+  		select n.note_num, n.note_cont, n.note_to, n.note_date, m.mem_name toname  
+  		from note n, member m where n.note_from=#{mem_num} and n.note_fromdelete=1 
+  		and m.mem_num=n.note_to order by n.note_date desc
+  	</select>
+  </mapper>

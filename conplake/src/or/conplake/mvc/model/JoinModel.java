@@ -35,7 +35,6 @@ public class JoinModel {
 	@RequestMapping(value="/joinMember")
 	public String joinMember(MemberVO mvo){		
 		// 회원 가입
-		System.out.println("들어오긴 하니ㅡㅡ");
 
 		// 입력한 정보 회원 데이터베이스에 저장
 		mdao.joinMember(mvo);

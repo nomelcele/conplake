@@ -1,5 +1,7 @@
 package or.conplake.mvc.dao;
 
+import java.util.List;
+
 import or.conplake.vo.MemberVO;
 
 import org.mybatis.spring.SqlSessionTemplate;
@@ -34,4 +36,11 @@ public class MemberDao {
 			return true;
 		}
 	}
+	
+	public void modifyInfo(MemberVO mvo){
+		// 회원 정보 수정
+		st.update("mem.modifyInfo", mvo);
+	}
+	
+
 }
