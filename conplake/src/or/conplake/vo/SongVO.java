@@ -2,8 +2,15 @@ package or.conplake.vo;
 
 public class SongVO {
 	private int song_num, song_artist, song_concert, song_order;
-	private String song_title, song_popular;
+	private String song_title, song_popular,
+	artistname;
 	
+	public String getArtistname() {
+		return artistname;
+	}
+	public void setArtistname(String artistname) {
+		this.artistname = artistname;
+	}
 	public int getSong_num() {
 		return song_num;
 	}

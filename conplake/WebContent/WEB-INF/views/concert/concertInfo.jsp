@@ -57,7 +57,7 @@
 	                    <tr class="tr_setList">
 	                        <td class="setListNum"><p>${setlist.song_order}</p></td>
 	                        <td class="setListTitle"><p>${setlist.song_title}</p></td>
-	                        <td class="setListLink"><p><a href="https://www.youtube.com/results?search_query=${setlist.song_title}">link</a></p></td>
+	                        <td class="setListLink"><p><a href="https://www.youtube.com/results?search_query=${setlist.artistname}+${setlist.song_title}">link</a></p></td>
 	                    </tr>
                     </c:forEach>
                     
