@@ -260,3 +260,11 @@ commit;
 -- 리뷰 작성 시, 공연의 관람일 저장
 alter table post add(post_concertdate date);
 commit;
+
+-- 11/20
+-- note 테이블에 컬럼 추가
+-- note_fromdelete: 1(기본값) 2(보낸 사람이 쪽지 삭제)
+-- note_todelete: 1(기본값) 2(받은 사람이 쪽지 삭제)
+alter table note add(note_fromdelete number(1));
+alter table note add(note_todelete number(1));
+commit;

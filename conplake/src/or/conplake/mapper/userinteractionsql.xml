@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="ui">
+  	<insert id="addFriend" parameterType="uivo">
+  		insert into userinteraction values(userinteraction_seq.nextVal,#{ui_member},'add_friend',null,null,#{ui_friend})
+  	</insert>
+  	<select id="friendsList" parameterType="int" resultType="mvo">
+  		select ui_friend, mem_name, mem_id, mem_img from userinteraction, member 
+  		where ui_member=#{mem_num} and ui_friend=mem_num order by mem_name
+    </select>
+  </mapper>
