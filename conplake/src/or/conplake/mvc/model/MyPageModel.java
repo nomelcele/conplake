@@ -3,6 +3,7 @@ package or.conplake.mvc.model;
 import javax.servlet.http.HttpSession;
 
 import or.conplake.mvc.dao.MemberDao;
+import or.conplake.mvc.dao.PostDao;
 import or.conplake.mvc.dao.UserinteractionDao;
 import or.conplake.vo.MemberVO;
 
@@ -17,6 +18,8 @@ public class MyPageModel {
 	private MemberDao mdao;
 	@Autowired
 	private UserinteractionDao udao;
+	@Autowired
+	private PostDao pdao;
 	
 	@RequestMapping(value="/modifyInfo")
 	public String modifyInfo(MemberVO mvo, HttpSession session){
@@ -25,11 +28,21 @@ public class MyPageModel {
 		return "";
 	}
 	
-	@RequestMapping(value="/friendsList")
-	public String friendsList(int mem_num, Model model){
+	@RequestMapping(value="/myFriends")
+	public String myFriends(int mem_num, Model model){
 		// 친구 목록
-		model.addAttribute("friends", udao.friendsList(mem_num));
+		model.addAttribute("friends", udao.myFriends(mem_num));
 		return "";
 	}
 	
+	@RequestMapping(value="/myPage")
+	public String myPage(int mem_num, Model model){
+		// 마이 페이지
+		model.addAttribute("myProfile", mdao.myProfile(mem_num)); // 프로필
+		// 관심 아티스트
+		model.addAttribute("likedConcerts", udao.likedConcerts(mem_num)); // 관심 공연
+		model.addAttribute("myReviews", pdao.myReviews(mem_num)); // 작성 후기
+		
+		return "";
+	}
 }

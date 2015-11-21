@@ -97,7 +97,7 @@ public class ConcertModel {
 		}
 
 		pdao.writeReview(pvo);
-		return "redirect:concertInfo?con_num=" + pvo.getPost_concert();
+		return "redirect:/concertInfo?con_num=" + pvo.getPost_concert();
 	}
 
 	@RequestMapping(value = "/readReview")
@@ -110,7 +110,7 @@ public class ConcertModel {
 	@RequestMapping(value = "/writePostComm")
 	public String writePostComm(CommVO commvo) {
 		cmdao.writePostComm(commvo);
-		return "redirect:readReview?post_num=" + commvo.getComm_post();
+		return "redirect:/readReview?post_num=" + commvo.getComm_post();
 	}
 
 	@RequestMapping(value = "/reviewSearch")
@@ -148,6 +148,18 @@ public class ConcertModel {
 //		return "concert/setlist";
 //	}
 	
-	
+	@RequestMapping(value="/deleteComm")
+	public String deleteComm(CommVO cmvo){
+		// ¥Ò±€ ªË¡¶
+		cmdao.deleteComm(cmvo.getComm_num());
+		return "redirect:/readReview?post_num="+cmvo.getComm_post();
+	}
+
+	@RequestMapping(value="/deleteReview")
+	public String deleteReview(PostVO pvo){
+		// ∏Æ∫‰ ªË¡¶
+		pdao.deleteReview(pvo.getPost_num());
+		return "redirect:/concertInfo?con_num="+pvo.getPost_concert();
+	}
 
 }

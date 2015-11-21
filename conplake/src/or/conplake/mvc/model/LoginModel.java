@@ -85,7 +85,7 @@ public class LoginModel {
 								
 				try {
 					URL conUrl = new URL("http://www.culture.go.kr/openapi/rest/publicperformancedisplays/realm?"+
-										"realmCode=B000&cPage=1&rows=300&"+"from="+"20151020"+"&to="+to+
+										"realmCode=B000&cPage=1&rows=300&"+"from="+from+"&to="+to+
 										"&sido=&gugun=&place=&gpsxfrom=&gpsyfrom=&gpsxto=&gpsyto="+
 										"&keyword=&sortStdr=1&"+"serviceKey="+serviceKey);
 					// 분야별 검색 -> 카테고리가 '음악'인 공연만 검색

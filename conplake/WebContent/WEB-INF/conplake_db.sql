@@ -268,3 +268,12 @@ commit;
 alter table note add(note_fromdelete number(1));
 alter table note add(note_todelete number(1));
 commit;
+
+-- 11/21
+-- comm 테이블에 제약 조건 추가
+alter table comm drop(comm_post);
+alter table comm drop(comm_tl);
+alter table comm add(comm_post number(12));
+alter table comm add constraint comm_comm_post_fk foreign key(comm_post) references post(post_num) on delete cascade;
+alter table comm add(comm_tl number(12));
+alter table comm add constraint comm_comm_tl_fk foreign key(comm_tl) references timeline(tl_num) on delete cascade;

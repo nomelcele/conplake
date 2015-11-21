@@ -17,4 +17,7 @@
   	update member set mem_pwd=#{mem_pwd}, mem_addr=#{mem_addr}, mem_intro=#{mem_intro}, mem_img=#{mem_img} 
   	where mem_num=#{mem_num}
   </update>
+  <select id="myProfile" parameterType="int" resultType="mvo">
+  	select mem_num, mem_img, mem_id, mem_intro from member where mem_num=#{mem_num}
+  </select>
   </mapper>

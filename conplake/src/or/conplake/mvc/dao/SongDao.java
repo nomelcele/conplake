@@ -20,4 +20,8 @@ public class SongDao {
 	public List<SongVO> setlist(int con_num){
 		return st.selectList("song.setlist", con_num);
 	}
+	
+	public List<SongVO> hitSongs(int art_num){
+		return st.selectList("song.hitSongs", art_num);
+	}
 }

@@ -2,6 +2,7 @@ package or.conplake.mvc.model;
 
 import or.conplake.mvc.dao.ConcertDao;
 import or.conplake.mvc.dao.ConcerthallDao;
+import or.conplake.mvc.dao.PostDao;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -14,6 +15,8 @@ public class ConcerthallModel {
 	private ConcerthallDao chdao;
 	@Autowired
 	private ConcertDao cdao;
+	@Autowired
+	private PostDao pdao;
 	
 	@RequestMapping(value="/concerthallSearch")
 	public String concerthallSearch(String chall_name, Model model){
@@ -26,6 +29,7 @@ public class ConcerthallModel {
 	public String concerthallInfo(int chall_num, Model model){
 		model.addAttribute("challInfo", chdao.concerthallInfo(chall_num));
 		model.addAttribute("ongoingCons", cdao.ongoingConcerts(chall_num));
+		model.addAttribute("reviews", pdao.concerthallReviews(chall_num));
 		return "hall.hallInfo";
 	}
 	

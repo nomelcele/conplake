@@ -6,8 +6,16 @@
   	<insert id="addFriend" parameterType="uivo">
   		insert into userinteraction values(userinteraction_seq.nextVal,#{ui_member},'add_friend',null,null,#{ui_friend})
   	</insert>
-  	<select id="friendsList" parameterType="int" resultType="mvo">
-  		select ui_friend, mem_name, mem_id, mem_img from userinteraction, member 
+  	<select id="myFriends" parameterType="int" resultType="mvo">
+  		select mem_num, mem_name, mem_id, mem_img from userinteraction, member 
   		where ui_member=#{mem_num} and ui_friend=mem_num order by mem_name
     </select>
+    <select id="likedConcerts" parameterType="int" resultType="cvo">
+ 		select con_num, con_name, con_poster, con_startdate, con_enddate, con_venue, chall_name venuename 
+ 		from concert, concerthall, userinteraction where ui_member=#{mem_num} and ui_type='liked_concert' 
+ 		and ui_concert=con_num and con_venue=chall_num order by ui_num desc
+    </select>
+    <insert id="likeArtist" parameterType="uivo">
+    	insert into userinteraction values(userinteraction_seq.nextVal,#{ui_member},'liked_artist',null,#{ui_artist},null)
+    </insert>
   </mapper>
