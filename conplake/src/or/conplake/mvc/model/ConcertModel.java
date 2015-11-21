@@ -11,12 +11,16 @@ import or.conplake.mvc.dao.CommDao;
 import or.conplake.mvc.dao.ConcertDao;
 import or.conplake.mvc.dao.PostDao;
 import or.conplake.mvc.dao.SongDao;
+import or.conplake.mvc.dao.UserinteractionDao;
+import or.conplake.mvc.service.ConcertService;
 import or.conplake.vo.CommVO;
 import or.conplake.vo.ConcertVO;
 import or.conplake.vo.PostVO;
 import or.conplake.vo.SongVO;
+import or.conplake.vo.UserinteractionVO;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
@@ -24,6 +28,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
+
 
 @Controller
 public class ConcertModel {
@@ -35,6 +40,11 @@ public class ConcertModel {
 	private CommDao cmdao;
 	@Autowired
 	private SongDao sdao;
+	@Autowired
+	private UserinteractionDao udao;
+	@Autowired
+	@Qualifier(value="concert")
+	private ConcertService service;
 
 	@RequestMapping(value = "/main")
 	public String main(Model model) {
@@ -128,14 +138,7 @@ public class ConcertModel {
 
 	@RequestMapping(value = "/saveSetlist")
 	public String saveSetlist(ConcertVO cvo, String[] songs_title, int[] songs_order, Model model) {
-		for(int i=0; i<songs_title.length; i++){
-			SongVO svo = new SongVO();
-			svo.setSong_artist(cvo.getCon_artist());
-			svo.setSong_concert(cvo.getCon_num());
-			svo.setSong_order(songs_order[i]);
-			svo.setSong_title(songs_title[i]);
-			sdao.addSetlist(svo);
-		}
+		service.saveSetlist(cvo, songs_title, songs_order);
 		
 //		return "redirect:setlist?con_num="+cvo.getCon_num();
 		model.addAttribute("setlist", sdao.setlist(cvo.getCon_num()));
@@ -160,6 +163,13 @@ public class ConcertModel {
 		// 리뷰 삭제
 		pdao.deleteReview(pvo.getPost_num());
 		return "redirect:/concertInfo?con_num="+pvo.getPost_concert();
+	}
+	
+	@RequestMapping(value="/likeConcert")
+	public String likeConcert(UserinteractionVO uivo){
+		// 관심 공연 추가
+		udao.likeConcert(uivo);
+		return "redirect:/concertInfo?con_num="+uivo.getUi_concert();
 	}
 
 }

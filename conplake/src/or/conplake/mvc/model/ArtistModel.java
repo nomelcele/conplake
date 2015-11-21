@@ -37,6 +37,12 @@ public class ArtistModel {
 		return "redirect:/artistInfo?art_num="+uivo.getUi_artist();
 	}
 	
-
+	@RequestMapping(value="/artistSearch")
+	public String artistSearch(String art_name, Model model){
+		// 아티스트 검색
+		model.addAttribute("artResult", adao.artistSearch(art_name));
+		model.addAttribute("resultType", "artist");
+		return "search.searchResult";
+	}
 
 }

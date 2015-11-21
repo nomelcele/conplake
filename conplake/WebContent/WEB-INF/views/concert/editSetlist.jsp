@@ -22,8 +22,8 @@
                     <c:forEach var="setlist" items="${setlist}">
 	                    <tr class="tr_setList">
 		                    <td class="setListCheck">
-	                        	<input class="input_check" id="input_check1" name="s_check" type="checkbox"/>
-	                            <label class="label_check" for="input_check1"></label>
+	                        	<input class="input_check" id="input_check_${setlist.song_order}" name="s_check" type="checkbox"/>
+	                            <label class="label_check" for="input_check_${setlist.song_order}"></label>
 	                        </td>
 	                        <td class="setListNum">
 	                        	<input class="input_setList" id="input_setListNum" name="input_setListNum" type="number" value="${setlist.song_order}"/>

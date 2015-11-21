@@ -15,6 +15,7 @@ $(document).ready( function () {
 				case 'artist':
 					$("#searchKeyword").attr("name","art_name");
 					$("#searchForm").attr("action","artistSearch").submit();
+					break;
 				case 'concert':
 					$("#searchKeyword").attr("name","con_name");
 					$("#searchForm").attr("action","concertSearch").submit();

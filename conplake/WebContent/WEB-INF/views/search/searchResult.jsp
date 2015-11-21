@@ -29,6 +29,14 @@
 	            	</c:forEach>
             	</c:when>
             	<c:otherwise>
+            	    <c:forEach var="artResult" items="#{artResult}">
+		            	<li id="list_search">
+		                    <a href="artistInfo?art_num=${artResult.art_num}"><img width="100" height="100" alt="콘서트이미지1" src="${artResult.art_img}"	style="float:left">
+		                       	<div id="search_info">
+		                            <p class="concert_title">${artResult.art_name}</p>
+		                        </div></a>
+		                </li>
+	            	</c:forEach>
             	</c:otherwise>
             </c:choose>	
                 

@@ -19,9 +19,9 @@
   <select id="concertInfo" parameterType="int" resultType="cvo">
   	select c.con_num, c.con_name, c.con_poster, to_char(c.con_startdate,'yyyy-mm-dd') con_startdate, 
   	to_char(c.con_enddate,'yyyy-mm-dd') con_enddate, c.con_venue, ch.chall_name venuename,
-  	c.con_artist, c.con_link, c.con_price, c.con_tel, c.con_detailimg from concert c, concerthall ch
-  	where c.con_num=#{con_num} and c.con_venue = ch.chall_num
-  	<!--  a.art_name artistname,  c.con_artist = a.art_num -->
+  	c.con_artist, c.con_link, c.con_price, c.con_tel, c.con_detailimg, a.art_name artistname 
+  	from concert c, concerthall ch, artist a where c.con_num=#{con_num} and c.con_venue = ch.chall_num 
+  	and c.con_artist = a.art_num
   </select>
   <select id="concertSearch" parameterType="cvo" resultType="cvo">
   	select c.con_num, c.con_poster, c.con_name, to_char(c.con_startdate,'yyyy-mm-dd') con_startdate, 

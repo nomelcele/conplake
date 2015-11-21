@@ -17,4 +17,7 @@
 			where song_artist=#{art_num} and song_artist=art_num and song_popular='y' 
 			order by song_num desc
 		</select>
+		<delete id="initializeSetlist" parameterType="int">
+			delete from song where song_concert=#{con_num}
+		</delete>
 	</mapper>

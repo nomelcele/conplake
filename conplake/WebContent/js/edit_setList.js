@@ -135,3 +135,17 @@ function removeRow(){
 
 }
 
+function editSetlist(){
+	alert("셋리수정");
+	$.ajax({
+		type : "POST",
+		url : "editSetlist",
+		data : {
+			con_num: $("#concertNumber").val(),
+			con_artist: $("#concertArtist").val()
+		},
+		success : function(result) {
+			$('#concertSetList').html(result);
+		}
+	});
+}

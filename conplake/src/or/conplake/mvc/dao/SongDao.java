@@ -24,4 +24,8 @@ public class SongDao {
 	public List<SongVO> hitSongs(int art_num){
 		return st.selectList("song.hitSongs", art_num);
 	}
+	
+	public void initializeSetlist(int con_num){
+		st.delete("song.initializeSetlist", con_num);
+	}
 }
