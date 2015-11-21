@@ -41,6 +41,10 @@ $( document ).ready(function() {
 		var pos = (barLeft * (max2 - min)) /800	+ min;
 		$('#ul_likeArtist li').css('left',pos);	
 	}
+	
+	$("#mypage").click(function(){
+		$("#myPageForm").submit();
+	});
 
 
 });

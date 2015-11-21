@@ -19,7 +19,6 @@ $('document').ready(function(){
 	
 	
 	$("#edit_setListBtn").click(function(){
-		alert("셋리수정");
 		$.ajax({
 			type : "POST",
 			url : "editSetlist",
@@ -37,7 +36,6 @@ $('document').ready(function(){
 	$.ajaxSettings.traditional = true;
 	
 	$("#setList_saveBtn").click(function(){
-		alert("셋리저장");
 		var titleArr = document.getElementsByName("input_setListTitle");
 		var orderArr = document.getElementsByName("input_setListNum");
 		
@@ -68,7 +66,6 @@ $('document').ready(function(){
 
 
 function createRow(){ 
-	alert("행 추가");
     rowNum+=1;
 
 	
@@ -127,7 +124,6 @@ function createRow(){
 } 
 
 function removeRow(){ 
-	alert("행 삭제");
 	$(".input_check:checked").not($("#input_check0")).parent().siblings().remove();
 	$(".input_check:checked").not($("#input_check0")).parent().remove();
 	
@@ -136,7 +132,6 @@ function removeRow(){
 }
 
 function editSetlist(){
-	alert("셋리수정");
 	$.ajax({
 		type : "POST",
 		url : "editSetlist",

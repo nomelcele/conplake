@@ -2,6 +2,7 @@ package or.conplake.mvc.dao;
 
 import java.util.List;
 
+import or.conplake.vo.ArtistVO;
 import or.conplake.vo.ConcertVO;
 import or.conplake.vo.MemberVO;
 import or.conplake.vo.UserinteractionVO;
@@ -23,6 +24,11 @@ public class UserinteractionDao {
 	// 친구 목록
 	public List<MemberVO> myFriends(int mem_num){
 		return st.selectList("ui.myFriends", mem_num);
+	}
+	
+	// 관심 아티스트 목록
+	public List<ArtistVO> likedArtists(int mem_num){
+		return st.selectList("ui.likedArtists", mem_num);
 	}
 	
 	// 관심 공연 목록

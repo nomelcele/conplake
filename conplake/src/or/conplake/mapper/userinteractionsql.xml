@@ -10,6 +10,11 @@
   		select mem_num, mem_name, mem_id, mem_img from userinteraction, member 
   		where ui_member=#{mem_num} and ui_friend=mem_num order by mem_name
     </select>
+    <select id="likedArtists" parameterType="int" resultType="avo">
+ 		select art_num, art_name, art_img from artist, userinteraction 
+ 		where ui_member=#{mem_num} and ui_type='liked_artist' 
+ 		and ui_artist=art_num order by ui_num desc
+    </select>
     <select id="likedConcerts" parameterType="int" resultType="cvo">
  		select con_num, con_name, con_poster, con_startdate, con_enddate, con_venue, chall_name venuename 
  		from concert, concerthall, userinteraction where ui_member=#{mem_num} and ui_type='liked_concert' 
