@@ -111,7 +111,8 @@
 <!--                         <a href="#">9</a> -->
                         <a href="#" class="page" id="page_next">></a>
                     </span>
-                <input id="write_review" class="innerButton button" type="button" value="후기 작성" onclick="location='writeReviewForm?con_num=${conInfo.con_num}'"/></p>
+                <input id="write_review" class="innerButton button" type="button" value="후기 작성" onclick="location='writeReviewForm?con_num=${conInfo.con_num}'"/>
+                </p>
             </div>
             
             
