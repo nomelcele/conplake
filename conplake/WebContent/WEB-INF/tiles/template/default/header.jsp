@@ -2,6 +2,9 @@
     pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <header>
+	<form id="myPageForm" action="myPage" method="post">
+		<input type="hidden" name="mem_num" value="${sessionScope.mvo.mem_num}">
+	</form>
 	<div class="util_menu">
     	<ul>
     		<c:if test="${!empty sessionScope.mvo.mem_name}">

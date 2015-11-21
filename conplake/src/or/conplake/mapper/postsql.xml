@@ -30,7 +30,7 @@
   	where p.post_num=#{post_num} and m.mem_num=p.post_author and c.con_num=p.post_concert and c.con_venue=ch.chall_num
   </select>
   <select id="myReviews" parameterType="int" resultType="pvo">
-  	select post_num, post_concert, con_name concertname, post_title, post_date from post, concert 
+  	select post_num, post_concert, con_name concertname, post_title, to_char(post_date,'yyyy-mm-dd') post_date from post, concert 
   	where post_author=#{mem_num} and post_concert=con_num order by post_date desc
   </select>
   <select id="concerthallReviews" parameterType="int" resultType="pvo">

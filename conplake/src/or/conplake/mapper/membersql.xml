@@ -18,6 +18,6 @@
   	where mem_num=#{mem_num}
   </update>
   <select id="myProfile" parameterType="int" resultType="mvo">
-  	select mem_num, mem_img, mem_id, mem_intro from member where mem_num=#{mem_num}
+  	select mem_num, mem_name, mem_img, mem_id, mem_intro from member where mem_num=#{mem_num}
   </select>
   </mapper>

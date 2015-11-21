@@ -61,3 +61,10 @@ update concert set con_artist = 46 where con_num=104465;
 insert into artist values(artist_seq.nextVal,'페퍼톤스',null,null,null,null);
 update concert set con_artist = 47 where con_num=104319;
 commit;
+
+update artist set art_img = 'http://s.pimg.tw/album2/maksimmrvica/albumset/18345318/zoomcrop/600x600.jpg?v=1435221228' where art_name='막심 므라비차';
+update artist set art_img = 'http://suprtickets.com/blog/wp-content/uploads/Damien-Rice-performing-live.png' where art_name='데미안 라이스';
+update artist set art_img = 'http://csb-island.dk/wordpress/wp-content/uploads/2015/06/Abba-profil.jpg' where art_name='아바걸스';
+update artist set art_img = 'http://cfile206.uf.daum.net/image/2714F64955D16C0434160F' where art_name='나윤권';
+update artist set art_img = 'http://img.etnews.com/news/article/2014/09/04/article_04090055267199.jpeg' where art_name='이은미';
+update artist set art_img = 'http://pbs.twimg.com/profile_images/413583999575924736/lShEZUDB.jpeg' where art_name='자이언티';
