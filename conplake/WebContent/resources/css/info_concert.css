@@ -4,7 +4,7 @@
 
 #innerButtonBox {width:215px; height:30px; float:right; display:inline-block;}
 .innerButton {width:100px; height:30px; background:#C30D22; padding:0; margin:0; border:none; border-radius:0; float:right;}
-.innerButton:hover {background:#ae0115;}
+.innerButton:hover {background:#fff;}
 
 #likeToGo {margin-right:15px;}
 
@@ -39,7 +39,7 @@ h3.concert_subTitle {width:900px; height:30px; line-height:30px; font-size:16px;
 #edit_setList {background:#666;}
 .tr_setList, .tr_review { border-bottom:1px solid #ccc;}
 
-.tr_setList th, .tr_review th {background:#eee;}
+.tr_setList th, .tr_review th {background:#eee; text-align:center;}
 
 #table_setList, #table_review { table-layout:fixed;}
 #table_setList th, #table_setList td, #table_review th, #table_review td{ height:30px;}
@@ -51,9 +51,11 @@ h3.concert_subTitle {width:900px; height:30px; line-height:30px; font-size:16px;
 #table_setList p, #table_review p, #table_review th p{ white-space:nowrap; text-overflow:ellipsis; overflow:hidden;}
 
 .reviewNum p{ width:100px; text-align:center;}
-.reviewTitle p{ width:450px; text-align:left;}
+th.reviewTitle p{ width:450px; text-align:center;}
+td.reviewTitle p{ width:450px; text-align:left;}
 .reviewTitle p a:hover{ text-decoration:underline;}
-.reviewId p{ width:100px; text-align:left;}
+th.reviewId p{ width:100px; text-align:center;}
+td.reviewId p{ width:100px; text-align:left;}
 
 .reviewDate p{ width:150px; text-align:center;}
 .reviewHits p{ width:100px; text-align:center;}
@@ -79,5 +81,5 @@ h3.concert_subTitle {width:900px; height:30px; line-height:30px; font-size:16px;
 #p_review span a.page {width:30px; font-weight:bold;}
 #p_review span a:hover {color:#C30D22;}
 
-input#write_review{ background:#666; float:right;}
+input#write_review{ background:#666; float:right; color:#fff;}
 input#write_review:hover { background:#444;}
