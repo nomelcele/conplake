@@ -34,4 +34,9 @@ public class UserinteractionDao {
 	public void likeArtist(UserinteractionVO uivo){
 		st.insert("ui.likeArtist", uivo);
 	}
+	
+	// 관심 공연 추가
+	public void likeConcert(UserinteractionVO uivo){
+		st.insert("ui.likeConcert", uivo);
+	}
 }

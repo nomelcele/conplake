@@ -6,5 +6,8 @@
   	<select id="artistInfo" parameterType="int" resultType="avo">
   		select art_num, art_name, art_img, art_intro, art_official, art_sns from artist where art_num=#{art_num}
   	</select>
-  	
+  	<select id="artistSearch" parameterType="String" resultType="avo">
+  		select art_num, art_name, art_img from artist 
+  		where art_name like '%'||#{art_name}||'%' order by art_name
+  	</select>
   </mapper>

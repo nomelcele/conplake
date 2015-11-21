@@ -18,5 +18,9 @@ public class ArtistDao {
 		return st.selectOne("art.artistInfo", art_num);
 	}
 	
+	public List<ArtistVO> artistSearch(String art_name){
+		return st.selectList("art.artistSearch", art_name);
+	}
+	
 
 }

@@ -18,4 +18,7 @@
     <insert id="likeArtist" parameterType="uivo">
     	insert into userinteraction values(userinteraction_seq.nextVal,#{ui_member},'liked_artist',null,#{ui_artist},null)
     </insert>
+    <insert id="likeConcert" parameterType="uivo">
+        insert into userinteraction values(userinteraction_seq.nextVal,#{ui_member},'liked_concert',#{ui_concert},null,null)
+    </insert>
   </mapper>

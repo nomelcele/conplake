@@ -277,3 +277,11 @@ alter table comm add(comm_post number(12));
 alter table comm add constraint comm_comm_post_fk foreign key(comm_post) references post(post_num) on delete cascade;
 alter table comm add(comm_tl number(12));
 alter table comm add constraint comm_comm_tl_fk foreign key(comm_tl) references timeline(tl_num) on delete cascade;
+
+-- artist 테이블 art_intro 타입 변경
+alter table artist drop(art_intro);
+alter table artist add(art_intro clob);
+alter table artist drop(art_official);
+alter table artist add(art_official varchar2(200));
+alter table artist drop(art_sns);
+alter table artist add(art_sns varchar2(200));

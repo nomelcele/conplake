@@ -77,16 +77,10 @@
             <tr class="tr_RsetList">
                 <td class="rsetListNum"><p>${setlist.song_order}</p></td>
                 <td class="rsetListTitle"><p>${setlist.song_title}</p></td>
-                <td class="rsetListLink"><p></p></td>
+                <td class="rsetListLink"><p><a href="https://www.youtube.com/results?search_query=${setlist.artistname}+${setlist.song_title}">link</a></p></td>
             </tr>
 			</c:forEach>
-<!-- 	                    <tr class="tr_setList"> -->
-<%-- 	                        <td class="setListNum"><p>${setlist.song_order}</p></td> --%>
-<%-- 	                        <td class="setListTitle"><p>${setlist.song_title}</p></td> --%>
-<!-- 	                        <td class="setListLink"><p></p></td> -->
-<!-- 	                    </tr> -->
-                    
-            
+
             </tbody>
           
         </Table>

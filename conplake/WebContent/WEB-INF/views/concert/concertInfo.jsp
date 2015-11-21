@@ -7,7 +7,7 @@
         	<h2 id="concertTitle">${conInfo.con_name}
             	<div id="innerButtonBox">
                     <input id="GoTogether" class="innerButton button" type="button" value="함께가요" onclick=""/>
-                    <input id="likeToGo" class="innerButton button" type="button" value="갈거예요" onclick=""/>
+                    <input id="likeToGo" class="innerButton button" type="button" value="갈거예요" onclick="location='likeConcert?ui_member='+${sessionScope.mvo.mem_num}+'&ui_concert='+${conInfo.con_num}"/>
                 </div>
             </h2>
             
@@ -103,12 +103,6 @@
                     	<a href="#">1</a>
 <!--                         <a href="#">2</a> -->
 <!--                         <a href="#">3</a> -->
-<!--                         <a href="#">4</a> -->
-<!--                         <a href="#">5</a> -->
-<!--                         <a href="#">6</a> -->
-<!--                         <a href="#">7</a> -->
-<!--                         <a href="#">8</a> -->
-<!--                         <a href="#">9</a> -->
                         <a href="#" class="page" id="page_next">></a>
                     </span>
                 <input id="write_review" class="innerButton button" type="button" value="후기 작성" onclick="location='writeReviewForm?con_num=${conInfo.con_num}'"/>
