@@ -45,7 +45,7 @@
                        	<c:if test="${sessionScope.mvo.mem_num eq reviewDetail.post_author}">
 	                        <tr class="tr_readReview" id="tr_button">
 	                            <td colspan="2">
-	                            	<input id="deleteReview" class="innerButton button" type="button" value="글 삭제" onclick=""/>
+	                            	<input id="deleteReview" class="innerButton button" type="button" value="글 삭제" onclick="location='deleteReview?post_num='+${reviewDetail.post_num}+'&post_concert='+${reviewDetail.post_concert}"/>
 	                            	<input id="editReview" class="innerButton button" type="button" value="수정" onclick=""/>
 	                            </td>
 	                        </tr>
@@ -57,20 +57,7 @@
                     
                     <p id="p_reply">REPLY</p>
                     
-                    <table id="table_reply"> <!-- 유저 댓글 보이는 목록 -->
-                    	
-<!--                     	<tr class="tr_readReply tr_reply" > 유저댓글 1 -->
-<!--                             <td class="td_readReply" id="td_replyId" ><img src="resources/img/profile_img_default.png" width="60" height="60"/></td> -->
-<!--                             <td class="td2_readReply" id="td_replyContent"> -->
-<!--                             	<p id="p_replyId">user_id</p> -->
-<!--                             	<p id="p_replyContent">댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용내용댓글내용댓글내용댓글내용댓글내용</p> -->
-<!--                             </td> -->
-<!--                             <td class="td_readReply" id="td_replyDate"> -->
-<!--                             	<p id="p_replyDate">2015.05.05</p> -->
-<!--                             	<p><input id="deleteReply" class="innerButton button" type="button" value="삭제" onclick=""/></p> -->
-<!--                             </td> -->
-<!--                         </tr> -->
-                        
+                    <table id="table_reply"> <!-- 유저 댓글 보이는 목록 -->                        
                         <c:forEach var="commList" items="${commList}">
 	                        <tr class="tr_readReply tr_reply" > <!-- 유저 댓글 2 -->
 	                            <td class="td_readReply" id="td_replyId" ><img src="resources/memberImg/${commList.authorimg}" width="60" height="60"/></td>
@@ -81,7 +68,7 @@
 	                            <td class="td_readReply" id="td_replyDate">
 	                            	<p id="p_replyDate">${commList.comm_date}</p>
 	                            	<c:if test="${sessionScope.mvo.mem_num eq commList.comm_author}">
-	                            		<p><input id="deleteReply" class="innerButton button" type="button" value="삭제" onclick=""/></p>
+	                            		<p><input id="deleteReply" class="innerButton button" type="button" value="삭제" onclick="location='deleteComm?comm_num='+${commList.comm_num}+'&comm_post='+${commList.comm_post}"/></p>
 	                            	</c:if>
 	                            </td>
 	                        </tr>

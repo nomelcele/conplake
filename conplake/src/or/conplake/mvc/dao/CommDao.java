@@ -20,4 +20,8 @@ public class CommDao {
 	public List<CommVO> postCommList(int comm_post){
 		return st.selectList("comm.postCommList", comm_post);
 	}
+	
+	public void deleteComm(int comm_num){
+		st.delete("comm.deleteComm", comm_num);
+	}
 }

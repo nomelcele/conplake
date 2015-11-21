@@ -12,4 +12,9 @@
 			and a.art_num in (select song_artist from song where song_concert=#{con_num}) 
 			order by s.song_order asc
 		</select> 
+		<select id="hitSongs" parameterType="int" resultType="svo">
+			select song_num, song_title, song_artist, art_name artistname from song, artist 
+			where song_artist=#{art_num} and song_artist=art_num and song_popular='y' 
+			order by song_num desc
+		</select>
 	</mapper>

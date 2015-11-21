@@ -7,7 +7,10 @@
   	insert into comm values(comm_seq.nextVal,#{comm_cont},#{comm_author},sysdate,#{comm_post},null)
   </insert>
   <select id="postCommList" parameterType="int" resultType="commvo">
-  	select m.mem_img authorimg, m.mem_name authorname, cm.comm_cont, cm.comm_date, cm.comm_author, cm.comm_num  
-  	from comm cm, member m where cm.comm_post=#{comm_post} and m.mem_num=cm.comm_author
+  	select m.mem_img authorimg, m.mem_name authorname, cm.comm_cont, cm.comm_date, cm.comm_author, cm.comm_num, cm.comm_post  
+  	from comm cm, member m where cm.comm_post=#{comm_post} and m.mem_num=cm.comm_author order by comm_date asc
   </select>
+  <delete id="deleteComm" parameterType="int">
+  	delete from comm where comm_num=#{comm_num}
+  </delete>
   </mapper>

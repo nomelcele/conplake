@@ -42,5 +42,9 @@ public class MemberDao {
 		st.update("mem.modifyInfo", mvo);
 	}
 	
+	public MemberVO myProfile(int mem_num){
+		return st.selectOne("mem.myProfile", mem_num);
+	}
+	
 
 }

@@ -24,10 +24,9 @@ public class NoteModel {
 	}
 	
 	@RequestMapping(value="/inbox")
-	public String inbox(HttpSession session, Model model){
+	public String inbox(int mem_num, Model model){
 		// 받은 쪽지 리스트
-		MemberVO mvo = (MemberVO) session.getAttribute("mvo"); // 로그인한 회원의 정보
-		model.addAttribute("noteList", ndao.inbox(mvo.getMem_num()));
+		model.addAttribute("noteList", ndao.inbox(mem_num));
 		model.addAttribute("inboxSent", "inbox");
 		return "";
 	}
@@ -40,10 +39,9 @@ public class NoteModel {
 	}
 	
 	@RequestMapping(value="/sent")
-	public String sent(HttpSession session, Model model){
+	public String sent(int mem_num, Model model){
 		// 보낸 쪽지 리스트
-		MemberVO mvo = (MemberVO) session.getAttribute("mvo"); // 로그인한 회원의 정보
-		model.addAttribute("noteList", ndao.sent(mvo.getMem_num()));
+		model.addAttribute("noteList", ndao.sent(mem_num));
 		model.addAttribute("inboxSent", "sent");
 		return "";
 	}

@@ -47,4 +47,7 @@ public class ConcertDao {
 		return st.selectList("con.ongoingConcerts", chall_num);
 	}
 
+	public List<ConcertVO> artistConcerts(int art_num){
+		return st.selectList("con.artistConcerts", art_num);
+	}
 }

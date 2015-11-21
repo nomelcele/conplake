@@ -47,4 +47,10 @@
   	to_char(con_enddate,'yyyy-mm-dd') con_enddate from concert c where con_venue = #{chall_num} and con_enddate <![CDATA[>=]]> sysdate-1
   	order by c.con_enddate asc
   </select>
+  <select id="artistConcerts" parameterType="int" resultType="cvo">
+  	select con_num, con_name, con_poster, to_char(con_startdate,'yyyy-mm-dd') con_startdate, 
+  	to_char(con_enddate,'yyyy-mm-dd') con_enddate, con_venue, chall_name venuename 
+  	from concert, concerthall where con_artist=#{art_num} and con_venue=chall_num 
+  	order by con_enddate desc
+  </select>
   </mapper>
