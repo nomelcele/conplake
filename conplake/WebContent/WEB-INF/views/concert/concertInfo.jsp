@@ -125,7 +125,7 @@
             				<div class="tLTextWrap">
             					<p id="tLUserName">user_name<span>2015.05.05</span></p>
             					<p id="tLText">text최대 두줄</p>
-            					<p>댓글(0)</p>
+            					<p><a href="">댓글(0)</a></p>
             				</div>
             			</li>
             			
@@ -134,7 +134,7 @@
             				<div class="tLTextWrap">
             					<p id="tLUserName">user_name<span>2015.05.05</span></p>
             					<p id="tLText">text최대 두줄</p>
-            					<p>댓글(0)</p>
+            					<p><a href="">댓글(0)</a></p>
             				</div>
             			</li>
             			
@@ -143,7 +143,7 @@
             				<div class="tLTextWrap">
             					<p id="tLUserName">user_name<span>2015.05.05</span></p>
             					<p id="tLText">text최대 두줄</p>
-            					<p>댓글(0)</p>
+            					<p><a href="">댓글(0)</a></p>
             				</div>
             			</li>
             			
@@ -152,7 +152,7 @@
             				<div class="tLTextWrap">
             					<p id="tLUserName">user_name<span>2015.05.05</span></p>
             					<p id="tLText">text최대 두줄</p>
-            					<p>댓글(0)</p>
+            					<p><a href="">댓글(0)</a></p>
             				</div>
             			</li>
             			
@@ -161,7 +161,7 @@
             				<div class="tLTextWrap">
             					<p id="tLUserName">user_name<span>2015.05.05</span></p>
             					<p id="tLText">text최대 두줄</p>
-            					<p>댓글(0)</p>
+            					<p><a href="">댓글(0)</a></p>
             				</div>
             			</li>
             			
@@ -170,7 +170,7 @@
             				<div class="tLTextWrap">
             					<p id="tLUserName">user_name<span>2015.05.05</span></p>
             					<p id="tLText">text최대 두줄 texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext</p>
-            					<p>댓글(0)</p>
+            					<p><a href="">댓글(0)</a></p>
             				</div>
             			</li>
             			
@@ -179,7 +179,7 @@
             				<div class="tLTextWrap">
             					<p id="tLUserName">user_name<span>2015.05.05</span></p>
             					<p id="tLText">text최대 두줄</p>
-            					<p>댓글(0)</p>
+            					<p><a href="">댓글(0)</a></p>
             				</div>
             			</li>
             			
@@ -188,7 +188,7 @@
             				<div class="tLTextWrap">
             					<p id="tLUserName">user_name<span>2015.05.05</span></p>
             					<p id="tLText">text최대 두줄</p>
-            					<p>댓글(0)</p>
+            					<p><a href="">댓글(0)</a></p>
             				</div>
             			</li>
             			</ul>
