@@ -7,6 +7,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import javax.servlet.http.HttpSession;
+
 import or.conplake.mvc.dao.CommDao;
 import or.conplake.mvc.dao.ConcertDao;
 import or.conplake.mvc.dao.PostDao;
@@ -15,6 +17,7 @@ import or.conplake.mvc.dao.UserinteractionDao;
 import or.conplake.mvc.service.ConcertService;
 import or.conplake.vo.CommVO;
 import or.conplake.vo.ConcertVO;
+import or.conplake.vo.MemberVO;
 import or.conplake.vo.PostVO;
 import or.conplake.vo.SongVO;
 import or.conplake.vo.UserinteractionVO;
@@ -53,12 +56,18 @@ public class ConcertModel {
 	}
 
 	@RequestMapping(value = "/concertInfo")
-	public String concertInfo(@RequestParam HashMap<String, String> map,
+	public String concertInfo(@RequestParam HashMap<String, String> map, HttpSession session,
 			Model model) {
 		model.addAttribute("conInfo",
 				cdao.concertInfo(Integer.parseInt(map.get("con_num"))));
 		model.addAttribute("reviewList", pdao.reviewList(map));
 		model.addAttribute("setlist", sdao.setlist(Integer.parseInt(map.get("con_num"))));
+		
+		UserinteractionVO uivo = new UserinteractionVO();
+		uivo.setUi_concert(Integer.parseInt(map.get("con_num")));
+		MemberVO mvo = (MemberVO) session.getAttribute("mvo");
+		uivo.setUi_member(mvo.getMem_num());
+		model.addAttribute("liked", udao.isLikedConcert(uivo));
 		return "concert.concertInfo";
 		// model.addAttribute("conInfo", cdao.concertInfo(con_num));
 		// model.addAttribute("reviewList", pdao.reviewList(con_num));
