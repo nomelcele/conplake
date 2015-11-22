@@ -4,6 +4,8 @@ $( document ).ready(function() {
 	$("#tab1").height("31");
 	$("#tab1").css("background-color","#fff");
 	
+	
+
 	$( "#tab1" ).click(function() {
 		page = 1;
 		$("#concertIntro").css("display","block");

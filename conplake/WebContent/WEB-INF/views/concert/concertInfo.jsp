@@ -113,6 +113,93 @@
             
             <div class="contentView" id="concertTimeLine">
             	<!-- 타임라인 -->
+            	<div id="timeLineWrap" class="timeLine">
+            		<div id="timeLineHeader" class="timeLine">
+            			<p>TIMELINE</p>
+            		</div>
+            		
+            		<div id="timeLineBody" class="timeLine">
+            			<ul>
+            			<li>
+            				<div class="tLImgWrap"><img src="resources/img/nell.jpg" width="50" height="50"/></div>
+            				<div class="tLTextWrap">
+            					<p id="tLUserName">user_name<span>2015.05.05</span></p>
+            					<p id="tLText">text최대 두줄</p>
+            					<p>댓글(0)</p>
+            				</div>
+            			</li>
+            			
+            			<li>
+            				<div class="tLImgWrap"><img src="resources/img/nell.jpg" width="50" height="50"/></div>
+            				<div class="tLTextWrap">
+            					<p id="tLUserName">user_name<span>2015.05.05</span></p>
+            					<p id="tLText">text최대 두줄</p>
+            					<p>댓글(0)</p>
+            				</div>
+            			</li>
+            			
+            			<li>
+            				<div class="tLImgWrap"><img src="resources/img/nell.jpg" width="50" height="50"/></div>
+            				<div class="tLTextWrap">
+            					<p id="tLUserName">user_name<span>2015.05.05</span></p>
+            					<p id="tLText">text최대 두줄</p>
+            					<p>댓글(0)</p>
+            				</div>
+            			</li>
+            			
+            			<li>
+            				<div class="tLImgWrap"><img src="resources/img/nell.jpg" width="50" height="50"/></div>
+            				<div class="tLTextWrap">
+            					<p id="tLUserName">user_name<span>2015.05.05</span></p>
+            					<p id="tLText">text최대 두줄</p>
+            					<p>댓글(0)</p>
+            				</div>
+            			</li>
+            			
+            			<li>
+            				<div class="tLImgWrap"><img src="resources/img/nell.jpg" width="50" height="50"/></div>
+            				<div class="tLTextWrap">
+            					<p id="tLUserName">user_name<span>2015.05.05</span></p>
+            					<p id="tLText">text최대 두줄</p>
+            					<p>댓글(0)</p>
+            				</div>
+            			</li>
+            			
+            			<li>
+            				<div class="tLImgWrap"><img src="resources/img/nell.jpg" width="50" height="50"/></div>
+            				<div class="tLTextWrap">
+            					<p id="tLUserName">user_name<span>2015.05.05</span></p>
+            					<p id="tLText">text최대 두줄 texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext</p>
+            					<p>댓글(0)</p>
+            				</div>
+            			</li>
+            			
+            			<li>
+            				<div class="tLImgWrap"><img src="resources/img/nell.jpg" width="50" height="50"/></div>
+            				<div class="tLTextWrap">
+            					<p id="tLUserName">user_name<span>2015.05.05</span></p>
+            					<p id="tLText">text최대 두줄</p>
+            					<p>댓글(0)</p>
+            				</div>
+            			</li>
+            			
+            			<li>
+            				<div class="tLImgWrap"><img src="resources/img/nell.jpg" width="50" height="50"/></div>
+            				<div class="tLTextWrap">
+            					<p id="tLUserName">user_name<span>2015.05.05</span></p>
+            					<p id="tLText">text최대 두줄</p>
+            					<p>댓글(0)</p>
+            				</div>
+            			</li>
+            			</ul>
+            		</div>
+            		
+            		<div id="timeLineFooter" class="timeLine">
+            			<input class="inputStyle" id="tLInputText" type="text" placeholder="메시지를 입력하세요."/>
+            			<input class="innerButton button" id="tLInputBtn" type="button" value="입력"/>
+            		</div>
+            		
+            	</div>
             </div>
             
             
