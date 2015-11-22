@@ -94,19 +94,32 @@ input#write_review:hover { background:#444;}
 #timeLineFooter {width:378px; height:28px; padding:15px 10px; border-bottom-left-radius:5px; border-bottom-right-radius:5px; border:1px solid #ccc;}
 
 
-#timeLineBody ul{width:388px; padding-left:10px; height:450px; overflow-y:scroll;}
-#timeLineBody ul li{ width:360px; border-bottom:1px solid #ddd; overflow:hidden;}
+#timeLineBody ul, #mdBody ul{width:388px; padding-left:10px; height:450px; overflow-y:scroll;}
+#timeLineBody ul li, #mdBody ul li{ width:360px; border-bottom:1px solid #ddd; overflow:hidden;}
 #timeLineBody ul li:last-child{ border-bottom:none;}
 
-.tLImgWrap{ float:left;  }
-.tLImgWrap img{ border-radius:50%; margin-top:10px;}
-.tLTextWrap{ width:300px; float:left; padding-top:5px; padding-bottom:5px; padding-left:10px;}
-.tLTextWrap p{ width:300px; line-height:20px; font-size:12px;}
+.tLImgWrap, .mdImgWrap{ float:left;  }
+.tLImgWrap img, .mdImgWrap img{ border-radius:50%; margin-top:10px;}
+.mdImgWrap img{ margin-bottom:10px;}
+.tLTextWrap, .mdTextWrap{ width:300px; float:left; padding-top:5px; padding-bottom:5px; padding-left:10px;}
+.tLTextWrap p, .mdTextWrap p{ width:300px; line-height:20px; font-size:12px;}
 
-p#tLUserName{ font-weight:bold;}
-p#tLUserName span{ font-weight:normal; float:right; font-size:11px; color:#666;}
-p#tLText{ word-break:break-all; max-height:40px; overflow:hidden;}
+p#tLUserName, p#mdUserName{ font-weight:bold;}
+p#tLUserName span, p#mdUserName span{ font-weight:normal; float:right; font-size:11px; color:#666;}
+p#tLText, p#mdText{ word-break:break-all; max-height:40px; overflow:hidden;}
+p#mdText{ float:left; width:240px; padding-right:10px;  }
+#mdDelete{ width:40px; height:20px; float:right; }
+
+#tLInputText, #mdInputText {width:298px; height:28px; border-top-right-radius:0; border-bottom-right-radius:0; padding:0 5px;}
+#tLInputBtn, #mdInputBtn { width:68px; height:30px; background:#666; color:#eee; letter-spacing:1px; border:none;}
 
 
-#tLInputText {width:298px; height:28px; border-top-right-radius:0; border-bottom-right-radius:0; padding:0 5px;}
-#tLInputBtn { width:68px; height:30px; background:#666; color:#eee; letter-spacing:1px; border:none;}
+
+#modalWindowWrap {width:100%; height:100%; position:fixed; background:rgba(0,0,0,.5); left:0; top:0; z-index:999; }
+#modalWindow{position:absolute; width:400px; height:540px; top:50%; left:50%; margin-left:-200px; margin-top:-275px; border:1px solid #333; background:#fff; box-shadow : rgba(0,0,0,0.5) 0 0 8px 3px;}
+
+#mdHeader{ width:100%; height:40px; background:#666;}
+#mdHeader p {width:100%; line-height:40px; color:#fff; font-size:14px; padding-left:10px;}
+#mdClose {width:30px; height:40px; color:#fff; font-size:14px; font-weight:bold; float:right; border:none; background:none; margin-right:10px;  }
+
+#mdFooter{width:380px; height:29px; padding:10px 10px; border-top:1px solid #ccc; box-shadow:#eee 0 -3px 1px;}
