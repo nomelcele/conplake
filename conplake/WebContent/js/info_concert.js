@@ -186,4 +186,13 @@ $( document ).ready(function() {
 		
 		
 	});
+	
+	
+	
+	
 });
+
+function mdClose(){
+	$("#modalWindowWrap").css('display', 'none');
+	
+}
