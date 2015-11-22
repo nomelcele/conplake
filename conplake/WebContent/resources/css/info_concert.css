@@ -123,3 +123,5 @@ p#mdText{ float:left; width:240px; padding-right:10px;  }
 #mdClose {width:30px; height:40px; color:#fff; font-size:14px; font-weight:bold; float:right; border:none; background:none; margin-right:10px;  }
 
 #mdFooter{width:380px; height:29px; padding:10px 10px; border-top:1px solid #ccc; box-shadow:#eee 0 -3px 1px;}
+
+.noScroll {overflow:hidden;}
