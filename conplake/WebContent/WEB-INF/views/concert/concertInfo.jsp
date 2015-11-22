@@ -267,22 +267,6 @@
 	            				</div>
 	            			</li>
 	            			
-	            			<li>
-	            				<div class="mdImgWrap"><img src="resources/img/nell.jpg" width="50" height="50"/></div>
-	            				<div class="mdTextWrap">
-	            					<p id="mdUserName">user_name<span>2015.05.05</span></p>
-	            					<p id="mdText">text최대 두줄</p>
-	            				</div>
-	            			</li>
-	            			
-	            			<li>
-	            				<div class="mdImgWrap"><img src="resources/img/nell.jpg" width="50" height="50"/></div>
-	            				<div class="mdTextWrap">
-	            					<p id="mdUserName">user_name<span>2015.05.05</span></p>
-	            					<p id="mdText">text최대 두줄</p>
-	            				</div>
-	            			</li>
-	            			
 	            			</ul>
             			</div>
             			<div id="mdFooter">

@@ -100,13 +100,13 @@ input#write_review:hover { background:#444;}
 
 .tLImgWrap, .mdImgWrap{ float:left;  }
 .tLImgWrap img, .mdImgWrap img{ border-radius:50%; margin-top:10px;}
-.mdImgWrap img{ margin-bottom:10px;}
+.mdImgWrap img{ margin-bottom:9px;}
 .tLTextWrap, .mdTextWrap{ width:300px; float:left; padding-top:5px; padding-bottom:5px; padding-left:10px;}
 .tLTextWrap p, .mdTextWrap p{ width:300px; line-height:20px; font-size:12px;}
 
 p#tLUserName, p#mdUserName{ font-weight:bold;}
 p#tLUserName span, p#mdUserName span{ font-weight:normal; float:right; font-size:11px; color:#666;}
-p#tLText, p#mdText{ word-break:break-all; max-height:40px; overflow:hidden;}
+p#tLText, p#mdText{ word-break:break-all; max-height:39px; overflow:hidden;}
 p#mdText{ float:left; width:240px; padding-right:10px;  }
 #mdDelete{ width:40px; height:20px; float:right; }
 
