@@ -45,4 +45,14 @@ public class UserinteractionDao {
 	public void likeConcert(UserinteractionVO uivo){
 		st.insert("ui.likeConcert", uivo);
 	}
+	
+	// 관심 공연 여부 확인
+	public String isLikedConcert(UserinteractionVO uivo){
+		if(st.selectOne("ui.isLikedConcert", uivo) != null){
+			// 이미 관심 공연으로 지정한 공연일 경우
+			return "y";
+		} else {
+			return "n";
+		}
+	}
 }

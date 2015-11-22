@@ -26,4 +26,7 @@
     <insert id="likeConcert" parameterType="uivo">
         insert into userinteraction values(userinteraction_seq.nextVal,#{ui_member},'liked_concert',#{ui_concert},null,null)
     </insert>
+    <select id="isLikedConcert" parameterType="uivo" resultType="Integer">
+    	select ui_concert from userinteraction where ui_concert=#{ui_concert} and ui_member=#{ui_member}
+    </select>
   </mapper>
