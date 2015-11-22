@@ -83,3 +83,30 @@ td.reviewId p{ width:100px; text-align:left;}
 
 input#write_review{ background:#666; float:right; color:#fff;}
 input#write_review:hover { background:#444;}
+
+
+#timeLineWrap {width:400px; height:550px; }
+#timeLineHeader {width:398px; height:38px; border-top-left-radius:5px; border-top-right-radius:5px; border:1px solid #ccc; background:#f9f9f9;}
+#timeLineHeader p {line-height:38px; font-size:12px; color:#333; font-weight:bold; padding-left:10px;}
+
+#timeLineBody {width:398px; height:450px; border-left:1px solid #ccc; border-right:1px solid #ccc;}
+
+#timeLineFooter {width:378px; height:28px; padding:15px 10px; border-bottom-left-radius:5px; border-bottom-right-radius:5px; border:1px solid #ccc;}
+
+
+#timeLineBody ul{width:388px; padding-left:10px; height:450px; overflow-y:scroll;}
+#timeLineBody ul li{ width:360px; border-bottom:1px solid #ddd; overflow:hidden;}
+#timeLineBody ul li:last-child{ border-bottom:none;}
+
+.tLImgWrap{ float:left;  }
+.tLImgWrap img{ border-radius:50%; margin-top:10px;}
+.tLTextWrap{ width:300px; float:left; padding-top:5px; padding-bottom:5px; padding-left:10px;}
+.tLTextWrap p{ width:300px; line-height:20px; font-size:12px;}
+
+p#tLUserName{ font-weight:bold;}
+p#tLUserName span{ font-weight:normal; float:right; font-size:11px; color:#666;}
+p#tLText{ word-break:break-all; max-height:40px; overflow:hidden;}
+
+
+#tLInputText {width:298px; height:28px; border-top-right-radius:0; border-bottom-right-radius:0; padding:0 5px;}
+#tLInputBtn { width:68px; height:30px; background:#666; color:#eee; letter-spacing:1px; border:none;}
