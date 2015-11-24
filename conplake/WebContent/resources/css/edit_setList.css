@@ -4,9 +4,10 @@ p.concert_subTitle {width:900px; height:30px; line-height:30px; font-size:16px; 
 
 .innerButton {width:100px; height:30px; background:#fff; padding:0; margin:0; border:1px solid #ccc; border-radius:0; float:right; color:#333; font-size:12px;}
 
-p input#edit_setList:hover {background:#eee;}
+p input#edit_setList{ background:#fff;}
+p input#edit_setList:hover {background:#f9f9f9;}
 p input#remove_setList{ margin-left:15px; background:#fff; border:1px solid #ccc; }
-p input#remove_setList:hover {background:#eee;}
+p input#remove_setList:hover {background:#f9f9f9;}
 
 #table_setList {}
 .tr_setList { border-bottom:1px solid #ccc;}
@@ -34,4 +35,4 @@ input[class="input_check"]:checked + label:after{ content:'\2716'; }
 #input_setListTitle{ width:720px; margin-left:10px;}
 
 
-#setList_saveBtn { float:right; margin-top:30px;}
+#setList_saveBtn { width:100px; height:30px; border-radius:0; float:right; margin-top:15px;}
