@@ -292,7 +292,8 @@ public class LoginModel {
 	}
 	
 	@RequestMapping(value="/changePwd")
-	public void changePwd(MemberVO mvo){
+	public String changePwd(MemberVO mvo){
 		mdao.changePwd(mvo);
+		return "login/enterCode";
 	}
 }

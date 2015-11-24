@@ -13,7 +13,7 @@
             		<img src="resources/img/profile_img_default.png" id="target_img"/>
             	</div>
 	    		<div id="inputProfileImgBox">
-           			<input id="inputProfileImg" name="mem_img" type="file"/>
+           			<input id="inputProfileImg" id="mem_img" name="mem_img" type="file"/>
         		</div>
 	    		<div id="profile_txt">
 	    			<textarea id="inputProfileTxt" placeholder="자기소개를 입력해주세요." 

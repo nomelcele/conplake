@@ -286,4 +286,4 @@ alter table artist add(art_official varchar2(200));
 alter table artist drop(art_sns);
 alter table artist add(art_sns varchar2(200));
 
-delete from member where mem_id='kristen';
+delete from member where mem_id='freja';
