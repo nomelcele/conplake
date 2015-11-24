@@ -1,0 +1,21 @@
+
+#artistIntro { display:block;}
+#artistConcert{ display:none;}
+#artistSong{ display:none;}
+
+.innerCards { background-color:#fff;
+	
+	border:1px solid #ddd;
+	box-shadow:2px 2px 2px #f7f7f7; 
+	margin: 0 auto;
+	position:relative;
+	}
+	
+.ul_artistSong{ width:900px; height:300px; padding-bottom:30px;}
+.ul_artistSong li.innerCards{ float:left; width:416px; height:296px; }
+.ul_artistSong li.innerCard1{ margin-right:60px; }
+
+.artistVideoWrap{ width:416px; height:246px; }
+.artistVideoTitle{ width:401px; padding-left:15px; height:49px; border-top:1px solid #ddd;}
+.artistVideoTitle p, .artistVideoTitle p span{ line-height:49px; font-size:14px; font-stretch:wider; color:#999;}
+	
