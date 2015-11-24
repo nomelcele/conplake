@@ -20,4 +20,10 @@
   <select id="myProfile" parameterType="int" resultType="mvo">
   	select mem_num, mem_name, mem_img, mem_id, mem_intro from member where mem_num=#{mem_num}
   </select>
+  <select id="confirmIdMail" parameterType="mvo" resultType="mvo">
+  	select mem_num, mem_pwd, mem_mail, mem_name from member where mem_id=#{mem_id} and mem_mail=#{mem_mail}
+  </select>
+  <update id="changePwd" parameterType="mvo">
+  	update member set mem_pwd=#{mem_pwd} where mem_num=#{mem_num}
+  </update>
   </mapper>

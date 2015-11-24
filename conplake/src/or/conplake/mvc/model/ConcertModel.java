@@ -181,4 +181,10 @@ public class ConcertModel {
 		return "redirect:/concertInfo?con_num="+uivo.getUi_concert();
 	}
 
+	@RequestMapping(value="/unlikeConcert")
+	public String unlikeConcert(UserinteractionVO uivo){
+		// 관심 공연 해제
+		udao.unlikeConcert(uivo);
+		return "redirect:/concertInfo?con_num="+uivo.getUi_concert();
+	}
 }
