@@ -69,7 +69,7 @@ function createRow(){
     rowNum+=1;
 
 	
-	var objTable = document.getElementById('table_setList'); 
+	var objTable = document.getElementById('table_editSetList'); 
     var objRow = objTable.insertRow();
 	
 	var cell0 = objRow.insertCell(0);

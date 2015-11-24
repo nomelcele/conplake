@@ -10,7 +10,7 @@
                     <input id="edit_setList" class="innerButton button" type="button" value="행 추가" onclick="createRow()"/>
                     
                 </p>
-            	<Table id="table_setList">
+            	<Table id="table_editSetList">
                     <tr class="tr_setList">
                         <th class="setListCheck">
                         	<input class="input_check" id="input_check0" name="s_checkAll" type="checkbox"/>

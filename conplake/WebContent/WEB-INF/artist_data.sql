@@ -1,27 +1,27 @@
 -- 아티스트 번호, 아티스트 이름, 아티스트 이미지, 아티스트 소개, 아티스트 공식 홈페이지, 아티스트 sns
-insert into artist values(artist_seq.nextVal,'데미안 라이스',null,null,null,null);
+insert into artist values(21,'데미안 라이스',null,null,null,null);
 update concert set con_artist = 21 where con_num=103782 or con_num=103781;
-insert into artist values(artist_seq.nextVal,'아바걸스',null,null,null,null);
+insert into artist values(22,'아바걸스',null,null,null,null);
 update concert set con_artist = 22 where con_num=104186;
-insert into artist values(artist_seq.nextVal,'나윤권',null,null,null,null);
+insert into artist values(23,'나윤권',null,null,null,null);
 update concert set con_artist = 23 where con_num=104007;
-insert into artist values(artist_seq.nextVal,'이은미',null,null,null,null);
+insert into artist values(24,'이은미',null,null,null,null);
 update concert set con_artist = 24 where con_num=103892;
-insert into artist values(artist_seq.nextVal,'방탄소년단',null,null,null,null);
+insert into artist values(25,'방탄소년단',null,null,null,null);
 update concert set con_artist = 25 where con_num=103740;
-insert into artist values(artist_seq.nextVal,'데이브레이크',null,null,null,null);
+insert into artist values(26,'데이브레이크',null,null,null,null);
 update concert set con_artist = 26 where con_num=104143;
-insert into artist values(artist_seq.nextVal,'이규호',null,null,null,null);
+insert into artist values(27,'이규호',null,null,null,null);
 update concert set con_artist = 27 where con_num=104381;
-insert into artist values(artist_seq.nextVal,'장기하와 얼굴들',null,null,null,null);
+insert into artist values(28,'장기하와 얼굴들',null,null,null,null);
 update concert set con_artist = 28 where con_num=104110;
-insert into artist values(artist_seq.nextVal,'웅산',null,null,null,null);
+insert into artist values(29,'웅산',null,null,null,null);
 update concert set con_artist = 29 where con_num=104422;
-insert into artist values(artist_seq.nextVal,'윤상',null,null,null,null);
+insert into artist values(30,'윤상',null,null,null,null);
 update concert set con_artist = 30 where con_num=104117;
-insert into artist values(artist_seq.nextVal,'조용필',null,null,null,null);
+insert into artist values(31,'조용필',null,null,null,null);
 update concert set con_artist = 31 where con_num=104039;
-insert into artist values(artist_seq.nextVal,'리쌍',null,null,null,null);
+insert into artist values(32,'리쌍',null,null,null,null);
 update concert set con_artist = 32 where con_num=104084 or con_num=104083;
 insert into artist values(34,'쏜애플','http://www.mintpaper.co.kr/wp-content/uploads/2014/07/thap_2015_new.jpg','<p><b>베어 물 수밖에 없는 가시 </b><b>돋친 </b><b>사과</b><b>, </b><b>쏜애플</b><b>(THORNAPPLE)</b></p>
 <p>흉내 낼 수 없는 독특한 감성의 가사와 몽환적인 사운드를 가진 밴드 쏜애플(THORNAPPLE)은 2010년 데뷔 앨범 “난 자꾸 말을 더듬고 잠드는 법도 잊었네”를 별도의 홍보 없이 ‘음악 그 자체의 힘’만으로 자신들이 설 땅을 굳건히 만들어 냈다.</p>
