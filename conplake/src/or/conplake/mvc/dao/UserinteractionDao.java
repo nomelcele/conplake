@@ -55,4 +55,8 @@ public class UserinteractionDao {
 			return "n";
 		}
 	}
+
+	public void unlikeConcert(UserinteractionVO uivo) {
+		st.delete("ui.unlikeConcert", uivo);
+	}
 }

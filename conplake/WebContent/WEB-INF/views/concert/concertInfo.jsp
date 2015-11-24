@@ -11,7 +11,7 @@
                     	<input id="likeToGo" class="innerButton button" type="button" value="갈거예요" onclick="location='likeConcert?ui_member='+${sessionScope.mvo.mem_num}+'&ui_concert='+${conInfo.con_num}"/>
                     </c:if>
                     <c:if test="${liked eq 'y'}">
-                    	<input id="likeToGo" class="innerButton button" type="button" value="관심 해제" onclick="location='likeConcert?ui_member='+${sessionScope.mvo.mem_num}+'&ui_concert='+${conInfo.con_num}"/>
+                    	<input id="likeToGo" class="innerButton button" type="button" value="관심 해제" onclick="location='unlikeConcert?ui_member='+${sessionScope.mvo.mem_num}+'&ui_concert='+${conInfo.con_num}"/>
                     </c:if>
                 </div>
             </h2>

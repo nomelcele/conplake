@@ -29,4 +29,7 @@
     <select id="isLikedConcert" parameterType="uivo" resultType="Integer">
     	select ui_concert from userinteraction where ui_concert=#{ui_concert} and ui_member=#{ui_member}
     </select>
+    <delete id="unlikeConcert" parameterType="uivo">
+    	delete from userinteraction where ui_member=#{ui_member} and ui_concert=#{ui_concert}
+    </delete>
   </mapper>

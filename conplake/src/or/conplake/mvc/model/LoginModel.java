@@ -1,14 +1,20 @@
 package or.conplake.mvc.model;
 
-import java.io.IOException;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Properties;
 
+import javax.mail.Address;
+import javax.mail.Authenticator;
+import javax.mail.Message;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -28,6 +34,7 @@ import org.jdom2.util.IteratorIterable;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
@@ -192,5 +199,100 @@ public class LoginModel {
 		session.invalidate();
 		System.out.println("로그아웃");
 		return "redirect:loginForm";
+	}
+	
+
+	@RequestMapping(value="/findPwd")
+	public String findPwd(){
+		// 비밀번호 찾기
+		return "login/findPwd";
+	}
+	
+	@RequestMapping(value="/sendPwdMail")
+	public String sendPwdMail(MemberVO mvo, HttpSession session, Model model) throws Exception{
+		// 비밀번호 찾기 인증 메일 발송
+		MemberVO memInfo = mdao.confirmIdMail(mvo);
+		if(memInfo != null){
+			// 사용자가 입력한 아이디와 메일이 회원 정보와 맞는 경우
+			// 메일 전송
+			int code = (int)((Math.random()*900000)+100000); // 6자리 인증 번호
+			String sender = "saluthiver@gmail.com";
+			String recipient = memInfo.getMem_mail();
+			String subject = "[CONPLAKE] 비밀번호 찾기 인증 메일입니다.";
+			String content = memInfo.getMem_name()+"님, 비밀번호 찾기 인증 번호는 "+code+
+					"입니다. \n 인증 번호 입력 후 비밀번호를 변경해 주세요.";
+			
+			//정보를 담기 위한 객체
+			Properties p = new Properties();
+			//SMTP 서버의 계정 설정
+			//Naver와 연결할 경우 네이버 아이디 지정
+			//Google과 연결할 경우 본인의 Gmail 주소
+			p.put("mail.smtp.user", sender);
+			//SMTP 서버 정보 설정
+			//네이버일 경우 smtp.naver.com
+			//Google일 경우 smtp.gmail.com
+			p.put("mail.smtp.host", "smtp.gmail.com");
+			//아래 정보는 네이버와 구글이 동일하므로 수정하지 마세요.
+			p.put("mail.smtp.port", "465");
+			p.put("mail.smtp.starttls.enable", "true");
+			p.put("mail.smtp.auth", "true");
+			p.put("mail.smtp.debug", "true");
+			p.put("mail.smtp.socketFactory.port", "465");
+			p.put("mail.smtp.socketFactory.class",
+					"javax.net.ssl.SSLSocketFactory");
+			p.put("mail.smtp.socketFactory.fallback", "false");
+
+			try {
+				Authenticator auth = new Authenticator() {
+					@Override
+					protected javax.mail.PasswordAuthentication getPasswordAuthentication() {
+						return new javax.mail.PasswordAuthentication(sender, "152appconplake");
+					}
+				};
+				Session ses = Session.getInstance(p, auth);
+				// 메일을 전송할 때 상세한 상황을 콘솔에 출력한다.
+				ses.setDebug(true);
+				// 메일의 내용을 담기 위한 객체
+				MimeMessage msg = new MimeMessage(ses);
+				// 제목 설정
+				msg.setSubject(subject);
+				// 보내는 사람의 메일주소
+				Address fromAddr = new InternetAddress(sender);
+				msg.setFrom(fromAddr);
+				// 받는 사람의 메일주소
+				Address toAddr = new InternetAddress(recipient);
+				msg.addRecipient(Message.RecipientType.TO, toAddr);
+				// 메시지 본문의 내용과 형식, 캐릭터 셋 설정
+				msg.setContent(content, "text/html;charset=UTF-8");
+				// 발송하기
+				Transport.send(msg);
+			} catch (Exception mex) {
+				mex.printStackTrace();
+				throw new Exception("메일 전송에 실패했습니다.");
+			}
+			session.setAttribute("code", code);
+			model.addAttribute("memInfo", memInfo);
+		} else {
+			throw new Exception("아이디나 메일 주소가 틀렸습니다. 다시 확인해 주세요.");
+		}
+		
+		System.out.println("???????");
+		return "login/enterCode";
+	}
+	
+	@RequestMapping(value="/checkCode")
+	public String checkCode(int userCode, HttpSession session) throws Exception{
+		// 사용자가 입력한 인증 번호가 올바른지 확인
+		if((int)session.getAttribute("code") == userCode){
+			return "login/enterCode";
+		} else {
+			throw new Exception("인증번호가 일치하지 않습니다.");
+		}
+		
+	}
+	
+	@RequestMapping(value="/changePwd")
+	public void changePwd(MemberVO mvo){
+		mdao.changePwd(mvo);
 	}
 }

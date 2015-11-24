@@ -60,5 +60,5 @@ public class JoinModel {
 			pw.flush();
 		}
 	}
-	
+
 }

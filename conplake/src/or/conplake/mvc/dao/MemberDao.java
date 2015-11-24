@@ -45,6 +45,14 @@ public class MemberDao {
 	public MemberVO myProfile(int mem_num){
 		return st.selectOne("mem.myProfile", mem_num);
 	}
+
+	public MemberVO confirmIdMail(MemberVO mvo) {
+		return st.selectOne("mem.confirmIdMail", mvo);
+	}
+
+	public void changePwd(MemberVO mvo) {
+		st.update("mem.changePwd", mvo);
+	}
 	
 
 }
