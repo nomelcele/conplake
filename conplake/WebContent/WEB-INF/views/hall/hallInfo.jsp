@@ -11,11 +11,11 @@
 <!--                     <input id="likeToGo" class="innerButton button" type="button" value="갈거예요" onclick=""/> -->
 <!--                 </div> -->
             
-            <div id="concertProfileBox">
-            	<div id="concertPoster">
-                	<img src="${challInfo.chall_img}" width="225" height="300" />
+            <div class="concertProfileBox profileSize" >
+            	<div class="concertPoster profileSize">
+                	<img src="${challInfo.chall_img}" width="225" height="225" />
                 </div>
-                <div id="concertProfile">
+                <div class="concertProfile profileSize">
                     <p>주소 : <span>${challInfo.chall_addr}</span></p>
                     <p>문의 : <span>${challInfo.chall_tel}</span></p>
                     <p>공식 사이트 : <span><a href="${challInfo.chall_official}">${challInfo.chall_official}</a></span></p>

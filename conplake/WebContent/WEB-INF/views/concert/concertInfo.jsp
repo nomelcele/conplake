@@ -16,11 +16,11 @@
                 </div>
             </h2>
             
-            <div id="concertProfileBox">
-            	<div id="concertPoster">
+            <div class="concertProfileBox">
+            	<div class="concertPoster">
                 	<img src="${conInfo.con_poster}" width="225" height="300" />
                 </div>
-                <div id="concertProfile">   	
+                <div class="concertProfile">   	
                     <p>일시 : <span>${conInfo.con_startdate} ~ ${conInfo.con_enddate}</span></p>
                     <p>장소 : <span><a href="concerthallInfo?chall_num=${conInfo.con_venue}">${conInfo.venuename}</a></span></p>
                     <p>출연 : <span><a href="artistInfo?art_num=${conInfo.con_artist}">
