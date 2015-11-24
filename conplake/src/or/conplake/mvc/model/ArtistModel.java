@@ -27,7 +27,7 @@ public class ArtistModel {
 		model.addAttribute("artistInfo", adao.artistInfo(art_num)); // 아티스트 정보
 		model.addAttribute("artistConcerts", cdao.artistConcerts(art_num)); // 아티스트 공연 목록
 		model.addAttribute("hitSongs", sdao.hitSongs(art_num)); // 아티스트 대표곡 목록
-		return "";
+		return "artist.artistInfo";
 	}
 	
 	@RequestMapping(value="likeArtist")

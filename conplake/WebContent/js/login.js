@@ -80,7 +80,7 @@ $(function(){
 	
 	$("changePwdBtn").click(function(){
 		// 비밀번호 변경
-		console.log($("#changePwdUser").val());
+		alert("비밀번호 변경"+$("#changePwdUser").val());
 		$.ajax({
 			type: "POST",
 			url: "changePwd",
