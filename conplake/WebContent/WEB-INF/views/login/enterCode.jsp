@@ -24,8 +24,8 @@
 						<div id="checkPwTarget"></div>
 					</div>
 
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
-						<button type="button" class="btn btn-primary" id="changePwdBtn" disabled="disabled">변경</button>
+					<div>
+						<button type="button" data-dismiss="modal">닫기</button>
+						<button type="button" id="changePwdBtn" disabled="disabled">변경</button>
 					</div>
 				</div>
