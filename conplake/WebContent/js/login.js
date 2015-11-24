@@ -78,7 +78,7 @@ $(function(){
 		}
 	});
 	
-	$("changePwdBtn").click(function(){
+	$("#changePwdBtn").click(function(){
 		// 비밀번호 변경
 		alert("비밀번호 변경"+$("#changePwdUser").val());
 		$.ajax({

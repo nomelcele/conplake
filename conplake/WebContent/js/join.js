@@ -157,7 +157,8 @@ $(function(){
 			$("#mem_addr").attr("value",memAddr);
 			
 			// 이미지 파일 업로드
-			imgUpload();
+			var img = imgUpload();
+			alert("????????????"+img);
 			console.log("이미지 파일 업로드 완료");
 			
 			// 회원 가입 폼 제출
@@ -180,8 +181,8 @@ function imgUpload(){
 	xhr.onreadystatechange = function(){
 		// callback
 		if(xhr.readyState == 4 && xhr.status == 200){
-// 			alert("사진경로"+xhr.responseText.trim());
-//			$('#memprofile').attr("value",xhr.responseText.trim());
+ 			alert("사진경로"+xhr.responseText.trim());
+			$('#mem_img').attr("value",xhr.responseText.trim());
 //			alert("사원정보가 업데이트 되었습니다.");
 
 		}
