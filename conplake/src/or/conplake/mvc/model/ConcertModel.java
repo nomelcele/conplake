@@ -68,6 +68,7 @@ public class ConcertModel {
 		MemberVO mvo = (MemberVO) session.getAttribute("mvo");
 		uivo.setUi_member(mvo.getMem_num());
 		model.addAttribute("liked", udao.isLikedConcert(uivo));
+		
 		return "concert.concertInfo";
 		// model.addAttribute("conInfo", cdao.concertInfo(con_num));
 		// model.addAttribute("reviewList", pdao.reviewList(con_num));
