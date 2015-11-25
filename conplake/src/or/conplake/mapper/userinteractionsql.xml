@@ -32,4 +32,10 @@
     <delete id="unlikeConcert" parameterType="uivo">
     	delete from userinteraction where ui_member=#{ui_member} and ui_concert=#{ui_concert}
     </delete>
+    <delete id="unlikeArtist" parameterType="uivo">
+    	delete from userinteraction where ui_member=#{ui_member} and ui_artist=#{ui_artist}
+    </delete>
+    <select id="isLikedArtist" parameterType="uivo" resultType="Integer">
+    	select ui_artist from userinteraction where ui_artist=#{ui_artist} and ui_member=#{ui_member}
+    </select>
   </mapper>

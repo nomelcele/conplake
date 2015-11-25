@@ -59,4 +59,18 @@ public class UserinteractionDao {
 	public void unlikeConcert(UserinteractionVO uivo) {
 		st.delete("ui.unlikeConcert", uivo);
 	}
+
+	public void unlikeArtist(UserinteractionVO uivo) {
+		st.delete("ui.unlikeArtist", uivo);
+	}
+
+	// 관심 아티스트 여부 확인
+	public String isLikedArtist(UserinteractionVO uivo) {
+		if(st.selectOne("ui.isLikedArtist", uivo) != null){
+			// 이미 관심 공연으로 지정한 공연일 경우
+			return "y";
+		} else {
+			return "n";
+		}
+	}
 }
