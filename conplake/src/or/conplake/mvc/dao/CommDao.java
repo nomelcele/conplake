@@ -24,4 +24,9 @@ public class CommDao {
 	public void deleteComm(int comm_num){
 		st.delete("comm.deleteComm", comm_num);
 	}
+	
+	public List<CommVO> tlCommList(int comm_tl){
+		return st.selectList("comm.tlCommList", comm_tl);
+	}
+
 }
