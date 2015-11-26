@@ -4,6 +4,7 @@
     <h1>CONCERT INFORMATION</h1>
     <input type="hidden" id="concertNumber" value="${conInfo.con_num}">
     <input type="hidden" id="concertArtist" value="${conInfo.con_artist}">
+    <input type="hidden" id="currentUserNum" value="${sessionScope.mvo.mem_num}">
         	<h2 id="concertTitle">${conInfo.con_name}
             	<div id="innerButtonBox">
                     <input id="GoTogether" class="innerButton button" type="button" value="함께가요" onclick=""/>
@@ -125,77 +126,44 @@
             		
             		<div id="timeLineBody" class="timeLine">
             			<ul>
-            			<li>
-            				<div class="tLImgWrap"><img src="resources/img/nell.jpg" width="50" height="50"/></div>
-            				<div class="tLTextWrap">
-            					<p id="tLUserName">user_name<span>2015.05.05</span></p>
-            					<p id="tLText">text최대 두줄</p>
-            					<p><a href="">댓글(0)</a></p>
-            				</div>
-            			</li>
+            			<c:forEach var="timeline" items="${timeline}">
+	            			<li>
+	            				<div class="tLImgWrap"><img src="resources/memberImg/${timeline.authorimg}" width="50" height="50"/></div>
+	            				<div class="tLTextWrap">
+	            					<p id="tLUserName">${timeline.authorname}<span>${timeline.tl_date}</span></p>
+	            					<p id="tLText">${timeline.tl_cont}</p>
+	            					<p><a href="" onclick="readTimelineComm(${timeline.tl_num})">댓글(${timeline.tlcount})</a></p>
+	            				</div>
+	            			</li>
+	            		</c:forEach>
             			
-            			<li>
-            				<div class="tLImgWrap"><img src="resources/img/nell.jpg" width="50" height="50"/></div>
-            				<div class="tLTextWrap">
-            					<p id="tLUserName">user_name<span>2015.05.05</span></p>
-            					<p id="tLText">text최대 두줄</p>
-            					<p><a href="">댓글(0)</a></p>
-            				</div>
-            			</li>
+<!--             			<li> -->
+<!--             				<div class="tLImgWrap"><img src="resources/img/nell.jpg" width="50" height="50"/></div> -->
+<!--             				<div class="tLTextWrap"> -->
+<!--             					<p id="tLUserName">user_name<span>2015.05.05</span></p> -->
+<!--             					<p id="tLText">text최대 두줄</p> -->
+<!--             					<p><a href="">댓글(0)</a></p> -->
+<!--             				</div> -->
+<!--             			</li> -->
             			
-            			<li>
-            				<div class="tLImgWrap"><img src="resources/img/nell.jpg" width="50" height="50"/></div>
-            				<div class="tLTextWrap">
-            					<p id="tLUserName">user_name<span>2015.05.05</span></p>
-            					<p id="tLText">text최대 두줄</p>
-            					<p><a href="">댓글(0)</a></p>
-            				</div>
-            			</li>
+<!--             			<li> -->
+<!--             				<div class="tLImgWrap"><img src="resources/img/nell.jpg" width="50" height="50"/></div> -->
+<!--             				<div class="tLTextWrap"> -->
+<!--             					<p id="tLUserName">user_name<span>2015.05.05</span></p> -->
+<!--             					<p id="tLText">text최대 두줄</p> -->
+<!--             					<p><a href="">댓글(0)</a></p> -->
+<!--             				</div> -->
+<!--             			</li> -->
             			
-            			<li>
-            				<div class="tLImgWrap"><img src="resources/img/nell.jpg" width="50" height="50"/></div>
-            				<div class="tLTextWrap">
-            					<p id="tLUserName">user_name<span>2015.05.05</span></p>
-            					<p id="tLText">text최대 두줄</p>
-            					<p><a href="">댓글(0)</a></p>
-            				</div>
-            			</li>
-            			
-            			<li>
-            				<div class="tLImgWrap"><img src="resources/img/nell.jpg" width="50" height="50"/></div>
-            				<div class="tLTextWrap">
-            					<p id="tLUserName">user_name<span>2015.05.05</span></p>
-            					<p id="tLText">text최대 두줄</p>
-            					<p><a href="">댓글(0)</a></p>
-            				</div>
-            			</li>
-            			
-            			<li>
-            				<div class="tLImgWrap"><img src="resources/img/nell.jpg" width="50" height="50"/></div>
-            				<div class="tLTextWrap">
-            					<p id="tLUserName">user_name<span>2015.05.05</span></p>
-            					<p id="tLText">text최대 두줄 texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext</p>
-            					<p><a href="">댓글(0)</a></p>
-            				</div>
-            			</li>
-            			
-            			<li>
-            				<div class="tLImgWrap"><img src="resources/img/nell.jpg" width="50" height="50"/></div>
-            				<div class="tLTextWrap">
-            					<p id="tLUserName">user_name<span>2015.05.05</span></p>
-            					<p id="tLText">text최대 두줄</p>
-            					<p><a href="">댓글(0)</a></p>
-            				</div>
-            			</li>
-            			
-            			<li>
-            				<div class="tLImgWrap"><img src="resources/img/nell.jpg" width="50" height="50"/></div>
-            				<div class="tLTextWrap">
-            					<p id="tLUserName">user_name<span>2015.05.05</span></p>
-            					<p id="tLText">text최대 두줄</p>
-            					<p><a href="">댓글(0)</a></p>
-            				</div>
-            			</li>
+<!--             			<li> -->
+<!--             				<div class="tLImgWrap"><img src="resources/img/nell.jpg" width="50" height="50"/></div> -->
+<!--             				<div class="tLTextWrap"> -->
+<!--             					<p id="tLUserName">user_name<span>2015.05.05</span></p> -->
+<!--             					<p id="tLText">text최대 두줄</p> -->
+<!--             					<p><a href="">댓글(0)</a></p> -->
+<!--             				</div> -->
+<!--             			</li> -->
+
             			</ul>
             		</div>
             		

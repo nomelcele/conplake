@@ -286,4 +286,9 @@ alter table artist add(art_official varchar2(200));
 alter table artist drop(art_sns);
 alter table artist add(art_sns varchar2(200));
 
-delete from member where mem_id='freja';
+select count(*) cnt from comm where comm_tl=tl_num;
+update member set mem_img='kristen-stewart-advice-t.jpg' where mem_name='크리스틴';
+
+  		select tl_num, tl_cont, tl_date, mem_name authorname, mem_img authorimg, tl_concert, 
+  		(select count(*) cnt from comm where tl_num=comm_tl) tlcount from timeline, member
+  		where tl_concert=104143 and tl_author=mem_num order by tl_date desc;

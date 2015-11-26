@@ -75,11 +75,42 @@ $( document ).ready(function() {
 		$("#modalWindow").height('540px');
 	}
 	
-	
+	$("#tLInputBtn").click(function(){
+		// 타임라인에 글 작성
+		$.ajax({
+			type : "POST",
+			url : "writeTimeline",
+			data : {
+				tl_cont: $("#tLInputText").val(),
+				tl_author: $("#currentUserNum").val(),
+				tl_concert: $("#concertNumber").val()
+			},
+			success : function(result) {
+				$('#concertTimeLine').html(result);
+			}
+		});
+
+	});
 	
 });
 
 function mdClose(){
 	$("#modalWindowWrap").css('display', 'none');
 	
+}
+
+function readTimelineComm(comm_tl){
+	// 댓글 불러오기
+	$.ajax({
+		type : "POST",
+		url : "readTimelineComm",
+		data : {
+			comm_tl: comm_tl
+		},
+		success : function(result) {
+			$('#modalWindowWrap').html(result);
+		}
+	});
+	alert("댓글창 열기");
+	$("#modalWindowWrap").css('display', 'block');
 }

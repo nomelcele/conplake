@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="tl">
+  	<insert id="writeTimeline" parameterType="tlvo">
+  		insert into timeline values(timeline_seq.nextVal,#{tl_cont},sysdate,#{tl_author},#{tl_concert})
+  	</insert>
+  	<select id="readTimeline" parameterType="int" resultType="tlvo">
+  		select tl_num, tl_cont, tl_date, mem_name authorname, mem_img authorimg, tl_concert, 
+  		(select count(*) cnt from comm where comm_tl=tl_num) tlcount from timeline, member
+  		where tl_concert=#{tl_concert} and tl_author=mem_num order by tl_date desc
+  	</select>
+  </mapper>

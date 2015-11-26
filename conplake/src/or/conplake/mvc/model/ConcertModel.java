@@ -13,6 +13,7 @@ import or.conplake.mvc.dao.CommDao;
 import or.conplake.mvc.dao.ConcertDao;
 import or.conplake.mvc.dao.PostDao;
 import or.conplake.mvc.dao.SongDao;
+import or.conplake.mvc.dao.TimelineDao;
 import or.conplake.mvc.dao.UserinteractionDao;
 import or.conplake.mvc.service.ConcertService;
 import or.conplake.vo.CommVO;
@@ -20,6 +21,7 @@ import or.conplake.vo.ConcertVO;
 import or.conplake.vo.MemberVO;
 import or.conplake.vo.PostVO;
 import or.conplake.vo.SongVO;
+import or.conplake.vo.TimelineVO;
 import or.conplake.vo.UserinteractionVO;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -48,6 +50,8 @@ public class ConcertModel {
 	@Autowired
 	@Qualifier(value="concert")
 	private ConcertService service;
+	@Autowired
+	private TimelineDao tldao;
 
 	@RequestMapping(value = "/main")
 	public String main(Model model) {
@@ -59,15 +63,17 @@ public class ConcertModel {
 	public String concertInfo(@RequestParam HashMap<String, String> map, HttpSession session,
 			Model model) {
 		model.addAttribute("conInfo",
-				cdao.concertInfo(Integer.parseInt(map.get("con_num"))));
-		model.addAttribute("reviewList", pdao.reviewList(map));
-		model.addAttribute("setlist", sdao.setlist(Integer.parseInt(map.get("con_num"))));
+				cdao.concertInfo(Integer.parseInt(map.get("con_num")))); // 콘서트 정보
+		model.addAttribute("reviewList", pdao.reviewList(map)); // 콘서트 리뷰
+		model.addAttribute("setlist", sdao.setlist(Integer.parseInt(map.get("con_num")))); // 세트리스트
 		
 		UserinteractionVO uivo = new UserinteractionVO();
 		uivo.setUi_concert(Integer.parseInt(map.get("con_num")));
 		MemberVO mvo = (MemberVO) session.getAttribute("mvo");
 		uivo.setUi_member(mvo.getMem_num());
-		model.addAttribute("liked", udao.isLikedConcert(uivo));
+		model.addAttribute("liked", udao.isLikedConcert(uivo)); // 로그인한 회원의 해당 콘서트 관심 여부
+		
+		model.addAttribute("timeline", tldao.readTimeline(Integer.parseInt(map.get("con_num")))); // 타임라인
 		
 		return "concert.concertInfo";
 		// model.addAttribute("conInfo", cdao.concertInfo(con_num));
@@ -187,5 +193,19 @@ public class ConcertModel {
 		// 관심 공연 해제
 		udao.unlikeConcert(uivo);
 		return "redirect:/concertInfo?con_num="+uivo.getUi_concert();
+	}
+	
+	@RequestMapping(value="/writeTimeline")
+	public String writeTimeline(TimelineVO tlvo){
+		// 타임라인에 글 작성
+		tldao.writeTimeline(tlvo);
+		return "concert/timeline";
+	}
+	
+	@RequestMapping(value="/readTimelineComm")
+	public String readTimelineComm(int comm_tl, Model model){
+		// 타임라인 댓글 목록 불러오기
+		model.addAttribute("commList", cmdao.tlCommList(comm_tl));
+		return "concert/timelineComm";
 	}
 }
