@@ -132,7 +132,7 @@
 	            				<div class="tLTextWrap">
 	            					<p id="tLUserName">${timeline.authorname}<span>${timeline.tl_date}</span></p>
 	            					<p id="tLText">${timeline.tl_cont}</p>
-	            					<p><a href="" onclick="readTimelineComm(${timeline.tl_num})">댓글(${timeline.tlcount})</a></p>
+	            					<p><a href="" onclick="readTimelineComm(${timeline.tl_num}); return false;">댓글(${timeline.tlcount})</a></p>
 	            				</div>
 	            			</li>
 	            		</c:forEach>
