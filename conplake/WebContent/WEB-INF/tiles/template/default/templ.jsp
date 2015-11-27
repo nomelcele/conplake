@@ -21,6 +21,9 @@
 <link href="resources/css/edit_setList.css" rel="stylesheet" type="text/css"/>
 <link href="resources/css/myPage.css" rel="stylesheet" type="text/css"/>
 <link href="resources/css/info_artist.css" rel="stylesheet" type="text/css"/>
+<link href="resources/css/addArtistInfo.css" rel="stylesheet" type="text/css"/>
+<link href="resources/css/prettyPhoto.css" rel="stylesheet" type="text/css"/>
+
 
 <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
@@ -37,16 +40,21 @@
 <script src="js/myPage.js"></script>
 <script src="js/info_artist.js"></script>
 <script src="js/tab.js"></script>
+
+<script src="js/info_artist.js"></script>
 <script src="js/jquery.ui.draggable.js"></script>
 <script src="js/jquery-ui.js"></script>
+<script src="js/jquery.prettyPhoto.js"></script>
+
 
 
 <script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=7f9c33732c713549cc705cd0d7c3b278"></script>
 <style>
-html, body{ width:100%; height:100%; position:relative; }
-.contentWrap{ width:1200px; height:100%; background:#fff;}
+html, body{ width:100%; height:100%; position:relative;}
+
+.contentWrap{ width:1200px; height:100%; }
 .mainBoxWrap{ width:919px; float:left; border-left:1px solid #ccc; padding-bottom:50px; }
-.mainBox {width:100%; height:100%; padding-left:40px; margin-top:150px;}
+.mainBox {width:100%; height:100%; padding-left:40px; margin-top:150px; }
 
 h1 {font:20px Arial, Helvetica, sans-serif; font-weight:600; color:#999; padding-bottom:35px; }
 
