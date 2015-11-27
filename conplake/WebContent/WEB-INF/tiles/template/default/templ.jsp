@@ -24,7 +24,9 @@
 
 <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>
+<!-- <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script> -->
+<!-- <script src="http://code.jquery.com/jquery-1.8.2.js"></script> -->
+<!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script> -->
 <script src="js/info_concert.js"></script>
 <script src="js/info_hall.js"></script>
 <script src="js/edit_setList.js"></script>
@@ -35,6 +37,9 @@
 <script src="js/myPage.js"></script>
 <script src="js/info_artist.js"></script>
 <script src="js/tab.js"></script>
+<script src="js/jquery.ui.draggable.js"></script>
+<script src="js/jquery-ui.js"></script>
+
 
 <script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=7f9c33732c713549cc705cd0d7c3b278"></script>
 <style>
