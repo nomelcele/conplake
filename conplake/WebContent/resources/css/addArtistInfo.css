@@ -1,0 +1,27 @@
+@CHARSET "UTF-8";
+
+.a_width {width:300px; }
+#input_artistImg{ border:none; }
+#input_artistImgName { width:200px; background:#f9f9f9;}
+#input_artistImgBtn { width:95px; background:#fff; border:1px solid #ccc; float:right; padding:0; margin-left:5px; color:#666; font-size:11px; text-align:center;}
+#input_artistImg {position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip:rect(0,0,0,0);
+  border: 0;
+}
+.select_artist {background: url(../img/arrow_down.png) no-repeat 270px center;}
+
+
+#formBoxLeft2 { min-height:400px; width:395px; padding-right:50px; }
+#formBoxRight2 { min-height:400px; width:455px;  }
+
+#formBoxLeft2 input, #formBoxLeft2 select {float:right; }
+
+.rInputStyleR{ width:320px; float:right;}
+
+.p_writeA{ padding-top:0;}
+#input_artistProfile{ width:433px; height:290px; border-radius:2px;}

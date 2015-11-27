@@ -79,3 +79,9 @@ div#seatReview {width:900px; height:500px;}
 
 
 #concerthallMap{width:800px; height:600px;}
+
+
+.pp_social {display:none;}
+.ppt {display:none; !important} 
+.pp_middle {display:none;}
+.pp_top  {display:none;}

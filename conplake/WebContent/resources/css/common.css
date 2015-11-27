@@ -14,6 +14,18 @@ a, h1, h2, h3, h4, h5, h6, table, tr, td, th, ul, li, input, select, textarea, b
 
 table, tr, td {margin:0; padding:0; border-spacing:0; border:0; border-collapse:collapse;}
 
+
+select {
+  -webkit-appearance: none;  /* 네이티브 외형 감추기 */
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* IE 10, 11의 네이티브 화살표 숨기기 */
+select::-ms-expand { 
+  display: none;
+}
+
 .inputStyle {
 	font-family: inherit;  /* 폰트 상속 */
 	color:#999;
