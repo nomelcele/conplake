@@ -21,4 +21,8 @@ public class TimelineDao {
 	public List<TimelineVO> readTimeline(int tl_concert){
 		return st.selectList("tl.readTimeline", tl_concert);
 	}
+	
+	public void deleteTimeline(int tl_num){
+		st.delete("tl.deleteTimeline", tl_num);
+	}
 }

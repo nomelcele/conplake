@@ -99,6 +99,38 @@ function readTimelineComm(comm_tl){
 	
 }
 
+
+function writeTimeline(){
+	$.ajax({
+		type : "POST",
+		url : "writeTimeline",
+		data : {
+			tl_cont: $("#tLInputText").val(),
+			tl_author: $("#currentUserNum").val(),
+			tl_concert: $("#concertNumber").val()
+		},
+		success : function(result) {
+			$('#concertTimeLine').html(result);
+		}
+	});
+}
+
+function writeTimelineComm(currentUserNumber,timelineNumber){
+	$.ajax({
+		type : "POST",
+		url : "writeTimelineComm",
+		data : {
+			comm_cont: $("#mdInputText").val(),
+			comm_author: currentUserNumber,
+			comm_tl: timelineNumber
+		},
+		success : function(result) {
+			$('#modalWindowWrap').html(result);
+		}
+	});
+}
+
+
 function commHeight(){
 	if($("#mdBody ul li").length == 0){
 		$("#mdBody ul").height('0');
@@ -121,3 +153,4 @@ function commHeight(){
 		$("#modalWindow").height('540px');
 	}
 }
+

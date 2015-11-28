@@ -7,8 +7,11 @@
   		insert into timeline values(timeline_seq.nextVal,#{tl_cont},sysdate,#{tl_author},#{tl_concert})
   	</insert>
   	<select id="readTimeline" parameterType="int" resultType="tlvo">
-  		select tl_num, tl_cont, tl_date, mem_name authorname, mem_img authorimg, tl_concert, 
+  		select tl_num, tl_cont, tl_date, mem_name authorname, mem_img authorimg, tl_concert, tl_author, 
   		(select count(*) cnt from comm where comm_tl=tl_num) tlcount from timeline, member
   		where tl_concert=#{tl_concert} and tl_author=mem_num order by tl_date desc
   	</select>
+  	<delete id="deleteTimeline" parameterType="int">
+  		delete from timeline where tl_num=#{tl_num}
+  	</delete>
   </mapper>

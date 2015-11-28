@@ -196,9 +196,11 @@ public class ConcertModel {
 	}
 	
 	@RequestMapping(value="/writeTimeline")
-	public String writeTimeline(TimelineVO tlvo){
+	public String writeTimeline(TimelineVO tlvo, Model model){
 		// 타임라인에 글 작성
 		tldao.writeTimeline(tlvo);
+		model.addAttribute("timeline", tldao.readTimeline(tlvo.getTl_concert())); // 타임라인
+		model.addAttribute("concertNumber", tlvo.getTl_concert());
 		return "concert/timeline";
 	}
 	
@@ -206,6 +208,23 @@ public class ConcertModel {
 	public String readTimelineComm(int comm_tl, Model model){
 		// 타임라인 댓글 목록 불러오기
 		model.addAttribute("commList", cmdao.tlCommList(comm_tl));
+		model.addAttribute("timelineNumber", comm_tl);
 		return "concert/timelineComm";
+	}
+	
+	@RequestMapping(value="/writeTimelineComm")
+	public String writeTimelineComm(CommVO commvo){
+		// 타임라인 댓글 작성
+		cmdao.writeTimelineComm(commvo);
+		return "redirect:/readTimelineComm?comm_tl="+commvo.getComm_tl();
+	}
+	
+	@RequestMapping(value="/deleteTimeline")
+	public String deleteTimeline(int tl_num, Model model){
+		tldao.deleteTimeline(tl_num);
+//		model.addAttribute("timeline", tldao.readTimeline(tlvo.getTl_concert())); // 타임라인
+//		model.addAttribute("concertNumber", tlvo.getTl_concert());
+		return "concert/timeline";
+
 	}
 }
