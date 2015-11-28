@@ -76,70 +76,70 @@
             		<ul class="ul_seatReview">
                         <li id="list_seat">
                             <a href="resources/img/gmf.png" rel="prettyPhoto" title="This is the description">                            
-                            	<img width="158" height="158" src="resources/img/gmf.png">
+                            	<img width="156" height="156" src="resources/img/gmf.png">
                             </a>
                             <p class="seat_title">A구역 5열 3번</p>
                         </li>
                         
                         <li id="list_seat">
                             <a href="resources/img/gmf.png" rel="prettyPhoto" title="This is the description">                            
-                            	<img width="158" height="158" src="resources/img/gmf.png">
+                            	<img width="156" height="156" src="resources/img/gmf.png">
                             </a>
                             <p class="seat_title">A구역 5열 3번</p>
                         </li>
                         
                         <li id="list_seat">
                             <a href="resources/img/gmf.png" rel="prettyPhoto" title="This is the description">                            
-                            	<img width="158" height="158" src="resources/img/gmf.png">
+                            	<img width="156" height="156" src="resources/img/gmf.png">
                             </a>
                             <p class="seat_title">A구역 5열 3번</p>
                         </li>
                         
                         <li id="list_seat">
                             <a href="resources/img/gmf.png" rel="prettyPhoto" title="This is the description">                            
-                            	<img width="158" height="158" src="resources/img/gmf.png">
+                            	<img width="156" height="156" src="resources/img/gmf.png">
                             </a>
                             <p class="seat_title">A구역 5열 3번</p>
                         </li>
                         
                         <li id="list_seat">
                             <a href="resources/img/gmf.png" rel="prettyPhoto" title="This is the description">                            
-                            	<img width="158" height="158" src="resources/img/gmf.png">
+                            	<img width="156" height="156" src="resources/img/gmf.png">
                             </a>
                             <p class="seat_title">A구역 5열 3번</p>
                         </li>
                         
                         <li id="list_seat">
                             <a href="resources/img/gmf.png" rel="prettyPhoto" title="This is the description">                            
-                            	<img width="158" height="158" src="resources/img/gmf.png">
+                            	<img width="156" height="156" src="resources/img/gmf.png">
                             </a>
                             <p class="seat_title">A구역 5열 3번</p>
                         </li>
                         
                         <li id="list_seat">
                             <a href="resources/img/gmf.png" rel="prettyPhoto" title="This is the description">                            
-                            	<img width="158" height="158" src="resources/img/gmf.png">
+                            	<img width="156" height="156" src="resources/img/gmf.png">
                             </a>
                             <p class="seat_title">A구역 5열 3번</p>
                         </li>
                         
                         <li id="list_seat">
                             <a href="resources/img/gmf.png" rel="prettyPhoto" title="This is the description">                            
-                            	<img width="158" height="158"  src="resources/img/gmf.png">
+                            	<img width="156" height="156"  src="resources/img/gmf.png">
                             </a>
                             <p class="seat_title">A구역 5열 3번</p>
                         </li>
                         
                         <li id="list_seat">
                             <a href="resources/img/gmf.png" rel="prettyPhoto" title="This is the description">                            
-                            	<img width="158" height="158" src="resources/img/gmf.png">
+                            	<img width="156" height="156" src="resources/img/gmf.png">
                             </a>
                             <p class="seat_title">A구역 5열 3번</p>
                         </li>
                         
                         <li id="list_seat">
                             <a href="resources/img/gmf.png" rel="prettyPhoto" title="This is the description">                            
-                            	<img width="158" height="158" src="resources/img/gmf.png">
+                            	<img width="156" height="156" src="resources/img/gmf.png">
                             </a>
                             <p class="seat_title">A구역 5열 3번</p>
                         </li>

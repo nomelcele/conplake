@@ -42,7 +42,7 @@ div#seatReview {width:900px; height:500px;}
 #p_searchSeatReview select {height:28px;}
 
 
-.ul_seatReview {width:900px; height:400px; max-width:900px; max-height:400px; display:block;}
+.ul_seatReview {width:900px;  max-width:900px; display:block;}
 .ul_seatReview p{ white-space:nowrap; text-overflow:ellipsis; overflow:hidden;}
 .ul_seatReview li {
     -moz-border-bottom-colors: none;
@@ -57,8 +57,8 @@ div#seatReview {width:900px; height:500px;}
 	margin-right:20px;
    	margin-bottom:20px;
     
-    width: 158px; max-width: 158px;
-    height:188px; max-height:188px; 
+    width: 156px; max-width: 156px;
+    height:186px; max-height:186px; 
     
 }
 .ul_seatReview li.list_lastLine {margin-right:0;}
@@ -70,7 +70,7 @@ div#seatReview {width:900px; height:500px;}
     font-size: 12px;
     font-weight: normal;
 	height:20px;
-    line-height: 14px;
+    line-height: 20px;
     overflow: hidden;
     padding: 5px 12px 0;
     text-overflow: ellipsis;
