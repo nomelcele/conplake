@@ -29,4 +29,7 @@ public class CommDao {
 		return st.selectList("comm.tlCommList", comm_tl);
 	}
 
+	public void writeTimelineComm(CommVO commvo){
+		st.insert("comm.writeTimelineComm", commvo);
+	}
 }

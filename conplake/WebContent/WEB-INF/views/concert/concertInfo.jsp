@@ -132,28 +132,15 @@
 	            				<div class="tLTextWrap">
 	            					<p id="tLUserName">${timeline.authorname}<span>${timeline.tl_date}</span></p>
 	            					<p id="tLText">${timeline.tl_cont}</p>
-	            					<p><a href="" onclick="readTimelineComm(${timeline.tl_num}); return false;">댓글(${timeline.tlcount})</a></p>
+	            					<p>
+		            					<a href="" onclick="readTimelineComm(${timeline.tl_num}); return false;">댓글(${timeline.tlcount})</a>
+		            					<c:if test="${sessionScope.mvo.mem_num eq timeline.tl_author}">
+		            						<input class="innerButton button" id="mdDelete" type="button" value="삭제" onclick="location='deleteTimeline?tl_num='+${timeline.tl_num}"/>
+		            					</c:if>
+	            					</p>
 	            				</div>
 	            			</li>
 	            		</c:forEach>
-            			
-<!--             			<li> -->
-<!--             				<div class="tLImgWrap"><img src="resources/img/nell.jpg" width="50" height="50"/></div> -->
-<!--             				<div class="tLTextWrap"> -->
-<!--             					<p id="tLUserName">user_name<span>2015.05.05</span></p> -->
-<!--             					<p id="tLText">text최대 두줄</p> -->
-<!--             					<p><a href="">댓글(0)</a></p> -->
-<!--             				</div> -->
-<!--             			</li> -->
-            			
-<!--             			<li> -->
-<!--             				<div class="tLImgWrap"><img src="resources/img/nell.jpg" width="50" height="50"/></div> -->
-<!--             				<div class="tLTextWrap"> -->
-<!--             					<p id="tLUserName">user_name<span>2015.05.05</span></p> -->
-<!--             					<p id="tLText">text최대 두줄</p> -->
-<!--             					<p><a href="">댓글(0)</a></p> -->
-<!--             				</div> -->
-<!--             			</li> -->
             			
 <!--             			<li> -->
 <!--             				<div class="tLImgWrap"><img src="resources/img/nell.jpg" width="50" height="50"/></div> -->
