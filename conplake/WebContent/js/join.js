@@ -97,7 +97,7 @@ $(function(){
 							
 
 		$('#target_img').attr('src', blobURL).css(
-				'width', '200').css('height', '200');
+				'width', '150').css('height', '150');
 		// attr() src 속성에  blobURL 넣기
 		}
 		
@@ -164,6 +164,10 @@ $(function(){
 			// 회원 가입 폼 제출
 			$("#joinForm").submit();
 	 });
+	 
+	 
+	 
+	 
 	 
 });
 

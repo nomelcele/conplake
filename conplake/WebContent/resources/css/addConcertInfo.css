@@ -1,0 +1,15 @@
+.c_width {width:330px; }
+.cDate_width{ width:150px;}
+#dateBtw{ width:30px; height:36px; line-height:36px; text-align:center; float:right; font-size:14px; }
+
+
+#input_concertImgName { width:230px; background:#f9f9f9;}
+
+
+#formBoxLeft3 { min-height:430px; width:425px; padding-right:50px; }
+#formBoxRight3 { min-height:430px; width:425px;  }
+
+#formBoxLeft3 input, #formBoxRight3 input, #formBoxLeft3 select {float:right; }
+
+
+#input_concertProfile{ width:403px; height:290px; border-radius:2px;}
