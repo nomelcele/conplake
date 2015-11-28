@@ -22,6 +22,7 @@
 <link href="resources/css/myPage.css" rel="stylesheet" type="text/css"/>
 <link href="resources/css/info_artist.css" rel="stylesheet" type="text/css"/>
 <link href="resources/css/addArtistInfo.css" rel="stylesheet" type="text/css"/>
+<link href="resources/css/addConcertInfo.css" rel="stylesheet" type="text/css"/>
 <link href="resources/css/prettyPhoto.css" rel="stylesheet" type="text/css"/>
 
 

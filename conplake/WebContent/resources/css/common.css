@@ -10,7 +10,7 @@ ul li{ list-style:none;}
 
 a, h1, h2, h3, h4, h5, h6, table, tr, td, th, ul, li, input, select, textarea, button, p, span, strong {font-family: '나눔고딕', 'Nanum Gothic', sans-serif; text-decoration:none; color:#333; font-size:12px; }
 
-
+input::-webkit-input-placeholder{ color:#ccc;}
 
 table, tr, td {margin:0; padding:0; border-spacing:0; border:0; border-collapse:collapse;}
 
@@ -54,6 +54,7 @@ select::-ms-expand {
 .button:hover {
 	background-color:#464646;
 }
+
 
 
 .input_category {

@@ -85,3 +85,17 @@ div#seatReview {width:900px; height:500px;}
 .ppt {display:none; !important} 
 .pp_middle {display:none;}
 .pp_top  {display:none;}
+
+
+#modalWindow2{position:absolute; width:500px; height:540px; top:50%; left:50%; margin-left:-250px; margin-top:-275px; border:1px solid #333; background:#fff; box-shadow : rgba(0,0,0,0.5) 0 0 8px 3px;}
+#mdBody1{ padding:10px 20px 0; height:84px; border-bottom:1px solid #ccc; }
+#mdBody2{ padding:10px 20px 0; height:375px;  }
+#p_searchSeatReview span {display:block; line-height:30px; color:#333;}
+input.inputSeat { width:65px; height:24px; margin-left:10px; padding-left:5px;}
+
+#p_seatPic{ height:65px;}
+#label_seatPic{ display:block; line-height:30px; clear:both;}
+
+#seatPicWrap{ width:448px; height:248px; padding:5px; border:1px solid #ccc; border-radius:2px;}
+#input_seatPicName{ width:350px;}
+#submit_seatPic{ margin-top:10px; border:none; background:#666; color:#eee;}

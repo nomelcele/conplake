@@ -54,26 +54,7 @@ $( document ).ready(function() {
 	});
 	
 	
-	if($("#mdBody ul li").length == 0){
-		$("#mdBody ul").height('0');
-		$("#modalWindow").height('90px');
-		$("#modalWindow").css('margin-top', '-45px');
-	}
 	
-	else if(($("#mdBody ul li").length > 0) && ($("#mdBody ul li").length <= 6)){
-		var li = $("#mdBody ul li").length;
-		var margFor = -45-(li*35);
-		
-		$("#mdBody ul").height(li*70);
-		$("#modalWindow").height(90 + li*70);
-		document.getElementById("modalWindow").style.marginTop = margFor.toString() + 'px';
-		
-	}
-	
-	else if($("#mdBody ul li").length > 6){
-		$("#mdBody ul").height('450px');
-		$("#modalWindow").height('540px');
-	}
 	
 	$("#tLInputBtn").click(function(){
 		// 타임라인에 글 작성
@@ -113,4 +94,30 @@ function readTimelineComm(comm_tl){
 	});
 	alert("댓글창 열기");
 	$("#modalWindowWrap").css('display', 'block');
+	
+	commHeight();
+	
+}
+
+function commHeight(){
+	if($("#mdBody ul li").length == 0){
+		$("#mdBody ul").height('0');
+		$("#modalWindow").height('90px');
+		$("#modalWindow").css('margin-top', '-45px');
+	}
+
+	else if(($("#mdBody ul li").length > 0) && ($("#mdBody ul li").length <= 6)){
+		var li = $("#mdBody ul li").length;
+		var margFor = -45-(li*35);
+		
+		$("#mdBody ul").height(li*70);
+		$("#modalWindow").height(90 + li*70);
+		document.getElementById("modalWindow").style.marginTop = margFor.toString() + 'px';
+		
+	}
+
+	else if($("#mdBody ul li").length > 6){
+		$("#mdBody ul").height('450px');
+		$("#modalWindow").height('540px');
+	}
 }

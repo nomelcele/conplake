@@ -1,10 +1,10 @@
 @CHARSET "UTF-8";
 
 .a_width {width:300px; }
-#input_artistImg{ border:none; }
-#input_artistImgName { width:200px; background:#f9f9f9;}
-#input_artistImgBtn { width:95px; background:#fff; border:1px solid #ccc; float:right; padding:0; margin-left:5px; color:#666; font-size:11px; text-align:center;}
-#input_artistImg {position: absolute;
+.input_fileImg{ border:none; }
+.input_fileImgName { width:200px; background:#f9f9f9;}
+.input_fileImgBtn { width:95px; background:#fff; border:1px solid #ccc; float:right; padding:0; margin-left:5px; color:#666; font-size:11px; text-align:center;}
+.input_fileImg {position: absolute;
   width: 1px;
   height: 1px;
   padding: 0;

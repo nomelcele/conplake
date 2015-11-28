@@ -12,5 +12,31 @@ function loadMap(gpsy,gpsx){
 
 $(document).ready(function(){
 	$("a[rel^='prettyPhoto']").prettyPhoto();
+	
+	
+	$("#input_seatPic").change(
+		function(){
+			var file = $(this).prop("files")[0];
+			blobURL = window.URL.createObjectURL(file);
+			
+			var seatPicWrap = document.getElementById('seatPicWrap'); 
+			var seatPic= document.createElement("img");
+			seatPic.id = "seatPic";
+			
+			seatPicWrap.appendChild(seatPic);
+			
+			$('#seatPic').attr('src', blobURL).css(
+					'maxWidth', '448px').css('maxHeight', '248px');
+		}
+	);
+	
+	
+	
+	
 });
+
+function uploadSeatPic(){
+	$("#modalWindowWrap").css('display','block');
+	
+}
 

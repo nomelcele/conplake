@@ -13,10 +13,10 @@
 		    <label class="inputLabel" id="">대표 사진</label>
 		    
 		    <label class="inputLabel rInputStyle a_width" id="input_artistImgBtn">Browse..
-		        <input type="file" id="input_artistImg" class="rInputStyle"/>
+		        <input type="file" id="input_artistImg" class="rInputStyle input_fileImg"/>
 		    </label>
 		    
-		    <input type="text" class="rInputStyle a_width" id="input_artistImgName" readonly/> 
+		    <input type="text" class="rInputStyle a_width input_fileImgName" id="input_artistImgName" readonly/> 
 		</p>
 		  
 		
