@@ -29,6 +29,7 @@
                   <li><a class="tab" id="tab3" href="#">진행 중인 공연</a></li>
                   <li><a class="tab" id="tab4" href="#">좌석</a></li>
                   <li><a class="tab" id="tab5" href="#">좌석별 시야</a></li>
+                  <li><a class="tab" id="tab6" href="#">공연장 후기</a></li>
                 </ul>
             </div>
             
@@ -160,6 +161,48 @@
                         <a href="#" class="page" id="page_next">></a>
                     </span>
                 <input id="write_review" class="innerButton button" type="button" onclick="uploadSeatPic()" value="사진 등록"/></p>
+            </div>
+            
+            
+            <div class="contentView" id="hallReview">
+            	<p id="p_searchReview">
+                	<span id="btn_searchReview"><a href="#"></a></span>
+                    <input id="reviewSearchKeyword" name="input_searchReview" class="inputStyle input_searchReview" type="text" placeholder="검색어를 입력하세요." autocomplete="off" >
+                	<select class="inputStyle input_categoryReview" id="reviewSearchCategory">
+                        <option selected="selected" value="title">제목</option>
+                        <option value="author">작성자</option>
+                        <option value="cont">내용</option>
+                    </select>
+                </p>
+            	<Table id="table_review">
+                    <tr class="tr_review">
+                        <th class="reviewNum"><p>번호</p></th>
+                        <th class="reviewTitle"><p>제목</p></th>
+                        <th class="reviewId"><p>작성자</p></th>
+                        <th class="reviewDate"><p>날짜</p></th>
+                        <th class="reviewHits"><p>조회수</p></th>
+                    </tr>
+                    <c:forEach var="reviewList" items="${reviewList}">
+	                    <tr class="tr_review">
+	                        <td class="reviewNum"><p>${reviewList.post_num}</p></td>
+	                        <td class="reviewTitle"><p><a href="readReview?post_num=${reviewList.post_num}">${reviewList.post_title}</a></p></td>
+	                        <td class="reviewID"><p>${reviewList.authorname}</p></td>
+	                        <td class="reviewDate"><p>${reviewList.post_date}</p></td>
+	                        <td class="reviewHits"><p>${reviewList.post_hit}</p></td>
+	                    </tr>
+                    </c:forEach>
+
+                                      
+                </Table>
+                <p id="p_review">
+                	<span id="span_hallReview">
+                    	<a href="#" class="page" id="page_prev"><</a>
+                    	<a href="#">1</a>
+<!--                         <a href="#">2</a> -->
+<!--                         <a href="#">3</a> -->
+                        <a href="#" class="page" id="page_next">></a>
+                    </span>
+                </p>
             </div>
             
             <div id="modalWindowWrap">
