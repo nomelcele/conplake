@@ -150,10 +150,11 @@
   constraint comment_comm_author_fk foreign key(comm_author)
   references member(mem_num),
   constraint comment_comm_post_fk foreign key(comm_post)
-  references post(post_num),
+  references post(post_num) on delete cascade,
   constraint comment_comm_tl_fk foreign key(comm_tl)
-  references timeline(tl_num)  
+  references timeline(tl_num) on delete cascade 
   );
+  
   
   create sequence comm_seq
   increment by 1
@@ -289,6 +290,4 @@ alter table artist add(art_sns varchar2(200));
 select count(*) cnt from comm where comm_tl=tl_num;
 update member set mem_img='kristen-stewart-advice-t.jpg' where mem_name='크리스틴';
 
-  		select tl_num, tl_cont, tl_date, mem_name authorname, mem_img authorimg, tl_concert, 
-  		(select count(*) cnt from comm where tl_num=comm_tl) tlcount from timeline, member
-  		where tl_concert=104143 and tl_author=mem_num order by tl_date desc;
+delete from comm;

@@ -154,3 +154,18 @@ function commHeight(){
 	}
 }
 
+function deleteComm(){
+	$.ajax({
+		type : "POST",
+		url : "writeTimelineComm",
+		data : {
+			comm_cont: $("#mdInputText").val(),
+			comm_author: currentUserNumber,
+			comm_tl: timelineNumber
+		},
+		success : function(result) {
+			$('#modalWindowWrap').html(result);
+		}
+	});
+}
+

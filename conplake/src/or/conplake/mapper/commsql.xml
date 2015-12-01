@@ -14,7 +14,7 @@
   	delete from comm where comm_num=#{comm_num}
   </delete>
   <select id="tlCommList" parameterType="int" resultType="commvo">
-  	select mem_img authorimg, mem_name authorname, comm_date, comm_cont, comm_author, comm_num 
+  	select mem_img authorimg, mem_name authorname, comm_date, comm_cont, comm_author, comm_num, comm_tl
   	from comm, member where comm_author=mem_num and comm_tl=#{comm_tl} order by comm_date desc
   </select>
   <insert id="writeTimelineComm" parameterType="commvo">

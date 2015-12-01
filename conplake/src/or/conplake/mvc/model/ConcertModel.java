@@ -168,10 +168,16 @@ public class ConcertModel {
 //	}
 	
 	@RequestMapping(value="/deleteComm")
-	public String deleteComm(CommVO cmvo){
+	public String deleteComm(CommVO cmvo, String type){
 		// 댓글 삭제
 		cmdao.deleteComm(cmvo.getComm_num());
-		return "redirect:/readReview?post_num="+cmvo.getComm_post();
+		
+		String url = "";
+		switch(type){
+			case "post": url = "redirect:/readReview?post_num="+cmvo.getComm_post();
+			case "timeline": url = "redirect:/readTimelineComm?comm_tl="+cmvo.getComm_tl();
+		}
+		return url;
 	}
 
 	@RequestMapping(value="/deleteReview")
@@ -220,10 +226,10 @@ public class ConcertModel {
 	}
 	
 	@RequestMapping(value="/deleteTimeline")
-	public String deleteTimeline(int tl_num, Model model){
-		tldao.deleteTimeline(tl_num);
-//		model.addAttribute("timeline", tldao.readTimeline(tlvo.getTl_concert())); // 타임라인
-//		model.addAttribute("concertNumber", tlvo.getTl_concert());
+	public String deleteTimeline(TimelineVO tlvo, Model model){
+		tldao.deleteTimeline(tlvo.getTl_num());
+		model.addAttribute("timeline", tldao.readTimeline(tlvo.getTl_concert())); // 타임라인
+		model.addAttribute("concertNumber", tlvo.getTl_concert());
 		return "concert/timeline";
 
 	}
