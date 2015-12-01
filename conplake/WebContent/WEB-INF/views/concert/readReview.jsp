@@ -68,7 +68,7 @@
 	                            <td class="td_readReply" id="td_replyDate">
 	                            	<p id="p_replyDate">${commList.comm_date}</p>
 	                            	<c:if test="${sessionScope.mvo.mem_num eq commList.comm_author}">
-	                            		<p><input id="deleteReply" class="innerButton button" type="button" value="삭제" onclick="location='deleteComm?comm_num='+${commList.comm_num}+'&comm_post='+${commList.comm_post}"/></p>
+	                            		<p><input id="deleteReply" class="innerButton button" type="button" value="삭제" onclick="location='deleteComm?comm_num='+${commList.comm_num}+'&comm_post='+${commList.comm_post}+'&type=post'"/></p>
 	                            	</c:if>
 	                            </td>
 	                        </tr>

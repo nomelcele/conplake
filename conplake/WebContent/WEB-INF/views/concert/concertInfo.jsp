@@ -135,7 +135,7 @@
 	            					<p>
 		            					<a href="" onclick="readTimelineComm(${timeline.tl_num}); return false;">댓글(${timeline.tlcount})</a>
 		            					<c:if test="${sessionScope.mvo.mem_num eq timeline.tl_author}">
-		            						<input class="innerButton button" id="mdDelete" type="button" value="삭제" onclick="location='deleteTimeline?tl_num='+${timeline.tl_num}"/>
+		            						<input class="innerButton button" id="mdDelete" type="button" value="삭제" onclick="location='deleteTimeline?tl_num='+${timeline.tl_num}+'&tl_concert='+${timeline.tl_concert}"/>
 		            					</c:if>
 	            					</p>
 	            				</div>

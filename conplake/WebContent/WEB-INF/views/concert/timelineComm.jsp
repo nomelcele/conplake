@@ -8,15 +8,6 @@
             			</div>
             			<div id="mdBody">
             				<ul>
-<!-- 	            			<li> -->
-<!-- 	            				<div class="mdImgWrap"><img src="resources/img/nell.jpg" width="50" height="50"/></div> -->
-<!-- 	            				<div class="mdTextWrap"> -->
-<!-- 	            					<p id="mdUserName">user_name<span>2015.05.05</span></p> -->
-<!-- 	            					<p id="mdText">text최대 두줄</p> -->
-<!-- 	            					<input class="innerButton button" id="mdDelete" type="button" value="삭제"/> -->
-<!-- 	            				</div> -->
-<!-- 	            			</li> -->
-	            			
 	            			<c:forEach var="commList" items="${commList}">
 		            			<li>
 		            				<div class="mdImgWrap"><img src="resources/memberImg/${commList.authorimg}" width="50" height="50"/></div>
@@ -25,7 +16,7 @@
 		            					<p id="mdText">${commList.comm_cont}</p>
 		            					<p>
 		            						<c:if test="${sessionScope.mvo.mem_num eq commList.comm_author}">
-		            							<input class="innerButton button" id="mdDelete" type="button" value="삭제"/>
+		            							<input class="innerButton button" id="mdDelete" type="button" value="삭제" onclick="location='deleteComm?comm_num='+${commList.comm_num}+'&comm_tl='+${commList.comm_tl}+'&type=timeline'"/>
 		            						</c:if>
 		            					</p>
 		            				</div>
