@@ -72,3 +72,6 @@ update artist set art_img = 'http://pbs.twimg.com/profile_images/413583999575924
 insert into userinteraction values(userinteraction_seq.nextVal,61,'liked_artist',null,21,null);
 insert into userinteraction values(userinteraction_seq.nextVal,61,'liked_artist',null,34,null);
 insert into userinteraction values(userinteraction_seq.nextVal,61,'liked_artist',null,35,null);
+
+insert into artist values(48,'넬','http://cfile30.uf.tistory.com/image/217C3A3E51B1513A225ECF','<p>1980년생 동갑내기 친구들로 구성된 밴드 넬(Nell)은 데뷔 때부터 &#39;한국형 브릿팝&#39; 밴드로 불렸다. <br />브릿팝이 국내에 많은 팬들을 갖고 있고, 그에 영향 받은 뮤지션들이 많은 것도 사실이지만, &#39;넬&#39;처럼 동시대의 특정 브릿팝 사운드의 전형을 한국어로 이렇듯 고스란히 재현해 낸 예는 흔치 않은 일이었다. <br />특히 넬은 그 누구보다 라디오헤드(Radiohead)나 뮤즈(Muse)의 흔적이 뚜렷한 사운드로 청춘의 대표적인 정서인 우울과 자기 연민을 노래하고 있다. <br /><br />1999년 1월, 고등학교 친구였던 김종완(보컬, 기타), 이재경(기타), 이정훈(베이스), 정재원(드럼)은 &#39;Ilot&#39;이라는 밴드를 결성, 이들은 같은 해 8월, 밴드 이름을 &#39;Nell&#39;로 바꾸고 본격적인 활동을 시작했다. <br />밴드명 &#39;넬&#39;은 조디 포스터 주연의 영화 [Nell]의 전체적인 분위기가 자신들의 음악이 주는 이미지와 비슷해서 붙인 이름이라고 한다. <br /><br />2002년에 새 레이블을 만들기로 계획중이던 서태지의 눈에 띄어 ETPFEST에 참가함으로서 메이저신에 입문했다가, <br />2006년 7월 서태지컴퍼니와 결별 후 절친한 사이인 힙합 그룹 에픽하이의 당시 소속사인 울림 엔터테인먼트와 계약을 체결하였다. <br /><br />2008년 12월 11일 골든디스크 수상을 끝으로 멤버들의 군입대 등의 이유로 활동을 잠정 중단했다.</p>','http://www.nellhouse.com','http://www.facebook.com/NellHome');
+update concert set con_artist = 48 where con_num=104565;

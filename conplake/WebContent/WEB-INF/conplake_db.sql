@@ -291,3 +291,9 @@ select count(*) cnt from comm where comm_tl=tl_num;
 update member set mem_img='kristen-stewart-advice-t.jpg' where mem_name='크리스틴';
 
 delete from comm;
+
+-- 12/2 song 테이블 컬럼 추가
+-- 비디오 링크
+alter table song add(song_link varchar2(200));
+
+delete from song;
