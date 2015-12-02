@@ -176,25 +176,25 @@
                 </p>
             	<Table class="table_list">
                     <tr class="tr_list">
-                        <th class="reviewNum"><p>번호</p></th>
-                        <th class="reviewTitle"><p>제목</p></th>
-                        <th class="reviewId"><p>작성자</p></th>
-                        <th class="reviewDate"><p>날짜</p></th>
-                        <th class="reviewHits"><p>조회수</p></th>
+                        <th id="reviewNum"><p>번호</p></th>
+                        <th id="reviewTitle"><p>제목</p></th>
+                        <th id="reviewId"><p>작성자</p></th>
+                        <th id="reviewDate"><p>날짜</p></th>
+                        <th id="reviewHits"><p>조회수</p></th>
                     </tr>
                     <c:forEach var="reviewList" items="${reviewList}">
 	                    <tr class="tr_list">
-	                        <td class="reviewNum"><p>${reviewList.post_num}</p></td>
-	                        <td class="reviewTitle"><p><a href="readReview?post_num=${reviewList.post_num}">${reviewList.post_title}</a></p></td>
-	                        <td class="reviewID"><p>${reviewList.authorname}</p></td>
-	                        <td class="reviewDate"><p>${reviewList.post_date}</p></td>
-	                        <td class="reviewHits"><p>${reviewList.post_hit}</p></td>
+	                        <td id="reviewNum"><p>${reviewList.post_num}</p></td>
+	                        <td id="reviewTitle"><p><a href="readReview?post_num=${reviewList.post_num}">${reviewList.post_title}</a></p></td>
+	                        <td id="reviewID"><p>${reviewList.authorname}</p></td>
+	                        <td id="reviewDate"><p>${reviewList.post_date}</p></td>
+	                        <td id="reviewHits"><p>${reviewList.post_hit}</p></td>
 	                    </tr>
                     </c:forEach>
 
                                       
                 </Table>
-                <p id="p_review">
+                <p class="p_review">
                 	<span id="span_hallReview">
                     	<a href="#" class="page" id="page_prev"><</a>
                     	<a href="#">1</a>
