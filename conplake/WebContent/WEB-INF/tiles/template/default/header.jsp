@@ -8,15 +8,14 @@
 	<div class="util_menuWrap">
     	<ul class="util_menu">
     		<li>
+    			<a id="a_addMenu" href="#" onclick="toggle_addMenu()";>정보 등록</a></li>
+    		</li>
+    		
+    		<li>
 	    		<c:if test="${!empty sessionScope.mvo.mem_name}">
 	    			<a id="a_myMenu" href="#" onclick="toggle_myMenu()";><strong>${sessionScope.mvo.mem_name}</strong> 님 환영합니다.</a></li>
 	    		</c:if>
     		</li>
-    		
-    		<li>
-    			<a id="a_addMenu" href="#" onclick="toggle_addMenu()";>정보 등록</a></li>
-    		</li>
-    		
         </ul>
         <ul class="pop" id="pop_myMenu">
         	<li><a href="#">개인정보수정</a></li>
