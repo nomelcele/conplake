@@ -8,12 +8,12 @@
 	<div class="util_menuWrap">
     	<ul class="util_menu">
     		<li>
-    			<a id="a_addMenu" href="#" onclick="toggle_addMenu()";>정보 등록</a></li>
+    			<a id="a_addMenu" href="#" onclick="toggle_addMenu(); return false;">정보 등록</a></li>
     		</li>
     		
     		<li>
 	    		<c:if test="${!empty sessionScope.mvo.mem_name}">
-	    			<a id="a_myMenu" href="#" onclick="toggle_myMenu()";><strong>${sessionScope.mvo.mem_name}</strong> 님 환영합니다.</a></li>
+	    			<a id="a_myMenu" href="#" onclick="toggle_myMenu(); return false;"><strong>${sessionScope.mvo.mem_name}</strong> 님 환영합니다.</a></li>
 	    		</c:if>
     		</li>
         </ul>
@@ -26,8 +26,8 @@
         </ul>
         
         <ul class="pop" id="pop_addMenu">
-        	<li><a href="#">공연정보</a></li>
-        	<li><a href="#">아티스트정보</a></li>
+        	<li><a href="addConcertForm">공연정보</a></li>
+        	<li><a href="addArtistForm">아티스트정보</a></li>
         	
         </ul>
     </div>
