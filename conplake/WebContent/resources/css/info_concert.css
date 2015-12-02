@@ -26,7 +26,7 @@ h3.concert_subTitle {width:900px; height:30px; line-height:30px; font-size:16px;
 #concertSetList {display:none;}
 #concertReview {display:none;}
 #concertTimeLine {display:none;}
-#concertSetList #p_setList, #p_review { height:30px; padding-top:15px;}
+#concertSetList #p_setList, .p_review { height:30px; padding-top:15px;}
 
 
 #tabBox {padding-top:80px;}
@@ -52,17 +52,20 @@ h3.concert_subTitle {width:900px; height:30px; line-height:30px; font-size:16px;
 
 .setListNum p, .setListLink p {text-align:center;}
 
-#table_setList p, #table_editSetList p, #table_review p, #table_review th p{ white-space:nowrap; text-overflow:ellipsis; overflow:hidden;}
 
-.reviewNum p{ width:100px; text-align:center;}
-th.reviewTitle p{ width:450px; text-align:center;}
-td.reviewTitle p{ width:450px; text-align:left;}
-.reviewTitle p a:hover{ text-decoration:underline;}
-th.reviewId p{ width:100px; text-align:center;}
-td.reviewId p{ width:100px; text-align:left;}
 
-.reviewDate p{ width:150px; text-align:center;}
-.reviewHits p{ width:100px; text-align:center;}
+
+#table_setList p, #table_editSetList p { white-space:nowrap; text-overflow:ellipsis; overflow:hidden;}
+
+#reviewNum p{ width:100px; text-align:center;}
+th#reviewTitle p{ width:450px; text-align:center;}
+td#reviewTitle p{ width:450px; text-align:left;}
+#reviewTitle p a:hover{ text-decoration:underline;}
+th#reviewId p{ width:100px; text-align:center;}
+td#reviewId p{ width:100px; text-align:left;}
+
+#reviewDate p{ width:150px; text-align:center;}
+#reviewHits p{ width:100px; text-align:center;}
 
 
 .input_categoryReview {
@@ -80,10 +83,10 @@ td.reviewId p{ width:100px; text-align:left;}
 #btn_searchReview a{ width:24px; height:24px; display:block; background:url(../img/search.png) no-repeat center center; margin-left:5px; float:right;}
 
 
-#p_review span {width:165px;margin-left:355px;}
-#p_review span a {width:15px;  line-height:30px; text-align:center; display:inline-block; font-size:13px; }
-#p_review span a.page {width:30px; font-weight:bold;}
-#p_review span a:hover {color:#C30D22;}
+.p_review span {width:165px;margin-left:355px;}
+.p_review span a {width:15px;  line-height:30px; text-align:center; display:inline-block; font-size:13px; }
+.p_review span a.page {width:30px; font-weight:bold;}
+.p_review span a:hover {color:#C30D22;}
 
 input#write_review{ background:#666; float:right; color:#fff;}
 input#write_review:hover { background:#444;}

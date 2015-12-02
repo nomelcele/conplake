@@ -44,53 +44,92 @@
        				</ul>
        			</div>
        			<div id="mdBody_right">
-       				<p class="concert_subTitle">
-                	<input id="remove_setList" class="innerButton button" type="button" value="행 삭제" onclick="removeRow()"/>
-                    <input id="edit_setList" class="innerButton button" type="button" value="행 추가" onclick="createRow()"/>
-                    
-                </p>
-            	<Table id="table_editSetList">
-                    <tr class="tr_setList">
-                        <th class="setListCheck">
-                        	<input class="input_check" id="input_check0" name="s_checkAll" type="checkbox"/>
-                            <label class="label_check" for="input_check0"></label>
-                        </th>
-                        <th class="setListNum">순서</th>
-                        <th class="setListTitle">곡 제목</th>
-                    </tr>
-                    <c:forEach var="setlist" items="${setlist}">
-	                    <tr class="tr_setList">
-		                    <td class="setListCheck">
-	                        	<input class="input_check" id="input_check_${setlist.song_order}" name="s_check" type="checkbox"/>
-	                            <label class="label_check" for="input_check_${setlist.song_order}"></label>
-	                        </td>
-	                        <td class="setListNum">
-	                        	<input class="input_setList" id="input_setListNum" name="input_setListNum" type="number" value="${setlist.song_order}"/>
-	                        </td>
-	                        <td class="setListTitle">
-	                        	<input class="input_setList" id="input_setListTitle" name="input_setListTitle" type="text" value="${setlist.song_title}"/>
-	                        </td>
-	                    </tr>
-                    </c:forEach>
-                    <tr class="tr_setList">
-                    	<td class="setListCheck">
-                        	<input class="input_check" id="input_check1" name="s_check" type="checkbox"/>
-                            <label class="label_check" for="input_check1"></label>
-                        </td>
-                        <td class="setListNum">
-                        	<input class="input_setList" id="input_setListNum" name="input_setListNum" type="number" />
-                        </td>
-                        <td class="setListTitle">
-                        	<input class="input_setList" id="input_setListTitle" name="input_setListTitle" type="text" />
-                        </td>
-                      
+       				
+       				<Table id="table_list">
+                    <tr class="tr_list">
+                        <th id="noteSelect"><p>ㅁ</p></th>
+                        <th id="noteTo"><p>받는 사람</p></th>
+                        <th id="noteTitle"><p>제목</p></th>
+                        <th id="noteDate"><p>보낸 날짜</p></th>
+                        
                     </tr>
                     
+                    <tr class="tr_list">
+                        <td id="noteSelect"><p>sf</p></td>
+                        <td id="noteTo"><p><a href="#">sdfa</a></p></td>
+                        <td id="noteTitle"><p>asd</p></td>
+                        <td id="noteDate"><p>sd</p></td>
+                    </tr>
+                    <tr class="tr_list">
+                        <td id="noteSelect"><p>sf</p></td>
+                        <td id="noteTo"><p><a href="#">sdfa</a></p></td>
+                        <td id="noteTitle"><p>asd</p></td>
+                        <td id="noteDate"><p>sd</p></td>
+                    </tr>
+                    <tr class="tr_list">
+                        <td id="noteSelect"><p>sf</p></td>
+                        <td id="noteTo"><p><a href="#">sdfa</a></p></td>
+                        <td id="noteTitle"><p>asd</p></td>
+                        <td id="noteDate"><p>sd</p></td>
+                    </tr>
+                    <tr class="tr_list">
+                        <td id="noteSelect"><p>sf</p></td>
+                        <td id="noteTo"><p><a href="#">sdfa</a></p></td>
+                        <td id="noteTitle"><p>asd</p></td>
+                        <td id="noteDate"><p>sd</p></td>
+                    </tr>
+                    <tr class="tr_list">
+                        <td id="noteSelect"><p>sf</p></td>
+                        <td id="noteTo"><p><a href="#">sdfa</a></p></td>
+                        <td id="noteTitle"><p>asd</p></td>
+                        <td id="noteDate"><p>sd</p></td>
+                    </tr>
+                    <tr class="tr_list">
+                        <td id="noteSelect"><p>sf</p></td>
+                        <td id="noteTo"><p><a href="#">sdfa</a></p></td>
+                        <td id="noteTitle"><p>asd</p></td>
+                        <td id="noteDate"><p>sd</p></td>
+                    </tr>
+                    <tr class="tr_list">
+                        <td id="noteSelect"><p>sf</p></td>
+                        <td id="noteTo"><p><a href="#">sdfa</a></p></td>
+                        <td id="noteTitle"><p>asd</p></td>
+                        <td id="noteDate"><p>sd</p></td>
+                    </tr>
+                    <tr class="tr_list">
+                        <td id="noteSelect"><p>sf</p></td>
+                        <td id="noteTo"><p><a href="#">sdfa</a></p></td>
+                        <td id="noteTitle"><p>asd</p></td>
+                        <td id="noteDate"><p>sd</p></td>
+                    </tr>
+                    <tr class="tr_list">
+                        <td id="noteSelect"><p>sf</p></td>
+                        <td id="noteTo"><p><a href="#">sdfa</a></p></td>
+                        <td id="noteTitle"><p>asd</p></td>
+                        <td id="noteDate"><p>sd</p></td>
+                    </tr>
+                    <tr class="tr_list">
+                        <td id="noteSelect"><p>sf</p></td>
+                        <td id="noteTo"><p><a href="#">sdfa</a></p></td>
+                        <td id="noteTitle"><p>asd</p></td>
+                        <td id="noteDate"><p>sd</p></td>
+                    </tr>
                     
                     
-                    
-                    
+
+                                      
                 </Table>
+                
+                <p class="p_review" id="p_note">
+                	<span id="span_hallReview">
+                    	<a href="#" class="page" id="page_prev"><</a>
+                    	<a href="#">1</a>
+<!--                         <a href="#">2</a> -->
+<!--                         <a href="#">3</a> -->
+                        <a href="#" class="page" id="page_next">></a>
+                    </span>
+                    <input id="remove_note" class="innerButton button" type="button" value="삭제" />
+                </p>
 	            	
 	                
        			</div>

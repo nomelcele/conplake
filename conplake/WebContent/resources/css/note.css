@@ -3,10 +3,10 @@
 #modalWindowWrap_header{ width:100%; height:100%; position:fixed; background:rgba(0,0,0,.8); 
 left:0; top:0; z-index:999; display:none; }
 
-#modalWindow3{ position:absolute; width:1000px; height:540px; top:50%; left:50%; margin-left:-500px; 
-margin-top:-275px; border:1px solid #333; background:#fff; box-shadow : rgba(0,0,0,0.5) 0 0 8px 3px;}
+#modalWindow3{ position:absolute; width:800px; height:440px; top:50%; left:50%; margin-left:-400px; 
+margin-top:-220px; border:1px solid #333; background:#fff; box-shadow : rgba(0,0,0,0.5) 0 0 8px 3px;}
 
-#mdBody_left{ float:left; width:147px; height:500px; 
+#mdBody_left{ float:left; width:147px; height:400px; 
 border-right:1px solid #ccc; box-shadow:#eee 2px 0 2px 0;}
 
 #write_note{ }
@@ -15,4 +15,11 @@ border-right:1px solid #ccc; box-shadow:#eee 2px 0 2px 0;}
 #mdBody_left ul li:first-child input {width:125px; height:40px; border-radius:2px;}
 #mdBody_left ul li a{ padding-left:10px; line-height:35px;}
 
-#mdBody_right{ float:left; width:850px; height:500px; }
+#mdBody_right{ float:left; width:650px; height:400px;}
+
+
+#noteSelect{ width:80px; text-align:center;}
+#noteTo{ width:150px; }
+#noteTitle{ width:260px;}
+#noteDate{ width:160px; text-align:center;}
+
