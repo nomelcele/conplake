@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -11,6 +11,7 @@
 </head>
 <body>
 	<div id="findPwd">
+	<div class="card">
 	<form action="sendPwdMail" method="post">
 		<h2>비밀번호 찾기</h2>
 		ID: <input type="text" id="userId"><br/>
@@ -28,5 +29,7 @@
 	    <input id="sendMailBtn" type="button" value="인증 메일 전송">
 	</form>
 	</div>
+	</div>
+	
 </body>
 </html>

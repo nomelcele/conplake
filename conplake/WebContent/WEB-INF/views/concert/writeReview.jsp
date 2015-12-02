@@ -53,16 +53,25 @@
 	<div class="formBox" id="formBoxLeft">
   		
   		
-        <p class="rinputBox"><label class="inputLabel">공연명</label><input class="rInputStyle" id="id" type="text" maxlength="30" autofocus spellcheck="false" value="${conWriteInfo.con_name}" readonly></p>
+        <p class="rinputBox">
+        	<label class="inputLabel">공연명</label>
+        	<input class="rInputStyle" id="id" type="text" maxlength="30" autofocus spellcheck="false" value="${conWriteInfo.con_name}" readonly>
+        </p>
           
+        <p class="rinputBox">
+        	<label class="inputLabel">공연 장소</label>
+        	<input class="rInputStyle" id="passwd" type="text" value="${conWriteInfo.venuename}" readonly>
+        </p>
         
-        <p class="rinputBox"><label class="inputLabel">공연 장소</label><input class="rInputStyle" id="passwd" type="text" value="${conWriteInfo.venuename}" readonly></p>
+        <p class="rinputBox">
+        	<label class="inputLabel">관람일</label>
+        	<input class="rInputStyle" type="date" max="${conWriteInfo.con_enddate}" min="${conWriteInfo.con_startdate}" name="post_concertdate">
+        </p>
         
-        
-        <p class="rinputBox"><label class="inputLabel">관람일</label><input class="rInputStyle" type="date" max="${conWriteInfo.con_enddate}" min="${conWriteInfo.con_startdate}" name="post_concertdate"></p>
-        
-      
-        <p class="rinputBox"><label class="inputLabel">좌석</label><input class="rInputStyle" type="text"  name="post_seat"></p>
+        <p class="rinputBox">
+        	<label class="inputLabel">좌석</label>
+        	<input class="rInputStyle" type="text"  name="post_seat">
+        </p>
         
         
  		<Table id="table_RsetList">
@@ -84,8 +93,11 @@
             </tbody>
           
         </Table>
-      
   </div>
+  
+ <div id="memberButtonBox">
+            <input id="writeReviewBtn" onclick="writeReview()" class="rButton" type="button" value="확인" name="mem_submit">
+		</div>
 </form>
 
 	
@@ -96,6 +108,3 @@
 
 
 
-<p id="memberButtonBox">
-            <input id="writeReviewBtn" onclick="writeReview()" class="rButton" type="button" value="확인" name="mem_submit">
-</p>

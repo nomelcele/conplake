@@ -56,7 +56,7 @@
             
             <div class="contentView" id="artistSong">                
             		<ul class="ul_artistSong">
-                        <li class="innerCards innerCard1" >
+                        <li class="innerCards" >
                         	<div class="artistVideoWrap">
                         		
                         	</div>
@@ -64,7 +64,7 @@
                         		<p><span>♬ </span>PIA - Urban Explorer</p>
                         	</div>
                         </li>
-                        <li class="innerCards innerCard2" >
+                        <li class="innerCards" >
                         	<div class="artistVideoWrap">
                         		
                         	</div>
@@ -72,29 +72,10 @@
                         		<p><span>♬ </span>PIA - Urban Explorer</p>
                         	</div>
                         </li>
-            		</ul>
             		
-            		<ul class="ul_artistSong">
-                        <li class="innerCards innerCard1" >
-                        	<div class="artistVideoWrap">
-                        		
-                        	</div>
-                        	<div class="artistVideoTitle">
-                        		<p><span>♬ </span>PIA - Urban Explorer</p>
-                        	</div>
-                        </li>
-                        <li class="innerCards innerCard2" >
-                        	<div class="artistVideoWrap">
-                        		
-                        	</div>
-                        	<div class="artistVideoTitle">
-                        		<p><span>♬ </span>PIA - Urban Explorer</p>
-                        	</div>
-                        </li>
-            		</ul>
             		
-            		<ul class="ul_artistSong">
-                        <li class="innerCards innerCard1" >
+            		
+                        <li class="innerCards" >
                         	<div class="artistVideoWrap">
                         		
                         	</div>
@@ -102,7 +83,26 @@
                         		<p><span>♬ </span>PIA - Urban Explorer</p>
                         	</div>
                         </li>
-                        <li class="innerCards innerCard2" >
+                        <li class="innerCards" >
+                        	<div class="artistVideoWrap">
+                        		
+                        	</div>
+                        	<div class="artistVideoTitle">
+                        		<p><span>♬ </span>PIA - Urban Explorer</p>
+                        	</div>
+                        </li>
+            		
+            		
+            		
+                        <li class="innerCards" >
+                        	<div class="artistVideoWrap">
+                        		
+                        	</div>
+                        	<div class="artistVideoTitle">
+                        		<p><span>♬ </span>PIA - Urban Explorer</p>
+                        	</div>
+                        </li>
+                        <li class="innerCards" >
                         	<div class="artistVideoWrap">
                         		
                         	</div>
