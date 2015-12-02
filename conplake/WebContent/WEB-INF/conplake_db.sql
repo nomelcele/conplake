@@ -297,3 +297,9 @@ delete from comm;
 alter table song add(song_link varchar2(200));
 
 delete from song;
+
+-- artist 테이블 컬럼 추가
+-- 국가, 활동 유형, 장르
+alter table artist add(art_country);
+alter table artist add(art_);
+alter table artist add(art_genre);
