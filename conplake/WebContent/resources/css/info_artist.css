@@ -11,9 +11,8 @@
 	position:relative;
 	}
 	
-.ul_artistSong{ width:900px; height:300px; padding-bottom:30px;}
-.ul_artistSong li.innerCards{ float:left; width:416px; height:296px; }
-.ul_artistSong li.innerCard1{ margin-right:60px; }
+.ul_artistSong{ width:960px; height:300px; }
+.ul_artistSong li.innerCards{ float:left; width:416px; height:296px; margin-right:60px; margin-bottom:30px;}
 
 .artistVideoWrap{ width:416px; height:246px; }
 .artistVideoTitle{ width:401px; padding-left:15px; height:49px; border-top:1px solid #ddd;}

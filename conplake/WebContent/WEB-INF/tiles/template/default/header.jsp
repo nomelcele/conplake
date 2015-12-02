@@ -5,13 +5,31 @@
 	<form id="myPageForm" action="myPage" method="post">
 		<input type="hidden" name="mem_num" value="${sessionScope.mvo.mem_num}">
 	</form>
-	<div class="util_menu">
-    	<ul>
-    		<c:if test="${!empty sessionScope.mvo.mem_name}">
-    			<li><strong>${sessionScope.mvo.mem_name}</strong> 님 환영합니다.</li>
-    		</c:if>
+	<div class="util_menuWrap">
+    	<ul class="util_menu">
+    		<li>
+	    		<c:if test="${!empty sessionScope.mvo.mem_name}">
+	    			<a id="a_myMenu" href="#" onclick="toggle_myMenu()";><strong>${sessionScope.mvo.mem_name}</strong> 님 환영합니다.</a></li>
+	    		</c:if>
+    		</li>
+    		
+    		<li>
+    			<a id="a_addMenu" href="#" onclick="toggle_addMenu()";>정보 등록</a></li>
+    		</li>
+    		
+        </ul>
+        <ul class="pop" id="pop_myMenu">
+        	<li><a href="#">개인정보수정</a></li>
         	<li id="mypage"><a href="#">마이페이지</a></li>
-            <li id="logout"><a href="logout">로그아웃</a></li>
+        	<li><a href="#">친구목록</a></li>
+        	<li><a href="#">쪽지</a></li>
+        	<li id="logout"><a href="logout">로그아웃</a></li>
+        </ul>
+        
+        <ul class="pop" id="pop_addMenu">
+        	<li><a href="#">공연정보</a></li>
+        	<li><a href="#">아티스트정보</a></li>
+        	
         </ul>
     </div>
     <div class="gnb">

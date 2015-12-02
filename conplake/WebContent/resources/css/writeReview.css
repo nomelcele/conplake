@@ -4,8 +4,8 @@
 	float:left;
 	
 }
-#formBoxLeft { min-height:870px; width:325px; padding-right:25px; padding-top:30px; }
-#formBoxRight { min-height:900px; width:500px;  padding-right:50px; }
+#formBoxLeft { min-height:784px; width:325px; padding-right:25px; padding-top:30px; padding-bottom:30px;}
+#formBoxRight { min-height:838px; width:500px;  padding-right:50px; padding-bottom:30px; }
 
 
 	
@@ -80,9 +80,8 @@
 .fileBox [type="file"] {width:30px; height:30px; float:right; overflow:hidden; background:url(../img/attach.png) center center no-repeat; background-size:60%; text-indent:-9999px; overflow-x:hidden;}
 
 #memberButtonBox {
-	width:875px;
-	height:100px; 
-	padding-top:35px;
+	float:right;
+	
 	
 	}
 #memberButtonBox input {float:right; margin-bottom:50px; }
