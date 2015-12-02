@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 
 <h1>ADD ARTIST INFORMATION</h1>
-<form >     
+<form action="addArtist" method="post" enctype="multipart/form-data">     
 	<div class="formBox" id="formBoxLeft2">
 		<p class="rinputBox">
 		    <label class="inputLabel">아티스트 명</label>
@@ -22,13 +22,13 @@
 		
 		<p class="rinputBox">
 		    <label class="inputLabel">국가</label>
-		    <input type="text" class="rInputStyle a_width" id="" placeholder="예) 대한민국"/>
+		    <input type="text" class="rInputStyle a_width" id="" name="art_country" placeholder="예) 대한민국"/>
 		</p>
 		
 		
 		<p class="rinputBox">
 		    <label class="inputLabel">활동유형</label>
-		    <select class="rInputStyle select_artist a_width">
+		    <select class="rInputStyle select_artist a_width" name="art_type">
 		        <option value="artist_fs">여성/솔로</option>
 		        <option value="artist_fd">여성/듀엣</option>
 		        <option value="artist_fg">여성/그룹</option>
@@ -43,7 +43,7 @@
 		
 		<p class="rinputBox">
 		    <label class="inputLabel">장르</label>
-		    <select class="rInputStyle select_artist a_width">
+		    <select class="rInputStyle select_artist a_width" name="art_genre">
 		      <option value="genre_b">발라드</option>
 		        <option value="genre_d">댄스</option>
 		        <option value="genre_h">랩/힙합</option>
@@ -57,13 +57,13 @@
 		
 		<p class="rinputBox">
 		        <label class="inputLabel">SNS</label>
-		        <input type="text" class="rInputStyle a_width" id="" placeholder="예) http://twitter.com/"/>
+		        <input type="text" class="rInputStyle a_width" id="" name="art_sns" placeholder="예) http://twitter.com/"/>
 		</p>
 		    
 		
 		<p class="rinputBox">
 		        <label class="inputLabel">공식사이트</label>
-		        <input type="text" class="rInputStyle a_width" id="" placeholder="예) http://official.com/"/>
+		        <input type="text" class="rInputStyle a_width" id="" name="art_official" placeholder="예) http://official.com/"/>
 		</p>
 	</div>
   
@@ -71,11 +71,11 @@
 	<div class="formBox" id="formBoxRight2">
 		<p class="p_write p_writeA">아티스트 소개</p>
 		<div id="txt_artistProfile">
-		    <textarea class="reviewContent" id="input_artistProfile"></textarea>
+		    <textarea class="reviewContent" id="input_artistProfile" name="art_intro"></textarea>
 		</div>
 	</div>
+	<p id="memberButtonBox">
+		<input id="writeReviewBtn" class="rButton" type="submit" value="확인" name="mem_submit">
+	</p>
 </form>
 
-<p id="memberButtonBox">
-	<input id="writeReviewBtn" onclick="writeReview()" class="rButton" type="button" value="확인" name="mem_submit">
-</p>

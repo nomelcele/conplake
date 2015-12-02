@@ -2,7 +2,7 @@ package or.conplake.vo;
 
 public class ArtistVO {
 	private int art_num;
-	private String art_name, art_img, art_intro, art_official, art_sns;
+	private String art_name, art_img, art_intro, art_official, art_sns, art_country, art_type, art_genre;
 	
 	public int getArt_num() {
 		return art_num;
@@ -39,6 +39,24 @@ public class ArtistVO {
 	}
 	public void setArt_sns(String art_sns) {
 		this.art_sns = art_sns;
+	}
+	public String getArt_genre() {
+		return art_genre;
+	}
+	public void setArt_genre(String art_genre) {
+		this.art_genre = art_genre;
+	}
+	public String getArt_type() {
+		return art_type;
+	}
+	public void setArt_type(String art_type) {
+		this.art_type = art_type;
+	}
+	public String getArt_country() {
+		return art_country;
+	}
+	public void setArt_country(String art_country) {
+		this.art_country = art_country;
 	}
 	
 	

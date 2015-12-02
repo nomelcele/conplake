@@ -4,12 +4,9 @@
     <h1>MY PAGE</h1>
 	<div id="userProfile">
 		<div id="profile_img">
-<!-- 	    	<img src="../img/apple.png" width="150" height="150" /> -->
 	    	<img src="resources/memberImg/${myProfile.mem_img}" width="150" height="150" />
 	    </div>
 		<div id="profileCard">
-<!-- 	        <p id="p_userId">user id</p> -->
-<!-- 	        <p id="p_introduce">안녕하세요. 테스트입니다.</p> -->
 	        <p id="p_userId">${myProfile.mem_name}</p>
 	        <p id="p_introduce">${myProfile.mem_intro}</p>
 	    </div>
@@ -26,38 +23,7 @@
 			            <p class="p_scroll">${likedConcerts.con_name}</p>
 			        </li>
 		        </c:forEach>
-<!-- 		        <li class="li_scroll" id="li_likeToGo"> -->
-<!-- 		            <a href="#"><img width="158" height="208" alt="콘서트이미지1" src="../img/sg.png"></a> -->
-<!-- 		            <p class="p_scroll">콘서트이름</p> -->
-<!-- 		        </li> -->
-<!-- 		        <li class="li_scroll" id="li_likeToGo"> -->
-<!-- 		            <a href="#"><img width="158" height="208" alt="콘서트이미지1" src="../img/sg.png"></a> -->
-<!-- 		            <p class="p_scroll">콘서트이름</p> -->
-<!-- 		        </li> -->
-<!-- 		        <li class="li_scroll" id="li_likeToGo"> -->
-<!-- 		            <a href="#"><img width="158" height="208" alt="콘서트이미지1" src="../img/sg.png"></a> -->
-<!-- 		            <p class="p_scroll">콘서트이름</p> -->
-<!-- 		        </li> -->
-<!-- 		        <li class="li_scroll" id="li_likeToGo"> -->
-<!-- 		            <a href="#"><img width="158" height="208" alt="콘서트이미지1" src="../img/sg.png"></a> -->
-<!-- 		            <p class="p_scroll">콘서트이름</p> -->
-<!-- 		        </li> -->
-<!-- 		        <li class="li_scroll" id="li_likeToGo"> -->
-<!-- 		            <a href="#"><img width="158" height="208" alt="콘서트이미지1" src="../img/sg.png"></a> -->
-<!-- 		            <p class="p_scroll">콘서트이름</p> -->
-<!-- 		        </li> -->
-<!-- 		        <li class="li_scroll" id="li_likeToGo"> -->
-<!-- 		            <a href="#"><img width="158" height="208" alt="콘서트이미지1" src="../img/sg.png"></a> -->
-<!-- 		            <p class="p_scroll">콘서트이름</p> -->
-<!-- 		        </li> -->
-<!-- 		         <li class="li_scroll" id="li_likeToGo"> -->
-<!-- 		            <a href="#"><img width="158" height="208" alt="콘서트이미지1" src="../img/sg.png"></a> -->
-<!-- 		            <p class="p_scroll">콘서트이름</p> -->
-<!-- 		        </li> -->
-<!-- 		        <li class="li_scroll" id="li_likeToGo"> -->
-<!-- 		            <a href="#"><img width="158" height="208" alt="콘서트이미지1" src="../img/sg.png"></a> -->
-<!-- 		            <p class="p_scroll">콘서트이름</p> -->
-<!-- 		        </li> -->
+
 		    </ul>
 		</div>
 	
@@ -78,38 +44,7 @@
 		            <p class="p_scroll">${likedArtists.art_name}</p>
 		        </li>
 		    </c:forEach>
-<!-- 	        <li class="li_scroll" id="li_likeArtist"> -->
-<!-- 	            <a href="#"><img width="158" height="158" alt="콘서트이미지1" src="../img/nell.jpg"></a> -->
-<!-- 	            <p class="p_scroll">콘서트이름</p> -->
-<!-- 	        </li> -->
-<!-- 	        <li class="li_scroll" id="li_likeArtist"> -->
-<!-- 	            <a href="#"><img width="158" height="158" alt="콘서트이미지1" src="../img/nell.jpg"></a> -->
-<!-- 	            <p class="p_scroll">콘서트이름</p> -->
-<!-- 	        </li> -->
-<!-- 	        <li class="li_scroll" id="li_likeArtist"> -->
-<!-- 	            <a href="#"><img width="158" height="158" alt="콘서트이미지1" src="../img/nell.jpg"></a> -->
-<!-- 	            <p class="p_scroll">콘서트이름</p> -->
-<!-- 	        </li> -->
-<!-- 	        <li class="li_scroll" id="li_likeArtist"> -->
-<!-- 	            <a href="#"><img width="158" height="158" alt="콘서트이미지1" src="../img/nell.jpg"></a> -->
-<!-- 	            <p class="p_scroll">콘서트이름</p> -->
-<!-- 	        </li> -->
-<!-- 	        <li class="li_scroll" id="li_likeArtist"> -->
-<!-- 	            <a href="#"><img width="158" height="158" alt="콘서트이미지1" src="../img/nell.jpg"></a> -->
-<!-- 	            <p class="p_scroll">콘서트이름</p> -->
-<!-- 	        </li> -->
-<!-- 	        <li class="li_scroll" id="li_likeArtist"> -->
-<!-- 	            <a href="#"><img width="158" height="158" alt="콘서트이미지1" src="../img/nell.jpg"></a> -->
-<!-- 	            <p class="p_scroll">콘서트이름</p> -->
-<!-- 	        </li> -->
-<!-- 	         <li class="li_scroll" id="li_likeArtist"> -->
-<!-- 	            <a href="#"><img width="158" height="158" alt="콘서트이미지1" src="../img/nell.jpg"></a> -->
-<!-- 	            <p class="p_scroll">콘서트이름</p> -->
-<!-- 	        </li> -->
-<!-- 	        <li class="li_scroll" id="li_likeArtist"> -->
-<!-- 	            <a href="#"><img width="158" height="158" alt="콘서트이미지1" src="../img/nell.jpg"></a> -->
-<!-- 	            <p class="p_scroll">콘서트이름</p> -->
-<!-- 	        </li> -->
+
 	    </ul>
 	</div>
 	
@@ -135,42 +70,6 @@
 		            <td class="reviewDate" id="myReviewDate"><p>${myReviews.post_date}</p></td>
 		        </tr>
 		    </c:forEach>
-<!-- 	        <tr class="tr_review"> -->
-<!-- 	         <td class="reviewNum"><p>12</p></td> -->
-<!-- 	        	<td id="myReviewConTitle"><p><a href="">2015 넬 크리스마스 콘서트</a></p></td> -->
-<!-- 	            <td class="reviewTitle" id="myReviewTitle"><p><a href="">후기 제목</a></p></td> -->
-<!-- 	            <td class="reviewDate" id="myReviewDate"><p>2015.05.05</p></td> -->
-<!-- 	        </tr> -->
-<!-- 	        <tr class="tr_review"> -->
-<!-- 	        	<td class="reviewNum"><p>12</p></td> -->
-<!-- 	        	<td id="myReviewConTitle"><p><a href="">2015 버즈 전국투어 콘서트 'The Original' - 서울</a></p></td> -->
-<!-- 	            <td class="reviewTitle" id="myReviewTitle"><p><a href="">후기 제목</a></p></td> -->
-<!-- 	            <td class="reviewDate" id="myReviewDate"><p>2015.05.05</p></td> -->
-<!-- 	        </tr> -->
-<!-- 	        <tr class="tr_review"> -->
-<!-- 	        	<td class="reviewNum"><p>12</p></td> -->
-<!-- 	        	<td id="myReviewConTitle"><p><a href="">공연이름이름이름</a></p></td> -->
-<!-- 	            <td class="reviewTitle" id="myReviewTitle"><p><a href="">후기 제목</a></p></td> -->
-<!-- 	            <td class="reviewDate" id="myReviewDate"><p>2015.05.05</p></td> -->
-<!-- 	        </tr> -->
-<!-- 	        <tr class="tr_review"> -->
-<!-- 	        	<td class="reviewNum"><p>12</p></td> -->
-<!-- 	        	<td id="myReviewConTitle"><p><a href="">공연이름이름이름</a></p></td> -->
-<!-- 	            <td class="reviewTitle" id="myReviewTitle"><p><a href="">후기 제목</a></p></td> -->
-<!-- 	            <td class="reviewDate" id="myReviewDate"><p>2015.05.05</p></td> -->
-<!-- 	        </tr> -->
-<!-- 	        <tr class="tr_review"> -->
-<!-- 	         <td class="reviewNum"><p>12</p></td> -->
-<!-- 	        	<td id="myReviewConTitle"><p><a href="">공연이름이름이름</a></p></td> -->
-<!-- 	            <td class="reviewTitle" id="myReviewTitle"><p><a href="">후기 제목</a></p></td> -->
-<!-- 	            <td class="reviewDate" id="myReviewDate"><p>2015.05.05</p></td> -->
-<!-- 	        </tr> -->
-<!-- 	        <tr class="tr_review"> -->
-<!-- 	        	<td class="reviewNum"><p>12</p></td> -->
-<!-- 	        	<td id="myReviewConTitle"><p><a href="">공연이름이름이름</a></p></td> -->
-<!-- 	            <td class="reviewTitle" id="myReviewTitle"><p><a href="">후기 제목</a></p></td> -->
-<!-- 	            <td class="reviewDate" id="myReviewDate"><p>2015.05.05</p></td> -->
-<!-- 	        </tr> -->
 	        
 	        
 		</table>

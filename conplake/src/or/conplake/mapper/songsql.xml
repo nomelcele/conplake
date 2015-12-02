@@ -4,7 +4,7 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 	<mapper namespace="song">
 		<insert id="addSetlist" parameterType="svo">
-			insert into song values(song_seq.nextVal,#{song_title},#{song_artist},'n',#{song_concert},#{song_order})
+			insert into song values(song_seq.nextVal,#{song_title},#{song_artist},'n',#{song_concert},#{song_order},null)
 		</insert>
 		<select id="setlist" parameterType="int" resultType="svo">
 			select s.song_title, s.song_order, a.art_name artistname 
