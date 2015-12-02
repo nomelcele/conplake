@@ -300,6 +300,6 @@ delete from song;
 
 -- artist 테이블 컬럼 추가
 -- 국가, 활동 유형, 장르
-alter table artist add(art_country);
-alter table artist add(art_);
-alter table artist add(art_genre);
+alter table artist add(art_country varchar2(50));
+alter table artist add(art_type varchar2(10));
+alter table artist add(art_genre varchar2(50));

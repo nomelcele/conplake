@@ -1,3 +1,4 @@
+-- 12/2
 insert into song values(song_seq.nextVal, '아가미', 34, 'y', null, null, 'http://www.youtube.com/embed/TYEbv-aHiyg');
 insert into song values(song_seq.nextVal, '오렌지의 시간', 34, 'y', null, null, 'http://www.youtube.com/embed/A1HBlUe6hOQ');
 insert into song values(song_seq.nextVal, '빨간 피터', 34, 'y', null, null, 'http://www.youtube.com/embed/W6AZscGtRqI');
