@@ -6,8 +6,8 @@
 #input_concertImgName { width:230px; background:#f9f9f9;}
 
 
-#formBoxLeft3 { min-height:430px; width:425px; padding-right:50px; }
-#formBoxRight3 { min-height:430px; width:425px;  }
+#formBoxLeft3 { min-height:300px; width:425px; padding-right:50px; }
+#formBoxRight3 { min-height:300px; width:425px;  }
 
 #formBoxLeft3 input, #formBoxRight3 input, #formBoxLeft3 select {float:right; }
 
