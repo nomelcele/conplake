@@ -154,18 +154,33 @@ function commHeight(){
 	}
 }
 
-function deleteComm(){
-	$.ajax({
-		type : "POST",
-		url : "writeTimelineComm",
-		data : {
-			comm_cont: $("#mdInputText").val(),
-			comm_author: currentUserNumber,
-			comm_tl: timelineNumber
-		},
-		success : function(result) {
-			$('#modalWindowWrap').html(result);
-		}
-	});
+function deleteTlComm(num, origin, type){
+	if(type=='comm'){ // 타임라인 댓글 삭제
+		$.ajax({
+			type : "POST",
+			url : "deleteComm",
+			data : {
+				comm_num: num,
+				comm_tl: origin,
+				type: 'timeline'
+			},
+			success : function(result) {
+				$('#modalWindowWrap').html(result);
+			}
+		});
+	} else { // 타임라인 삭제
+		$.ajax({
+			type : "POST",
+			url : "deleteTimeline",
+			data : {
+				tl_num: num,
+				tl_concert: origin
+			},
+			success : function(result) {
+				$('#concertTimeLine').html(result);
+			}
+		});
+	}
+	
 }
 

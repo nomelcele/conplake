@@ -16,7 +16,7 @@
 		            					<p id="mdText">${commList.comm_cont}</p>
 		            					<p>
 		            						<c:if test="${sessionScope.mvo.mem_num eq commList.comm_author}">
-		            							<input class="innerButton button" id="mdDelete" type="button" value="삭제" onclick="location='deleteComm?comm_num='+${commList.comm_num}+'&comm_tl='+${commList.comm_tl}+'&type=timeline'"/>
+		            							<input class="innerButton button" id="mdDelete" type="button" value="삭제" onclick="deleteTlComm(${commList.comm_num},${commList.comm_tl},'comm')"/>
 		            						</c:if>
 		            					</p>
 		            				</div>

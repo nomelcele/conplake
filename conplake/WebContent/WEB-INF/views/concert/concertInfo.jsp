@@ -135,21 +135,12 @@
 	            					<p>
 		            					<a href="" onclick="readTimelineComm(${timeline.tl_num}); return false;">댓글(${timeline.tlcount})</a>
 		            					<c:if test="${sessionScope.mvo.mem_num eq timeline.tl_author}">
-		            						<input class="innerButton button" id="mdDelete" type="button" value="삭제" onclick="location='deleteTimeline?tl_num='+${timeline.tl_num}+'&tl_concert='+${timeline.tl_concert}"/>
+		            						<input class="innerButton button" id="mdDelete" type="button" value="삭제" onclick="deleteTlComm(${timeline.tl_num},${timeline.tl_concert})"/>
 		            					</c:if>
 	            					</p>
 	            				</div>
 	            			</li>
 	            		</c:forEach>
-            			
-<!--             			<li> -->
-<!--             				<div class="tLImgWrap"><img src="resources/img/nell.jpg" width="50" height="50"/></div> -->
-<!--             				<div class="tLTextWrap"> -->
-<!--             					<p id="tLUserName">user_name<span>2015.05.05</span></p> -->
-<!--             					<p id="tLText">text최대 두줄</p> -->
-<!--             					<p><a href="">댓글(0)</a></p> -->
-<!--             				</div> -->
-<!--             			</li> -->
 
             			</ul>
             		</div>
@@ -161,74 +152,7 @@
             	</div>
             	
             	<div id="modalWindowWrap">
-<!--             		<div id="modalWindow">	 -->
-<!--             			<div id="mdHeader"> -->
-<!--             				<p>REPLY<input id="mdClose" type="button" value="X" onclick="mdClose()"/></p> -->
-<!--             			</div> -->
-<!--             			<div id="mdBody"> -->
-<!--             				<ul> -->
-<!-- 	            			<li> -->
-<!-- 	            				<div class="mdImgWrap"><img src="resources/img/nell.jpg" width="50" height="50"/></div> -->
-<!-- 	            				<div class="mdTextWrap"> -->
-<!-- 	            					<p id="mdUserName">user_name<span>2015.05.05</span></p> -->
-<!-- 	            					<p id="mdText">text최대 두줄</p> -->
-<!-- 	            					<input class="innerButton button" id="mdDelete" type="button" value="삭제"/> -->
-<!-- 	            				</div> -->
-<!-- 	            			</li> -->
-<!-- 	            			<li> -->
-<!-- 	            				<div class="mdImgWrap"><img src="resources/img/nell.jpg" width="50" height="50"/></div> -->
-<!-- 	            				<div class="mdTextWrap"> -->
-<!-- 	            					<p id="mdUserName">user_name<span>2015.05.05</span></p> -->
-<!-- 	            					<p id="mdText">text최대 두줄texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext</p> -->
-<!-- 	            				</div> -->
-<!-- 	            			</li> -->
-<!-- 	            			<li> -->
-<!-- 	            				<div class="mdImgWrap"><img src="resources/img/nell.jpg" width="50" height="50"/></div> -->
-<!-- 	            				<div class="mdTextWrap"> -->
-<!-- 	            					<p id="mdUserName">user_name<span>2015.05.05</span></p> -->
-<!-- 	            					<p id="mdText">text최대 두줄</p> -->
-<!-- 	            				</div> -->
-<!-- 	            			</li> -->
-	            			
-<!-- 	            			<li> -->
-<!-- 	            				<div class="mdImgWrap"><img src="resources/img/nell.jpg" width="50" height="50"/></div> -->
-<!-- 	            				<div class="mdTextWrap"> -->
-<!-- 	            					<p id="mdUserName">user_name<span>2015.05.05</span></p> -->
-<!-- 	            					<p id="mdText">text최대 두줄</p> -->
-<!-- 	            				</div> -->
-<!-- 	            			</li> -->
-	            			
-<!-- 	            			<li> -->
-<!-- 	            				<div class="mdImgWrap"><img src="resources/img/nell.jpg" width="50" height="50"/></div> -->
-<!-- 	            				<div class="mdTextWrap"> -->
-<!-- 	            					<p id="mdUserName">user_name<span>2015.05.05</span></p> -->
-<!-- 	            					<p id="mdText">text최대 두줄</p> -->
-<!-- 	            				</div> -->
-<!-- 	            			</li> -->
-	            			
-<!-- 	            			<li> -->
-<!-- 	            				<div class="mdImgWrap"><img src="resources/img/nell.jpg" width="50" height="50"/></div> -->
-<!-- 	            				<div class="mdTextWrap"> -->
-<!-- 	            					<p id="mdUserName">user_name<span>2015.05.05</span></p> -->
-<!-- 	            					<p id="mdText">text최대 두줄</p> -->
-<!-- 	            				</div> -->
-<!-- 	            			</li> -->
-	            			
-<!-- 	            			<li> -->
-<!-- 	            				<div class="mdImgWrap"><img src="resources/img/nell.jpg" width="50" height="50"/></div> -->
-<!-- 	            				<div class="mdTextWrap"> -->
-<!-- 	            					<p id="mdUserName">user_name<span>2015.05.05</span></p> -->
-<!-- 	            					<p id="mdText">text최대 두줄</p> -->
-<!-- 	            				</div> -->
-<!-- 	            			</li> -->
-	            			
-<!-- 	            			</ul> -->
-<!--             			</div> -->
-<!--             			<div id="mdFooter"> -->
-<!--             				<input class="inputStyle" id="mdInputText" type="text" placeholder="댓글 내용을 입력하세요."/> -->
-<!--             				<input class="innerButton button" id="mdInputBtn" type="button" value="입력"/> -->
-<!--             			</div> -->
-<!--             		</div> -->
+
             	</div>
             </div>
             
