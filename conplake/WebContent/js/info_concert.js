@@ -96,7 +96,6 @@ function readTimelineComm(comm_tl){
 	$("#modalWindowWrap").css('display', 'block');
 	
 	commHeight();
-	
 }
 
 

@@ -26,6 +26,7 @@
 <link href="resources/css/prettyPhoto.css" rel="stylesheet" type="text/css"/>
 <link href="resources/css/findPwd.css" rel="stylesheet" type="text/css"/>
 <link href="resources/css/icon.css" rel="stylesheet" type="text/css"/>
+<link href="resources/css/note.css" rel="stylesheet" type="text/css"/>
 
 
 <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
@@ -44,6 +45,7 @@
 <script src="js/info_artist.js"></script>
 <script src="js/tab.js"></script>
 <script src="js/header.js"></script>
+<script src="js/note.js"></script>
 
 <script src="js/info_artist.js"></script>
 <script src="js/jquery.ui.draggable.js"></script>
