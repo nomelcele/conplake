@@ -6,14 +6,14 @@
 	<div class="formBox" id="formBoxLeft2">
 		<p class="rinputBox">
 		    <label class="inputLabel">아티스트 명</label>
-		    <input class="rInputStyle a_width" id="" type="text" maxlength="30" autofocus spellcheck="false" placeholder="">
+		    <input class="rInputStyle a_width" id="" name="art_name" type="text" maxlength="30" autofocus spellcheck="false" placeholder="">
 		</p>
 		
 		<p class="rinputBox" id="p_artistImg">
 		    <label class="inputLabel" id="">대표 사진</label>
 		    
 		    <label class="inputLabel rInputStyle a_width" id="input_artistImgBtn">Browse..
-		        <input type="file" id="input_artistImg" class="rInputStyle input_fileImg"/>
+		        <input type="file" id="input_artistImg" name="art_img" class="rInputStyle input_fileImg"/>
 		    </label>
 		    
 		    <input type="text" class="rInputStyle a_width input_fileImgName" id="input_artistImgName" readonly/> 
@@ -35,7 +35,6 @@
 		        <option value="artist_ms">남성/솔로</option>
 		        <option value="artist_md">남성/듀엣</option>
 		        <option value="artist_mg">남성/그룹</option>
-		        <option value="artist_fms">혼성/솔로</option>
 		        <option value="artist_fmd">혼성/듀엣</option>
 		        <option value="artist_fmg">혼성/그룹</option>
 		    </select>

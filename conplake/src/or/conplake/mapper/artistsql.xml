@@ -10,4 +10,7 @@
   		select art_num, art_name, art_img from artist 
   		where art_name like '%'||#{art_name}||'%' order by art_name
   	</select>
+  	<insert id="addArtist" parameterType="avo">
+  		insert into artist values(artist_seq.nextVal,#{art_name},#{art_img},#{art_intro},#{art_official},#{art_sns})
+  	</insert>
   </mapper>

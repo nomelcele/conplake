@@ -22,5 +22,8 @@ public class ArtistDao {
 		return st.selectList("art.artistSearch", art_name);
 	}
 	
-
+	public void addArtist(ArtistVO avo){
+		st.insert("art.addArtist", avo);
+	}
+	
 }
