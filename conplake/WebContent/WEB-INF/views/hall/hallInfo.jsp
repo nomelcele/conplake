@@ -231,7 +231,7 @@
             				<p class="rinputBox" id="p_seatPic">
 							    <label id="label_seatPic">시야 사진</label>
 							    <label class="inputLabel rInputStyle a_width input_fileImgBtn" id="">Browse..
-							        <input type="file" id="input_seatPic" class="rInputStyle input_fileImg"/>
+							        <input type="file" id="" class="rInputStyle input_fileImg"/>
 							    </label>
 							    
 							    <input type="text" class="rInputStyle a_width input_fileImgName" id="input_seatPicName" readonly/> 

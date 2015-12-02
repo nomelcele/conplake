@@ -12,8 +12,8 @@
 		<p class="rinputBox" id="p_artistImg">
 		    <label class="inputLabel" id="">대표 사진</label>
 		    
-		    <label class="inputLabel rInputStyle a_width" id="input_artistImgBtn">Browse..
-		        <input type="file" id="input_artistImg" name="art_img" class="rInputStyle input_fileImg"/>
+		    <label class="inputLabel rInputStyle input_fileImgBtn" id="">Browse..
+		        <input type="file" id="" name="art_img" class="rInputStyle input_fileImg"/>
 		    </label>
 		    
 		    <input type="text" class="rInputStyle a_width input_fileImgName" id="input_artistImgName" readonly/> 

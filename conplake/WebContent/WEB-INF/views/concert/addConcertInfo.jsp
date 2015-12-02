@@ -12,13 +12,22 @@
 	<p class="rinputBox" id="p_artistImg">
 	    <label class="inputLabel" id="">공연 포스터</label>
 	    
-	    <label class="inputLabel rInputStyle c_width" id="input_artistImgBtn">Browse..
-	        <input type="file" class="input_fileImg" id="input_artistImg" name="con_poster" class="rInputStyle"/>
+	    <label class="inputLabel rInputStyle input_fileImgBtn" id="">Browse..
+	        <input type="file" class="input_fileImg" id="" name="con_poster" class="rInputStyle"/>
 	    </label>
 	    
-	    <input type="text" class="rInputStyle c_width input_fileImgName" id="input_concertImgName" readonly/> 
+	    <input type="text" class="rInputStyle input_fileImgName" id="input_concertImgName" readonly/> 
 	</p>
 	  
+	<p class="rinputBox" id="p_artistImg">
+	    <label class="inputLabel" id="">소개 이미지</label>
+	    
+	    <label class="inputLabel rInputStyle input_fileImgBtn" id="">Browse..
+	        <input type="file" class="input_fileImg" id="" name="con_detailimg" class="rInputStyle"/>
+	    </label>
+	    
+	    <input type="text" class="rInputStyle input_fileImgName" id="input_concertImgName" readonly/> 
+	</p>  
 	
 	<p class="rinputBox">
 	    <label class="inputLabel">공연일</label>
@@ -31,8 +40,17 @@
 	
 	<p class="rinputBox">
 	    <label class="inputLabel">공연 장소</label>
-	    <input class="rInputStyle c_width" id="" name="con_venue" type="text" maxlength="30" autofocus spellcheck="false" placeholder="">
+	    <input class="rInputStyle c_width inner" id="" name="con_venue" type="text" maxlength="30" autofocus spellcheck="false" placeholder="">
 	</p>
+	
+	
+	
+	
+</div>
+  
+  
+<div class="formBox" id="formBoxRight3">
+	
 	
 	<p class="rinputBox">
 	    <label class="inputLabel">출연</label>
@@ -53,24 +71,6 @@
 	    <label class="inputLabel">문의처</label>
 	    <input class="rInputStyle c_width" id="" name="con_tel" type="text" maxlength="30" autofocus spellcheck="false" placeholder="">
 	</p>
-</div>
-  
-  
-<div class="formBox" id="formBoxRight3">
-	<p class="rinputBox" id="p_artistImg">
-	    <label class="inputLabel" id="">소개 이미지</label>
-	    
-	    <label class="inputLabel rInputStyle c_width" id="input_artistImgBtn">Browse..
-	        <input type="file" class="input_fileImg" id="input_artistImg" name="con_detailimg" class="rInputStyle"/>
-	    </label>
-	    
-	    <input type="text" class="rInputStyle c_width input_fileImgName" id="input_concertImgName" readonly/> 
-	</p>
-	
-	<p class="p_write p_writeA">소개 글</p>
-	<div id="txt_artistProfile">
-	    <textarea class="reviewContent" id="input_concertProfile"></textarea>
-	</div>
         
 </div>
 </form>
