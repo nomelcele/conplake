@@ -13,17 +13,22 @@
 
 
 #edit_setList {background:#666;}
-.tr_ongoing, .tr_review { border-bottom:1px solid #ccc;}
 
-.tr_ongoing th, .tr_review th {background:#eee;}
 
-#table_ongoing, #table_review { table-layout:fixed;}
-#table_ongoing th, #table_ongoing td, #table_review th, #table_review td{ height:30px;}
+.table_list{ table-layout:fixed;}
 
-.ongoingTitle{ width:600px;}
-.ongoingDate{ width:300px;}
+.tr_list{ border-bottom:1px solid #ccc;}
 
-#table_ongoing p { text-align:center; white-space:nowrap; text-overflow:ellipsis; overflow:hidden;}
+.tr_list th{ background:#eee; height:30px;}
+.tr_list td{ height:30px;}
+
+.table_list p{ text-align:center; white-space:nowrap; text-overflow:ellipsis; overflow:hidden;}
+
+#ongoingTitle{ width:600px;}
+#ongoingDate{ width:300px;}
+
+
+
 
 
 

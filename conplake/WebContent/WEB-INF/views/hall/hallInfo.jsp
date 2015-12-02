@@ -43,15 +43,15 @@
             </div>
            
            <div class="contentView" id="hallOngoing">
-            	<Table id="table_ongoing">
-                    <tr class="tr_ongoing">
-                        <th class="ongoingTitle"><p>공연 제목</p></th>
-                        <th class="ongoingDate"><p>공연 기간</p></th>
+            	<Table class="table_list">
+                    <tr class="tr_list">
+                        <th class="ongoingTitle" id="ongoingTitle"><p>공연 제목</p></th>
+                        <th class="ongoingDate" id="ongoingDate"><p>공연 기간</p></th>
                     </tr>
                     <c:forEach var="ongoingCons" items="${ongoingCons}">
-	                    <tr class="tr_ongoing">
-	                        <td class="ongoingTitle"><p><a href="concertInfo?con_num=${ongoingCons.con_num}">${ongoingCons.con_name}</a></p></td>
-	                        <td class="ongoingDate"><p>${ongoingCons.con_startdate} ~ ${ongoingCons.con_enddate}</p></td>
+	                    <tr class="tr_list">
+	                        <td class="ongoingTitle" id="ongoingTitle"><p><a href="concertInfo?con_num=${ongoingCons.con_num}">${ongoingCons.con_name}</a></p></td>
+	                        <td class="ongoingDate" id="ongoingDate"><p>${ongoingCons.con_startdate} ~ ${ongoingCons.con_enddate}</p></td>
 	                    </tr>     
                     </c:forEach>
                 </Table>
@@ -146,7 +146,7 @@
                         </li>
             		</ul>
                 
-                <p id="p_review">
+                <p class="p_review">
                 	<span>
                     	<a href="#" class="page" id="page_prev"><</a>
                     	<a href="#">1</a>
@@ -174,8 +174,8 @@
                         <option value="cont">내용</option>
                     </select>
                 </p>
-            	<Table id="table_review">
-                    <tr class="tr_review">
+            	<Table class="table_list">
+                    <tr class="tr_list">
                         <th class="reviewNum"><p>번호</p></th>
                         <th class="reviewTitle"><p>제목</p></th>
                         <th class="reviewId"><p>작성자</p></th>
@@ -183,7 +183,7 @@
                         <th class="reviewHits"><p>조회수</p></th>
                     </tr>
                     <c:forEach var="reviewList" items="${reviewList}">
-	                    <tr class="tr_review">
+	                    <tr class="tr_list">
 	                        <td class="reviewNum"><p>${reviewList.post_num}</p></td>
 	                        <td class="reviewTitle"><p><a href="readReview?post_num=${reviewList.post_num}">${reviewList.post_title}</a></p></td>
 	                        <td class="reviewID"><p>${reviewList.authorname}</p></td>

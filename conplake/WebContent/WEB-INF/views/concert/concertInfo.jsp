@@ -69,7 +69,7 @@
                     
                   
                 </Table>
-                <p id="p_setList"><input id="edit_setListBtn" class="innerButton button" type="button" value="수정"/></p>
+                <p id="p_setList"><input id="edit_setListBtn" class="rButton" type="button" value="수정"/></p>
             </div>
             
             
@@ -83,27 +83,27 @@
                         <option value="cont">내용</option>
                     </select>
                 </p>
-            	<Table id="table_review">
-                    <tr class="tr_review">
-                        <th class="reviewNum"><p>번호</p></th>
-                        <th class="reviewTitle"><p>제목</p></th>
-                        <th class="reviewId"><p>작성자</p></th>
-                        <th class="reviewDate"><p>날짜</p></th>
-                        <th class="reviewHits"><p>조회수</p></th>
+            	<Table id="table_list">
+                    <tr class="tr_list">
+                        <th id="reviewNum"><p>번호</p></th>
+                        <th id="reviewTitle"><p>제목</p></th>
+                        <th id="reviewId"><p>작성자</p></th>
+                        <th id="reviewDate"><p>날짜</p></th>
+                        <th id="reviewHits"><p>조회수</p></th>
                     </tr>
                     <c:forEach var="reviewList" items="${reviewList}">
-	                    <tr class="tr_review">
-	                        <td class="reviewNum"><p>${reviewList.post_num}</p></td>
-	                        <td class="reviewTitle"><p><a href="readReview?post_num=${reviewList.post_num}">${reviewList.post_title}</a></p></td>
-	                        <td class="reviewID"><p>${reviewList.authorname}</p></td>
-	                        <td class="reviewDate"><p>${reviewList.post_date}</p></td>
-	                        <td class="reviewHits"><p>${reviewList.post_hit}</p></td>
+	                    <tr class="tr_list">
+	                        <td id="reviewNum"><p>${reviewList.post_num}</p></td>
+	                        <td id="reviewTitle"><p><a href="readReview?post_num=${reviewList.post_num}">${reviewList.post_title}</a></p></td>
+	                        <td id="reviewID"><p>${reviewList.authorname}</p></td>
+	                        <td id="reviewDate"><p>${reviewList.post_date}</p></td>
+	                        <td id="reviewHits"><p>${reviewList.post_hit}</p></td>
 	                    </tr>
                     </c:forEach>
 
                                       
                 </Table>
-                <p id="p_review">
+                <p class="p_review">
                 	<span>
                     	<a href="#" class="page" id="page_prev"><</a>
                     	<a href="#">1</a>

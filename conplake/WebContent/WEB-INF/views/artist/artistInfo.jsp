@@ -38,15 +38,15 @@
             
            
            <div class="contentView" id="artistConcert">
-            	<Table id="table_ongoing">
-                    <tr class="tr_ongoing">
-                        <th class="ongoingTitle"><p>공연 제목</p></th>
-                        <th class="ongoingDate"><p>공연 기간</p></th>
+            	<Table id="table_list">
+                    <tr class="tr_list">
+                        <th id="ongoingTitle"><p>공연 제목</p></th>
+                        <th id="ongoingDate"><p>공연 기간</p></th>
                     </tr>
                     <c:forEach var="artistConcerts" items="${artistConcerts}">
-	                    <tr class="tr_ongoing">
-	                        <td class="ongoingTitle"><p><a href="concertInfo?con_num=${artistConcerts.con_num}">${artistConcerts.con_name}</a></p></td>
-	                        <td class="ongoingDate"><p>${artistConcerts.con_startdate} ~ ${artistConcerts.con_enddate}</p></td>
+	                    <tr class="tr_list">
+	                        <td id="ongoingTitle"><p><a href="concertInfo?con_num=${artistConcerts.con_num}">${artistConcerts.con_name}</a></p></td>
+	                        <td id="ongoingDate"><p>${artistConcerts.con_startdate} ~ ${artistConcerts.con_enddate}</p></td>
 	                    </tr>     
                    	</c:forEach>
                 </Table>
@@ -98,7 +98,7 @@
             		</ul>
             		
                 
-                <p id="p_review">
+                <p class="p_review">
                 	<input id="write_review" class="innerButton button" type="button" value="후기 작성"/>
                 </p>
             </div>
