@@ -56,60 +56,45 @@
             
             <div class="contentView" id="artistSong">                
             		<ul class="ul_artistSong">
+            		  <c:forEach var="hitSongs" items="${hitSongs}">
                         <li class="innerCards" >
                         	<div class="artistVideoWrap">
-                        		
+                        		<iframe width="416" height="246" src="${hitSongs.song_link}" frameborder="0" allowfullscreen></iframe>                        	
                         	</div>
                         	<div class="artistVideoTitle">
-                        		<p><span>♬ </span>PIA - Urban Explorer</p>
+                        		<p><span>♬ </span>${hitSongs.song_title}</p>
                         	</div>
                         </li>
-                        <li class="innerCards" >
-                        	<div class="artistVideoWrap">
+                        </c:forEach>
+            
+<!--                         <li class="innerCards" > -->
+<!--                         	<div class="artistVideoWrap"> -->
                         		
-                        	</div>
-                        	<div class="artistVideoTitle">
-                        		<p><span>♬ </span>PIA - Urban Explorer</p>
-                        	</div>
-                        </li>
+<!--                         	</div> -->
+<!--                         	<div class="artistVideoTitle"> -->
+<!--                         		<p><span>♬ </span>PIA - Urban Explorer</p> -->
+<!--                         	</div> -->
+<!--                         </li> -->
             		
             		
             		
-                        <li class="innerCards" >
-                        	<div class="artistVideoWrap">
+<!--                         <li class="innerCards" > -->
+<!--                         	<div class="artistVideoWrap"> -->
                         		
-                        	</div>
-                        	<div class="artistVideoTitle">
-                        		<p><span>♬ </span>PIA - Urban Explorer</p>
-                        	</div>
-                        </li>
-                        <li class="innerCards" >
-                        	<div class="artistVideoWrap">
+<!--                         	</div> -->
+<!--                         	<div class="artistVideoTitle"> -->
+<!--                         		<p><span>♬ </span>PIA - Urban Explorer</p> -->
+<!--                         	</div> -->
+<!--                         </li> -->
+<!--                         <li class="innerCards" > -->
+<!--                         	<div class="artistVideoWrap"> -->
                         		
-                        	</div>
-                        	<div class="artistVideoTitle">
-                        		<p><span>♬ </span>PIA - Urban Explorer</p>
-                        	</div>
-                        </li>
+<!--                         	</div> -->
+<!--                         	<div class="artistVideoTitle"> -->
+<!--                         		<p><span>♬ </span>PIA - Urban Explorer</p> -->
+<!--                         	</div> -->
+<!--                         </li> -->
             		
-            		
-            		
-                        <li class="innerCards" >
-                        	<div class="artistVideoWrap">
-                        		
-                        	</div>
-                        	<div class="artistVideoTitle">
-                        		<p><span>♬ </span>PIA - Urban Explorer</p>
-                        	</div>
-                        </li>
-                        <li class="innerCards" >
-                        	<div class="artistVideoWrap">
-                        		
-                        	</div>
-                        	<div class="artistVideoTitle">
-                        		<p><span>♬ </span>PIA - Urban Explorer</p>
-                        	</div>
-                        </li>
             		</ul>
             		
                 

@@ -2,7 +2,7 @@ package or.conplake.vo;
 
 public class SongVO {
 	private int song_num, song_artist, song_concert, song_order;
-	private String song_title, song_popular,
+	private String song_title, song_popular, song_link,
 	artistname;
 	
 	public String getArtistname() {
@@ -46,6 +46,12 @@ public class SongVO {
 	}
 	public void setSong_popular(String song_popular) {
 		this.song_popular = song_popular;
+	}
+	public String getSong_link() {
+		return song_link;
+	}
+	public void setSong_link(String song_link) {
+		this.song_link = song_link;
 	}
 	
 	
