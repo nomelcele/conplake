@@ -2,11 +2,11 @@
     pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>  
 <!-- 타임라인 댓글 -->  
-            		<div id="modalWindow">	
-            			<div id="mdHeader">
-            				<p>REPLY<input id="mdClose" type="button" value="X" onclick="mdClose()"/></p>
+            		<div class="modalWindow">	
+            			<div class="mdHeader">
+            				<p>REPLY<input class="mdClose" type="button" value="X" onclick="mdClose()"/></p>
             			</div>
-            			<div id="mdBody">
+            			<div class="mdBody">
             				<ul class="ul_commList">
 	            			<c:forEach var="commList" items="${commList}">
 		            			<li>
@@ -24,7 +24,7 @@
 	            			</c:forEach>
 	            			</ul>
             			</div>
-            			<div id="mdFooter">
+            			<div class="mdFooter">
             				<input class="inputStyle" id="mdInputText" type="text" placeholder="댓글 내용을 입력하세요."/>
             				<input class="innerButton button" id="mdInputBtn" type="button" value="입력" onclick="writeTimelineComm(${sessionScope.mvo.mem_num},${timelineNumber})"/>
             			</div>

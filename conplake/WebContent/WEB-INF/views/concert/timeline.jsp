@@ -36,17 +36,17 @@
             	</div>
             	
             	
-            	<div id="modalWindowWrap">
-            		<div id="modalWindow">	
-            			<div id="mdHeader">
-            				<p>REPLY<input id="mdClose" type="button" value="X" onclick="mdClose()"/></p>
+            	<div class="modalWindowWrap">
+            		<div class="modalWindow">	
+            			<div class="mdHeader">
+            				<p>REPLY<input class="mdClose" type="button" value="X" onclick="mdClose()"/></p>
             			</div>
-            			<div id="mdBody">
+            			<div class="mdBody">
             				<ul>
 	            			
 	            			</ul>
             			</div>
-            			<div id="mdFooter">
+            			<div class="mdFooter">
             				<input class="inputStyle" id="mdInputText" type="text" placeholder="댓글 내용을 입력하세요."/>
             				<input class="innerButton button" id="mdInputBtn" type="button" value="입력"/>
             			</div>

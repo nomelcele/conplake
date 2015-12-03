@@ -151,7 +151,7 @@
             		</div>
             	</div>
             	
-            	<div id="modalWindowWrap">
+            	<div class="modalWindowWrap">
 
             	</div>
             </div>

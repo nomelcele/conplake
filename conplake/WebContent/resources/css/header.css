@@ -9,8 +9,8 @@ header {width:100%; height:110px; position:fixed; z-index:999;}
 .util_menuWrap ul.util_menu{ display:block; height:30px; float:right; padding-right:50px;}
 .util_menuWrap ul.util_menu li { list-style:none; float:left; padding-left:20px; color:#fff; line-height:30px; }
 .util_menuWrap ul.util_menu li strong {color:inherit;}
-.util_menuWrap ul.util_menu li a { width:140px; background:url(../img/arrow_down.png) no-repeat 125px center; background-size:10px 5px; display:block;  font-size:12px; line-height:30px; color:#eee;}
-.util_menuWrap ul.util_menu li a#a_addMenu{ width:70px; background:url(../img/arrow_down.png) no-repeat 55px center; background-size:10px 5px;}
+.util_menuWrap ul.util_menu li a { width:160px; background:url(../img/arrow_down.png) no-repeat 145px center; background-size:10px 5px; display:block;  font-size:12px; line-height:30px; color:#eee;}
+.util_menuWrap ul.util_menu li a#a_addMenu{ width:90px; background:url(../img/arrow_down.png) no-repeat 75px center; background-size:10px 5px;}
 
 .util_menuWrap ul.util_menu li a:hover{ color:#fff;}
 
@@ -19,9 +19,9 @@ header {width:100%; height:110px; position:fixed; z-index:999;}
 
 
 .pop{ width:88px; height:127px;  display:none; position:absolute; z-index:995; right:51px; top:26px; 
-color:#fff; background:#333; outline:1px solid #666; outline-offset:-3px; border-radius:2px;}
+color:#fff; background:#333; outline:1px solid #999; outline-offset:-3px; border-radius:2px;}
 .pop li{  text-align:center;}
 .pop li a{ color:#eee; height:25px; line-height:25px; }
 .pop li a:hover{ color:#fff;}
 
-#pop_addMenu{ height:52px; right:215px;}
+#pop_addMenu{ height:52px; right:235px;}
