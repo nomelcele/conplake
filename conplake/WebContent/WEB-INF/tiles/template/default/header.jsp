@@ -33,8 +33,8 @@
     	</div>    
        <div id="modalWindowWrap_note_header">
        		<div id="modalWindow3">	
-       			<div id="mdHeader">
-       				<p>NOTE<input id="mdClose" type="button" value="X" onclick="mdClose_note_header()"/></p>
+       			<div class="mdHeader">
+       				<p>NOTE<input class="mdClose" type="button" value="X" onclick="mdClose_note_header()"/></p>
        			</div>
        			<div id="mdBody_left">
        				<ul>
@@ -175,10 +175,10 @@
     
     <div id="modalWindowWrap_fri_header">
        		<div id="modalWindow_fri">	
-       			<div id="mdHeader">
-       				<p>NOTE<input id="mdClose" type="button" value="X" onclick="mdClose_fri_header()"/></p>
+       			<div class="mdHeader">
+       				<p>NOTE<input class="mdClose" type="button" value="X" onclick="mdClose_fri_header()"/></p>
        			</div>
-       			<div id="mdBody">
+       			<div class="mdBody">
        				<ul class="ul_commList">
             			<li>
             				<div class="mdImgWrap"><img src="resources/css/profile_img_default.png" width="50" height="50"/></div>
