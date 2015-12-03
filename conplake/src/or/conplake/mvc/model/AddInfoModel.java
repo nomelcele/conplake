@@ -38,16 +38,17 @@ public class AddInfoModel {
 	}
 
 	@RequestMapping(value="/addArtist")
-	public String addArtist(ArtistVO avo, @RequestParam("art_img")MultipartFile art_img){
+	public String addArtist(ArtistVO avo){
 		// 아티스트 정보 추가
 	
 		// 이미지 파일 업로드
+		MultipartFile art_file = avo.getArt_file();
 		String r_path = "C:\\conplake\\ws\\conplake\\WebContent\\resources\\artistImg\\";
-		String fileName = art_img.getOriginalFilename();
+		String fileName = art_file.getOriginalFilename();
 		StringBuffer path = new StringBuffer();
 		path.append(r_path).append(fileName);
 		System.out.println("Artist Img Upload Path: "+path.toString());
-		avo.setArt_img(path.toString()); // 이미지 경로를 db에 저장해야 하므로
+		avo.setArt_img("resources/artistImg/"+fileName); // 이미지 경로를 db에 저장해야 하므로
 		
 		File file = new File(path.toString());
 		if(!file.exists()){
@@ -55,7 +56,7 @@ public class AddInfoModel {
 		}
 		
 		try {
-			art_img.transferTo(file);
+			art_file.transferTo(file);
 		} catch(Exception e){
 			e.printStackTrace();
 		}

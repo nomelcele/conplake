@@ -210,37 +210,39 @@
             			<div id="mdHeader">
             				<p>UPLOAD PICTURE<input id="mdClose" type="button" value="X" onclick="mdClose()"/></p>
             			</div>
-            			<div id="mdBody1">
-            				<p id="p_searchSeatReview">
-            					<span>관람석 위치</span>
-			                	<select class="inputStyle input_seatFloor" >
-			                        <option selected>1층</option>
-			                        <option>2층</option>
-			                        <option>3층</option>
-			                    </select>
-			                    <select class="inputStyle input_seatStanding" >
-			                        <option selected>좌석</option>
-			                        <option>스탠딩</option>
-			                    </select>
-			                    <input class="inputStyle inputSeat" id="" placeholder="구역"/>
-			                    <input class="inputStyle inputSeat" id="" placeholder="열"/>
-			                    <input class="inputStyle inputSeat" id="" placeholder="좌석"/>
-			                </p>
-            			</div>
-            			<div id="mdBody2">
-            				<p class="rinputBox" id="p_seatPic">
-							    <label id="label_seatPic">시야 사진</label>
-							    <label class="inputLabel rInputStyle a_width input_fileImgBtn" id="">Browse..
-							        <input type="file" id="" class="rInputStyle input_fileImg"/>
-							    </label>
-							    
-							    <input type="text" class="rInputStyle a_width input_fileImgName" id="input_seatPicName" readonly/> 
-							</p>
-							
-							<div id="seatPicWrap"></div>
-							<input class="innerButton" id="submit_seatPic" type="submit" value="올리기"/>
-            			</div>
-            			
+            			<form action="addSightimg" method="post" enctype="multipart/form-data">
+            				<input type="hidden" name="si_concerthall" value="${challInfo.chall_num}">
+	            			<div id="mdBody1">
+	            				<p id="p_searchSeatReview">
+	            					<span>관람석 위치</span>
+				                	<select class="inputStyle input_seatFloor" name="si_floor">
+				                        <option selected value="1">1층</option>
+				                        <option value="2">2층</option>
+				                        <option value="3">3층</option>
+				                    </select>
+				                    <select class="inputStyle input_seatStanding" name="si_standseat">
+				                        <option selected value="seat">좌석</option>
+				                        <option value="stand">스탠딩</option>
+				                    </select>
+				                    <input class="inputStyle inputSeat" name="si_area" placeholder="구역"/>
+				                    <input class="inputStyle inputSeat" name="si_row" placeholder="열"/>
+				                    <input class="inputStyle inputSeat" name="si_seatnum" placeholder="좌석"/>
+				                </p>
+	            			</div>
+	            			<div id="mdBody2">
+	            				<p class="rinputBox" id="p_seatPic">
+								    <label id="label_seatPic">시야 사진</label>
+								    <label class="inputLabel rInputStyle a_width input_fileImgBtn" id="">Browse..
+								        <input type="file" name="sightimgFile" class="rInputStyle input_fileImg"/>
+								    </label>
+								    
+								    <input type="text" class="rInputStyle a_width input_fileImgName" id="input_seatPicName" readonly/> 
+								</p>
+								
+								<div id="seatPicWrap"></div>
+								<input class="innerButton" id="submit_seatPic" type="submit" value="올리기"/>
+	            			</div>
+            			</form>
             		</div>
             	</div>
             
