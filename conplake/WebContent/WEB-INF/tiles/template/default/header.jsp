@@ -8,12 +8,12 @@
 	<div class="util_menuWrap">
     	<ul class="util_menu">
     		<li>
-    			<a id="a_addMenu" href="#" onclick="toggle_addMenu(); return false;">정보 등록</a></li>
+    			<a id="a_addMenu" href="#" onclick="toggle_addMenu(); return false;">&#128712; 정보 등록</a></li>
     		</li>
     		
     		<li>
 	    		<c:if test="${!empty sessionScope.mvo.mem_name}">
-	    			<a id="a_myMenu" href="#" onclick="toggle_myMenu(); return false;"><strong>${sessionScope.mvo.mem_name}</strong> 님 환영합니다.</a></li>
+	    			<a id="a_myMenu" href="#" onclick="toggle_myMenu(); return false;">&#128100; <strong>${sessionScope.mvo.mem_name}</strong> 님 환영합니다.</a></li>
 	    		</c:if>
     		</li>
         </ul>

@@ -36,7 +36,7 @@ $(document).ready(function(){
 });
 
 function uploadSeatPic(){
-	$("#modalWindowWrap").css('display','block');
+	$(".modalWindowWrap").css('display','block');
 	
 }
 

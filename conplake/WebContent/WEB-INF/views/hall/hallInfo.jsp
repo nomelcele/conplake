@@ -205,10 +205,10 @@
                 </p>
             </div>
             
-            <div id="modalWindowWrap">
+            <div class="modalWindowWrap">
             		<div id="modalWindow2">	
-            			<div id="mdHeader">
-            				<p>UPLOAD PICTURE<input id="mdClose" type="button" value="X" onclick="mdClose()"/></p>
+            			<div class="mdHeader">
+            				<p>UPLOAD PICTURE<input class="mdClose" type="button" value="X" onclick="mdClose()"/></p>
             			</div>
 
             			
