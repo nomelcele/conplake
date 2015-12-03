@@ -7,7 +7,7 @@
             				<p>REPLY<input id="mdClose" type="button" value="X" onclick="mdClose()"/></p>
             			</div>
             			<div id="mdBody">
-            				<ul>
+            				<ul class="ul_commList">
 	            			<c:forEach var="commList" items="${commList}">
 		            			<li>
 		            				<div class="mdImgWrap"><img src="resources/memberImg/${commList.authorimg}" width="50" height="50"/></div>

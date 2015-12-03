@@ -20,8 +20,8 @@
         <ul class="pop" id="pop_myMenu">
         	<li><a href="#">개인정보수정</a></li>
         	<li id="mypage"><a href="#">마이페이지</a></li>
-        	<li><a href="#">친구목록</a></li>
-        	<li><a href="#" onclick="mdOpen_header(); return false;">쪽지</a></li>
+        	<li><a href="#" onclick="mdOpen_fri_header(); return false;">친구목록</a></li>
+        	<li><a href="#" onclick="mdOpen_note_header(); return false;">쪽지</a></li>
         	<li id="logout"><a href="logout">로그아웃</a></li>
         </ul>
         
@@ -31,10 +31,10 @@
         	
         </ul>
     	</div>    
-       <div id="modalWindowWrap_header">
+       <div id="modalWindowWrap_note_header">
        		<div id="modalWindow3">	
        			<div id="mdHeader">
-       				<p>NOTE<input id="mdClose" type="button" value="X" onclick="mdClose_header()"/></p>
+       				<p>NOTE<input id="mdClose" type="button" value="X" onclick="mdClose_note_header()"/></p>
        			</div>
        			<div id="mdBody_left">
        				<ul>
@@ -173,7 +173,70 @@
         
     </div>
     
+    <div id="modalWindowWrap_fri_header">
+       		<div id="modalWindow_fri">	
+       			<div id="mdHeader">
+       				<p>NOTE<input id="mdClose" type="button" value="X" onclick="mdClose_fri_header()"/></p>
+       			</div>
+       			<div id="mdBody">
+       				<ul class="ul_commList">
+            			<li>
+            				<div class="mdImgWrap"><img src="resources/css/profile_img_default.png" width="50" height="50"/></div>
+            				<div class="mdTextWrap">
+            					<p id="p_friend">
+            						<strong>asdfasdf<span> (ddaf)</span></strong>
+         							<input class="innerButton button" id="mdDelete" type="button" value="삭제" onclick=""/>
+         							<input class="innerButton button" id="friendNoteBtn" type="button" value="&#9993;" onclick=""/>
+            					</p>
+            				</div>
+            			</li>
+            			
+            			<li>
+            				<div class="mdImgWrap"><img src="resources/css/profile_img_default.png" width="50" height="50"/></div>
+            				<div class="mdTextWrap">
+            					<p id="p_friend">
+            						<strong>asdfasdf<span> (ddaf)</span></strong>
+         							<input class="innerButton button" id="mdDelete" type="button" value="삭제" onclick=""/>
+         							<input class="innerButton button" id="friendNoteBtn" type="button" value="&#9993;" onclick=""/>
+            					</p>
+            				</div>
+            			</li>
+            			
+            			<li>
+            				<div class="mdImgWrap"><img src="resources/css/profile_img_default.png" width="50" height="50"/></div>
+            				<div class="mdTextWrap">
+            					<p id="p_friend">
+            						<strong>asdfasdf<span> (ddaf)</span></strong>
+         							<input class="innerButton button" id="mdDelete" type="button" value="삭제" onclick=""/>
+         							<input class="innerButton button" id="friendNoteBtn" type="button" value="&#9993;" onclick=""/>
+            					</p>
+            				</div>
+            			</li>
+            			
+            			<li>
+            				<div class="mdImgWrap"><img src="resources/css/profile_img_default.png" width="50" height="50"/></div>
+            				<div class="mdTextWrap">
+            					<p id="p_friend">
+            						<strong>asdfasdf<span> (ddaf)</span></strong>
+         							<input class="innerButton button" id="mdDelete" type="button" value="삭제" onclick=""/>
+         							<input class="innerButton button" id="friendNoteBtn" type="button" value="&#9993;" onclick=""/>
+            					</p>
+            				</div>
+            			</li>
+            			
+            			
+           			</ul>
+	            	
+	                
+       			</div>
+            			
+            			
+            		
+       </div>
+        
+    </div>
     
+    	
     <div class="gnb">
     	<a id="logo" href="main"><img id="imgLogo" src="resources/img/logo_main.png" alt="CONPLAKE" /></a>
     </div>
