@@ -3,10 +3,11 @@ $(function(){
 		location="joinForm";		
 	});
 	
-	$("#findPasswd").click(function(){
-		var option = "width=800, height=600, scrollbars=yes";
-		window.open("findPwd","비밀번호 찾기",option);	
-	});
+	
+//	$("#findPasswd").click(function(){
+//		var option = "width=800, height=600, scrollbars=yes";
+//		window.open("findPwd","비밀번호 찾기",option);	
+//	});
 	
 	$("#email_select").change(function(){
 		// 메일 주소 select
@@ -97,3 +98,14 @@ $(function(){
 		});
 	});
 });
+
+
+function mdOpen(){
+	$(".modalWindowWrap").css('display','block');
+	
+}
+
+function mdClose(){
+	$(".modalWindowWrap").css('display','none');
+	
+}
