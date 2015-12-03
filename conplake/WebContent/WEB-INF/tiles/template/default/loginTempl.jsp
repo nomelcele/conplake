@@ -127,9 +127,21 @@ input#signIn:hover {
 
 .noScroll {overflow:hidden;}
 
-#modalWindow_pwd{ width:500px; margin-left:-250px; height:300px; margin-top:-150px;}
-#mdBody_pwd{ padding:20px;}
+#modalWindow_pwd{ width:600px; margin-left:-300px; height:220px; margin-top:-110px;}
+#mdBody_pwd{ padding:25px 40px 25px;}
 
+
+#mdBody_pwd p {height:32px; line-height:32px; margin-bottom:10px;  font-weight:bold; font-size:12px; color:#666;}
+#mdBody_pwd p input, #mdBody_pwd p select, #mdBody_pwd p span { float:right;}
+#mdBody_pwd p span{ width:20px; text-align:center; line-height:32px; font-weight:normal;}
+#userId{ width:462px;}
+#email_id{ width:125px;}
+#email_address{ width:150px;}
+#email_select{ width:150px; background-position:125px center; height:32px; margin-left:10px;}
+
+
+#sendMailBtn{ width:518px; background:#f9f9f9; color:#666; border:1px solid #bbb; border-radius:3px;  font-size:12px;  height:40px; float:none;  margin-top:10px; }
+#sendMailBtn:hover{ background:#f3f3f3;}
 .input_search {
    /* 원하는 너비설정 */
   height: 20px;

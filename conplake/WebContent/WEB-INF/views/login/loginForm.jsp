@@ -27,10 +27,8 @@
 			</div>
 			<div class="mdBody" id="mdBody_pwd">
 				<form action="sendPwdMail" method="post">
-					<p>ID: <input type="text" class="inputStyle input_search" id="userId"></p>
-					<p>MAIL: 	<input class="inputStyle input_search" id="email_id" type="text" maxlength="30">
-				            <span>@</span>
-				            <input class="inputStyle input_search" id="email_address" type="text" maxlength="30">
+					<p>ID <input type="text" class="inputStyle input_search" id="userId"></p>
+					<p>MAIL 	
 				            <select class="inputStyle input_category" id="email_select" autocomplete="off">
 				            	<option selected>-직접입력-</option>
 				                <option >naver.com</option>
@@ -39,8 +37,13 @@
 				                <option>gmail.com</option>
 				                <option>hotmail.com</option>
 				            </select>
-				    <input id="sendMailBtn" type="button" value="인증 메일 전송">
+				            <input class="inputStyle input_search" id="email_address" type="text" maxlength="30"/>
+				    		<span>@</span>
+				    		<input class="inputStyle input_search" id="email_id" type="text" maxlength="30">
 				    </p>
+				    
+				    <input class="" id="sendMailBtn" type="button" value="인증 메일 전송">
+				    
 				</form>		
 			</div>
 		</div>
