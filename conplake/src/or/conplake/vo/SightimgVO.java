@@ -1,8 +1,11 @@
 package or.conplake.vo;
 
+import org.springframework.web.multipart.MultipartFile;
+
 public class SightimgVO {
 	private int si_num, si_floor, si_seatnum, si_concerthall;
 	private String si_imgname, si_standseat, si_area, si_row;
+	private MultipartFile sightimgFile;
 	
 	public int getSi_num() {
 		return si_num;
@@ -51,6 +54,12 @@ public class SightimgVO {
 	}
 	public void setSi_row(String si_row) {
 		this.si_row = si_row;
+	}
+	public MultipartFile getSightimgFile() {
+		return sightimgFile;
+	}
+	public void setSightimgFile(MultipartFile sightimgFile) {
+		this.sightimgFile = sightimgFile;
 	}
 	
 	

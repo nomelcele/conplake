@@ -18,6 +18,9 @@
                 	<img src="${artistInfo.art_img}" width="225" height="225" />
                 </div>
                 <div class="concertProfile profileSize">
+     		        <p>국가 : <span>${artistInfo.art_country}</span></p>
+              		<p>활동 유형 : <span>${artistInfo.art_type}</span></p>
+              		<p>장르 : <span>${artistInfo.art_genre}</span></p>
                     <p>SNS : <span><a href="${artistInfo.art_sns}">${artistInfo.art_sns}</a></span></p>
                     <p>공식 사이트 : <span><a href="${artistInfo.art_official}">${artistInfo.art_official}</a></span></p>
                 </div>
@@ -67,34 +70,6 @@
                         </li>
                         </c:forEach>
             
-<!--                         <li class="innerCards" > -->
-<!--                         	<div class="artistVideoWrap"> -->
-                        		
-<!--                         	</div> -->
-<!--                         	<div class="artistVideoTitle"> -->
-<!--                         		<p><span>♬ </span>PIA - Urban Explorer</p> -->
-<!--                         	</div> -->
-<!--                         </li> -->
-            		
-            		
-            		
-<!--                         <li class="innerCards" > -->
-<!--                         	<div class="artistVideoWrap"> -->
-                        		
-<!--                         	</div> -->
-<!--                         	<div class="artistVideoTitle"> -->
-<!--                         		<p><span>♬ </span>PIA - Urban Explorer</p> -->
-<!--                         	</div> -->
-<!--                         </li> -->
-<!--                         <li class="innerCards" > -->
-<!--                         	<div class="artistVideoWrap"> -->
-                        		
-<!--                         	</div> -->
-<!--                         	<div class="artistVideoTitle"> -->
-<!--                         		<p><span>♬ </span>PIA - Urban Explorer</p> -->
-<!--                         	</div> -->
-<!--                         </li> -->
-            		
             		</ul>
             		
                 

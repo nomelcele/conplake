@@ -13,7 +13,7 @@
 		    <label class="inputLabel" id="">대표 사진</label>
 		    
 		    <label class="inputLabel rInputStyle input_fileImgBtn" id="">Browse..
-		        <input type="file" id="" name="art_img" class="rInputStyle input_fileImg"/>
+		        <input type="file" id="" name="art_file" class="rInputStyle input_fileImg"/>
 		    </label>
 		    
 		    <input type="text" class="rInputStyle a_width input_fileImgName" id="input_artistImgName" readonly/> 
@@ -29,14 +29,11 @@
 		<p class="rinputBox">
 		    <label class="inputLabel">활동유형</label>
 		    <select class="rInputStyle select_artist a_width" name="art_type">
-		        <option value="artist_fs">여성/솔로</option>
-		        <option value="artist_fd">여성/듀엣</option>
-		        <option value="artist_fg">여성/그룹</option>
-		        <option value="artist_ms">남성/솔로</option>
-		        <option value="artist_md">남성/듀엣</option>
-		        <option value="artist_mg">남성/그룹</option>
-		        <option value="artist_fmd">혼성/듀엣</option>
-		        <option value="artist_fmg">혼성/그룹</option>
+		        <option value="여성/솔로">여성/솔로</option>
+		        <option value="여성/그룹">여성/그룹</option>
+		        <option value="남성/솔로">남성/솔로</option>
+		        <option value="남성/그룹">남성/그룹</option>
+		        <option value="혼성/그룹">혼성/그룹</option>
 		    </select>
 		</p>
 		
@@ -44,14 +41,21 @@
 		<p class="rinputBox">
 		    <label class="inputLabel">장르</label>
 		    <select class="rInputStyle select_artist a_width" name="art_genre">
-		      <option value="genre_b">발라드</option>
-		        <option value="genre_d">댄스</option>
-		        <option value="genre_h">랩/힙합</option>
-		        <option value="genre_r">R&B/Soul</option>
-		        <option value="genre_e">일렉트로니카</option>
-		        <option value="genre_t">트로트</option>
-		        <option value="genre_f">포크</option>
-		        <option value="genre_i">인디음악</option>
+		     	<option value="발라드">발라드</option>
+		        <option value="댄스">댄스</option>
+		        <option value="R&B/소울">R&B/소울</option>
+		        <option value="락">락</option>
+		        <option value="랩/힙합">랩/힙합</option>
+		        <option value="일렉트로니카">일렉트로니카</option>
+		        <option value="인디">인디</option>
+		        <option value="블루스/포크/컨트리">블루스/포크/컨트리</option>
+		        <option value="트로트">트로트</option>
+		        <option value="팝">팝</option>
+		        <option value="재즈">재즈</option>
+		        <option value="라틴">라틴</option>
+		        <option value="클래식">클래식</option>
+		        <option value="뉴에이지">뉴에이지</option>
+		        <option value="크로스오버">크로스오버</option>
 		    </select>
 		</p>
 		

@@ -1,8 +1,11 @@
 package or.conplake.vo;
 
+import org.springframework.web.multipart.MultipartFile;
+
 public class ArtistVO {
 	private int art_num;
 	private String art_name, art_img, art_intro, art_official, art_sns, art_country, art_type, art_genre;
+	private MultipartFile art_file;
 	
 	public int getArt_num() {
 		return art_num;
@@ -57,6 +60,12 @@ public class ArtistVO {
 	}
 	public void setArt_country(String art_country) {
 		this.art_country = art_country;
+	}
+	public MultipartFile getArt_file() {
+		return art_file;
+	}
+	public void setArt_file(MultipartFile art_file) {
+		this.art_file = art_file;
 	}
 	
 	
