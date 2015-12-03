@@ -92,7 +92,7 @@ function readTimelineComm(comm_tl){
 			$('#modalWindowWrap').html(result);
 		}
 	});
-	alert("댓글창 열기");
+	
 	$("#modalWindowWrap").css('display', 'block');
 	
 	commHeight();

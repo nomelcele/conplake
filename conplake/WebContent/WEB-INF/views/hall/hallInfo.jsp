@@ -210,6 +210,9 @@
             			<div id="mdHeader">
             				<p>UPLOAD PICTURE<input id="mdClose" type="button" value="X" onclick="mdClose()"/></p>
             			</div>
+
+            			
+
             			<form action="addSightimg" method="post" enctype="multipart/form-data">
             				<input type="hidden" name="si_concerthall" value="${challInfo.chall_num}">
 	            			<div id="mdBody1">
@@ -233,7 +236,7 @@
 	            				<p class="rinputBox" id="p_seatPic">
 								    <label id="label_seatPic">시야 사진</label>
 								    <label class="inputLabel rInputStyle a_width input_fileImgBtn" id="">Browse..
-								        <input type="file" name="sightimgFile" class="rInputStyle input_fileImg"/>
+								        <input type="file" name="sightimgFile" id="input_seatPic" class="rInputStyle input_fileImg"/>
 								    </label>
 								    
 								    <input type="text" class="rInputStyle a_width input_fileImgName" id="input_seatPicName" readonly/> 
@@ -243,6 +246,7 @@
 								<input class="innerButton" id="submit_seatPic" type="submit" value="올리기"/>
 	            			</div>
             			</form>
+
             		</div>
             	</div>
             
