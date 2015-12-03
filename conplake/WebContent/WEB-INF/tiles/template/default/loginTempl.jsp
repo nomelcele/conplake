@@ -18,7 +18,7 @@
 	});
 </script>
 <style>
-body{ background:#eee; padding-bottom:100px;}
+body{ height:100%; background:#eee; padding-bottom:100px;}
 
 .card { background-color:#f7f7f7;
 	border-radius:2px; 
@@ -112,6 +112,30 @@ input#signIn:hover {
 .button#findPasswd {
 	margin-right:10px;
 	}	
+	
+	
+.modalWindowWrap {width:100%; height:100%; position:fixed; background:rgba(0,0,0,.8); left:0; top:0; zindex:999; display:none; }
+
+
+.modalWindow{position:absolute; width:400px; height:540px; top:50%; left:50%; margin-left:-200px; margin-top:-275px; border:1px solid #333; background:#fff; box-shadow : rgba(0,0,0,0.5) 0 0 8px 3px;}
+
+.mdHeader{ width:100%; height:40px; background:#666;}
+.mdHeader p {width:100%; line-height:40px; color:#eee; font-weight:bold; font-size:12px; padding-left:10px;}
+.mdClose {width:30px; height:40px; color:#fff; font-size:14px; font-weight:bold; float:right; border:none; background:none; margin-right:10px;  }
+
+.mdFooter{width:380px; height:29px; padding:10px 10px; border-top:1px solid #ccc; box-shadow:#eee 0 -3px 1px;}
+
+.noScroll {overflow:hidden;}
+
+#modalWindow_pwd{ width:500px; margin-left:-250px; height:300px; margin-top:-150px;}
+#mdBody_pwd{ padding:20px;}
+
+.input_search {
+   /* 원하는 너비설정 */
+  height: 20px;
+  padding: 5px 0 5px 5px; /* 여백으로 높이 설정 */
+}
+
 </style>
 </head>
 <body>

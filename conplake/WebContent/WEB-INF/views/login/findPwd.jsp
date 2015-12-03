@@ -18,9 +18,9 @@
 	<form action="sendPwdMail" method="post">
 		<h2>비밀번호 찾기</h2>
 		ID: <input type="text" id="userId"><br/>
-		MAIL: 	<input class="inputStyle" id="email_id" type="text" maxlength="30">
+		MAIL: 	<input class="inputStyle input_search" id="email_id" type="text" maxlength="30">
 	            <span>@</span>
-	            <input class="inputStyle" id="email_address" type="text" maxlength="30">
+	            <input class="inputStyle input_search" id="email_address" type="text" maxlength="30">
 	            <select class="inputStyle input_category" id="email_select" autocomplete="off">
 	            	<option selected>-직접입력-</option>
 	                <option >naver.com</option>

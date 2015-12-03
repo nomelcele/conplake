@@ -30,7 +30,7 @@ select::-ms-expand {
 	font-family: inherit;  /* 폰트 상속 */
 	color:#999;
 	border: 1px solid #999; 
-	border-radius: 0px; /* iOS 둥근모서리 제거 */
+	border-radius: 3px; /* iOS 둥근모서리 제거 */
 	-webkit-appearance: none; /* 네이티브 외형 감추기 */
 	-moz-appearance: none;
 	appearance: none;
