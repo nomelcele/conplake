@@ -131,24 +131,24 @@ function writeTimelineComm(currentUserNumber,timelineNumber){
 
 
 function commHeight(){
-	if($("#mdBody ul li").length == 0){
-		$("#mdBody ul").height('0');
+	if($(".ul_commList li").length == 0){
+		$(".ul_commList").height('0');
 		$("#modalWindow").height('90px');
 		$("#modalWindow").css('margin-top', '-45px');
 	}
 
-	else if(($("#mdBody ul li").length > 0) && ($("#mdBody ul li").length <= 6)){
+	else if(($(".ul_commList li").length > 0) && ($("#mdBody ul li").length <= 6)){
 		var li = $("#mdBody ul li").length;
 		var margFor = -45-(li*35);
 		
-		$("#mdBody ul").height(li*70);
+		$(".ul_commList").height(li*70);
 		$("#modalWindow").height(90 + li*70);
 		document.getElementById("modalWindow").style.marginTop = margFor.toString() + 'px';
 		
 	}
 
-	else if($("#mdBody ul li").length > 6){
-		$("#mdBody ul").height('450px');
+	else if($(".ul_commList li").length > 6){
+		$(".ul_commList").height('450px');
 		$("#modalWindow").height('540px');
 	}
 }
