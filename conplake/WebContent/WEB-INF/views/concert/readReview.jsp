@@ -57,7 +57,7 @@
                     
                     <p id="p_reply">REPLY</p>
                     
-                    <table id="table_reply"> <!-- 유저 댓글 보이는 목록 -->                        
+                    <table class="table_reply" id="table_replyLetsGo"> <!-- 유저 댓글 보이는 목록 -->                        
                         <c:forEach var="commList" items="${commList}">
 	                        <tr class="tr_readReply tr_reply" > <!-- 유저 댓글 2 -->
 	                            <td class="td_readReply" id="td_replyId" ><img src="resources/memberImg/${commList.authorimg}" width="60" height="60"/></td>
