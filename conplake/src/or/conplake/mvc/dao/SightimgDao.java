@@ -1,5 +1,7 @@
 package or.conplake.mvc.dao;
 
+import java.util.List;
+
 import or.conplake.vo.SightimgVO;
 
 import org.mybatis.spring.SqlSessionTemplate;
@@ -13,5 +15,9 @@ public class SightimgDao {
 	
 	public void addSightimg(SightimgVO sivo){
 		st.insert("si.addSightimg", sivo);
+	}
+	
+	public List<SightimgVO> sightimgList(int si_concerthall){
+		return st.selectList("si.sightimgList", si_concerthall);
 	}
 }

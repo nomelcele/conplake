@@ -80,15 +80,15 @@
   
   create table sightimg(
   si_num number(10), -- 사진 번호
-  si_imgname varchar2(100), -- 사진 파일 이름
+  si_imgname varchar2(200), -- 사진 파일 이름
   si_floor number(2), -- 층수
-  si_standseat varchar2(5), -- 스탠딩/좌석 여부
-  si_area varchar2(10), -- 구역
-  si_row varchar2(5), -- 열
+  si_standseat varchar2(10), -- 스탠딩/좌석 여부
+  si_area varchar2(20), -- 구역
+  si_row varchar2(10), -- 열
   si_seatnum number(5), -- 좌석
   si_concerthall number(6), -- 공연장 번호
   constraint sightimg_si_num_pk primary key(si_num),
-  constraint sightimg_si_standseat_ck check(si_standseat='stand' or si_standseat='seat'),
+  constraint sightimg_si_standseat_ck check(si_standseat='스탠딩' or si_standseat='좌석'),
   constraint sightimg_si_concerthall_fk foreign key(si_concerthall)
   references concerthall(chall_num)
   );
@@ -307,3 +307,20 @@ alter table artist drop(art_genre);
 alter table artist add(art_country varchar2(70));
 alter table artist add(art_type varchar2(20));
 alter table artist add(art_genre varchar2(50));
+
+-- 12/4 sightimg 테이블 지우고 다시 만듦
+drop table sightimg;
+create table sightimg(
+  si_num number(10), -- 사진 번호
+  si_imgname varchar2(200), -- 사진 파일 이름
+  si_floor number(2), -- 층수
+  si_standseat varchar2(10), -- 스탠딩/좌석 여부
+  si_area varchar2(20), -- 구역
+  si_row varchar2(10), -- 열
+  si_seatnum number(5), -- 좌석
+  si_concerthall number(6), -- 공연장 번호
+  constraint sightimg_si_num_pk primary key(si_num),
+  constraint sightimg_si_standseat_ck check(si_standseat='스탠딩' or si_standseat='좌석'),
+  constraint sightimg_si_concerthall_fk foreign key(si_concerthall)
+  references concerthall(chall_num)
+  );
