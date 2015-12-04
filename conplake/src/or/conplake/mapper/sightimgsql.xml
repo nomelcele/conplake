@@ -6,4 +6,7 @@
   	<insert id="addSightimg" parameterType="sivo">
   		insert into sightimg values(sightimg_seq.nextVal,#{si_imgname},#{si_floor},#{si_standseat},#{si_area},#{si_row},#{si_seatnum},#{si_concerthall})
   	</insert>
+  	<select id="sightimgList" parameterType="int" resultType="sivo">
+  		select * from sightimg where si_concerthall=#{si_concerthall}
+  	</select>
   </mapper>
