@@ -76,6 +76,7 @@ $( document ).ready(function() {
 });
 
 function mdClose(){
+	$("#modalWindowWrap_comm").css('display', 'none');
 	$(".modalWindowWrap").css('display', 'none');
 	
 }
@@ -89,11 +90,11 @@ function readTimelineComm(comm_tl){
 			comm_tl: comm_tl
 		},
 		success : function(result) {
-			$('.modalWindowWrap').html(result);
+			$('#modalWindowWrap_comm').html(result);
 		}
 	});
 	
-	$(".modalWindowWrap").css('display', 'block');
+	$("#modalWindowWrap_comm").css('display', 'block');
 	
 }
 
@@ -123,7 +124,7 @@ function writeTimelineComm(currentUserNumber,timelineNumber){
 			comm_tl: timelineNumber
 		},
 		success : function(result) {
-			$('.modalWindowWrap').html(result);
+			$('#modalWindowWrap_comm').html(result);
 		}
 	});
 }
@@ -163,7 +164,7 @@ function deleteTlComm(num, origin, type){
 				type: 'timeline'
 			},
 			success : function(result) {
-				$('.modalWindowWrap').html(result);
+				$('#modalWindowWrap_comm').html(result);
 			}
 		});
 	} else { // 타임라인 삭제
@@ -182,3 +183,6 @@ function deleteTlComm(num, origin, type){
 	
 }
 
+function mdOpen_letsGo(){
+	$("#modalWindowWrap_letsGo").css('display', 'block');	
+}

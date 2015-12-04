@@ -57,15 +57,15 @@ h3.concert_subTitle {width:900px; height:30px; line-height:30px; font-size:16px;
 
 #table_setList p, #table_editSetList p { white-space:nowrap; text-overflow:ellipsis; overflow:hidden;}
 
-#reviewNum p{ width:100px; text-align:center;}
-th#reviewTitle p{ width:450px; text-align:center;}
-td#reviewTitle p{ width:450px; text-align:left;}
-#reviewTitle p a:hover{ text-decoration:underline;}
-th#reviewId p{ width:100px; text-align:center;}
-td#reviewId p{ width:100px; text-align:left;}
+#reviewNum p, #letsGoNum p{ width:100px; text-align:center;}
+th#reviewTitle p, th#letsGoTitle p{ width:450px; text-align:center;}
+td#reviewTitle p, td#letsGoTitle p{ width:450px; text-align:left;}
+#reviewTitle p a:hover, #letsGoTitle p a:hover{ text-decoration:underline;}
+th#reviewId p, th#letsGoId p{ width:100px; text-align:center;}
+td#reviewId p, td#letsGoId p{ width:100px; text-align:left;}
 
-#reviewDate p{ width:150px; text-align:center;}
-#reviewHits p{ width:100px; text-align:center;}
+#reviewDate p, #letsGoDate p{ width:150px; text-align:center;}
+#reviewHits p, #letsGoHits p{ width:100px; text-align:center;}
 
 
 .input_categoryReview {
@@ -122,3 +122,6 @@ p#mdText{ float:left; width:240px; padding-right:10px;  }
 
 
 
+#modalWindow_letsGo{ width:927px; margin-left:-463px; height:500px; margin-top:-250px; }
+#mdBody_letsGo{ height:460px; overflow-y:scroll; padding: 0; }
+#table_letsGo{ }

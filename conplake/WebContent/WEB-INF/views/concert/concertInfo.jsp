@@ -7,7 +7,7 @@
     <input type="hidden" id="currentUserNum" value="${sessionScope.mvo.mem_num}">
         	<h2 id="concertTitle">${conInfo.con_name}
             	<div id="innerButtonBox">
-                    <input id="GoTogether" class="innerButton button" type="button" value="함께가요" onclick=""/>
+                    <input id="GoTogether" class="innerButton button" type="button" value="함께가요" onclick="mdOpen_letsGo()"/>
                     <c:if test="${liked eq 'n'}">
                     	<input id="likeToGo" class="innerButton button" type="button" value="갈거예요" onclick="location='likeConcert?ui_member='+${sessionScope.mvo.mem_num}+'&ui_concert='+${conInfo.con_num}"/>
                     </c:if>
@@ -151,11 +151,143 @@
             		</div>
             	</div>
             	
-            	<div class="modalWindowWrap">
-
+            	<div class="modalWindowWrap" id="modalWindowWrap_comm">
+				
             	</div>
+            	
+            	
+            	
+            	
             </div>
             
             
+            <div class="modalWindowWrap" id="modalWindowWrap_letsGo">
+            		<div class="modalWindow" id="modalWindow_letsGo">	
+            			<div class="mdHeader">
+            				<p>Let's Go<input class="mdClose" type="button" value="X" onclick="mdClose()"/></p>
+            			</div>
+            			<div class="mdBody" id="mdBody_letsGo">
+            				<Table class="table_list" id="table_letsGo">
+			                    <tr class="tr_list">
+			                        <th id="letsGoNum"><p>번호</p></th>
+			                        <th id="letsGoTitle"><p>제목</p></th>
+			                        <th id="letsGoId"><p>작성자</p></th>
+			                        <th id="letsGoDate"><p>날짜</p></th>
+			                        <th id="letsGoHits"><p>조회수</p></th>
+			                    </tr>
+			                    
+			                    <tr class="tr_list">
+			                        <td id="letsGoNum"><p>12</p></td>
+			                        <td id="letsGoTitle"><p><a href="">타이틀</a></p></td>
+			                        <td id="letsGoId"><p>아이디</p></td>
+			                        <td id="letsGoDate"><p>20122151</p></td>
+			                        <td id="letsGoHits"><p>0</p></td>
+			                    </tr>
+			                    
+			                    <tr class="tr_list">
+			                        <td id="letsGoNum"><p>12</p></td>
+			                        <td id="letsGoTitle"><p><a href="">타이틀</a></p></td>
+			                        <td id="letsGoId"><p>아이디</p></td>
+			                        <td id="letsGoDate"><p>20122151</p></td>
+			                        <td id="letsGoHits"><p>0</p></td>
+			                    </tr>
+			                    
+			                    <tr class="tr_list">
+			                        <td id="letsGoNum"><p>12</p></td>
+			                        <td id="letsGoTitle"><p><a href="">타이틀</a></p></td>
+			                        <td id="letsGoId"><p>아이디</p></td>
+			                        <td id="letsGoDate"><p>20122151</p></td>
+			                        <td id="letsGoHits"><p>0</p></td>
+			                    </tr>
+			                    
+			                    <tr class="tr_list">
+			                        <td id="letsGoNum"><p>12</p></td>
+			                        <td id="letsGoTitle"><p><a href="">타이틀</a></p></td>
+			                        <td id="letsGoId"><p>아이디</p></td>
+			                        <td id="letsGoDate"><p>20122151</p></td>
+			                        <td id="letsGoHits"><p>0</p></td>
+			                    </tr>
+			                    
+			                    <tr class="tr_list">
+			                        <td id="letsGoNum"><p>12</p></td>
+			                        <td id="letsGoTitle"><p><a href="">타이틀</a></p></td>
+			                        <td id="letsGoId"><p>아이디</p></td>
+			                        <td id="letsGoDate"><p>20122151</p></td>
+			                        <td id="letsGoHits"><p>0</p></td>
+			                    </tr>
+			                    
+			                    <tr class="tr_list">
+			                        <td id="letsGoNum"><p>12</p></td>
+			                        <td id="letsGoTitle"><p><a href="">타이틀</a></p></td>
+			                        <td id="letsGoId"><p>아이디</p></td>
+			                        <td id="letsGoDate"><p>20122151</p></td>
+			                        <td id="letsGoHits"><p>0</p></td>
+			                    </tr>
+			                    
+			                    <tr class="tr_list">
+			                        <td id="letsGoNum"><p>12</p></td>
+			                        <td id="letsGoTitle"><p><a href="">타이틀</a></p></td>
+			                        <td id="letsGoId"><p>아이디</p></td>
+			                        <td id="letsGoDate"><p>20122151</p></td>
+			                        <td id="letsGoHits"><p>0</p></td>
+			                    </tr>
+			                    
+			                    <tr class="tr_list">
+			                        <td id="letsGoNum"><p>12</p></td>
+			                        <td id="letsGoTitle"><p><a href="">타이틀</a></p></td>
+			                        <td id="letsGoId"><p>아이디</p></td>
+			                        <td id="letsGoDate"><p>20122151</p></td>
+			                        <td id="letsGoHits"><p>0</p></td>
+			                    </tr>
+			                    
+			                    <tr class="tr_list">
+			                        <td id="letsGoNum"><p>12</p></td>
+			                        <td id="letsGoTitle"><p><a href="">타이틀</a></p></td>
+			                        <td id="letsGoId"><p>아이디</p></td>
+			                        <td id="letsGoDate"><p>20122151</p></td>
+			                        <td id="letsGoHits"><p>0</p></td>
+			                    </tr>
+			                    
+			                    <tr class="tr_list">
+			                        <td id="letsGoNum"><p>12</p></td>
+			                        <td id="letsGoTitle"><p><a href="">타이틀</a></p></td>
+			                        <td id="letsGoId"><p>아이디</p></td>
+			                        <td id="letsGoDate"><p>20122151</p></td>
+			                        <td id="letsGoHits"><p>0</p></td>
+			                    </tr>
+			                    
+			                    <tr class="tr_list">
+			                        <td id="letsGoNum"><p>12</p></td>
+			                        <td id="letsGoTitle"><p><a href="">타이틀</a></p></td>
+			                        <td id="letsGoId"><p>아이디</p></td>
+			                        <td id="letsGoDate"><p>20122151</p></td>
+			                        <td id="letsGoHits"><p>0</p></td>
+			                    </tr>
+			                    
+			                    <tr class="tr_list">
+			                        <td id="letsGoNum"><p>12</p></td>
+			                        <td id="letsGoTitle"><p><a href="">타이틀</a></p></td>
+			                        <td id="letsGoId"><p>아이디</p></td>
+			                        <td id="letsGoDate"><p>20122151</p></td>
+			                        <td id="letsGoHits"><p>0</p></td>
+			                    </tr>
+			
+			                                      
+			                </Table>
+			                <p class="p_review">
+			                	<span>
+			                    	<a href="#" class="page" id="page_prev"><</a>
+			                    	<a href="#">1</a>
+			<!--                         <a href="#">2</a> -->
+			<!--                         <a href="#">3</a> -->
+			                        <a href="#" class="page" id="page_next">></a>
+			                    </span>
+			                <input id="write_review" class="innerButton button" type="button" value="후기 작성" onclick="location='writeReviewForm?con_num=${conInfo.con_num}'"/>
+			                </p>
+            							
+            			
+            			</div>
+            		</div>
+            	</div>
             <footer></footer>
     
