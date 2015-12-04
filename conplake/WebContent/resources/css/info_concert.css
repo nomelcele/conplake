@@ -121,7 +121,3 @@ p#mdText{ float:left; width:240px; padding-right:10px;  }
 #tLInputBtn, #mdInputBtn { width:68px; height:30px; background:#666; color:#eee; letter-spacing:1px; border:none;}
 
 
-
-#modalWindow_letsGo{ width:927px; margin-left:-463px; height:500px; margin-top:-250px; }
-#mdBody_letsGo{ height:460px; overflow-y:scroll; padding: 0; }
-#table_letsGo{ }

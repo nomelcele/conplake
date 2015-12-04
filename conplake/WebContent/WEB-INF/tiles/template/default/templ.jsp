@@ -29,6 +29,7 @@
 <link href="resources/css/note.css" rel="stylesheet" type="text/css"/>
 <link href="resources/css/friend.css" rel="stylesheet" type="text/css"/>
 <link href="resources/css/modal.css" rel="stylesheet" type="text/css"/>
+<link href="resources/css/letsGo.css" rel="stylesheet" type="text/css"/>
 
 
 <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
