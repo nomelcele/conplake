@@ -10,7 +10,7 @@
 #hallOngoing #p_setList, #p_review { height:30px; padding-top:15px;}
 #hallReview {display:none;}
 
-
+#p_review{ clear:both; display:inline-block;}
 
 #edit_setList {background:#666;}
 
@@ -48,7 +48,7 @@ div#seatReview {width:900px; height:500px;}
 #p_searchSeatReview select {height:28px;}
 
 
-.ul_seatReview {width:900px;  max-width:900px; display:block;}
+.ul_seatReview {width:900px; max-width:900px; display:inline-block; }
 .ul_seatReview p{ white-space:nowrap; text-overflow:ellipsis; overflow:hidden;}
 .ul_seatReview li {
     -moz-border-bottom-colors: none;

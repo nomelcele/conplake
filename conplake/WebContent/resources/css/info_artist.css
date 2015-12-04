@@ -11,7 +11,7 @@
 	position:relative;
 	}
 	
-.ul_artistSong{ width:960px; height:300px; }
+.ul_artistSong{ width:960px; height:auto; display:inline-block;}
 .ul_artistSong li.innerCards{ float:left; width:416px; height:296px; margin-right:60px; margin-bottom:30px;}
 
 .artistVideoWrap{ width:416px; height:246px; }
