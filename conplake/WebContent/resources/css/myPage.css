@@ -57,12 +57,13 @@
 .scrollBars {width:870px; height:10px; background:#eee;}
 .bars { width:100px; height:10px; background:#666;}
 
-
+#myReviewNum p{width:80px;}
+#myReviewDate p{width:120px;}
 #myReviewConTitle p{width:245px;}
 td#myReviewConTitle p{padding-left:10px;}
 #myReviewTitle p{ width:420px;}
 td#myReviewTitle p{ padding-left:20px;}
-#myReviewDate p{ width:100px;}
+
 
 
 #p_myReview {height:30px; padding-top:15px;}
