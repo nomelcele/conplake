@@ -13,7 +13,7 @@
   	</select>
   	<select id="readNote" parameterType="int" resultType="nvo">
   		select n.note_num, n.note_cont, n.note_from, n.note_to, n.note_date,
-  		m1.mem_name fromname, m2.mem_name toname from note n, member m1, member m2 
+  		m1.mem_name fromname, m2.mem_name toname, m1.mem_id fromid, m2.mem_id toid from note n, member m1, member m2 
   		where n.note_num=#{note_num} and n.note_from=m1.mem_num and n.note_to=m2.mem_num 
   	</select>
   	<select id="sent" parameterType="int" resultType="nvo">
