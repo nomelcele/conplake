@@ -50,11 +50,13 @@ border-right:1px solid #ccc; box-shadow:#eee 2px 0 2px 0;}
 
 
 
-
 #mdBody_writeNote {padding:10px 20px;}
 #mdBody_writeNote p{ height:60px; line-height:60px;}
 
-#toWriteNote{ width:543px;}
+#toWriteNote{ width:543px; position:relative;}
 #contentWriteNote{ width:585px; height:250px; padding:10px; margin-bottom:10px;}
 
 #noWriteNote{ margin-right:10px;}
+
+
+#addressView { width:530px; padding:10px; position:absolute; top:90px; right:18px; border:1px solid #ccc; box-shadow:#eee 1px 1px 2px; z-index:1000; background-color:#fff; display:none}
