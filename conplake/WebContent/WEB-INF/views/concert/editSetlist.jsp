@@ -5,6 +5,7 @@
 <h1>EDIT SETLIST</h1>
 	<input type="hidden" id="setList_con_num" value="${concertInfo.con_num}">
 	<input type="hidden" id="setList_con_artist" value="${concertInfo.con_artist}">
+    <input type="hidden" id="setList_artistname" value="${concertInfo.artistname}">
             	<p class="concert_subTitle">
                 	<input id="remove_setList" class="innerButton button" type="button" value="행 삭제" onclick="removeRow()"/>
                     <input id="edit_setList" class="innerButton button" type="button" value="행 추가" onclick="createRow()"/>
@@ -30,11 +31,11 @@
 	                        	<input class="input_setList" id="input_setListNum" name="input_setListNum" type="number" value="${setlist.song_order}"/>
 	                        </td>
 	                        <td class="setListTitle">
-	                        	<input class="input_setList" id="input_setListTitle" name="input_setListTitle" type="text" value="${setlist.song_title}"/>
+	                        	<input class="input_setList" id="input_setListTitle_${setlist.song_order}" name="input_setListTitle" type="text" value="${setlist.song_title}" onkeydown="setSearchQuery(${setlist.artistname},${setlist.song_order})"/>
 	                        </td>
 	                        <td class="setListLink">
-	                        	<input class="input_setList" id="input_setListLink" name="input_setListTitle" type="text" value=""/>
-	                        	<span class="btn_searchReview"><a id="searchLink" href="#"></a></span>
+	                        	<input class="input_setList" id="input_setListLink_${setlist.song_order}" name="input_setListTitle" type="text" value="${setlist.song_link}"/>
+	                        	<span class="btn_searchReview"><a id="searchLink_${setlist.song_order}" href="#" target="_blank"></a></span>
 	                        </td>
 	                    </tr>
                     </c:forEach>
@@ -47,7 +48,7 @@
                         	<input class="input_setList" id="input_setListNum" name="input_setListNum" type="number" />
                         </td>
                         <td class="setListTitle">
-                        	<input class="input_setList" id="input_setListTitle" name="input_setListTitle" type="text" />
+                        	<input class="input_setList" id="input_setListTitle" name="input_setListTitle" type="text" onkeydown="setSearchQuery(${concertInfo.artistname})"/>
                         </td>
                         <td class="setListLink">
                         	<input class="input_setList" id="input_setListLink" name="input_setListTitle" type="text" value=""/>

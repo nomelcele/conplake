@@ -7,7 +7,7 @@
 			insert into song values(song_seq.nextVal,#{song_title},#{song_artist},'n',#{song_concert},#{song_order},null)
 		</insert>
 		<select id="setlist" parameterType="int" resultType="svo">
-			select s.song_title, s.song_order, a.art_name artistname 
+			select s.song_title, s.song_order, a.art_name artistname, s.song_link 
 			from song s, artist a where s.song_concert=#{con_num} 
 			and a.art_num in (select song_artist from song where song_concert=#{con_num}) 
 			order by s.song_order asc

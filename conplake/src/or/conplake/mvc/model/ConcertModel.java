@@ -147,7 +147,7 @@ public class ConcertModel {
 
 	@RequestMapping(value = "/editSetlist")
 	public String editSetlist(ConcertVO cvo, Model model) {
-		model.addAttribute("concertInfo", cvo);
+		model.addAttribute("concertInfo", cdao.concertInfo(cvo.getCon_num()));
 		model.addAttribute("setlist", sdao.setlist(cvo.getCon_num()));
 		return "concert/editSetlist";
 	}

@@ -33,8 +33,10 @@ input[class="input_check"]:checked + label:after{ content:'\2716'; color:#666;  
 
 .input_setList{ height:25px; border:1px solid #ddd; padding-left:5px; display:inline; cursor: pointer;}
 #input_setListNum{ width:70px; margin-left:10px;}
-#input_setListTitle{ width:430px; margin-left:10px;}
-#input_setListLink{ width:250px; margin-left:10px; }
+/* #input_setListTitle{ width:430px; margin-left:10px;} */
+/* #input_setListLink{ width:250px; margin-left:10px; } */
+input[id*="input_setListTitle"]{ width:430px; margin-left:10px;}
+input[id*="input_setListLink"]{ width:250px; margin-left:10px; }
 
 #searchLink{ height:28px; background-position:center center; float:right; display:inline;}
 #setList_saveBtn { width:100px; height:30px; border-radius:0; float:right; margin-top:15px;}
