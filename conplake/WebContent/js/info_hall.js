@@ -31,12 +31,34 @@ $(document).ready(function(){
 	);
 	
 	
+	$("#input_seatReviewPic").change(
+			function(){
+				var file = $(this).prop("files")[0];
+				blobURL = window.URL.createObjectURL(file);
+				
+				var seatReviewPicWrap = document.getElementById('seatReviewPicWrap'); 
+				var seatReviewPic= document.createElement("img");
+				seatReviewPic.id = "seatReviewPic";
+				
+				seatReviewPicWrap.appendChild(seatReviewPic);
+				
+				$('#seatReviewPic').attr('src', blobURL).css(
+						'maxWidth', '448px').css('maxHeight', '248px');
+			}
+		);
+	
+	
 	
 	
 });
 
 function uploadSeatPic(){
-	$(".modalWindowWrap").css('display','block');
+	$("#modalWindowWrap_seatReview").css('display','block');
+	
+}
+
+function uploadSeatReviewPic(){
+	$("#modalWindowWrap_seat").css('display','block');
 	
 }
 
