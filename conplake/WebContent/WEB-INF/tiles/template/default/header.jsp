@@ -38,7 +38,7 @@
        			</div>
        			<div id="mdBody_left">
        				<ul>
-       					<li><input class="innerButton" id="write_note" type="button" value="쪽지 쓰기"/></li>
+       					<li><input class="innerButton" id="write_note" type="button" value="쪽지 쓰기" onclick="writeNoteForm()"/></li>
        					<li><a href="#" onclick="mdOpen_note_header(${sessionScope.mvo.mem_num}); return false;">받은 쪽지함 <span>(0)</span></a></li>
        					<li><a href="#" onclick="sentNotesList(${sessionScope.mvo.mem_num}); return false;">보낸 쪽지함 <span>(0)</span></a></li>
        				</ul>
