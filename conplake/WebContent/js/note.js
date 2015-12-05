@@ -127,7 +127,6 @@ function replyNote(note_from){
 var address = null;
 
 function addressBook(){
-	alert("주소록");
 	$.ajax({
 		type: "POST",
 		url: "addressBook",
