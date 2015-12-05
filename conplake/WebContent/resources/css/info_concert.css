@@ -82,8 +82,8 @@ td#reviewId p, td#letsGoId p{ width:100px; text-align:left;}
 .input_searchReview { width:200px; height:24px; padding-left:5px; margin-left:10px;}
 .btn_searchReview a{ width:24px; height:24px; display:block; background:url(../img/search.png) no-repeat center center; margin-left:5px; float:right;}
 
-
-.p_review span {width:165px;margin-left:355px;}
+.p_review{ text-align:center;}
+.p_review span {width:165px;}
 .p_review span a {width:15px;  line-height:30px; text-align:center; display:inline-block; font-size:13px; }
 .p_review span a.page {width:30px; font-weight:bold;}
 .p_review span a:hover {color:#C30D22;}

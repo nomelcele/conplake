@@ -120,3 +120,19 @@ input.inputSeat { width:65px; height:24px; margin-left:10px; padding-left:5px;}
 #div_seatPic{ width:900px; height:auto;}
 
 #modalWindow2_seat{ height:450px; margin-top:-225px;}
+
+
+select#reviewSearchCategory{ width:130px; background-position:105px center; float:left;}
+.box_hallReview{ width:100%; height:auto;  margin-bottom:20px;}
+.boxT_hallReview{ width:880px; padding:0 10px; height:25px; line-height:25px; background:#f9f9f9; border-bottom:1px solid #ccc;}
+.boxB_hallReview{ width:880px; padding:10px; height:auto; border-bottom:1px solid #ccc; box-shadow:#f9f9f9 0 1px 2px;}
+.ul_hallReview{ display:inline-block; height:30px; float:right;}
+.ul_hallReview li{ float:left;}
+.span_hallReviewTitle{ }
+.li_hallReviewDate{ text-align:right; }
+.li_hallReviewDate:after{ content:"|"; padding:0 10px;}
+.li_hallReviewId{ text-align:right; }
+
+#content_hallReview{ width:880px; max-height:40px; white-space:pre-wrap; text-overflow:ellipsis; overflow:hidden; word-break:break-all;}
+
+

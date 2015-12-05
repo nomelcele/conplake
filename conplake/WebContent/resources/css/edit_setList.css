@@ -16,7 +16,7 @@ p input#remove_setList:hover {background:#f9f9f9;}
 
 
 .tr_setList th{ height:30px;} 
-.tr_setList td{ height:50px;}
+#table_editSetList .tr_setList td{ height:40px;}
 
 #table_editSetList .tr_setList .setListCheck{ width:50px; text-align:center;}
 #table_editSetList .tr_setList .setListNum{ width:100px;}
@@ -25,16 +25,16 @@ p input#remove_setList:hover {background:#f9f9f9;}
 
 
 .input_check {display:none;}
-.label_check { display:inline-block; background:#fff; width:15px; height:15px; border:1px solid #ccc; border-radius:0; font-weight:100; vertical-align:middle; text-align:center; cursor:pointer; }
-input[class="input_check"]:checked + label:after{ content:'\2716'; }
+.label_check { display:inline-block; background:#fff; width:15px; height:15px; border:1px solid #ccc; border-radius:0; font-weight:100; vertical-align:middle; text-align:center; cursor:pointer; padding:0; margin:0; position:relative;}
+input[class="input_check"]:checked + label:after{ content:'\2716'; color:#666;  position:absolute; left:0; top:0; height:15px; line-height:15px; width:15px; text-align:center;}
 
 
 
 
-.input_setList{ height:25px; border:1px solid #ddd; padding-left:5px; display:inline-block; cursor: pointer;}
+.input_setList{ height:25px; border:1px solid #ddd; padding-left:5px; display:inline; cursor: pointer;}
 #input_setListNum{ width:70px; margin-left:10px;}
 #input_setListTitle{ width:430px; margin-left:10px;}
-#input_setListLink{ width:250px; margin-left:10px;}
+#input_setListLink{ width:250px; margin-left:10px; }
 
-#searchLink{ height:28px; background-position:center center; float:right;}
+#searchLink{ height:28px; background-position:center center; float:right; display:inline;}
 #setList_saveBtn { width:100px; height:30px; border-radius:0; float:right; margin-top:15px;}
