@@ -34,6 +34,7 @@
 	                        </td>
 	                        <td class="setListLink">
 	                        	<input class="input_setList" id="input_setListLink" name="input_setListTitle" type="text" value=""/>
+	                        	<span class="btn_searchReview"><a id="searchLink" href="#"></a></span>
 	                        </td>
 	                    </tr>
                     </c:forEach>
@@ -49,8 +50,9 @@
                         	<input class="input_setList" id="input_setListTitle" name="input_setListTitle" type="text" />
                         </td>
                         <td class="setListLink">
-	                        	<input class="input_setList" id="input_setListLink" name="input_setListTitle" type="text" value=""/>
-	                    </td>
+                        	<input class="input_setList" id="input_setListLink" name="input_setListTitle" type="text" value=""/>
+                        	<span class="btn_searchReview"><a id="searchLink" href="#"></a></span>
+                        </td>
                       
                     </tr>
                     

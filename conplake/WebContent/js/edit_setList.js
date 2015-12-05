@@ -115,6 +115,17 @@ function createRow(){
 	input3.name = "input_setListLink";
 	cell3.appendChild(input3);
 	
+	var spanSearch= document.createElement("span");
+	spanSearch.className="btn_searchReview";
+	
+	var aSearch = document.createElement("a");
+	aSearch.id = "searchLink";
+	aSearch.setAttribute("href", "#");
+	
+	spanSearch.appendChild(aSearch);
+	cell3.appendChild(spanSearch);
+	
+	
 	objRow.style.borderBottom = '1px solid #ccc';
 	cell1.width = '100'; 
     cell1.height = '50';
@@ -122,7 +133,7 @@ function createRow(){
 	cell2.width = '450';
 	cell2.height = '50';
 	
-	cell3.width = '300';
+	cell3.width = '250';
 	cell3.height = '50';
 	
 	cell0.width = '50';

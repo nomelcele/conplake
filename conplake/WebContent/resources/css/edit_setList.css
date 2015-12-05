@@ -10,7 +10,7 @@ p input#remove_setList{ margin-left:15px; background:#fff; border:1px solid #ccc
 p input#remove_setList:hover {background:#f9f9f9;}
 
 #table_setList {}
-.tr_setList { border-bottom:1px solid #ccc;}
+.tr_setList { border-bottom:1px solid #ccc; line-height:36px;}
 
 .tr_setList th {background:#eee;}
 
@@ -34,7 +34,7 @@ input[class="input_check"]:checked + label:after{ content:'\2716'; }
 .input_setList{ height:25px; border:1px solid #ddd; padding-left:5px; display:inline-block; cursor: pointer;}
 #input_setListNum{ width:70px; margin-left:10px;}
 #input_setListTitle{ width:430px; margin-left:10px;}
-#input_setListLink{ width:280px; margin-left:10px;}
+#input_setListLink{ width:250px; margin-left:10px;}
 
-
+#searchLink{ height:28px; background-position:center center; float:right;}
 #setList_saveBtn { width:100px; height:30px; border-radius:0; float:right; margin-top:15px;}
