@@ -54,5 +54,8 @@ public class MemberDao {
 		st.update("mem.changePwd", mvo);
 	}
 	
+	public int findMemnum(String mem_id){
+		return st.selectOne("mem.findMemnum", mem_id);
+	}
 
 }
