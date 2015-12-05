@@ -45,4 +45,9 @@ public class NoteModel {
 		model.addAttribute("inboxSent", "sent");
 		return "note/noteList";
 	}
+	
+	@RequestMapping(value="/noteWriteForm")
+	public String noteWriteForm(){
+		return "note/writeNote";
+	}
 }

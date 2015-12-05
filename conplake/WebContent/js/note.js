@@ -51,7 +51,8 @@ $('document').ready(function(){
 			});
 		}
 	});
-})
+	
+});
 
 
 function removeNote(){ 
@@ -60,4 +61,16 @@ function removeNote(){
 	
 	$("#input_n_check0").prop("checked",false);  
 
+}
+
+function writeNoteForm(){
+		alert("쪽지 쓰기");
+		// 쪽지 쓰기 페이지 이동
+		$.ajax({
+			type: "POST",
+			url: "writeNoteForm",
+			success: function(result){
+				$("#mdBody_right").html(result);
+			}
+		});
 }
