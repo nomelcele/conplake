@@ -7,16 +7,18 @@
        			</div>
        			<div class="mdBody">
        				<ul class="ul_commList">
-            			<li>
-            				<div class="mdImgWrap"><img src="resources/css/profile_img_default.png" width="50" height="50"/></div>
-            				<div class="mdTextWrap">
-            					<p id="p_friend">
-            						<strong>asdfasdf<span> (ddaf)</span></strong>
-         							<input class="innerButton button" id="mdDelete" type="button" value="삭제" onclick=""/>
-         							<input class="innerButton button" id="friendNoteBtn" type="button" value="&#9993;" onclick=""/>
-            					</p>
-            				</div>
-            			</li>
+       					<c:forEach var="friends" items="${friends}">
+	            			<li>
+	            				<div class="mdImgWrap"><img src="resources/memberImg/${friends.mem_img}" width="50" height="50"/></div>
+	            				<div class="mdTextWrap">
+	            					<p id="p_friend">
+	            						<a href="myPage?mem_num=${friends.mem_num}"><strong>${friends.mem_name}<span> (${friends.mem_id})</span></strong></a>
+	         							<input class="innerButton button" id="mdDelete" type="button" value="삭제" onclick="deleteFriend(${sessionScope.mvo.mem_num},${friends.mem_num})"/>
+	         							<input class="innerButton button" id="friendNoteBtn" type="button" value="&#9993;" onclick=""/>
+	            					</p>
+	            				</div>
+	            			</li>
+            			</c:forEach>
            			</ul>
        			</div>
        </div>    

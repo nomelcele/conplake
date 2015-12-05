@@ -10,6 +10,7 @@ import or.conplake.mvc.dao.UserinteractionDao;
 import or.conplake.vo.ArtistVO;
 import or.conplake.vo.MemberVO;
 import or.conplake.vo.PostVO;
+import or.conplake.vo.UserinteractionVO;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -48,5 +49,12 @@ public class MyPageModel {
 		model.addAttribute("myReviews", pdao.myReviews(mem_num)); // 累己 饶扁
 		
 		return "myPage.myPage";
+	}
+	
+	@RequestMapping(value="/deleteFriend")
+	public String deleteFriend(UserinteractionVO uivo){
+		// 模备 昏力
+		udao.deleteFriend(uivo);
+		return "redirect:/myFriends?mem_num="+uivo.getUi_member();
 	}
 }

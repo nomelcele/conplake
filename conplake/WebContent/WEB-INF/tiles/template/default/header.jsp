@@ -20,7 +20,7 @@
         <ul class="pop" id="pop_myMenu">
         	<li><a href="#">개인정보수정</a></li>
         	<li id="mypage"><a href="#">마이페이지</a></li>
-        	<li><a href="#" onclick="mdOpen_fri_header(); return false;">친구목록</a></li>
+        	<li><a href="#" onclick="mdOpen_fri_header(${sessionScope.mvo.mem_num}); return false;">친구목록</a></li>
         	<li><a href="#" onclick="mdOpen_note_header(); return false;">쪽지</a></li>
         	<li id="logout"><a href="logout">로그아웃</a></li>
         </ul>
@@ -56,66 +56,6 @@
     </div>
     <!-- 친구 목록 (S) -->
     <div id="modalWindowWrap_fri_header">
-       		<div id="modalWindow_fri">	
-       			<div class="mdHeader">
-       				<p>NOTE<input class="mdClose" type="button" value="X" onclick="mdClose_fri_header()"/></p>
-       			</div>
-       			<div class="mdBody" id="mdBody_fri">
-       				<ul class="ul_commList" id="ul_fri">
-            			<li>
-            				<div class="mdImgWrap"><img src="resources/css/profile_img_default.png" width="50" height="50"/></div>
-            				<div class="mdTextWrap">
-            					<p id="p_friend">
-            						<strong>asdfasdf<span> (ddaf)</span></strong>
-         							<input class="innerButton button" id="mdDelete" type="button" value="삭제" onclick=""/>
-         							<input class="innerButton button" id="friendNoteBtn" type="button" value="&#9993;" onclick=""/>
-            					</p>
-            				</div>
-            			</li>
-            			
-            			<li>
-            				<div class="mdImgWrap"><img src="resources/css/profile_img_default.png" width="50" height="50"/></div>
-            				<div class="mdTextWrap">
-            					<p id="p_friend">
-            						<strong>asdfasdf<span> (ddaf)</span></strong>
-         							<input class="innerButton button" id="mdDelete" type="button" value="삭제" onclick=""/>
-         							<input class="innerButton button" id="friendNoteBtn" type="button" value="&#9993;" onclick=""/>
-            					</p>
-            				</div>
-            			</li>
-            			
-            			<li>
-            				<div class="mdImgWrap"><img src="resources/css/profile_img_default.png" width="50" height="50"/></div>
-            				<div class="mdTextWrap">
-            					<p id="p_friend">
-            						<strong>asdfasdf<span> (ddaf)</span></strong>
-         							<input class="innerButton button" id="mdDelete" type="button" value="삭제" onclick=""/>
-         							<input class="innerButton button" id="friendNoteBtn" type="button" value="&#9993;" onclick=""/>
-            					</p>
-            				</div>
-            			</li>
-            			
-            			<li>
-            				<div class="mdImgWrap"><img src="resources/css/profile_img_default.png" width="50" height="50"/></div>
-            				<div class="mdTextWrap">
-            					<p id="p_friend">
-            						<strong>asdfasdf<span> (ddaf)</span></strong>
-         							<input class="innerButton button" id="mdDelete" type="button" value="삭제" onclick=""/>
-         							<input class="innerButton button" id="friendNoteBtn" type="button" value="&#9993;" onclick=""/>
-            					</p>
-            				</div>
-            			</li>
-            			
-            			
-           			</ul>
-	            	
-	                
-       			</div>
-            			
-            			
-            		
-       </div>
-        
     </div>
     
     	

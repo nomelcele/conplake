@@ -35,7 +35,7 @@ $(function(){
 			},
 			success: function(result){
 				alert("인증 번호를 메일로 전송하였습니다.");
-				$("#mdBody").html(result);
+				$(".mdBody").html(result);
 				//findPwd
 			},
 			error: function(thrownError){

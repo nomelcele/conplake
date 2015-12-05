@@ -48,3 +48,18 @@ $( document ).ready(function() {
 
 
 });
+
+function deleteFriend(ui_member,ui_friend){
+	// 친구 삭제
+	$.ajax({
+		type: "POST",
+		url: "deleteFriend",
+		data: {
+			ui_member: ui_member,
+			ui_friend: ui_friend
+		},
+		success: function(result){
+			$("#modalWindowWrap_fri_header").html(result);
+		}
+	});
+}

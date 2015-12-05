@@ -10,6 +10,9 @@
   		select mem_num, mem_name, mem_id, mem_img from userinteraction, member 
   		where ui_member=#{mem_num} and ui_friend=mem_num order by mem_name
     </select>
+    <delete id="deleteFriend" parameterType="uivo">
+    	delete from userinteraction where ui_member=#{ui_member} and ui_friend=#{ui_friend}
+    </delete>
     <select id="likedArtists" parameterType="int" resultType="avo">
  		select art_num, art_name, art_img from artist, userinteraction 
  		where ui_member=#{mem_num} and ui_type='liked_artist' 

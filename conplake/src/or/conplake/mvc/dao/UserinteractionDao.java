@@ -26,6 +26,11 @@ public class UserinteractionDao {
 		return st.selectList("ui.myFriends", mem_num);
 	}
 	
+	// 친구 삭제
+	public void deleteFriend(UserinteractionVO uivo){
+		st.delete("ui.deleteFriend", uivo);
+	}
+	
 	// 관심 아티스트 목록
 	public List<ArtistVO> likedArtists(int mem_num){
 		return st.selectList("ui.likedArtists", mem_num);
