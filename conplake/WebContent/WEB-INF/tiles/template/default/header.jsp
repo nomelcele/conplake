@@ -44,25 +44,9 @@
        				</ul>
        			</div>
        			<div id="mdBody_right">
-       				<table class="table_list" id="table_readNote">
-       					<tr class="tr_list">
-       						<td class="td_list" id="td_infoNote">
-       							<p>보낸 사람: <span>이유라</span></p>
-       							<p>보낸 날짜: <span>2012.05.05</span></p>
-       						</td>
-       					</tr>
-       					<tr class="tr_list">
-       						<td class="td_list" id="td_contentNote">
-       							쪽지내용ㅇ
-       						</td>
-       					</tr>
-       					
-       					<tr class="tr_list">
-       						<td class="td_list" id="td_buttonNote">
-       							<input id="replyNote" class="innerButton button" type="button" value="답장" onclick=""/>
-       						</td>
-       					</tr>
-       				</table>
+       				
+       				
+       				
        			</div>
             			
             			
@@ -76,8 +60,8 @@
        			<div class="mdHeader">
        				<p>NOTE<input class="mdClose" type="button" value="X" onclick="mdClose_fri_header()"/></p>
        			</div>
-       			<div class="mdBody">
-       				<ul class="ul_commList">
+       			<div class="mdBody" id="mdBody_fri">
+       				<ul class="ul_commList" id="ul_fri">
             			<li>
             				<div class="mdImgWrap"><img src="resources/css/profile_img_default.png" width="50" height="50"/></div>
             				<div class="mdTextWrap">

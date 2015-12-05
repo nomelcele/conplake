@@ -55,16 +55,16 @@
 	
 	<div class="myPageContents" id="myPageContent3">
 		<p class="p_myPageContents" id="p_myPageContent3">마이 리뷰</p>
-		<table id="table_review">
-	    	<tr class="tr_review">
-	        	<th class="reviewNum"><p>번호</p></th>
+		<table class="table_list">
+	    	<tr class="tr_list">
+	        	<th class="reviewNum" id="myReviewNum"><p>번호</p></th>
 	        	<th id="myReviewConTitle"><p>공연 제목</p></th>
 	            <th class="reviewTitle" id="myReviewTitle"><p>제목</p></th>
 	            <th class="reviewDate" id="myReviewDate"><p>날짜</p></th>
 	        </tr>
 	        <c:forEach var="myReviews" items="${myReviews}">
-		        <tr class="tr_review">
-		        	<td class="reviewNum"><p>${myReviews.post_num}</p></td>
+		        <tr class="tr_list">
+		        	<td class="reviewNum" id="myReviewNum"><p>${myReviews.post_num}</p></td>
 		        	<td id="myReviewConTitle"><p><a href="concertInfo?con_num=${myReviews.post_concert}">${myReviews.concertname}</a></p></td>
 		            <td class="reviewTitle" id="myReviewTitle"><p><a href="readReview?post_num=${myReviews.post_num}">${myReviews.post_title}</a></p></td>
 		            <td class="reviewDate" id="myReviewDate"><p>${myReviews.post_date}</p></td>

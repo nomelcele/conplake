@@ -40,3 +40,21 @@ border-right:1px solid #ccc; box-shadow:#eee 2px 0 2px 0;}
 #td_buttonNote{ height:43px; border-bottom:none;}
 
 #replyNote{ margin-right:10px;}
+
+
+
+
+
+
+
+
+
+
+
+#mdBody_writeNote {padding:10px 20px;}
+#mdBody_writeNote p{ height:60px; line-height:60px;}
+
+#toWriteNote{ width:543px;}
+#contentWriteNote{ width:585px; height:250px; padding:10px; margin-bottom:10px;}
+
+#noWriteNote{ margin-right:10px;}
