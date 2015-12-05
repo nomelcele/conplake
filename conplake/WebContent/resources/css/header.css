@@ -25,3 +25,12 @@ color:#fff; background:#333; outline:1px solid #999; outline-offset:-3px; border
 .pop li a:hover{ color:#fff;}
 
 #pop_addMenu{ height:52px; right:235px;}
+
+.table_list{ table-layout:fixed;}
+
+.tr_list{ border-bottom:1px solid #ccc;}
+
+.tr_list th{ background:#eee; height:30px;}
+.tr_list td{ height:30px;}
+
+.table_list p{ text-align:center; white-space:nowrap; text-overflow:ellipsis; overflow:hidden;}
