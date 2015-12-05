@@ -20,7 +20,7 @@ public class NoteModel {
 	public String writeNote(NoteVO nvo){
 		// 쪽지 쓰기
 		ndao.writeNote(nvo);
-		return "";
+		return "redirect:/inbox?mem_num="+nvo.getNote_from();
 	}
 	
 	@RequestMapping(value="/inbox")
@@ -35,7 +35,7 @@ public class NoteModel {
 	public String readNote(int note_num, Model model){
 		// 쪽지 읽기
 		model.addAttribute("note", ndao.readNote(note_num));
-		return "";
+		return "note/readNote";
 	}
 	
 	@RequestMapping(value="/sent")

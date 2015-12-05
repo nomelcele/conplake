@@ -5,13 +5,13 @@
     <table class="table_list" id="table_readNote">
 		<tr class="tr_list">
 			<td class="td_list" id="td_infoNote">
-				<p>보낸 사람: <span>이유라</span></p>
-				<p>보낸 날짜: <span>2012.05.05</span></p>
+				<p>보낸 사람: <span>${note.fromname}</span></p>
+				<p>보낸 날짜: <span>${note.note_date}</span></p>
 			</td>
 		</tr>
 		<tr class="tr_list">
 			<td class="td_list" id="td_contentNote">
-				쪽지내용ㅇ
+				${note.note_cont}
 			</td>
 		</tr>
 		

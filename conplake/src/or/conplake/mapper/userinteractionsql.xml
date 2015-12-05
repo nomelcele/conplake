@@ -41,4 +41,7 @@
     <select id="isLikedArtist" parameterType="uivo" resultType="Integer">
     	select ui_artist from userinteraction where ui_artist=#{ui_artist} and ui_member=#{ui_member}
     </select>
+    <select id="isFriend" parameterType="uivo" resultType="Integer">
+    	select ui_friend from userinteraction where ui_friend=#{ui_friend} and ui_member=#{ui_member}
+    </select>
   </mapper>

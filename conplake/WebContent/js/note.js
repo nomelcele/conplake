@@ -64,7 +64,6 @@ function removeNote(){
 }
 
 function writeNoteForm(){
-		alert("쪽지 쓰기");
 		// 쪽지 쓰기 페이지 이동
 		$.ajax({
 			type: "POST",
@@ -73,4 +72,20 @@ function writeNoteForm(){
 				$("#mdBody_right").html(result);
 			}
 		});
+}
+
+function writeNote(mem_num){
+	// 쪽지 쓰기
+	$.ajax({
+		type: "POST",
+		url: "writeNote",
+		data: {
+			note_from: mem_num,
+			note_to: $("#toWriteNote").val(),
+			note_cont: $("#contentWriteNote").val()
+		},
+		success: function(result){
+			$("#mdBody_right").html(result);
+		}
+	});
 }

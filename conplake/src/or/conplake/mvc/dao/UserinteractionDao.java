@@ -78,4 +78,14 @@ public class UserinteractionDao {
 			return "n";
 		}
 	}
+	
+	// 模备 咯何 犬牢
+	public String isFriend(UserinteractionVO uivo){
+		if(st.selectOne("ui.isFriend", uivo) != null){
+			// 模备肺 殿废等 蜡历老 版快
+			return "y";
+		} else {
+			return "n";
+		}
+	}
 }

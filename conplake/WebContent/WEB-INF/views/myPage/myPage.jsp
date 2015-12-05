@@ -2,7 +2,12 @@
     pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>  
     <h1>USER MY PAGE
-    	<input id="addFriend" class="innerButton button" type="button" value="친구 추가" onclick=""/>
+    	<c:if test="${isFriend eq 'n'}">
+    		<input id="addFriend" class="innerButton button" type="button" value="친구 추가" onclick="addFriend(${sessionScope.mvo.mem_num},${myProfile.mem_num})"/>
+    	</c:if>
+    	<c:if test="${isFriend eq 'y'}">
+    		<input id="addFriend" class="innerButton button" type="button" value="친구 해제" onclick="deleteFriend(${sessionScope.mvo.mem_num},${myProfile.mem_num},'myPage')"/>
+    	</c:if>
     </h1>
     
 	<div id="userProfile">

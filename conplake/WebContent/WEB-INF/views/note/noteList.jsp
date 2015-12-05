@@ -31,7 +31,7 @@
 					<a href="#">${noteList.toname}</a>
 				</c:if>
 	        </p></td>
-	        <td id="noteTitle"><p>${noteList.note_cont}</p></td>
+	        <td id="noteTitle"><p><a href="#" onclick="readNote(${noteList.note_num}); return false;">${noteList.note_cont}</a></p></td>
 	        <td id="noteDate"><p>${noteList.note_date}</p></td>
 	    </tr>
 	</c:forEach>    
