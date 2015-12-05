@@ -21,7 +21,7 @@
         	<li><a href="#">개인정보수정</a></li>
         	<li id="mypage"><a href="#">마이페이지</a></li>
         	<li><a href="#" onclick="mdOpen_fri_header(${sessionScope.mvo.mem_num}); return false;">친구목록</a></li>
-        	<li><a href="#" onclick="mdOpen_note_header(); return false;">쪽지</a></li>
+        	<li><a href="#" onclick="mdOpen_note_header(${sessionScope.mvo.mem_num}); return false;">쪽지</a></li>
         	<li id="logout"><a href="logout">로그아웃</a></li>
         </ul>
         
@@ -39,8 +39,8 @@
        			<div id="mdBody_left">
        				<ul>
        					<li><input class="innerButton" id="write_note" type="button" value="쪽지 쓰기"/></li>
-       					<li><a href="#">받은 쪽지함 <span>(0)</span></a></li>
-       					<li><a href="#">보낸 쪽지함 <span>(0)</span></a></li>
+       					<li><a href="#" onclick="mdOpen_note_header(${sessionScope.mvo.mem_num}); return false;">받은 쪽지함 <span>(0)</span></a></li>
+       					<li><a href="#" onclick="sentNotesList(${sessionScope.mvo.mem_num}); return false;">보낸 쪽지함 <span>(0)</span></a></li>
        				</ul>
        			</div>
        			<div id="mdBody_right">

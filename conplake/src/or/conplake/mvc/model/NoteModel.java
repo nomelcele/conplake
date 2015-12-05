@@ -28,7 +28,7 @@ public class NoteModel {
 		// 받은 쪽지 리스트
 		model.addAttribute("noteList", ndao.inbox(mem_num));
 		model.addAttribute("inboxSent", "inbox");
-		return "";
+		return "note/noteList";
 	}
 	
 	@RequestMapping(value="/readNote")
@@ -43,6 +43,6 @@ public class NoteModel {
 		// 보낸 쪽지 리스트
 		model.addAttribute("noteList", ndao.sent(mem_num));
 		model.addAttribute("inboxSent", "sent");
-		return "";
+		return "note/noteList";
 	}
 }

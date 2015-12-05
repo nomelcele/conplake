@@ -1,4 +1,38 @@
 
+function mdOpen_note_header(mem_num){
+	// 쪽지창 띄우기(초기 화면-받은 쪽지함)
+	$.ajax({
+		type: "POST",
+		url: "inbox",
+		data: {
+			mem_num: mem_num
+		},
+		success: function(result){
+			$("#mdBody_right").html(result);
+			$("#modalWindowWrap_note_header").css('display','block');
+		}
+	});
+}
+
+function mdClose_note_header(){
+	$("#modalWindowWrap_note_header").css('display','none');
+}
+
+function sentNotesList(mem_num){
+	// 쪽지창 띄우기(초기 화면-받은 쪽지함)
+	$.ajax({
+		type: "POST",
+		url: "sent",
+		data: {
+			mem_num: mem_num
+		},
+		success: function(result){
+			$("#mdBody_right").html(result);
+//			$("#modalWindowWrap_note_header").css('display','block');
+		}
+	});
+	
+}
 
 
 $('document').ready(function(){

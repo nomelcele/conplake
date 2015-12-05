@@ -330,3 +330,11 @@ create table sightimg(
   insert into userinteraction values(userinteraction_seq.nextVal,94,'add_friend',null,null,21);
   insert into userinteraction values(userinteraction_seq.nextVal,94,'add_friend',null,null,95);
   insert into userinteraction values(userinteraction_seq.nextVal,94,'add_friend',null,null,96);
+
+  insert into note values(note_seq.nextVal,'test',61,94,sysdate,1,1);
+  insert into note values(note_seq.nextVal,'test2',42,94,sysdate,1,1);
+  insert into note values(note_seq.nextVal,'test3',21,94,sysdate,1,1);
+  insert into note values(note_seq.nextVal,'test4',61,94,sysdate,1,1);
+  insert into note values(note_seq.nextVal,'test5',94,21,sysdate,1,1);
+  insert into note values(note_seq.nextVal,'test6',94,95,sysdate,1,1);
+  

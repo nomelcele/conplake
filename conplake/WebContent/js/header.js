@@ -1,12 +1,4 @@
 
-function mdOpen_note_header(){
-	$("#modalWindowWrap_note_header").css('display','block');
-}
-
-function mdClose_note_header(){
-	$("#modalWindowWrap_note_header").css('display','none');
-}
-
 function mdOpen_fri_header(mem_num){
 	// 친구 목록 띄우기
 	$.ajax({
