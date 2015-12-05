@@ -46,8 +46,8 @@ public class NoteModel {
 		return "note/noteList";
 	}
 	
-	@RequestMapping(value="/noteWriteForm")
-	public String noteWriteForm(){
+	@RequestMapping(value="/writeNoteForm")
+	public String writeNoteForm(){
 		return "note/writeNote";
 	}
 }
