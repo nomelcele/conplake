@@ -18,9 +18,10 @@ p input#remove_setList:hover {background:#f9f9f9;}
 .tr_setList th{ height:30px;} 
 .tr_setList td{ height:50px;}
 
-.setListCheck{ width:50px; text-align:center;}
-.setListNum{ width:100px;}
-.setListTitle{ width:750px;}
+#table_editSetList .tr_setList .setListCheck{ width:50px; text-align:center;}
+#table_editSetList .tr_setList .setListNum{ width:100px;}
+#table_editSetList .tr_setList .setListTitle{ width:450px;}
+#table_editSetList .tr_setList .setListLink{ width:300px;}
 
 
 .input_check {display:none;}
@@ -32,7 +33,8 @@ input[class="input_check"]:checked + label:after{ content:'\2716'; }
 
 .input_setList{ height:25px; border:1px solid #ddd; padding-left:5px; display:inline-block; cursor: pointer;}
 #input_setListNum{ width:70px; margin-left:10px;}
-#input_setListTitle{ width:720px; margin-left:10px;}
+#input_setListTitle{ width:430px; margin-left:10px;}
+#input_setListLink{ width:280px; margin-left:10px;}
 
 
 #setList_saveBtn { width:100px; height:30px; border-radius:0; float:right; margin-top:15px;}

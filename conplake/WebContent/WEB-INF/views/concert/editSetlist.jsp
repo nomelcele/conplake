@@ -18,6 +18,7 @@
                         </th>
                         <th class="setListNum">순서</th>
                         <th class="setListTitle">곡 제목</th>
+                        <th class="setListLink">링크 주소</th>
                     </tr>
                     <c:forEach var="setlist" items="${setlist}">
 	                    <tr class="tr_setList">
@@ -30,6 +31,9 @@
 	                        </td>
 	                        <td class="setListTitle">
 	                        	<input class="input_setList" id="input_setListTitle" name="input_setListTitle" type="text" value="${setlist.song_title}"/>
+	                        </td>
+	                        <td class="setListLink">
+	                        	<input class="input_setList" id="input_setListLink" name="input_setListTitle" type="text" value=""/>
 	                        </td>
 	                    </tr>
                     </c:forEach>
@@ -44,6 +48,9 @@
                         <td class="setListTitle">
                         	<input class="input_setList" id="input_setListTitle" name="input_setListTitle" type="text" />
                         </td>
+                        <td class="setListLink">
+	                        	<input class="input_setList" id="input_setListLink" name="input_setListTitle" type="text" value=""/>
+	                    </td>
                       
                     </tr>
                     

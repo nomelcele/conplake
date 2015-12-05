@@ -75,7 +75,7 @@ function createRow(){
 	var cell0 = objRow.insertCell(0);
 	var cell1 = objRow.insertCell(1);
 	var cell2 = objRow.insertCell(2);
-	
+	var cell3 = objRow.insertCell(3);
 	
 	
 	var input0= document.createElement("INPUT");
@@ -108,14 +108,22 @@ function createRow(){
 	input2.name = "input_setListTitle";
 	cell2.appendChild(input2);
 	
-	
+	var input3= document.createElement("INPUT");
+	input3.setAttribute("type", "text");
+	input3.className = "input_setList";
+	input3.id = "input_setListLink";
+	input3.name = "input_setListLink";
+	cell3.appendChild(input3);
 	
 	objRow.style.borderBottom = '1px solid #ccc';
 	cell1.width = '100'; 
     cell1.height = '50';
 	
-	cell2.width = '750';
+	cell2.width = '450';
 	cell2.height = '50';
+	
+	cell3.width = '300';
+	cell3.height = '50';
 	
 	cell0.width = '50';
     cell0.align = 'center'; 
