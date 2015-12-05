@@ -52,7 +52,15 @@
             </div>
             
             <div class="contentView" id="hallSeat">
-            	<img src="${challInfo.chall_seatsimg}" />
+            	
+            	<div id="div_seatPic">
+            		<img src="${challInfo.chall_seatsimg}" />
+            
+            	</div>
+            	<p>
+            		<input id="btn_Hallseat" class="rButton" type="button" onclick="uploadSeatReviewPic()" value="사진 등록"/>
+            	</p>
+            	
             </div>
             
             <div class="contentView" id="seatReview">
@@ -147,8 +155,37 @@
                 </p>
             </div>
             
-            <div class="modalWindowWrap">
-            		<div id="modalWindow2">	
+            
+            
+            <!-- 좌석표 사진등록 모달 -->
+            <div class="modalWindowWrap" id="modalWindowWrap_seat">
+            		<div class="modalWindow2" id="modalWindow2_seat">	
+            			<div class="mdHeader">
+            				<p>UPLOAD PICTURE<input class="mdClose" type="button" value="X" onclick="mdClose()"/></p>
+            			</div>
+            			
+            			<div id="mdBody2">
+            				<p class="rinputBox" id="p_seatPic">
+							    <label id="label_seatPic">시야 사진</label>
+							    <label class="inputLabel rInputStyle a_width input_fileImgBtn" id="">Browse..
+							        <input type="file" name="sightimgFile" id="input_seatPic" class="rInputStyle input_fileImg"/>
+							    </label>
+							    
+							    <input type="text" class="rInputStyle a_width input_fileImgName" id="input_seatPicName" readonly/> 
+							</p>
+							
+							<div id="seatPicWrap"></div>
+							<input class="innerButton" id="submit_seatPic" type="submit" value="올리기"/>
+            			</div>
+
+            		</div>
+            	</div>
+            
+            
+            
+            <!-- 좌석별 시야 사진 등록 모달 -->
+            <div class="modalWindowWrap" id="modalWindowWrap_seatReview">
+            		<div class="modalWindow2">	
             			<div class="mdHeader">
             				<p>UPLOAD PICTURE<input class="mdClose" type="button" value="X" onclick="mdClose()"/></p>
             			</div>
@@ -176,16 +213,16 @@
 	            			</div>
 	            			<div id="mdBody2">
 	            				<p class="rinputBox" id="p_seatPic">
-								    <label id="label_seatPic">시야 사진</label>
+								    <label id="label_seatReviewPic">시야 사진</label>
 								    <label class="inputLabel rInputStyle a_width input_fileImgBtn" id="">Browse..
-								        <input type="file" name="sightimgFile" id="input_seatPic" class="rInputStyle input_fileImg"/>
+								        <input type="file" name="sightimgFile" id="input_seatReviewPic" class="rInputStyle input_fileImg"/>
 								    </label>
 								    
-								    <input type="text" class="rInputStyle a_width input_fileImgName" id="input_seatPicName" readonly/> 
+								    <input type="text" class="rInputStyle a_width input_fileImgName" id="input_seatReviewPicName" readonly/> 
 								</p>
 								
-								<div id="seatPicWrap"></div>
-								<input class="innerButton" id="submit_seatPic" type="submit" value="올리기"/>
+								<div id="seatReviewPicWrap"></div>
+								<input class="innerButton" id="submit_seatReviewPic" type="submit" value="올리기"/>
 	            			</div>
             			</form>
 

@@ -1,7 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>  
-    <h1>MY PAGE</h1>
+    <h1>USER MY PAGE
+    	<input id="addFriend" class="innerButton button" type="button" value="친구 추가" onclick=""/>
+    </h1>
+    
 	<div id="userProfile">
 		<div id="profile_img">
 	    	<img src="resources/memberImg/${myProfile.mem_img}" width="150" height="150" />
