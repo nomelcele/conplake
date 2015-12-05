@@ -15,7 +15,7 @@
   			and si_floor=#{si_floor}
   			</if>
   			<if test="si_standseat != null">
-  			and si_standseat='#{si_standseat}'
+  			and si_standseat=#{si_standseat}
   			</if>
   	</select>
   </mapper>

@@ -8,7 +8,7 @@
   	'review',#{post_seat},#{post_sightsound},#{post_facility},#{post_perform},null,#{post_concertdate})
   </insert>
   <select id="reviewList" parameterType="map" resultType="pvo">
-  	select p.post_num, p.post_title, m.mem_name authorname, p.post_date, p.post_hit 
+  	select p.post_num, p.post_title, p.post_author, m.mem_name authorname, p.post_date, p.post_hit 
   	from post p, member m where p.post_author=m.mem_num and p.post_concert=#{con_num} 
   		<if test="post_title != null">
   			and p.post_title like '%'||#{post_title}||'%'

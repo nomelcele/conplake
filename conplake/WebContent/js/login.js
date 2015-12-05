@@ -35,7 +35,8 @@ $(function(){
 			},
 			success: function(result){
 				alert("인증 번호를 메일로 전송하였습니다.");
-				$("#findPwd").html(result);
+				$("#modalWindow_pwd").html(result);
+				//findPwd
 			},
 			error: function(thrownError){
 				alert("Error");
@@ -94,6 +95,7 @@ $(function(){
 				window.open("about:blank","_self").close();
 				// 모달 종료
 //				$('#findPW').modal('toggle');
+				$(".modalWindowWrap").css('display','none');
 			}
 		});
 	});
