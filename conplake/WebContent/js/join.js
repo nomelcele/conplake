@@ -137,8 +137,10 @@ $(function(){
 			$('#userPwd2').val("");
 			$('#userPwd').focus();
 			$('#inputBox_pwCheck').html('비밀번호가 일치하지 않습니다.');
+			$('#inputBox_pwCheck').css('color','red');
 		} else {
 			$('#inputBox_pwCheck').html('비밀번호가 일치합니다.');
+			$('#inputBox_pwCheck').css('color','blue');
 			setTimeout(function(){
 				$('#inputBox_pwCheck').html('');
 			}, 2000);
