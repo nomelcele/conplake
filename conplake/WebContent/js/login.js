@@ -93,7 +93,6 @@ $(function(){
 			success: function(result){
 				alert("비밀번호가 변경되었습니다.");
 				// 모달 종료
-//				$('#findPW').modal('toggle');
 				$(".modalWindowWrap").css('display','none');
 			}
 		});
