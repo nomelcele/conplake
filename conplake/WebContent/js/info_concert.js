@@ -186,3 +186,9 @@ function deleteTlComm(num, origin, type){
 function mdOpen_letsGo(){
 	$("#modalWindowWrap_letsGo").css('display', 'block');	
 }
+
+function goMyPage(mem_num){
+	// 마이 페이지 이동
+	var formId = "#myPageForm"+mem_num;
+	$(formId).submit();
+}

@@ -92,16 +92,17 @@
                         <th id="reviewHits"><p>조회수</p></th>
                     </tr>
                     <c:forEach var="reviewList" items="${reviewList}">
+                    	<form id="myPageForm${reviewList.post_author}" action="myPage" method="post">
+                    		<input type="hidden" name="mem_num" value="${reviewList.post_author}">
+                    	</form>
 	                    <tr class="tr_list">
 	                        <td id="reviewNum"><p>${reviewList.post_num}</p></td>
 	                        <td id="reviewTitle"><p><a href="readReview?post_num=${reviewList.post_num}">${reviewList.post_title}</a></p></td>
-	                        <td id="reviewID"><p>${reviewList.authorname}</p></td>
+	                        <td id="reviewID"><p><a href="myPage?mem_num=${reviewList.post_author}">${reviewList.authorname}</a></p></td>
 	                        <td id="reviewDate"><p>${reviewList.post_date}</p></td>
 	                        <td id="reviewHits"><p>${reviewList.post_hit}</p></td>
 	                    </tr>
                     </c:forEach>
-
-                                      
                 </Table>
                 <p class="p_review">
                 	<span>
