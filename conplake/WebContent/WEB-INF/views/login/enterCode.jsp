@@ -25,7 +25,7 @@
 					</div>
 
 					<div>
-						<button type="button" data-dismiss="modal">닫기</button>
+<!-- 						<button type="button" data-dismiss="modal">닫기</button> -->
 						<button type="button" id="changePwdBtn" disabled="disabled">변경</button>
 					</div>
 				</div>
