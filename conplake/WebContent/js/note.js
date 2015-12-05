@@ -137,7 +137,7 @@ function addressBook(){
 			var txt = "<table>";
 			for(var i=0; i<address.length; i++){
 				console.log(address[i]);
-				txt += "<tr style='background:white;'><td style='cursor:pointer;' onmouseover='this.style.background=\"silver\"' onmouseout='this.style.background=\"white\"' onclick='selectMember("+i+")'>"+address[i]+"</td></tr>";
+				txt += "<tr style='background:white;'><td style='cursor:pointer;' onmouseover='this.style.background=\"#eee\"' onmouseout='this.style.background=\"white\"' onclick='selectMember("+i+")'>"+address[i]+"</td></tr>";
 			}
 			txt += "</table>";
 			$("#addressView").html(txt);
