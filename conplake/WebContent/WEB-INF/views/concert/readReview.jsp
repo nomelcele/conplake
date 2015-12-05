@@ -55,9 +55,9 @@
                     	
                     </table>
                     
-                    <p id="p_reply">REPLY</p>
+                    <p class="p_reply">REPLY</p>
                     
-                    <table class="table_reply" id="table_replyLetsGo"> <!-- 유저 댓글 보이는 목록 -->                        
+                    <table class="table_reply"> <!-- 유저 댓글 보이는 목록 -->                        
                         <c:forEach var="commList" items="${commList}">
 	                        <tr class="tr_readReply tr_reply" > <!-- 유저 댓글 2 -->
 	                            <td class="td_readReply" id="td_replyId" ><img src="resources/memberImg/${commList.authorimg}" width="60" height="60"/></td>
@@ -78,7 +78,7 @@
                     <form id="writeReviewCommForm" action="writePostComm" method="post">
                     	<input type="hidden" id="comm_author" name="comm_author" value="${sessionScope.mvo.mem_num}">
                     	<input type="hidden" id="comm_post" name="comm_post" value="${reviewDetail.post_num}">
-	                    <div id="div_inputReply"> <!-- 고정부분 댓글 입력 -->
+	                    <div class="div_inputReply"> <!-- 고정부분 댓글 입력 -->
 	                            	<textarea name="comm_cont" id="comm_cont" class="inputStyle input_search" placeholder="댓글 내용을 입력하세요." ></textarea>
 	                            	<input id="writeReviewCommBtn" class="innerButton button" type="button" value="입력"/>
 	                   </div>
