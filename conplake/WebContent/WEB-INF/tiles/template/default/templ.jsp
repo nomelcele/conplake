@@ -49,7 +49,7 @@
 <script src="js/tab.js"></script>
 <script src="js/header.js"></script>
 <script src="js/note.js"></script>
-
+<script src="js/addConcertInfo.js"></script>
 <script src="js/info_artist.js"></script>
 <script src="js/jquery.ui.draggable.js"></script>
 <script src="js/jquery-ui.js"></script>

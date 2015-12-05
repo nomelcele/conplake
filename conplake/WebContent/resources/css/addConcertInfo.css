@@ -13,3 +13,22 @@
 
 
 #input_concertProfile{ width:403px; height:290px; border-radius:2px;}
+
+
+#addConInfo{ width:300px;}
+
+#span_addSearch{ float:right;}
+a.addSearch{float:right; height:36px; background-position:center center;}
+
+.mdBody_searchWrap{ padding:15px 20px; border-bottom:1px solid #ccc; box-shadow:#eee 0 2px 2px;}
+.mdBody_searchWrap input{ margin-left:10px;}
+.s_width{ width:270px;}
+
+
+.mdBody_searchResult{ width:100%; height:432px;}
+#ul_searchResult{ height:422px; padding-top:10px;}
+#ul_searchResult li{ height:50px; line-height:50px;}
+#ul_searchResult li p{ padding:0 10px;}
+#ul_searchResult li input{ margin-top:15px;}
+
+#mdSearchSelect{ width:40px; height:20px; float:right; }

@@ -5,7 +5,7 @@ $( document ).ready(function() {
 	
 	//----------------------------tab3-----------------------------//
 	
-	$("#btn_searchReview").click(function(){
+	$(".btn_searchReview").click(function(){
 		// 리뷰 검색
 		var searchOption = $("#reviewSearchCategory").val();
 		switch(searchOption){

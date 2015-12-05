@@ -75,7 +75,7 @@
             
             <div class="contentView" id="concertReview">
             	<p id="p_searchReview">
-                	<span id="btn_searchReview"><a href="#"></a></span>
+                	<span class="btn_searchReview"><a href="#"></a></span>
                     <input id="reviewSearchKeyword" name="input_searchReview" class="inputStyle input_searchReview" type="text" placeholder="검색어를 입력하세요." autocomplete="off" >
                 	<select class="inputStyle input_categoryReview" id="reviewSearchCategory">
                         <option selected="selected" value="title">제목</option>
