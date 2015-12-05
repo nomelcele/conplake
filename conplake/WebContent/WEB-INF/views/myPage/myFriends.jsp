@@ -5,8 +5,8 @@
        			<div class="mdHeader">
        				<p>친구 목록<input class="mdClose" type="button" value="X" onclick="mdClose_fri_header()"/></p>
        			</div>
-       			<div class="mdBody">
-       				<ul class="ul_commList">
+       			<div class="mdBody" id="mdBody_fri">
+       				<ul class="ul_commList" id="ul_fri">
        					<c:forEach var="friends" items="${friends}">
 	            			<li>
 	            				<div class="mdImgWrap"><img src="resources/memberImg/${friends.mem_img}" width="50" height="50"/></div>

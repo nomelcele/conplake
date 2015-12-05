@@ -4,11 +4,11 @@
 left:0; top:0; z-index:999; display:none; }
 
 
-#modalWindow_fri{ position:absolute; width:400px; height:440px; top:50%; left:50%; margin-left:-200px; 
-margin-top:-220px; border:1px solid #333; background:#fff; box-shadow : rgba(0,0,0,0.5) 0 0 8px 3px;}
+#modalWindow_fri{ position:absolute; width:400px; height:490px; top:50%; left:50%; margin-left:-200px; 
+margin-top:-245px; border:1px solid #333; background:#fff; box-shadow : rgba(0,0,0,0.5) 0 0 8px 3px;}
 
-#mdBody_fri{ height:400px;}
-#ul_fri{ height:400px;}
+#mdBody_fri{ height:450px;}
+#ul_fri{ height:450px;}
 #p_friend{ height:60px; line-height:60px; }
 #p_friend strong{ font-weight:normal;}
 #p_friend input{ margin-top:20px;}
