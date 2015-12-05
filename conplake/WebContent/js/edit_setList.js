@@ -104,14 +104,15 @@ function createRow(){
 	var input2= document.createElement("INPUT");
 	input2.setAttribute("type", "text");
 	input2.className = "input_setList";
-	input2.id = "input_setListTitle";
+	input2.id = "input_setListTitle"+rowNum;
 	input2.name = "input_setListTitle";
+	input2.onkeydown = function(){setSearchQuery($("#setList_artistname"),rowNum)}; // 함수
 	cell2.appendChild(input2);
 	
 	var input3= document.createElement("INPUT");
 	input3.setAttribute("type", "text");
 	input3.className = "input_setList";
-	input3.id = "input_setListLink";
+	input3.id = "input_setListLink"+rowNum;
 	input3.name = "input_setListLink";
 	cell3.appendChild(input3);
 	
@@ -119,7 +120,7 @@ function createRow(){
 	spanSearch.className="btn_searchReview";
 	
 	var aSearch = document.createElement("a");
-	aSearch.id = "searchLink";
+	aSearch.id = "searchLink"+rowNum;
 	aSearch.setAttribute("href", "#");
 	
 	spanSearch.appendChild(aSearch);
@@ -162,4 +163,11 @@ function editSetlist(){
 			$('#concertSetList').html(result);
 		}
 	});
+}
+
+function setSearchQuery(artistName, order){
+	console.log("유튭유튭");
+	var linkId = "#searchLink_"+order;
+	var titleId = "#input_setListTitle_"+order;
+	$(linkId).attr("href","http://www.youtube.com/results?search_query="+artistName+"+"+$(titleId));
 }
