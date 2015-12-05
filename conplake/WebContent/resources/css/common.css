@@ -26,6 +26,8 @@ select::-ms-expand {
   display: none;
 }
 
+
+
 .inputStyle {
 	font-family: inherit;  /* 폰트 상속 */
 	color:#999;

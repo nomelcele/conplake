@@ -127,7 +127,7 @@ input#signIn:hover {
 
 .noScroll {overflow:hidden;}
 
-#modalWindow_pwd{ width:600px; margin-left:-300px; height:220px; margin-top:-110px;}
+#modalWindow_pwd{ width:600px; margin-left:-300px; height:250px; margin-top:-125px;}
 #mdBody_pwd{ padding:25px 40px 25px;}
 
 
@@ -140,13 +140,36 @@ input#signIn:hover {
 #email_select{ width:150px; background-position:125px center; height:32px; margin-left:10px;}
 
 
-#sendMailBtn{ width:518px; background:#f9f9f9; color:#666; border:1px solid #bbb; border-radius:3px;  font-size:12px;  height:40px; float:none;  margin-top:10px; }
+#sendMailBtn{ width:518px; background:#f9f9f9; color:#666; border:1px solid #bbb; border-radius:3px;  font-size:12px;  height:40px; float:none;  margin-top:30px; }
 #sendMailBtn:hover{ background:#f3f3f3;}
+
+.inputStyle {
+    
+    border-color: #c0c0c0 #d9d9d9 #d9d9d9;
+    border-image: none;
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+    color: #999;
+    display: inline-block;
+    font-size: 12px;
+}
+
 .input_search {
    /* 원하는 너비설정 */
   height: 20px;
   padding: 5px 0 5px 5px; /* 여백으로 높이 설정 */
 }
+
+#checkCodeBtn {width:100px; height:30px; color:#666; background:#fff; padding:0; margin:0; border:1px solid #ccc;; border-radius:0; float:right;}
+
+#userCode{ width:300px; margin-right:10px;}
+.p_changePwd{ line-height:50px;}
+
+.input_changePwd{ width:410px; float:right; height: 20px; padding: 5px 0 5px 5px; }
+
+
+
 
 </style>
 </head>
