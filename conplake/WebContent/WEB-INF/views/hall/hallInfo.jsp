@@ -122,27 +122,65 @@
                         <option value="author">시설</option>
                     </select>
                 </p>
-            	<Table class="table_list">
-                    <tr class="tr_list">
-                        <th id="reviewNum"><p>번호</p></th>
-                        <th id="reviewTitle"><p>제목</p></th>
-                        <th id="reviewId"><p>작성자</p></th>
-                        <th id="reviewDate"><p>날짜</p></th>
-                        <th id="reviewHits"><p>조회수</p></th>
-                    </tr>
-                    <c:forEach var="reviewList" items="${reviewList}">
-	                    <tr class="tr_list">
-	                        <td id="reviewNum"><p>${reviewList.post_num}</p></td>
-	                        <td id="reviewTitle"><p><a href="readReview?post_num=${reviewList.post_num}">${reviewList.post_title}</a></p></td>
-	                        <td id="reviewID"><p>${reviewList.authorname}</p></td>
-	                        <td id="reviewDate"><p>${reviewList.post_date}</p></td>
-	                        <td id="reviewHits"><p>${reviewList.post_hit}</p></td>
-	                    </tr>
-                    </c:forEach>
-
-                                      
-                </Table>
-                <p class="p_review">
+            	
+            	<div class="box_hallReview">
+            		<div class="boxT_hallReview">
+            			<span class="span_hallReviewTitle">공연제목</span>
+	            		<ul class="ul_hallReview">
+	            			<li class="li_hallReviewDate">2015.05.05</li>
+	            			<li class="li_hallReviewId"><a href="">user_id</a></li>
+	            		</ul>
+            		</div>
+            		
+            		<div class="boxB_hallReview">
+            			<p id="content_hallReview">sadfasdfadsfafd</p>
+            		</div>
+            	</div>
+            	
+            	<div class="box_hallReview">
+            		<div class="boxT_hallReview">
+            			<span class="span_hallReviewTitle">공연제목</span>
+	            		<ul class="ul_hallReview">
+	            			<li class="li_hallReviewDate">2015.05.05</li>
+	            			<li class="li_hallReviewId"><a href="">user_id</a></li>
+	            		</ul>
+            		</div>
+            		
+            		<div class="boxB_hallReview">
+            			<p id="content_hallReview">sadfasdfadsfafd</p>
+            		</div>
+            	</div>
+            	
+            	<div class="box_hallReview">
+            		<div class="boxT_hallReview">
+            			<span class="span_hallReviewTitle">공연제목</span>
+	            		<ul class="ul_hallReview">
+	            			<li class="li_hallReviewDate">2015.05.05</li>
+	            			<li class="li_hallReviewId"><a href="">user_id</a></li>
+	            		</ul>
+            		</div>
+            		
+            		<div class="boxB_hallReview">
+            			<p id="content_hallReview">sadfasdfadsfafd</p>
+            		</div>
+            	</div>
+            	
+            	<div class="box_hallReview">
+            		<div class="boxT_hallReview">
+            			<span class="span_hallReviewTitle">공연제목</span>
+	            		<ul class="ul_hallReview">
+	            			<li class="li_hallReviewDate">2015.05.05</li>
+	            			<li class="li_hallReviewId"><a href="">user_id</a></li>
+	            		</ul>
+            		</div>
+            		
+            		<div class="boxB_hallReview">
+            			<p id="content_hallReview">sadfsdafasdfasasdfadsfafdsadfsdafasdfasasdfadsfafdsadfsdafasdfasasdfadsfafdsadfsdafasdfasasdfadsfafdsadfsdafasdfasasdfadsfafdsadfsdafasdfasasdfadsfafdsadfsdafasdfasasdfadsfafdsadfsdafasdfasasdfadsfafdsadfsdafasdfasasdfadsfafdsadfsdafasdfasasdfadsfafdsadfsdafasdfasasdfadsfafdsadfsdafasdfasasdfadsfafdsadfsdafasdfasasdfadsfafdsadfsdafasdfasasdfadsfafdsadfsdafasdfasasdfadsfafdsadfsdafasdfasasdfadsfafdsadfsdafasdfasasdfadsfafdsadfsdafasdfasasdfadsfafdsadfsdafasdfasasdfadsfafdsadfsdafasdfasasdfadsfafdsadfsdafasdfasasdfadsfafdsadfsdafasdfasasdfadsfafdsadfsdafasdfasasdfadsfafdsadfsdafasdfasasdfadsfafdsadfsdafasdfasasdfadsfafdsadfsdafasdfasasdfadsfafdsadfsdafasdfasasdfadsfafdsadfsdafasdfasasdfadsfafdsadfsdafasdfasasdfadsfafdsadfsdafasdfasasdfadsfafdsadfsdafasdfasasdfadsfafdsadfsdafasdfasasdfadsfafdsadfsdafasdfasasdfadsfafdsadfsdafasdfasasdfadsfafd</p>
+            		</div>
+            	</div>
+            	
+            	
+                <p class="p_review" id="page_hallReview">
                 	<span id="span_hallReview">
                     	<a href="#" class="page" id="page_prev"><</a>
                     	<a href="#">1</a>
