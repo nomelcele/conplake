@@ -41,20 +41,70 @@ public class MyPageModel {
 	}
 	
 	@RequestMapping(value="/myPage")
-	public String myPage(int mem_num, Model model){
+	public String myPage(int mem_num, Model model, HttpSession session){
 		// 마이 페이지
 		model.addAttribute("myProfile", mdao.myProfile(mem_num)); // 프로필
 		model.addAttribute("likedArtists", udao.likedArtists(mem_num)); // 관심 아티스트
 		model.addAttribute("likedConcerts", udao.likedConcerts(mem_num)); // 관심 공연
 		model.addAttribute("myReviews", pdao.myReviews(mem_num)); // 작성 후기
+		// 친구 여부 확인(다른 유저의 마이 페이지인 경우)
+		int current_userNum = ((MemberVO)session.getAttribute("mvo")).getMem_num();
+		if(current_userNum != mem_num){
+			UserinteractionVO uivo = new UserinteractionVO();
+			uivo.setUi_friend(mem_num);
+			uivo.setUi_member(current_userNum);
+			model.addAttribute("isFriend", udao.isFriend(uivo));
+		} else {
+			model.addAttribute("isFriend", "currentUser");
+		}
 		
 		return "myPage.myPage";
 	}
 	
 	@RequestMapping(value="/deleteFriend")
-	public String deleteFriend(UserinteractionVO uivo){
+	public String deleteFriend(UserinteractionVO uivo, String type, Model model, HttpSession session){
 		// 친구 삭제
 		udao.deleteFriend(uivo);
-		return "redirect:/myFriends?mem_num="+uivo.getUi_member();
+		String url = "";
+		if(type.equals("myFriends")){
+			url = "redirect:/myFriends?mem_num="+uivo.getUi_member();
+		} else {
+			int mem_num = uivo.getUi_friend();
+			model.addAttribute("myProfile", mdao.myProfile(mem_num)); // 프로필
+			model.addAttribute("likedArtists", udao.likedArtists(mem_num)); // 관심 아티스트
+			model.addAttribute("likedConcerts", udao.likedConcerts(mem_num)); // 관심 공연
+			model.addAttribute("myReviews", pdao.myReviews(mem_num)); // 작성 후기
+			// 친구 여부 확인(다른 유저의 마이 페이지인 경우)
+			int current_userNum = ((MemberVO)session.getAttribute("mvo")).getMem_num();
+				UserinteractionVO uivoRe = new UserinteractionVO();
+				uivoRe.setUi_friend(mem_num);
+				uivoRe.setUi_member(current_userNum);
+				model.addAttribute("isFriend", udao.isFriend(uivoRe));
+			
+			url = "myPage/myPage";
+
+		}
+		return url;
+	}
+	
+	@RequestMapping(value="/addFriend")
+	public String addFriend(UserinteractionVO uivo, Model model, HttpSession session){
+		// 친구 추가
+		udao.addFriend(uivo);
+		
+		int mem_num = uivo.getUi_friend();
+		model.addAttribute("myProfile", mdao.myProfile(mem_num)); // 프로필
+		model.addAttribute("likedArtists", udao.likedArtists(mem_num)); // 관심 아티스트
+		model.addAttribute("likedConcerts", udao.likedConcerts(mem_num)); // 관심 공연
+		model.addAttribute("myReviews", pdao.myReviews(mem_num)); // 작성 후기
+		// 친구 여부 확인(다른 유저의 마이 페이지인 경우)
+		int current_userNum = ((MemberVO)session.getAttribute("mvo")).getMem_num();
+			UserinteractionVO uivoRe = new UserinteractionVO();
+			uivoRe.setUi_friend(mem_num);
+			uivoRe.setUi_member(current_userNum);
+			model.addAttribute("isFriend", udao.isFriend(uivoRe));
+		
+		return "myPage/myPage";
+//		return "redirect:/myPage?mem_num="+uivo.getUi_friend();
 	}
 }
