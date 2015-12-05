@@ -70,7 +70,7 @@
        </div>
         
     </div>
-    
+    <!-- 친구 목록 (S) -->
     <div id="modalWindowWrap_fri_header">
        		<div id="modalWindow_fri">	
        			<div class="mdHeader">

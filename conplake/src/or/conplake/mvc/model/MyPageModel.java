@@ -36,7 +36,7 @@ public class MyPageModel {
 	public String myFriends(int mem_num, Model model){
 		// 친구 목록
 		model.addAttribute("friends", udao.myFriends(mem_num));
-		return "";
+		return "myPage/myFriends";
 	}
 	
 	@RequestMapping(value="/myPage")
