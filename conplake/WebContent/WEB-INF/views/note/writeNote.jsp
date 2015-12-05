@@ -1,8 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
     <div id="mdBody_writeNote">
 		<p>받는 사람 : 
-			<input type="text" class="inputStyle input_search" id="toWriteNote"/>
+			<c:if test="${replyId ne ''}">
+				<input type="text" class="inputStyle input_search" id="toWriteNote" value="${replyId.mem_id}"/>
+			</c:if>
 		</p>
 		
 		<textarea class="inputStyle" id="contentWriteNote" placeholder="쪽지 내용을 입력하세요."></textarea>

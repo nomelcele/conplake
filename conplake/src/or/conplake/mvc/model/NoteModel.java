@@ -2,6 +2,7 @@ package or.conplake.mvc.model;
 
 import javax.servlet.http.HttpSession;
 
+import or.conplake.mvc.dao.MemberDao;
 import or.conplake.mvc.dao.NoteDao;
 import or.conplake.vo.MemberVO;
 import or.conplake.vo.NoteVO;
@@ -15,6 +16,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class NoteModel {
 	@Autowired
 	private NoteDao ndao;
+	@Autowired
+	private MemberDao mdao;
 	
 	@RequestMapping(value="/writeNote")
 	public String writeNote(NoteVO nvo){
@@ -47,7 +50,13 @@ public class NoteModel {
 	}
 	
 	@RequestMapping(value="/writeNoteForm")
-	public String writeNoteForm(){
-		return "note/writeNote";
+	public String writeNoteForm(String type, int note_to, Model model){
+		if(type.equals("normal")){
+			model.addAttribute("replyId", "");
+		} else {
+			// 답장 쓸 때
+			model.addAttribute("replyId", mdao.myProfile(note_to));
+		}
+		return "note/writeNote";	
 	}
 }
