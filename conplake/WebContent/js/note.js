@@ -85,7 +85,7 @@ function writeNote(mem_num){
 		url: "writeNote",
 		data: {
 			note_from: mem_num,
-			note_to: $("#toWriteNote").val(),
+			toNameId: $("#toWriteNote").val(),
 			note_cont: $("#contentWriteNote").val()
 		},
 		success: function(result){

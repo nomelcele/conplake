@@ -26,4 +26,7 @@
   <update id="changePwd" parameterType="mvo">
   	update member set mem_pwd=#{mem_pwd} where mem_num=#{mem_num}
   </update>
+  <select id="findMemnum" parameterType="String" resultType="int">
+  	select mem_num from member where mem_id=#{mem_id}
+  </select>
   </mapper>

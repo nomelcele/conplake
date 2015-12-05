@@ -28,8 +28,14 @@ public class NoteModel {
 	private UserinteractionDao udao;
 	
 	@RequestMapping(value="/writeNote")
-	public String writeNote(NoteVO nvo){
+	public String writeNote(NoteVO nvo, String toNameId){
 		// 쪽지 쓰기
+		int startIdx = toNameId.indexOf("(")+1;
+		int endIdx = toNameId.indexOf(")");
+		String toId = toNameId.substring(startIdx, endIdx);
+		int note_to = mdao.findMemnum(toId);
+		nvo.setNote_to(note_to);
+		
 		ndao.writeNote(nvo);
 		return "redirect:/inbox?mem_num="+nvo.getNote_from();
 	}
