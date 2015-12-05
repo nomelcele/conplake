@@ -40,3 +40,17 @@ function uploadSeatPic(){
 	
 }
 
+function searchSightimg(chall_num){
+	$.ajax({
+		type: "post",
+		url: "searchSightimg",
+		data: {
+			si_concerthall: chall_num,
+			si_floor: $("#select_floor").val(),
+			si_standseat: $("#select_standseat").val()
+		},
+		success: function(result){
+			$("#seatReview").html(result);
+		}
+	});
+}

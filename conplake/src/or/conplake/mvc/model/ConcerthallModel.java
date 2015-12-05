@@ -75,4 +75,10 @@ public class ConcerthallModel {
 		return "redirect:/concerthallInfo?chall_num="+sivo.getSi_concerthall(); // 나중에 고쳐
 	}
 	
+	@RequestMapping(value="/searchSightimg")
+	public String searchSightimg(SightimgVO sivo, Model model){
+		model.addAttribute("sightimgs", sidao.searchSightimg(sivo));
+		return "hall/sightImgList";
+	}
+	
 }

@@ -57,12 +57,12 @@
             
             <div class="contentView" id="seatReview">
             	<p id="p_searchSeatReview">
-                	<select class="inputStyle input_seatFloor" >
+                	<select class="inputStyle input_seatFloor" id="select_floor" onchange="searchSightimg(${challInfo.chall_num})">
                         <option selected value="1">1층</option>
                         <option value="2">2층</option>
                         <option value="3">3층</option>
                     </select>
-                    <select class="inputStyle input_seatStanding" >
+                    <select class="inputStyle input_seatStanding" id="select_standseat" onchange="searchSightimg(${challInfo.chall_num})">
                         <option selected value="seat">좌석</option>
                         <option value="stand">스탠딩</option>
                     </select>

@@ -9,4 +9,13 @@
   	<select id="sightimgList" parameterType="int" resultType="sivo">
   		select * from sightimg where si_concerthall=#{si_concerthall}
   	</select>
+  	<select id="searchSightimg" parameterType="sivo" resultType="sivo">
+  		select * from sightimg where si_concerthall=#{si_concerthall} 
+  			<if test="si_floor != null">
+  			and si_floor=#{si_floor}
+  			</if>
+  			<if test="si_standseat != null">
+  			and si_standseat='#{si_standseat}'
+  			</if>
+  	</select>
   </mapper>

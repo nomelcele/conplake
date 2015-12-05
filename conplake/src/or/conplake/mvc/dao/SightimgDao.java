@@ -20,4 +20,8 @@ public class SightimgDao {
 	public List<SightimgVO> sightimgList(int si_concerthall){
 		return st.selectList("si.sightimgList", si_concerthall);
 	}
+	
+	public List<SightimgVO> searchSightimg(SightimgVO sivo){
+		return st.selectList("si.searchSightimg", sivo);
+	}
 }
