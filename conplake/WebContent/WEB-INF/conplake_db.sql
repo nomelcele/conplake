@@ -324,3 +324,9 @@ create table sightimg(
   constraint sightimg_si_concerthall_fk foreign key(si_concerthall)
   references concerthall(chall_num)
   );
+  
+  insert into userinteraction values(userinteraction_seq.nextVal,94,'add_friend',null,null,61);
+  insert into userinteraction values(userinteraction_seq.nextVal,94,'add_friend',null,null,42);
+  insert into userinteraction values(userinteraction_seq.nextVal,94,'add_friend',null,null,21);
+  insert into userinteraction values(userinteraction_seq.nextVal,94,'add_friend',null,null,95);
+  insert into userinteraction values(userinteraction_seq.nextVal,94,'add_friend',null,null,96);
