@@ -116,12 +116,10 @@
             
             <div class="contentView" id="hallReview">
             	<p id="p_searchReview">
-                	<span id="btn_searchReview"><a href="#"></a></span>
-                    <input id="reviewSearchKeyword" name="input_searchReview" class="inputStyle input_searchReview" type="text" placeholder="검색어를 입력하세요." autocomplete="off" >
+                    
                 	<select class="inputStyle input_categoryReview" id="reviewSearchCategory">
-                        <option selected="selected" value="title">제목</option>
-                        <option value="author">작성자</option>
-                        <option value="cont">내용</option>
+                        <option selected="selected" value="title">시야 및 음향</option>
+                        <option value="author">시설</option>
                     </select>
                 </p>
             	<Table class="table_list">

@@ -35,7 +35,7 @@
                         </tr>
                         <tr class="tr_readReview">
                             <td class="td_readReview">공연장 시설</td>
-                            <td class="td2_readReview" id="hallReview">${reviewDetail.post_facility}</td>
+                            <td class="td2_readReview" id="musicHallReview">${reviewDetail.post_facility}</td>
                         </tr>
                         <tr class="tr_readReview">
                             <td class="td_readReview">공연 내용</td>
