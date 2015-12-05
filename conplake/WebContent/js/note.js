@@ -68,6 +68,10 @@ function writeNoteForm(){
 		$.ajax({
 			type: "POST",
 			url: "writeNoteForm",
+			data: {
+				type: 'normal',
+				note_to: 0
+			},
 			success: function(result){
 				$("#mdBody_right").html(result);
 			}
@@ -105,13 +109,14 @@ function readNote(note_num){
 
 }
 
-function replyNote(note_to, note_num){
+function replyNote(note_to){
 	// 쪽지 답장
 	$.ajax({
 		type: "POST",
 		url: "readNote",
 		data: {
-			note_num: note_num
+			type: 'reply',
+			note_to: note_to
 		},
 		success: function(result){
 			$("#mdBody_right").html(result);

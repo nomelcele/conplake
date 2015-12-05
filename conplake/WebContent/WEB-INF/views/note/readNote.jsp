@@ -18,7 +18,7 @@
 		
 		<tr class="tr_list">
 			<td class="td_list" id="td_buttonNote">
-				<input id="replyNote" class="innerButton button" type="button" value="답장" onclick="replyNote(${note.note_to},${note.note_num})"/>
+				<input id="replyNote" class="innerButton button" type="button" value="답장" onclick="replyNote(${note.note_to})"/>
 			</td>
 		</tr>
 	</table>
