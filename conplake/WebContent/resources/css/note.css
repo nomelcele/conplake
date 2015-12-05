@@ -34,9 +34,9 @@ border-right:1px solid #ccc; box-shadow:#eee 2px 0 2px 0;}
 
 
 #table_readNote{ width:100%;}
-#td_infoNote { width:640px; background:rgba(0,0,0,.025); height:50px; float:right; padding-left:10px; padding-top:5px;}
+#td_infoNote { width:640px; background:rgba(0,0,0,.025); height:65px; float:right; padding-left:10px; padding-top:5px;}
 #td_infoNote p { line-height:20px; text-align:left;}
-#td_contentNote{ height:279px; vertical-align:top; padding:10px;}
+#td_contentNote{ height:264px; vertical-align:top; padding:10px;}
 #td_buttonNote{ height:43px; border-bottom:none;}
 
 #replyNote{ margin-right:10px;}

@@ -89,3 +89,32 @@ function writeNote(mem_num){
 		}
 	});
 }
+
+function readNote(note_num){
+	// 쪽지 읽기
+	$.ajax({
+		type: "POST",
+		url: "readNote",
+		data: {
+			note_num: note_num
+		},
+		success: function(result){
+			$("#mdBody_right").html(result);
+		}
+	});
+
+}
+
+function replyNote(note_to, note_num){
+	// 쪽지 답장
+	$.ajax({
+		type: "POST",
+		url: "readNote",
+		data: {
+			note_num: note_num
+		},
+		success: function(result){
+			$("#mdBody_right").html(result);
+		}
+	});
+}

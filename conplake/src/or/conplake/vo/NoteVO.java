@@ -3,8 +3,20 @@ package or.conplake.vo;
 public class NoteVO {
 	private int note_num, note_from, note_to;
 	private String note_cont, note_date,
-	fromname, toname;
+	fromname, toname, fromid, toid;
 	
+	public String getFromid() {
+		return fromid;
+	}
+	public void setFromid(String fromid) {
+		this.fromid = fromid;
+	}
+	public String getToid() {
+		return toid;
+	}
+	public void setToid(String toid) {
+		this.toid = toid;
+	}
 	public String getFromname() {
 		return fromname;
 	}
