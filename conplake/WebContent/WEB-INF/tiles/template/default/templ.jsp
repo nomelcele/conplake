@@ -54,7 +54,7 @@
 <script src="js/jquery.ui.draggable.js"></script>
 <script src="js/jquery-ui.js"></script>
 <script src="js/jquery.prettyPhoto.js"></script>
-
+<script src="js/json2.js"></script>
 
 
 <script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=7f9c33732c713549cc705cd0d7c3b278"></script>

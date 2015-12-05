@@ -69,8 +69,8 @@ function writeNoteForm(){
 			type: "POST",
 			url: "writeNoteForm",
 			data: {
-				type: 'normal',
-				note_to: 0
+				type: "normal",
+				note_from: 0
 			},
 			success: function(result){
 				$("#mdBody_right").html(result);
@@ -109,17 +109,50 @@ function readNote(note_num){
 
 }
 
-function replyNote(note_to){
+function replyNote(note_from){
 	// 쪽지 답장
 	$.ajax({
 		type: "POST",
-		url: "readNote",
+		url: "writeNoteForm",
 		data: {
-			type: 'reply',
-			note_to: note_to
+			type: "reply",
+			note_from: note_from
 		},
 		success: function(result){
 			$("#mdBody_right").html(result);
 		}
 	});
+}
+
+var address = null;
+
+function addressBook(){
+	alert("주소록");
+	$.ajax({
+		type: "POST",
+		url: "addressBook",
+		dataType: "json",
+		success: function(jdata){
+			console.log("Ddddddd");
+			address = jdata;
+			var txt = "<table>";
+			for(var i=0; i<address.length; i++){
+				console.log(address[i]);
+				txt += "<tr style='background:white;'><td style='cursor:pointer;' onmouseover='this.style.background=\"silver\"' onmouseout='this.style.background=\"white\"' onclick='selectMember("+i+")'>"+address[i]+"</td></tr>";
+			}
+			txt += "</table>";
+			$("#addressView").html(txt);
+			$("#addressView").css("display","block");
+		}
+	});
+}
+
+function selectMember(idx){
+	$("#toWriteNote").attr("value",address[idx]);
+	$("#addressView").css("display","none");
+}
+
+function removeView(){
+	$("#addressView").css("display","none");
+	console.log("!!!");
 }

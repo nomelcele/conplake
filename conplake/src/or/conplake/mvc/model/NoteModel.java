@@ -1,9 +1,15 @@
 package or.conplake.mvc.model;
 
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.List;
+
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import or.conplake.mvc.dao.MemberDao;
 import or.conplake.mvc.dao.NoteDao;
+import or.conplake.mvc.dao.UserinteractionDao;
 import or.conplake.vo.MemberVO;
 import or.conplake.vo.NoteVO;
 
@@ -18,6 +24,8 @@ public class NoteModel {
 	private NoteDao ndao;
 	@Autowired
 	private MemberDao mdao;
+	@Autowired
+	private UserinteractionDao udao;
 	
 	@RequestMapping(value="/writeNote")
 	public String writeNote(NoteVO nvo){
@@ -50,13 +58,44 @@ public class NoteModel {
 	}
 	
 	@RequestMapping(value="/writeNoteForm")
-	public String writeNoteForm(String type, int note_to, Model model){
+	public String writeNoteForm(String type, int note_from, Model model){
 		if(type.equals("normal")){
 			model.addAttribute("replyId", "");
 		} else {
 			// 답장 쓸 때
-			model.addAttribute("replyId", mdao.myProfile(note_to));
+			model.addAttribute("replyId", mdao.myProfile(note_from));
 		}
 		return "note/writeNote";	
+	}
+	
+	@RequestMapping(value="/addressBook")
+	public void addressBook(HttpSession session, HttpServletResponse response) throws IOException{
+		int mem_num = ((MemberVO)session.getAttribute("mvo")).getMem_num();
+		List<MemberVO> friends = udao.myFriends(mem_num);
+		
+		String[] names = new String[friends.size()];
+		String[] ids = new String[friends.size()];
+		
+		// json 형식으로 전송할 데이터(이름+아이디)
+		StringBuffer sb = new StringBuffer();
+		sb.append("[");
+		for(int i=0; i<friends.size(); i++){
+			names[i] = friends.get(i).getMem_name();
+			ids[i] = friends.get(i).getMem_id();
+			sb.append("\"");
+			sb.append(names[i]+" ("+ids[i]+")");
+			sb.append("\"");
+			if(!(i == friends.size()-1)){
+				sb.append(",");
+			}
+		}
+		sb.append("]");
+		
+		PrintWriter pw = response.getWriter();
+		pw.write(sb.toString());
+		pw.flush();
+		pw.close();
+		
+		
 	}
 }
