@@ -21,4 +21,10 @@
   		from note n, member m where n.note_from=#{mem_num} and n.note_fromdelete=1 
   		and m.mem_num=n.note_to order by n.note_date desc
   	</select>
+  	<update id="deleteInbox" parameterType="int">
+  		update note set note_todelete=2 where note_num=#{note_num}
+  	</update>
+  	<update id="deleteSent" parameterType="int">
+  		update note set note_fromdelete=2 where note_num=#{note_num}
+  	</update>
   </mapper>
