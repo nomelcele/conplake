@@ -8,7 +8,9 @@
     	<c:if test="${isFriend eq 'y'}">
     		<input id="addFriend" class="innerButton" type="button" value="친구 해제" onclick="deleteFriend(${sessionScope.mvo.mem_num},${myProfile.mem_num},'myPage')"/>
     	</c:if>
-    	<input id="mp_sendNote" class="innerButton" type="button" value="&#9993;  쪽지 보내기" onclick=""/>
+    	<c:if test="${sessionScope.mvo.mem_num ne myProfile.mem_num}">
+    		<input id="mp_sendNote" class="innerButton" type="button" value="&#9993;  쪽지 보내기" onclick="replyNote(${myProfile.mem_num})"/>
+    	</c:if>
     </h1>
     
 	<div id="userProfile">
