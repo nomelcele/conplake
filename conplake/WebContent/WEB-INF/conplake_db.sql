@@ -341,3 +341,18 @@ create table sightimg(
   -- 12/6 콘서트 시퀀스 시작 번호 변경
   drop sequence concert_seq;
   create sequence concert_seq increment by 1 start with 10000000;
+  
+  -- post 테이블 컬럼 추가
+  -- 함께 가요 게시판 말머리
+  alter table post add(post_subtype varchar2(50));
+  
+  
+  insert into post values(post_seq.nextVal,'test',94,sysdate,0,10000001,'with',null,null,null,null,'test',null,'같이가요');
+  insert into post values(post_seq.nextVal,'test',94,sysdate,0,10000001,'with',null,null,null,null,'test',null,'같이가요');
+  insert into post values(post_seq.nextVal,'test',94,sysdate,0,10000001,'with',null,null,null,null,'test',null,'같이가요');
+  insert into post values(post_seq.nextVal,'test',94,sysdate,0,10000001,'with',null,null,null,null,'test',null,'같이가요');
+
+  
+  	select post_num, post_title, post_author, mem_name authorname, post_date, post_hit, post_concert,
+  	post_cont, post_subtype from post, member where post_author=mem_num 
+  	and post_type='with' and post_concert=10000001 order by post_date desc;

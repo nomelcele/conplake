@@ -37,4 +37,16 @@ public class PostDao {
 	public void deleteReview(int post_num){
 		st.delete("post.deleteReview", post_num);
 	}
+	
+	public void writeLetsgo(PostVO pvo){
+		st.insert("post.writeLetsgo", pvo);
+	}
+	
+	public List<PostVO> letsgoList(int post_concert){
+		return st.selectList("post.letsgoList", post_concert);
+	}
+	
+	public PostVO readLetsgo(int post_num){
+		return st.selectOne("post.readLetsgo", post_num);
+	}
 }

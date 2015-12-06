@@ -184,11 +184,63 @@ function deleteTlComm(num, origin, type){
 }
 
 function mdOpen_letsGo(){
-	$("#modalWindowWrap_letsGo").css('display', 'block');	
+	$.ajax({
+		type : "POST",
+		url : "letsgoList",
+		data : {
+			post_concert: $("#concertNumber").val()
+		},
+		success : function(result) {
+			$('.mdBody').html(result);
+			$("#modalWindowWrap_letsGo").css('display', 'block');	
+		}
+	});
 }
 
 function goMyPage(mem_num){
 	// 마이 페이지 이동
 	var formId = "#myPageForm"+mem_num;
 	$(formId).submit();
+}
+
+function writeLetsgoForm(){
+	$.ajax({
+		type : "POST",
+		url : "writeLetsgoForm",
+		success : function(result) {
+			$('.mdBody').html(result);
+		}
+	});
+}
+
+function writeLetsgo(){
+	$.ajax({
+		type : "POST",
+		url : "writeLetsgo",
+		data : {
+			post_subtype: $("#subjectLetsGo").val(),
+			post_title: $("#titleLetsGo").val(),
+			post_cont: $("#contentLetsGo").val(),
+			post_author: $("#currentUserNum").val(),
+			post_concert: $("#concertNumber").val()
+		},
+		success : function(result) {
+			$('.mdBody').html(result);
+		}
+	});
+	
+}
+
+function readLetsgo(post_num){
+	$.ajax({
+		type : "POST",
+		url : "readLetsgo",
+		data : {
+			post_num: post_num
+		},
+		success : function(result) {
+			$('.mdBody').html(result);
+		}
+	});
+	
 }

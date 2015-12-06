@@ -1,31 +1,34 @@
-	<%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>    
 
 <table class="table_list" id="table_readLetsGo">
 	<tr class="tr_list" id="tr_titleReadLetsGo">
-	    <th id="th_titleReadReview" ><span>[캠핑] </span>함께가요 타이틀</th>
+	    <th id="th_titleReadReview" ><span>[${post.post_subtype}] </span>${post.post_title}</th>
 	</tr>
 	
 	<tr class="tr_list" id="tr_infoReadLetsGo">
 	    <th id="th_infoReadLetsGo">
 	    	<ul>
-	        	<li><span id=""><a href="#">leeyura</a></span></li>
-	            <li><span id="">2015.05.05</span></li>
-	        	<li><span>조회: </span><span id="">0</span></li>
+	        	<li><span id=""><a href="myPage?mem_num=${post.post_author}">${post.authorname}</a></span></li>
+	            <li><span id="">${post.post_date}</span></li>
+	        	<li><span>조회: </span><span id="">${post.post_hit}</span></li>
 	        </ul>
 	    </th>
 	</tr>
 	
 	<tr class="tr_list" id="tr_readLetsGo">
-	    <td class="td_readLetsGo">함께가요 글 내용</td>
+	    <td class="td_readLetsGo">${post.post_cont}</td>
 	    
 	</tr>
 	
 	<tr class="tr_readLetsGo" id="tr_button">
 	    <td>
-	    	<input id="listViewletsGo" class="innerButton button" type="button" value="목록" onclick=""/>
-	    	<input id="deleteReview" class="innerButton button" type="button" value="글 삭제" onclick=""/>
-	    	<input id="editReview" class="innerButton button" type="button" value="수정" onclick=""/>
+	    	<input id="listViewletsGo" class="innerButton button" type="button" value="목록" onclick="mdOpen_letsGo()"/>
+			<c:if test="${sessionScope.mvo.mem_num eq post.post_author}">	    	
+	    		<input id="deleteReview" class="innerButton button" type="button" value="글 삭제" onclick=""/>
+	    		<input id="editReview" class="innerButton button" type="button" value="수정" onclick=""/>
+	    	</c:if>
 	    </td>
 	</tr>
 
