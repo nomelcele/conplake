@@ -40,8 +40,8 @@ public class AddInfoModel {
 		String posterName = poster.getOriginalFilename();
 		String detailName = detail.getOriginalFilename();
 		
-		File posterFile = new File(posterPath);
-		File detailFile = new File(detailPath);
+		File posterFile = new File(posterPath+posterName);
+		File detailFile = new File(detailPath+detailName);
 		if(!posterFile.exists()){
 			posterFile.mkdirs();
 		}
