@@ -233,4 +233,27 @@ public class ConcertModel {
 		return "concert/timeline";
 
 	}
+	
+	@RequestMapping(value="/letsgoList")
+	public String letsgoList(int post_concert, Model model){
+		model.addAttribute("postList", pdao.letsgoList(post_concert));
+		return "concert/listLetsGo";
+	}
+	
+	@RequestMapping(value="/writeLetsgoForm")
+	public String writeLetsgoForm(){
+		return "concert/writeLetsGo";
+	}
+	
+	@RequestMapping(value="writeLetsgo")
+	public String writeLetsgo(PostVO pvo){
+		pdao.writeLetsgo(pvo);
+		return "redirect:/letsgoList?post_concert="+pvo.getPost_concert();
+	}
+	
+	@RequestMapping(value="/readLetsgo")
+	public String readLetsgo(int post_num, Model model){
+		model.addAttribute("post", pdao.readLetsgo(post_num));
+		return "concert/readLetsGo";
+	}
 }

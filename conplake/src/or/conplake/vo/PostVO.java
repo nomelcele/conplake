@@ -7,7 +7,7 @@ import org.springframework.web.multipart.MultipartFile;
 public class PostVO {
 	private int post_num, post_author, post_hit, post_concert;
 	private String post_title, post_date, post_type,
-	post_seat, post_sightsound, post_facility, post_perform, post_cont, post_concertdate,
+	post_seat, post_sightsound, post_facility, post_perform, post_cont, post_concertdate, post_subtype,
 	authorname, concertname, concertposter, venuename;
 	private List<MultipartFile> files;
 	
@@ -118,6 +118,12 @@ public class PostVO {
 	}
 	public void setPost_cont(String post_cont) {
 		this.post_cont = post_cont;
+	}
+	public String getPost_subtype() {
+		return post_subtype;
+	}
+	public void setPost_subtype(String post_subtype) {
+		this.post_subtype = post_subtype;
 	}
 	
 	

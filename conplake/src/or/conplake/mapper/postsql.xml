@@ -5,7 +5,7 @@
   <mapper namespace="post">
   <insert id="writeReview" parameterType="pvo">
   	insert into post values(post_seq.nextVal,#{post_title},#{post_author},sysdate,0,#{post_concert},
-  	'review',#{post_seat},#{post_sightsound},#{post_facility},#{post_perform},null,#{post_concertdate})
+  	'review',#{post_seat},#{post_sightsound},#{post_facility},#{post_perform},null,#{post_concertdate},null)
   </insert>
   <select id="reviewList" parameterType="map" resultType="pvo">
   	select p.post_num, p.post_title, p.post_author, m.mem_name authorname, p.post_date, p.post_hit 
@@ -41,4 +41,17 @@
   <delete id="deleteReview" parameterType="int">
   	delete from post where post_num=#{post_num}
   </delete>
+  <insert id="writeLetsgo" parameterType="pvo">
+  	insert into post values(post_seq.nextVal,#{post_title},#{post_author},sysdate,0,#{post_concert},
+  	'with',null,null,null,null,#{post_cont},null,#{post_subtype})
+  </insert>
+  <select id="letsgoList" parameterType="int" resultType="pvo">
+  	select post_num, post_title, post_author, mem_name authorname, post_date, post_hit, post_concert,
+  	post_cont, post_subtype from post, member where post_author=mem_num 
+  	and post_type='with' and post_concert=#{post_concert} order by post_date desc
+  </select>
+  <select id="readLetsgo" parameterType="int" resultType="pvo">
+  	select post_num, post_title, post_author, mem_name authorname, post_date, post_hit, 
+  	post_concert, post_cont, post_subtype from post, member where post_num=#{post_num} and mem_num=post_author
+  </select>
   </mapper>
