@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <form id="searchForm" method="post">
+    		<input type="hidden" id="searchType" name="searchType">
         	<ul>
             	<li id="text_search"><p>SEARCH</p></li>
             	<li id="categoryBox">

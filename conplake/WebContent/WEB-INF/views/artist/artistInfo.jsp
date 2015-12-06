@@ -35,8 +35,7 @@
             </div>
             
             <div class="contentView" id="artistIntro">
-            ${artistInfo.art_intro}
-<!--             	<img src="../img/apple_intro.png" width="900"> -->
+           		<p>${artistInfo.art_intro}</p>
             </div>
             
            

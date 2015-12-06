@@ -1,11 +1,26 @@
 package or.conplake.vo;
 
+import org.springframework.web.multipart.MultipartFile;
+
 public class ConcertVO {
 	private int con_num, con_venue, con_artist;
 	private String con_name, con_poster, con_startdate, con_enddate,
 	con_link, con_detailimg, con_price, con_tel,
 	venuename, artistname;
+	private MultipartFile posterFile, detailFile;
 	
+	public MultipartFile getPosterFile() {
+		return posterFile;
+	}
+	public void setPosterFile(MultipartFile posterFile) {
+		this.posterFile = posterFile;
+	}
+	public MultipartFile getDetailFile() {
+		return detailFile;
+	}
+	public void setDetailFile(MultipartFile detailFile) {
+		this.detailFile = detailFile;
+	}
 	public String getArtistname() {
 		return artistname;
 	}

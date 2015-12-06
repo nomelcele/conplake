@@ -55,11 +55,18 @@ public class ArtistModel {
 	}
 	
 	@RequestMapping(value="/artistSearch")
-	public String artistSearch(String art_name, Model model){
+	public String artistSearch(String art_name, String searchType, Model model){
 		// 아티스트 검색
 		model.addAttribute("artResult", adao.artistSearch(art_name));
 		model.addAttribute("resultType", "artist");
-		return "search.searchResult";
+		
+		String url = "";
+		if(searchType.equals("searchLeft")){
+			url = "search.searchResult";
+		} else {
+			url = "concert/searchArtist";
+		}
+		return url;
 	}
 
 }

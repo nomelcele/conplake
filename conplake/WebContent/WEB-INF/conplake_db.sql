@@ -338,3 +338,6 @@ create table sightimg(
   insert into note values(note_seq.nextVal,'test5',94,21,sysdate,1,1);
   insert into note values(note_seq.nextVal,'test6',94,95,sysdate,1,1);
   
+  -- 12/6 콘서트 시퀀스 시작 번호 변경
+  drop sequence concert_seq;
+  create sequence concert_seq increment by 1 start with 10000000;

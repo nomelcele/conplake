@@ -1,6 +1,9 @@
 package or.conplake.mvc.model;
 
 import java.io.File;
+import java.io.IOException;
+
+import javax.servlet.http.HttpSession;
 
 import or.conplake.mvc.dao.ArtistDao;
 import or.conplake.mvc.dao.ConcertDao;
@@ -25,10 +28,37 @@ public class AddInfoModel {
 		return "concert.addConcertInfo";
 	}
 	
-	@RequestMapping(value="/addConcert")
-	public String addConcert(ConcertVO cvo){
+	@RequestMapping(value="/addNewConcert")
+	public String addNewConcert(ConcertVO cvo, HttpSession session){
 		// 콘서트 정보 추가
-		cdao.addConcert(cvo);
+		// 파일 업로드
+		MultipartFile poster = cvo.getPosterFile(); // 포스터
+		MultipartFile detail = cvo.getDetailFile(); // 상세 이미지
+		
+		String posterPath = session.getServletContext().getRealPath("/")+"resources\\posterImg\\";
+		String detailPath = session.getServletContext().getRealPath("/")+"resources\\detailImg\\";
+		String posterName = poster.getOriginalFilename();
+		String detailName = detail.getOriginalFilename();
+		
+		File posterFile = new File(posterPath);
+		File detailFile = new File(detailPath);
+		if(!posterFile.exists()){
+			posterFile.mkdirs();
+		}
+		if(!detailFile.exists()){
+			detailFile.mkdirs();
+		}
+		
+		try {
+			poster.transferTo(posterFile);
+			detail.transferTo(detailFile);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		cvo.setCon_poster("resources/posterImg/"+posterName);
+		cvo.setCon_detailimg("<img src='resources/detailImg/"+detailName+"' width='700'/>");
+		cdao.addNewConcert(cvo);
 		return "concert.addConcertInfo";
 	}
 	
@@ -38,12 +68,14 @@ public class AddInfoModel {
 	}
 
 	@RequestMapping(value="/addArtist")
-	public String addArtist(ArtistVO avo){
+	public String addArtist(ArtistVO avo, HttpSession session){
 		// 아티스트 정보 추가
 	
 		// 이미지 파일 업로드
 		MultipartFile art_file = avo.getArt_file();
-		String r_path = "C:\\conplake\\ws\\conplake\\WebContent\\resources\\artistImg\\";
+//		String r_path = "C:\\conplake\\ws\\conplake\\WebContent\\resources\\artistImg\\";
+		String r_path = session.getServletContext().getRealPath("/")+"resources\\artistImg\\";
+
 		String fileName = art_file.getOriginalFilename();
 		StringBuffer path = new StringBuffer();
 		path.append(r_path).append(fileName);

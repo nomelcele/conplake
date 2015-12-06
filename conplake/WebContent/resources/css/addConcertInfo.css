@@ -15,7 +15,8 @@
 #input_concertProfile{ width:403px; height:290px; border-radius:2px;}
 
 
-#addConInfo{ width:300px;}
+#addConInfo_hall{ width:300px;}
+#addConInfo_artist{ width:300px;}
 
 #span_addSearch{ float:right;}
 a.addSearch{float:right; height:36px; background-position:center center;}
