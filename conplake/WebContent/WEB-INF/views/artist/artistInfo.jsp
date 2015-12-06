@@ -5,10 +5,10 @@
         	<h2 id="concertTitle">${artistInfo.art_name}
         	<div id="innerButtonBox">
             	    <c:if test="${liked eq 'n'}">
-                    	<input id="likeToGo" class="innerButton button" type="button" value="좋아요" onclick="location='likeArtist?ui_member='+${sessionScope.mvo.mem_num}+'&ui_artist='+${artistInfo.art_num}"/>
+                    	<input id="likeToGo" class="innerButton" type="button" value="좋아요" onclick="location='likeArtist?ui_member='+${sessionScope.mvo.mem_num}+'&ui_artist='+${artistInfo.art_num}"/>
                     </c:if>
                     <c:if test="${liked eq 'y'}">
-                    	<input id="likeToGo" class="innerButton button" type="button" value="관심 해제" onclick="location='unlikeArtist?ui_member='+${sessionScope.mvo.mem_num}+'&ui_artist='+${artistInfo.art_num}"/>
+                    	<input id="likeToGo" class="innerButton" type="button" value="관심 해제" onclick="location='unlikeArtist?ui_member='+${sessionScope.mvo.mem_num}+'&ui_artist='+${artistInfo.art_num}"/>
                     </c:if>
             </div></h2>
             	
@@ -73,7 +73,7 @@
             		
                 
                 <p class="p_review">
-                	<input id="write_review" class="innerButton button" type="button" value="후기 작성"/>
+                	<input id="write_review" class="innerButton" type="button" value="후기 작성"/>
                 </p>
             </div>
             

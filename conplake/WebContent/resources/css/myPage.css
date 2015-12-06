@@ -1,5 +1,6 @@
 @CHARSET "UTF-8";
 
+#addFriend{ margin-left:10px; margin-right:10px;}
 #userProfile{ width:900px; min-height:150px; text-align:center;}
 #profile_img {width:150px; height:150px; margin-left:375px; -moz-border-radius: 50%; -webkit-border-radius: 50%; border-radius: 50%; overflow:hidden; }
 

@@ -52,5 +52,5 @@
 	    	<a href="#">1</a>
 	    <a href="#" class="page" id="page_next">></a>
 	</span>
-	<input id="remove_note" class="innerButton button" onclick="removeNote()" type="button" value="삭제" />
+	<input id="remove_note" class="innerButton" onclick="removeNote()" type="button" value="삭제" />
 	</p>

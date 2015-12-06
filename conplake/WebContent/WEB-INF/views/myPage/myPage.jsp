@@ -3,11 +3,12 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>  
     <h1>USER MY PAGE
     	<c:if test="${isFriend eq 'n'}">
-    		<input id="addFriend" class="innerButton button" type="button" value="친구 추가" onclick="addFriend(${sessionScope.mvo.mem_num},${myProfile.mem_num})"/>
+    		<input id="addFriend" class="innerButton" type="button" value="친구 추가" onclick="addFriend(${sessionScope.mvo.mem_num},${myProfile.mem_num})"/>
     	</c:if>
     	<c:if test="${isFriend eq 'y'}">
-    		<input id="addFriend" class="innerButton button" type="button" value="친구 해제" onclick="deleteFriend(${sessionScope.mvo.mem_num},${myProfile.mem_num},'myPage')"/>
+    		<input id="addFriend" class="innerButton" type="button" value="친구 해제" onclick="deleteFriend(${sessionScope.mvo.mem_num},${myProfile.mem_num},'myPage')"/>
     	</c:if>
+    	<input id="mp_sendNote" class="innerButton" type="button" value="&#9993;  쪽지 보내기" onclick=""/>
     </h1>
     
 	<div id="userProfile">

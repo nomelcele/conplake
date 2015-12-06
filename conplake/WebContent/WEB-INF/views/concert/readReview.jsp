@@ -45,8 +45,8 @@
                        	<c:if test="${sessionScope.mvo.mem_num eq reviewDetail.post_author}">
 	                        <tr class="tr_readReview" id="tr_button">
 	                            <td colspan="2">
-	                            	<input id="deleteReview" class="innerButton button" type="button" value="글 삭제" onclick="location='deleteReview?post_num='+${reviewDetail.post_num}+'&post_concert='+${reviewDetail.post_concert}"/>
-	                            	<input id="editReview" class="innerButton button" type="button" value="수정" onclick=""/>
+	                            	<input id="deleteReview" class="innerButton" type="button" value="글 삭제" onclick="location='deleteReview?post_num='+${reviewDetail.post_num}+'&post_concert='+${reviewDetail.post_concert}"/>
+	                            	<input id="editReview" class="innerButton" type="button" value="수정" onclick=""/>
 	                            </td>
 	                        </tr>
 	                    </c:if>
@@ -68,7 +68,7 @@
 	                            <td class="td_readReply" id="td_replyDate">
 	                            	<p id="p_replyDate">${commList.comm_date}</p>
 	                            	<c:if test="${sessionScope.mvo.mem_num eq commList.comm_author}">
-	                            		<p><input id="deleteReply" class="innerButton button" type="button" value="삭제" onclick="location='deleteComm?comm_num='+${commList.comm_num}+'&comm_post='+${commList.comm_post}+'&type=post'"/></p>
+	                            		<p><input id="deleteReply" class="innerButton" type="button" value="삭제" onclick="location='deleteComm?comm_num='+${commList.comm_num}+'&comm_post='+${commList.comm_post}+'&type=post'"/></p>
 	                            	</c:if>
 	                            </td>
 	                        </tr>
@@ -80,7 +80,7 @@
                     	<input type="hidden" id="comm_post" name="comm_post" value="${reviewDetail.post_num}">
 	                    <div class="div_inputReply"> <!-- 고정부분 댓글 입력 -->
 	                            	<textarea name="comm_cont" id="comm_cont" class="inputStyle input_search" placeholder="댓글 내용을 입력하세요." ></textarea>
-	                            	<input id="writeReviewCommBtn" class="innerButton button" type="button" value="입력"/>
+	                            	<input id="writeReviewCommBtn" class="innerButton" type="button" value="입력"/>
 	                   </div>
                    </form>
                   
