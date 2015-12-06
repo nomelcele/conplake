@@ -160,10 +160,10 @@
 	
 	<div id="memberButtonBox">
 		<c:if test="${type eq 'join'}">
-			<input id="joinBtn" onclick="joinMember('join')" class="button" type="submit" value="가입" name="mem_submit">
+			<input id="joinBtn" onclick="joinMember('join')" class="button" type="button" value="가입" name="mem_submit">
 		</c:if>
 		<c:if test="${type eq 'modify'}">
-			<input id="joinBtn" onclick="joinMember('modify')" class="button" type="submit" value="수정" name="mem_submit">
+			<input id="joinBtn" onclick="joinMember('modify')" class="button" type="button" value="수정" name="mem_submit">
 		</c:if>
 	</div>
 </form>

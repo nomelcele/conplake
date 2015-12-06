@@ -202,6 +202,7 @@ function imgUpload(){
 
 function joinMember(type){
 	// 메일
+	alert("잠 좀 자자");
 	 var mailAddr = $("#email_id").val()+"@"+$("#email_address").val();
 		$("#mem_mail").attr("value",mailAddr);
 		
@@ -215,10 +216,10 @@ function joinMember(type){
 		
 		if(type=='modify'){
 			// 개인 정보 수정 시
-			$("#joinMember").attr("action","modifyMemInfo");
+			$("#joinForm").attr("action","modifyMemInfo");
 		} else {
 			// 회원 가입 시
-			$("#joinMember").attr("action","joinMember");
+			$("#joinForm").attr("action","joinMember");
 		}
 		
 		// 회원 가입 폼 제출
