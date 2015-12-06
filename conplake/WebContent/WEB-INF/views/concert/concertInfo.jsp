@@ -7,12 +7,12 @@
     <input type="hidden" id="currentUserNum" value="${sessionScope.mvo.mem_num}">
         	<h2 id="concertTitle">${conInfo.con_name}
             	<div id="innerButtonBox">
-                    <input id="GoTogether" class="innerButton button" type="button" value="함께가요" onclick="mdOpen_letsGo()"/>
+                    <input id="GoTogether" class="innerButton" type="button" value="함께가요" onclick="mdOpen_letsGo()"/>
                     <c:if test="${liked eq 'n'}">
-                    	<input id="likeToGo" class="innerButton button" type="button" value="갈거예요" onclick="location='likeConcert?ui_member='+${sessionScope.mvo.mem_num}+'&ui_concert='+${conInfo.con_num}"/>
+                    	<input id="likeToGo" class="innerButton" type="button" value="갈거예요" onclick="location='likeConcert?ui_member='+${sessionScope.mvo.mem_num}+'&ui_concert='+${conInfo.con_num}"/>
                     </c:if>
                     <c:if test="${liked eq 'y'}">
-                    	<input id="likeToGo" class="innerButton button" type="button" value="관심 해제" onclick="location='unlikeConcert?ui_member='+${sessionScope.mvo.mem_num}+'&ui_concert='+${conInfo.con_num}"/>
+                    	<input id="likeToGo" class="innerButton" type="button" value="관심 해제" onclick="location='unlikeConcert?ui_member='+${sessionScope.mvo.mem_num}+'&ui_concert='+${conInfo.con_num}"/>
                     </c:if>
                 </div>
             </h2>
@@ -112,7 +112,7 @@
 <!--                         <a href="#">3</a> -->
                         <a href="#" class="page" id="page_next">></a>
                     </span>
-                <input id="write_review" class="innerButton button" type="button" value="후기 작성" onclick="location='writeReviewForm?con_num=${conInfo.con_num}'"/>
+                <input id="write_review" class="innerButton" type="button" value="후기 작성" onclick="location='writeReviewForm?con_num=${conInfo.con_num}'"/>
                 </p>
             </div>
             
@@ -136,7 +136,7 @@
 	            					<p>
 		            					<a href="" onclick="readTimelineComm(${timeline.tl_num}); return false;">댓글(${timeline.tlcount})</a>
 		            					<c:if test="${sessionScope.mvo.mem_num eq timeline.tl_author}">
-		            						<input class="innerButton button" id="mdDelete" type="button" value="삭제" onclick="deleteTlComm(${timeline.tl_num},${timeline.tl_concert})"/>
+		            						<input class="innerButton" id="mdDelete" type="button" value="삭제" onclick="deleteTlComm(${timeline.tl_num},${timeline.tl_concert})"/>
 		            					</c:if>
 	            					</p>
 	            				</div>
@@ -148,7 +148,7 @@
             		
             		<div id="timeLineFooter" class="timeLine">
             			<input class="inputStyle" id="tLInputText" type="text" placeholder="메시지를 입력하세요."/>
-            			<input class="innerButton button" id="tLInputBtn" type="button" value="입력"/>
+            			<input class="innerButton" id="tLInputBtn" type="button" value="입력"/>
             		</div>
             	</div>
             	

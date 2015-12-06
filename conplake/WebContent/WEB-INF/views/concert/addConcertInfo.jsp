@@ -100,7 +100,32 @@
 			</div>
 			<div class="mdBody_searchResult">
 				<ul id="ul_searchResult">
+<<<<<<< .mine
+					<li>
+						<p>
+							<span>올림픽공원 체조경기장</span>
+							<input class="innerButton" id="mdSearchSelect" type="button" value="선택" onclick=""/>
+						</p>
+					</li>
+=======
+>>>>>>> .r169
 					
+<<<<<<< .mine
+					<li>
+						<p>
+							<span>올림픽공원 체조경기장</span>
+							<input class="innerButton" id="mdSearchSelect" type="button" value="선택" onclick=""/>
+						</p>
+					</li>
+					
+					<li>
+						<p>
+							<span>올림픽공원 체조경기장</span>
+							<input class="innerButton" id="mdSearchSelect" type="button" value="선택" onclick=""/>
+						</p>
+					</li>
+=======
+>>>>>>> .r169
 				</ul>
 			</div>
 			
@@ -124,7 +149,32 @@
 			</div>
 			<div class="mdBody_searchResult">
 				<ul id="ul_searchResult">
+
+					<li>
+						<p>
+							<span>올림픽공원 체조경기장</span>
+							<input class="innerButton" id="mdSearchSelect" type="button" value="선택" onclick=""/>
+						</p>
+					</li>
+
+
 					
+
+					<li>
+						<p>
+							<span>올림픽공원 체조경기장</span>
+							<input class="innerButton" id="mdSearchSelect" type="button" value="선택" onclick=""/>
+						</p>
+					</li>
+					
+					<li>
+						<p>
+							<span>올림픽공원 체조경기장</span>
+							<input class="innerButton" id="mdSearchSelect" type="button" value="선택" onclick=""/>
+						</p>
+					</li>
+=======
+>>>>>>> .r169
 				</ul>
 			</div>
 				

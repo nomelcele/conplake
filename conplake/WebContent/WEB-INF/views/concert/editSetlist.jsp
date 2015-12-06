@@ -7,8 +7,8 @@
 	<input type="hidden" id="setList_con_artist" value="${concertInfo.con_artist}">
     <input type="hidden" id="setList_artistname" value="${concertInfo.artistname}">
             	<p class="concert_subTitle">
-                	<input id="remove_setList" class="innerButton button" type="button" value="행 삭제" onclick="removeRow()"/>
-                    <input id="edit_setList" class="innerButton button" type="button" value="행 추가" onclick="createRow()"/>
+                	<input id="remove_setList" class="innerButton" type="button" value="행 삭제" onclick="removeRow()"/>
+                    <input id="edit_setList" class="innerButton" type="button" value="행 추가" onclick="createRow()"/>
                     
                 </p>
             	<Table id="table_editSetList">

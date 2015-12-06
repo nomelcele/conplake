@@ -16,4 +16,4 @@
                     </c:forEach>
                   
                 </Table>
-                <p id="p_setList"><input id="edit_setListBtn" class="innerButton button" type="button" value="수정" onclick="editSetlist()"/></p>
+                <p id="p_setList"><input id="edit_setListBtn" class="innerButton" type="button" value="수정" onclick="editSetlist()"/></p>

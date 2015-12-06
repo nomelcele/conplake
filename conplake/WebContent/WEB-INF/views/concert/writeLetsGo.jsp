@@ -13,6 +13,9 @@
 	      </p>
 	      
 	      <textarea class="inputStyle" id="contentLetsGo" placeholder="글 내용을 입력하세요."></textarea>	
-	<input id="write_review" class="innerButton button" type="button" value="등록" onclick="writeLetsgo()"/>
-	<input id="write_review2" class="innerButton button" type="button" value="취소" onclick="mdOpen_letsGo()"/>
+
+
+	<input id="write_review" class="innerButton" type="button" value="등록" onclick="writeLetsgo()"/>
+	<input id="write_review2" class="innerButton" type="button" value="취소" onclick="mdOpen_letsGo()"/>
+
 </div>

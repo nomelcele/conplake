@@ -16,7 +16,7 @@
 		            					<p id="mdText">${commList.comm_cont}</p>
 		            					<p>
 		            						<c:if test="${sessionScope.mvo.mem_num eq commList.comm_author}">
-		            							<input class="innerButton button" id="mdDelete" type="button" value="삭제" onclick="deleteTlComm(${commList.comm_num},${commList.comm_tl},'comm')"/>
+		            							<input class="innerButton" id="mdDelete" type="button" value="삭제" onclick="deleteTlComm(${commList.comm_num},${commList.comm_tl},'comm')"/>
 		            						</c:if>
 		            					</p>
 		            				</div>
@@ -26,6 +26,6 @@
             			</div>
             			<div class="mdFooter">
             				<input class="inputStyle" id="mdInputText" type="text" placeholder="댓글 내용을 입력하세요."/>
-            				<input class="innerButton button" id="mdInputBtn" type="button" value="입력" onclick="writeTimelineComm(${sessionScope.mvo.mem_num},${timelineNumber})"/>
+            				<input class="innerButton" id="mdInputBtn" type="button" value="입력" onclick="writeTimelineComm(${sessionScope.mvo.mem_num},${timelineNumber})"/>
             			</div>
             		</div>
