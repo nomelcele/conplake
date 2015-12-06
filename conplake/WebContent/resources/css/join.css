@@ -1,0 +1,128 @@
+@CHARSET "UTF-8";
+/* body{ padding-bottom:100px; background:#eee;} */
+
+.card { background-color:#f7f7f7;
+	border-radius:2px; 
+	width:1000px; 
+	height:800px; 
+	box-shadow:0 2px 2px rgba(0, 0, 0, 0.3); 
+	margin: 0 auto;
+	position:relative;
+	}
+
+.logoBox {
+	width : 250px;
+	height: 200px;
+	margin: 30px auto 0;
+	background: url(resources/img/logo.png) no-repeat center center;
+	background-size:contain;
+	}
+
+
+.formBox {
+	width: 500px; height:720px;
+	float:left;
+	margin-top:30px;
+
+}
+
+#formBoxRight {width:430px; padding-left:45px; border-left:1px solid #ddd;}
+
+
+.profileBox {width:300px; height:460px; margin:50px auto;}
+#profile_img {width:150px; height:150px; -moz-border-radius: 50%; -webkit-border-radius: 50%; border-radius: 50%; margin-left:75px; overflow:hidden; float:left;}
+
+#inputProfileImgBox {width:25px; height:25px; background:url(resources/img/setting.png) no-repeat center center; display:inline-block; float:left;}
+#inputProfileImg {width:25px; height:25px; opacity:0;}
+
+
+#profile_txt {width:300px; height:220px; float:left; padding-top:30px; }
+#inputProfileTxt {width:268px; height:190px; border:1px solid #ddd; border-radius:20px; padding:15px; resize:none;
+overflow-x:hidden; overflow-y:auto;}
+
+	
+	
+.inputLabel {color:#333; font-size:12px; font-family: '나눔고딕', 'Nanum Gothic', sans-serif;}
+
+#inputLabel_name {padding-top:10px;}
+	
+.inputStyle { background: #fff none repeat scroll 0 0;
+	border-color: #c0c0c0 #d9d9d9 #d9d9d9;
+    border-image: none;
+    border-radius: 1px;
+    border-style: solid;
+    border-width: 1px;
+    box-sizing: border-box;
+    color: #999;
+    display: inline-block;
+    font-size: 12px;
+    width:200px;
+	height: 36px;
+    padding: 0 8px;
+	
+	}
+
+    
+
+
+.inputBox {height:50px; margin:5px 0 5px;}
+#inputBox_id{ height:75px;}
+#inputBox_pw{ height:115px;}
+
+#inputBox_idCheck, #inputBox_pwCheck {width:430px; height:25px; line-height:25px; font-weight:inherit; text-align:left; font-size:11px; color:red; display:block;} //숨기기 display:none; 보이기 display:block;
+
+
+#inputBox_pw {width:300px; height:115px; display:block; clear:both;}
+#inputBox_pwBox {width:300px; height:40px; text-align:left;}
+#inputBox_pwCheckBox {width:300px; height:75px; text-align:left; }
+
+
+#inputBox_gender {margin-bottom:15px;}
+
+
+#email_id {width:90px;}
+.inputBox span { display:inline-block; width:10px; text-align:center; height:36px; line-height:36px;  }
+.inputBox span#span_gender { width:30px; }
+.inputBox span#btwSpan {width:10px;}
+
+
+
+
+.input_category { background: url(resources/img/arrow_down.png) no-repeat 120px center; /* 네이티브 화살표 대체 */  }
+#email_address, #email_select {width:145px;}
+
+
+#btnPost, #idChkBtn {width:100px; height:36px; float:none; margin-left:10px; background:#ddd; color:#666; border:none; font-size:12px;} 
+.input_postCode {width:100px;}
+
+.input_address {width:195px;}
+#adressDetail{ margin-left:10px;}
+	
+	
+#memberButtonBox {
+	width:1000px;
+	height:50px; 
+	margin:0 auto;
+	padding-top:35px;
+	}
+	
+	
+/* .button { background: #666 none repeat scroll 0 0; */
+/* 	border:#666; */
+/*     border-radius: 5px; */
+/*     border-style: solid; */
+/*     border-width: 1px; */
+/*     box-sizing: border-box; */
+/*     color: #fff; */
+/*     display: inline-block; */
+/*     font-size: 14px; */
+/*     width:240px; */
+/* 	height: 50px; */
+/*     padding: 0 8px; */
+/* 	float:right; */
+/* 	} */
+
+.button:hover {
+	background-color:#464646;
+}
+	

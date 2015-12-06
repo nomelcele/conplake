@@ -28,3 +28,13 @@ function toggle_addMenu() {
 	$("#pop_addMenu").slideToggle("100");
 	
 };
+
+function modifyInfoForm(){
+	$.ajax({
+		type: "POST",
+		url: "modifyInfoForm",
+		success: function(result){
+			$(".mainBox").html(result);
+		}
+	});
+}

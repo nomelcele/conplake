@@ -26,11 +26,16 @@ public class MyPageModel {
 	@Autowired
 	private PostDao pdao;
 	
+	@RequestMapping(value="/modifyInfoForm")
+	public String modifyInfoForm(){
+		return "join/joinForm";
+	}
+	
 	@RequestMapping(value="/modifyInfo")
 	public String modifyInfo(MemberVO mvo, HttpSession session){
 		// 개인 정보 수정
 		mdao.modifyInfo(mvo);
-		return "";
+		return "join/joinForm";
 	}
 	
 	@RequestMapping(value="/myFriends")
