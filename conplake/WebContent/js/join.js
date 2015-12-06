@@ -202,7 +202,6 @@ function imgUpload(){
 
 function joinMember(type){
 	// 메일
-	alert("잠 좀 자자");
 	 var mailAddr = $("#email_id").val()+"@"+$("#email_address").val();
 		$("#mem_mail").attr("value",mailAddr);
 		

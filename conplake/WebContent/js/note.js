@@ -19,7 +19,7 @@ function mdClose_note_header(){
 }
 
 function sentNotesList(mem_num){
-	// 쪽지창 띄우기(초기 화면-받은 쪽지함)
+	// 쪽지창 띄우기(보낸 쪽지함)
 	$.ajax({
 		type: "POST",
 		url: "sent",
@@ -112,7 +112,7 @@ function readNote(note_num){
 }
 
 function replyNote(note_from){
-	// 쪽지 답장
+	// 쪽지 답장 & 친구목록/마이페이지에서 쪽지 보내기
 	$.ajax({
 		type: "POST",
 		url: "writeNoteForm",
@@ -122,6 +122,8 @@ function replyNote(note_from){
 		},
 		success: function(result){
 			$("#mdBody_right").html(result);
+			$("#modalWindowWrap_fri_header").css('display','none');
+			$("#modalWindowWrap_note_header").css('display','block');
 		}
 	});
 }
