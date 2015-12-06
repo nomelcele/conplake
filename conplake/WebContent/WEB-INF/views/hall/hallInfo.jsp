@@ -23,7 +23,7 @@
                   <li><a class="tab" id="tab1" href="#">공연장 소개</a></li>
                   <li><a class="tab" id="tab2" href="#">공연장 지도</a></li>
                   <li><a class="tab" id="tab3" href="#">진행 중인 공연</a></li>
-                  <li><a class="tab" id="tab4" href="#">좌석</a></li>
+                  <li><a class="tab" id="tab4" href="#">좌석표</a></li>
                   <li><a class="tab" id="tab5" href="#">좌석별 시야</a></li>
                   <li><a class="tab" id="tab6" href="#">공연장 후기</a></li>
                 </ul>
@@ -55,7 +55,7 @@
             <div class="contentView" id="hallSeat">
             	
             	<div id="div_seatPic">
-            		<img src="${challInfo.chall_seatsimg}" />
+            		<img src="resources/seatsImg/${challInfo.chall_seatsimg}" />
             
             	</div>
             	<p>
@@ -170,11 +170,13 @@
             				<p>UPLOAD PICTURE<input class="mdClose" type="button" value="X" onclick="mdClose()"/></p>
             			</div>
             			
+            			<form action="uploadSeatsimg" method="post" enctype="multipart/form-data">
+            			<input type="hidden" name="chall_num" value="${challInfo.chall_num}">
             			<div id="mdBody2">
             				<p class="rinputBox" id="p_seatPic">
-							    <label id="label_seatPic">시야 사진</label>
+							    <label id="label_seatPic">좌석표 이미지</label>
 							    <label class="inputLabel rInputStyle a_width input_fileImgBtn" id="">Browse..
-							        <input type="file" name="sightimgFile" id="input_seatPic" class="rInputStyle input_fileImg"/>
+							        <input type="file" name="seatsimgFile" id="input_seatPic" class="rInputStyle input_fileImg"/>
 							    </label>
 							    
 							    <input type="text" class="rInputStyle a_width input_fileImgName" id="input_seatPicName" readonly/> 
@@ -183,6 +185,7 @@
 							<div id="seatPicWrap"></div>
 							<input class="innerButton" id="submit_seatPic" type="submit" value="올리기"/>
             			</div>
+            			</form>
 
             		</div>
             	</div>
@@ -217,6 +220,7 @@
 				                    <input class="inputStyle inputSeat" name="si_seatnum" placeholder="좌석"/>
 				                </p>
 	            			</div>
+	            			
 	            			<div id="mdBody2">
 	            				<p class="rinputBox" id="p_seatPic">
 								    <label id="label_seatReviewPic">시야 사진</label>

@@ -43,6 +43,8 @@ public class ConcerthallDao {
 		return st.selectOne("chall.concerthallInfo", chall_num);
 	}
 	
-	
+	public void uploadSeatsimg(ConcerthallVO chvo){
+		st.update("chall.uploadSeatsimg", chvo);
+	}
 	
 }

@@ -10,6 +10,8 @@ import or.conplake.mvc.dao.ConcertDao;
 import or.conplake.mvc.dao.ConcerthallDao;
 import or.conplake.mvc.dao.PostDao;
 import or.conplake.mvc.dao.SightimgDao;
+import or.conplake.vo.ConcertVO;
+import or.conplake.vo.ConcerthallVO;
 import or.conplake.vo.PostVO;
 import or.conplake.vo.SightimgVO;
 
@@ -49,10 +51,6 @@ public class ConcerthallModel {
 		model.addAttribute("challInfo", chdao.concerthallInfo(chall_num));
 		model.addAttribute("ongoingCons", cdao.ongoingConcerts(chall_num));
 		List<PostVO> reviews = pdao.concerthallReviews(chall_num);
-		for(int i=0; i<reviews.size(); i++){
-			System.out.println("공연 이름: "+reviews.get(i).getConcertname());
-			System.out.println("작성 날짜: "+reviews.get(i).getPost_date());
-		}
 		model.addAttribute("reviews", reviews);
 		model.addAttribute("sightimgs", sidao.sightimgList(chall_num));
 		return "hall.hallInfo";
@@ -100,5 +98,28 @@ public class ConcerthallModel {
 		model.addAttribute("reviews", pdao.concerthallReviews(chall_num));
 		model.addAttribute("type", type);
 		return "hall/hallReview";
+	}
+	
+	@RequestMapping(value="/uploadSeatsimg")
+	public String uploadSeatsimg(ConcerthallVO chvo, HttpSession session){
+		// 좌석표 이미지 업로드
+		MultipartFile seatsimgFile = chvo.getSeatsimgFile();
+		String r_path = session.getServletContext().getRealPath("/")+"resources\\seatsImg\\";
+		String fileName = seatsimgFile.getOriginalFilename();
+		
+		File file = new File(r_path+fileName);
+		if(!file.exists()){
+			file.mkdirs();
+		}
+		
+		try {
+			seatsimgFile.transferTo(file);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		chvo.setChall_seatsimg(fileName);
+		chdao.uploadSeatsimg(chvo);
+		return "redirect:/concerthallInfo?chall_num="+chvo.getChall_num(); // 나중에 고쳐
 	}
 }
