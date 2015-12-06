@@ -28,3 +28,7 @@ function toggle_addMenu() {
 	$("#pop_addMenu").slideToggle("100");
 	
 };
+
+function modifyInfoForm(){
+	location = "modifyInfoForm";
+}

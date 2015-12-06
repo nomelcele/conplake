@@ -57,5 +57,8 @@ public class MemberDao {
 	public int findMemnum(String mem_id){
 		return st.selectOne("mem.findMemnum", mem_id);
 	}
-
+	
+	public MemberVO memInfo(int mem_num){
+		return st.selectOne("mem.memInfo", mem_num);
+	}
 }

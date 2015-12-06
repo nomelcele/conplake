@@ -18,7 +18,7 @@
     		</li>
         </ul>
         <ul class="pop" id="pop_myMenu">
-        	<li><a href="modifyInfoForm">개인정보수정</a></li>
+        	<li><a href="#" onclick="modifyInfoForm(); return false;">개인정보수정</a></li>
         	<li id="mypage"><a href="#">마이페이지</a></li>
         	<li><a href="#" onclick="mdOpen_fri_header(${sessionScope.mvo.mem_num}); return false;">친구목록</a></li>
         	<li><a href="#" onclick="mdOpen_note_header(${sessionScope.mvo.mem_num}); return false;">쪽지</a></li>

@@ -27,15 +27,40 @@ public class MyPageModel {
 	private PostDao pdao;
 	
 	@RequestMapping(value="/modifyInfoForm")
-	public String modifyInfoForm(){
+	public String modifyInfoForm(HttpSession session, Model model){
+		// 개인 정보 수정 페이지 이동
+		System.out.println("왜 일로 오니 얘야....");
+		int mem_num = ((MemberVO)session.getAttribute("mvo")).getMem_num();
+		model.addAttribute("type", "modify");
+		MemberVO memInfo = mdao.memInfo(mem_num);
+		model.addAttribute("memInfo", memInfo);
+		
+		String mem_mail = memInfo.getMem_mail(); // 메일 주소
+		model.addAttribute("mailId",mem_mail.substring(0, mem_mail.indexOf("@")));
+		model.addAttribute("mailDomain",mem_mail.substring(mem_mail.indexOf("@")+1));
+		
+		String[] mem_addr = memInfo.getMem_addr().split("/"); // 주소
+		String postcode = mem_addr[0];
+		model.addAttribute("postcode1",postcode.substring(0,postcode.indexOf("-")));
+		model.addAttribute("postcode2",postcode.substring(postcode.indexOf("-")+1));
+		model.addAttribute("address1",mem_addr[1]);
+		model.addAttribute("address2",mem_addr[2]);
+		
 		return "join.joinForm";
 	}
 	
-	@RequestMapping(value="/modifyInfo")
-	public String modifyInfo(MemberVO mvo, HttpSession session){
+	@RequestMapping(value="/modifyMemInfo")
+	public String modifyInfo(MemberVO mvo, Model model, HttpSession session){
 		// 개인 정보 수정
 		mdao.modifyInfo(mvo);
-		return "join/joinForm";
+		
+		int mem_num = mvo.getMem_num();
+		model.addAttribute("myProfile", mdao.myProfile(mem_num)); // 프로필
+		model.addAttribute("likedArtists", udao.likedArtists(mem_num)); // 관심 아티스트
+		model.addAttribute("likedConcerts", udao.likedConcerts(mem_num)); // 관심 공연
+		model.addAttribute("myReviews", pdao.myReviews(mem_num)); // 작성 후기
+		model.addAttribute("isFriend", "currentUser");
+		return "myPage.myPage";
 	}
 	
 	@RequestMapping(value="/myFriends")

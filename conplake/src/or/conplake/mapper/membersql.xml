@@ -8,14 +8,18 @@
 	#{mem_birth},#{mem_gender},#{mem_addr},#{mem_intro},#{mem_img})
   </insert>
   <select id="login" parameterType="mvo" resultType="mvo">
-  	select mem_id, mem_num, mem_name from member where mem_id=#{mem_id} and mem_pwd=#{mem_pwd}
+  	select * from member where mem_id=#{mem_id} and mem_pwd=#{mem_pwd}
   </select>
   <select id="idCheck" parameterType="String" resultType="String">
   	select mem_id from member where mem_id=#{mem_id}
   </select>
   <update id="modifyInfo" parameterType="mvo">
-  	update member set mem_pwd=#{mem_pwd}, mem_addr=#{mem_addr}, mem_intro=#{mem_intro}, mem_img=#{mem_img} 
-  	where mem_num=#{mem_num}
+  	update member set 
+  		<if test="mem_pwd != null">
+  			mem_pwd=#{mem_pwd},
+  		</if>	 
+  		mem_addr=#{mem_addr}, mem_intro=#{mem_intro}, mem_img=#{mem_img} 
+  		where mem_num=#{mem_num}
   </update>
   <select id="myProfile" parameterType="int" resultType="mvo">
   	select mem_num, mem_name, mem_img, mem_id, mem_intro from member where mem_num=#{mem_num}
@@ -28,5 +32,9 @@
   </update>
   <select id="findMemnum" parameterType="String" resultType="int">
   	select mem_num from member where mem_id=#{mem_id}
+  </select>
+  <select id="memInfo" parameterType="int" resultType="mvo">
+  	select mem_num, mem_name, mem_id, mem_pwd, mem_mail, to_char(mem_birth,'yyyy-mm-dd') mem_birth,
+  	mem_gender, mem_addr, mem_intro, mem_img from member where mem_num=#{mem_num}
   </select>
   </mapper>
