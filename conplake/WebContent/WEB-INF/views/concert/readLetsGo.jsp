@@ -29,10 +29,10 @@
 	    	<input id="deleteReview" class="innerButton" type="button" value="글 삭제" onclick=""/>
 	    	<input id="editReview" class="innerButton" type="button" value="수정" onclick=""/>
 
-	    	<input id="listViewletsGo" class="innerButton button" type="button" value="목록" onclick="mdOpen_letsGo()"/>
+	    	<input id="listViewletsGo" class="innerButton" type="button" value="목록" onclick="mdOpen_letsGo()"/>
 			<c:if test="${sessionScope.mvo.mem_num eq post.post_author}">	    	
-	    		<input id="deleteReview" class="innerButton button" type="button" value="글 삭제" onclick=""/>
-	    		<input id="editReview" class="innerButton button" type="button" value="수정" onclick=""/>
+	    		<input id="deleteReview" class="innerButton" type="button" value="글 삭제" onclick=""/>
+	    		<input id="editReview" class="innerButton" type="button" value="수정" onclick=""/>
 	    	</c:if>
 
 	    </td>

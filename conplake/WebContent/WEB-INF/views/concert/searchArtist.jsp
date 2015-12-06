@@ -19,7 +19,7 @@
 						<li>
 							<p>
 								<span>${artResult.art_name}</span>
-								<input class="innerButton button" id="mdSearchSelect" type="button" value="선택" onclick="selectArtist('${artResult.art_name}',${artResult.art_num})"/>
+								<input class="innerButton" id="mdSearchSelect" type="button" value="선택" onclick="selectArtist('${artResult.art_name}',${artResult.art_num})"/>
 							</p>
 						</li>
 					</c:forEach>
