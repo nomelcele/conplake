@@ -30,7 +30,6 @@
 <link href="resources/css/friend.css" rel="stylesheet" type="text/css"/>
 <link href="resources/css/modal.css" rel="stylesheet" type="text/css"/>
 <link href="resources/css/letsGo.css" rel="stylesheet" type="text/css"/>
-<link href="resources/css/join.css" rel="stylesheet" type="text/css"/>
 
 <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
@@ -54,8 +53,6 @@
 <script src="js/jquery.ui.draggable.js"></script>
 <script src="js/jquery-ui.js"></script>
 <script src="js/jquery.prettyPhoto.js"></script>
-<script src="js/join.js"></script>
-<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
 
 
 <script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=7f9c33732c713549cc705cd0d7c3b278"></script>
