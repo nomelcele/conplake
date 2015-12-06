@@ -76,3 +76,18 @@ function searchSightimg(chall_num){
 		}
 	});
 }
+
+function hallReviewList(){
+	// 공연장 후기 불러오기
+	$.ajax({
+		type: "post",
+		url: "hallReviewList",
+		data: {
+			type: $("#reviewSearchCategory").val(),
+			chall_num: $("#concerthallNum").val()
+		},
+		success: function(result){
+			$("#hallReview").html(result);
+		}
+	});
+}
