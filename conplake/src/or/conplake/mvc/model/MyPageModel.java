@@ -28,7 +28,7 @@ public class MyPageModel {
 	
 	@RequestMapping(value="/modifyInfoForm")
 	public String modifyInfoForm(){
-		return "join/joinForm";
+		return "join.joinForm";
 	}
 	
 	@RequestMapping(value="/modifyInfo")
