@@ -10,7 +10,7 @@ p input#remove_setList{ margin-left:15px; background:#fff; border:1px solid #ccc
 p input#remove_setList:hover {background:#f9f9f9;}
 
 #table_setList {}
-.tr_setList { border-bottom:1px solid #ccc; line-height:36px;}
+.tr_setList { border-bottom:1px solid #ccc; line-height:30px;}
 
 .tr_setList th {background:#eee;}
 

@@ -20,7 +20,7 @@ border-right:1px solid #ccc; box-shadow:#eee 2px 0 2px 0;}
 
 #noteSelect{ width:80px; text-align:center;}
 #noteTo{ width:150px; }
-#noteTitle{ width:260px;}
+#noteTitle p{ width:260px; white-space:nowrap; text-overflow:ellipsis; overflow:hidden;}
 #noteDate{ width:160px; text-align:center;}
 
 .table_list{ table-layout:fixed;}
@@ -59,4 +59,4 @@ border-right:1px solid #ccc; box-shadow:#eee 2px 0 2px 0;}
 #noWriteNote{ margin-right:10px;}
 
 
-#addressView { width:530px; padding:10px; position:absolute; top:90px; right:18px; border:1px solid #ccc; box-shadow:#eee 1px 1px 2px; z-index:1000; background-color:#fff; display:none}
+#addressView { width:525px; padding:10px;  position:absolute; top:95px; right:25px; border:1px solid #ccc; box-shadow:#eee 1px 1px 2px; z-index:1000; background-color:#fff; border-color:#eee #ddd #ccc #ddd; display:none}

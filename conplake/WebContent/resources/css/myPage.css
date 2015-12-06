@@ -61,8 +61,8 @@
 #myReviewDate p{width:120px;}
 #myReviewConTitle p{width:245px;}
 td#myReviewConTitle p{padding-left:10px;}
-#myReviewTitle p{ width:420px;}
-td#myReviewTitle p{ padding-left:20px;}
+th#myReviewTitle p { text-align:center;}
+td#myReviewTitle p{ width:420px; text-align:left; padding-left:20px;}
 
 
 

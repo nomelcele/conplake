@@ -56,6 +56,8 @@ $('document').ready(function(){
 
 
 function removeNote(){ 
+	
+	
 	$(".input_check:checked").not($("#input_n_check0")).parent().siblings().remove();
 	$(".input_check:checked").not($("#input_n_check0")).parent().parent().parent().remove();
 	
