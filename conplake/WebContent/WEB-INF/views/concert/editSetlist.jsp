@@ -31,10 +31,10 @@
 	                        	<input class="input_setList" id="input_setListNum" name="input_setListNum" type="number" value="${setlist.song_order}"/>
 	                        </td>
 	                        <td class="setListTitle">
-	                        	<input class="input_setList" id="input_setListTitle_${setlist.song_order}" name="input_setListTitle" type="text" value="${setlist.song_title}" onkeydown="setSearchQuery(${setlist.artistname},${setlist.song_order})"/>
+	                        	<input class="input_setList" id="input_setListTitle_${setlist.song_order}" name="input_setListTitle" type="text" value="${setlist.song_title}" onkeyup="setSearchQuery('${setlist.artistname}','_${setlist.song_order}')"/>
 	                        </td>
 	                        <td class="setListLink">
-	                        	<input class="input_setList" id="input_setListLink_${setlist.song_order}" name="input_setListTitle" type="text" value="${setlist.song_link}"/>
+	                        	<input class="input_setList" id="input_setListLink_${setlist.song_order}" name="input_setListLink" type="text" value="${setlist.song_link}"/>
 	                        	<span class="btn_searchReview"><a id="searchLink_${setlist.song_order}" href="#" target="_blank"></a></span>
 	                        </td>
 	                    </tr>
@@ -48,11 +48,11 @@
                         	<input class="input_setList" id="input_setListNum" name="input_setListNum" type="number" />
                         </td>
                         <td class="setListTitle">
-                        	<input class="input_setList" id="input_setListTitle" name="input_setListTitle" type="text" onkeydown="setSearchQuery(${concertInfo.artistname})"/>
+                        	<input class="input_setList" id="input_setListTitle" name="input_setListTitle" type="text" onkeyup="setSearchQuery('${concertInfo.artistname}','')"/>
                         </td>
                         <td class="setListLink">
-                        	<input class="input_setList" id="input_setListLink" name="input_setListTitle" type="text" value=""/>
-                        	<span class="btn_searchReview"><a id="searchLink" href="#"></a></span>
+                        	<input class="input_setList" id="input_setListLink" name="input_setListLink" type="text" value=""/>
+                        	<span class="btn_searchReview"><a id="searchLink" target="_blank" href="#"></a></span>
                         </td>
                       
                     </tr>
