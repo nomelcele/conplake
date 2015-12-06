@@ -1,10 +1,13 @@
 package or.conplake.vo;
 
+import org.springframework.web.multipart.MultipartFile;
+
 public class ConcerthallVO {
 	private int chall_num;
 	private double chall_gpsx, chall_gpsy;
 	private String chall_name, chall_addr, chall_tel, chall_official,
 	chall_img, chall_intro, chall_seatsimg;
+	private MultipartFile seatsimgFile;
 	
 	public int getChall_num() {
 		return chall_num;
@@ -65,6 +68,12 @@ public class ConcerthallVO {
 	}
 	public void setChall_seatsimg(String chall_seatsimg) {
 		this.chall_seatsimg = chall_seatsimg;
+	}
+	public MultipartFile getSeatsimgFile() {
+		return seatsimgFile;
+	}
+	public void setSeatsimgFile(MultipartFile seatsimgFile) {
+		this.seatsimgFile = seatsimgFile;
 	}
 	
 	

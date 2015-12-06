@@ -20,4 +20,7 @@
   <select id="concerthallInfo" parameterType="int" resultType="chvo">
   	select * from concerthall where chall_num=#{chall_num}
   </select>
+  <update id="uploadSeatsimg" parameterType="chvo">
+  	update concerthall set chall_seatsimg=#{chall_seatsimg} where chall_num=#{chall_num} 
+  </update>
   </mapper>
