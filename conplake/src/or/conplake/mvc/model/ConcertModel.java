@@ -153,8 +153,8 @@ public class ConcertModel {
 	}
 
 	@RequestMapping(value = "/saveSetlist")
-	public String saveSetlist(ConcertVO cvo, String[] songs_title, int[] songs_order, Model model) {
-		service.saveSetlist(cvo, songs_title, songs_order);
+	public String saveSetlist(ConcertVO cvo, String[] songs_title, int[] songs_order, String[] songs_link, Model model) {
+		service.saveSetlist(cvo, songs_title, songs_order, songs_link);
 		
 //		return "redirect:setlist?con_num="+cvo.getCon_num();
 		model.addAttribute("setlist", sdao.setlist(cvo.getCon_num()));

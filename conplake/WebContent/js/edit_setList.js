@@ -36,15 +36,18 @@ $('document').ready(function(){
 	$.ajaxSettings.traditional = true;
 	
 	$("#setList_saveBtn").click(function(){
-		var titleArr = document.getElementsByName("input_setListTitle");
-		var orderArr = document.getElementsByName("input_setListNum");
+		var titleArr = document.getElementsByName("input_setListTitle"); // 제목
+		var orderArr = document.getElementsByName("input_setListNum"); // 순서
+		var linkArr = document.getElementsByName("input_setListLink");// 영상 링크
 		
 		var songs_title = [];
 		var songs_order = [];
+		var songs_link = [];
 
 		for(var i=0; i<titleArr.length; i++){
 			songs_title.push(titleArr[i].value);
 			songs_order.push(orderArr[i].value);
+			songs_link.push(linkArr[i].value);
 		}
 		
 		$.ajax({
@@ -54,7 +57,8 @@ $('document').ready(function(){
 				songs_title: songs_title,
 				con_artist: $("#setList_con_artist").val(),
 				con_num: $("#setList_con_num").val(),
-				songs_order: songs_order 
+				songs_order: songs_order,
+				songs_link: songs_link
 			},
 			success : function(result) {
 				$('#concertSetList').html(result);
@@ -106,7 +110,7 @@ function createRow(){
 	input2.className = "input_setList";
 	input2.id = "input_setListTitle"+rowNum;
 	input2.name = "input_setListTitle";
-	input2.onkeydown = function(){setSearchQuery($("#setList_artistname"),rowNum)}; // 함수
+	input2.onkeyup = function(){setSearchQuery($('#setList_artistname').val(),rowNum)}; // 함수
 	cell2.appendChild(input2);
 	
 	var input3= document.createElement("INPUT");
@@ -120,8 +124,10 @@ function createRow(){
 	spanSearch.className="btn_searchReview";
 	
 	var aSearch = document.createElement("a");
+	aSearch.target = "_blank";
 	aSearch.id = "searchLink"+rowNum;
 	aSearch.setAttribute("href", "#");
+	
 	
 	spanSearch.appendChild(aSearch);
 	cell3.appendChild(spanSearch);
@@ -166,8 +172,8 @@ function editSetlist(){
 }
 
 function setSearchQuery(artistName, order){
-	console.log("유튭유튭");
-	var linkId = "#searchLink_"+order;
-	var titleId = "#input_setListTitle_"+order;
-	$(linkId).attr("href","http://www.youtube.com/results?search_query="+artistName+"+"+$(titleId));
+	var linkId = "#searchLink"+order;
+	console.log("linkId: "+linkId);
+	var titleId = "#input_setListTitle"+order;
+	$(linkId).attr("href","http://www.youtube.com/results?search_query="+artistName+"+"+$(titleId).val());
 }

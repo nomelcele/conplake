@@ -16,7 +16,7 @@ public class ConcertService {
 	@Autowired
 	private SongDao sdao;
 	
-	public void saveSetlist(ConcertVO cvo, String[] songs_title, int[] songs_order){
+	public void saveSetlist(ConcertVO cvo, String[] songs_title, int[] songs_order, String[] songs_link){
 		sdao.initializeSetlist(cvo.getCon_num()); // 수정 내용 반영 전 테이블 초기화
 		for(int i=0; i<songs_title.length; i++){
 			SongVO svo = new SongVO();
@@ -24,6 +24,7 @@ public class ConcertService {
 			svo.setSong_concert(cvo.getCon_num());
 			svo.setSong_order(songs_order[i]);
 			svo.setSong_title(songs_title[i]);
+			svo.setSong_link(songs_link[i]);
 			sdao.addSetlist(svo);
 		}
 	}
