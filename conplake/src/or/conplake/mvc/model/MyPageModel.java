@@ -25,11 +25,10 @@ public class MyPageModel {
 	private UserinteractionDao udao;
 	@Autowired
 	private PostDao pdao;
-	
+
 	@RequestMapping(value="/modifyInfoForm")
 	public String modifyInfoForm(HttpSession session, Model model){
 		// 개인 정보 수정 페이지 이동
-		System.out.println("왜 일로 오니 얘야....");
 		int mem_num = ((MemberVO)session.getAttribute("mvo")).getMem_num();
 		model.addAttribute("type", "modify");
 		MemberVO memInfo = mdao.memInfo(mem_num);
@@ -48,10 +47,11 @@ public class MyPageModel {
 		
 		return "join.joinForm";
 	}
-	
+
 	@RequestMapping(value="/modifyMemInfo")
 	public String modifyInfo(MemberVO mvo, Model model, HttpSession session){
 		// 개인 정보 수정
+		mvo.setMem_num(((MemberVO)session.getAttribute("mvo")).getMem_num());
 		mdao.modifyInfo(mvo);
 		
 		int mem_num = mvo.getMem_num();
@@ -62,6 +62,7 @@ public class MyPageModel {
 		model.addAttribute("isFriend", "currentUser");
 		return "myPage.myPage";
 	}
+	
 	
 	@RequestMapping(value="/myFriends")
 	public String myFriends(int mem_num, Model model){
