@@ -31,11 +31,11 @@
 	                        	<input class="input_setList" id="input_setListNum" name="input_setListNum" type="number" value="${setlist.song_order}"/>
 	                        </td>
 	                        <td class="setListTitle">
-	                        	<input class="input_setList" id="input_setListTitle_${setlist.song_order}" name="input_setListTitle" type="text" value="${setlist.song_title}" onkeyup="setSearchQuery('${setlist.artistname}','_${setlist.song_order}')"/>
+	                        	<input class="input_setList" id="input_setListTitle_${setlist.song_order}" name="input_setListTitle" type="text" value="${setlist.song_title}"/>
 	                        </td>
 	                        <td class="setListLink">
 	                        	<input class="input_setList" id="input_setListLink_${setlist.song_order}" name="input_setListLink" type="text" value="${setlist.song_link}"/>
-	                        	<span class="btn_searchReview"><a id="searchLink_${setlist.song_order}" href="#" target="_blank"></a></span>
+	                        	<span class="btn_searchReview"><a id="searchLink_${setlist.song_order}" href="http://www.youtube.com/results?search_query=${setlist.artistname}+${setlist.song_title}" target="_blank"></a></span>
 	                        </td>
 	                    </tr>
                     </c:forEach>

@@ -63,7 +63,7 @@
 	                    <tr class="tr_setList">
 	                        <td class="setListNum"><p>${setlist.song_order}</p></td>
 	                        <td class="setListTitle"><p>${setlist.song_title}</p></td>
-	                        <td class="setListLink"><p><a href="${setlist.song_link}">link</a></p></td>
+	                        <td class="setListLink"><p><a href="${setlist.song_link}" target="_blank"><img src="resources/img/playIcon.gif" width="15"></a></p></td>
 	                    </tr>
                     </c:forEach>
                     
