@@ -14,6 +14,7 @@ $(document).ready( function () {
 			switch(searchOption){
 				case 'artist':
 					$("#searchKeyword").attr("name","art_name");
+					$("#searchType").attr("value","searchLeft");
 					$("#searchForm").attr("action","artistSearch").submit();
 					break;
 				case 'concert':
@@ -22,6 +23,7 @@ $(document).ready( function () {
 					break;
 				case 'concerthall':
 					$("#searchKeyword").attr("name","chall_name");
+					$("#searchType").attr("value","searchLeft");
 					$("#searchForm").attr("action","concerthallSearch").submit();
 					break;
 			}

@@ -6,7 +6,7 @@
             <ul class="ul_search">
             <c:choose>
             	<c:when test="${resultType eq 'concert'}">
-	            	<c:forEach var="conResult" items="#{conResult}">
+	            	<c:forEach var="conResult" items="${conResult}">
 		            	<li id="list_search">
 		                    <a href="concertInfo?con_num=${conResult.con_num}"><img width="100" height="100" alt="콘서트이미지1" src="${conResult.con_poster}"	style="float:left">
 		                       	<div id="search_info">
@@ -18,7 +18,7 @@
 	            	</c:forEach>
             	</c:when>
             	<c:when test="${resultType eq 'concerthall'}">
-            		<c:forEach var="challResult" items="#{challResult}">
+            		<c:forEach var="challResult" items="${challResult}">
 		            	<li id="list_search">
 		                    <a href="concerthallInfo?chall_num=${challResult.chall_num}"><img width="100" height="100" alt="콘서트이미지1" src="${challResult.chall_img}"	style="float:left">
 		                       	<div id="search_info">
@@ -29,7 +29,7 @@
 	            	</c:forEach>
             	</c:when>
             	<c:otherwise>
-            	    <c:forEach var="artResult" items="#{artResult}">
+            	    <c:forEach var="artResult" items="${artResult}">
 		            	<li id="list_search">
 		                    <a href="artistInfo?art_num=${artResult.art_num}"><img width="100" height="100" alt="콘서트이미지1" src="${artResult.art_img}"	style="float:left">
 		                       	<div id="search_info">
@@ -51,49 +51,4 @@
 <!--                         </div></a> -->
 <!--                 </li> -->
             
-<!--                 <li id="list_search"> -->
-<!--                     <a href="#"><img width="100" height="100" alt="콘서트이미지1" src="resources/img/nell.jpg"	style="float:left"> -->
-<!--                        	<div id="search_info"> -->
-<!--                             <p class="concert_title">넬 콘서트 : NELL'S SEASON 2015 - Beautiful Day</p> -->
-<!--                             <p class="concert_date">2015.05.22 ~ 2015.06.07</p> -->
-<!--                             <p class="concert_place">이화여자대학교 삼성홀 </p> -->
-<!--                         </div></a> -->
-<!--                 </li> -->
-                
-                                
-<!--                 <li id="list_search"> -->
-<!--                     <a href="#"><img width="100" height="100" alt="콘서트이미지1" src="resources/img/nell2.png"	style="float:left"> -->
-<!--                        	<div id="search_info"> -->
-<!--                             <p class="concert_title">2014 넬 크리스마스 콘서트 CHRISTMAS IN NELL＇S ROOM 2014</p> -->
-<!--                             <p class="concert_date">2014.12.24 ~ 2014.12.25</p> -->
-<!--                             <p class="concert_place">서울 잠실학생체육관</p> -->
-<!--                         </div></a> -->
-<!--                 </li> -->
-                
-<!--                 <li id="list_search"> -->
-<!--                     <a href="#"><img width="100" height="100" alt="콘서트이미지1" src="resources/img/nell3.png"	style="float:left"> -->
-<!--                        	<div id="search_info"> -->
-<!--                             <p class="concert_title">NELL＇S SEASON 2014 - NEWTON’S APPLE</p> -->
-<!--                             <p class="concert_date">2014.04.03 ~ 2014.04.06</p> -->
-<!--                             <p class="concert_place">블루스퀘어 삼성카드홀</p> -->
-<!--                         </div></a> -->
-<!--                 </li> -->
-                
-<!--                 <li id="list_search"> -->
-<!--                     <a href="#"><img width="100" height="100" alt="콘서트이미지1" src="resources/img/nell4.png"	style="float:left"> -->
-<!--                        	<div id="search_info"> -->
-<!--                             <p class="concert_title">2013 넬 크리스마스 콘서트 CHRISTMAS IN NELL＇s ROOM 2013</p> -->
-<!--                             <p class="concert_date">2013.12.24 ~ 2013.12.25</p> -->
-<!--                             <p class="concert_place">서울 잠실학생체육관</p> -->
-<!--                         </div></a> -->
-<!--                 </li> -->
-                
-<!--                  <li id="list_search"> -->
-<!--                     <a href="#"><img width="100" height="100" alt="콘서트이미지1" src="resources/img/nell5.png"	style="float:left"> -->
-<!--                        	<div id="search_info"> -->
-<!--                             <p class="concert_title"> 2012 넬 콘서트 NELL＇s ROOM</p> -->
-<!--                             <p class="concert_date">2012.12.31</p> -->
-<!--                             <p class="concert_place">서울 잠실학생체육관</p> -->
-<!--                         </div></a> -->
-<!--                 </li>           -->
             </ul>

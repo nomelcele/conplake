@@ -29,10 +29,17 @@ public class ConcerthallModel {
 	private SightimgDao sidao;
 	
 	@RequestMapping(value="/concerthallSearch")
-	public String concerthallSearch(String chall_name, Model model){
+	public String concerthallSearch(String chall_name, String searchType, Model model){
 		model.addAttribute("challResult", chdao.concerthallSearch(chall_name));
 		model.addAttribute("resultType", "concerthall");
-		return "search.searchResult";
+		
+		String url = "";
+		if(searchType.equals("searchLeft")){
+			url = "search.searchResult";
+		} else {
+			url = "concert/searchConcerthall";
+		}
+		return url;
 	}
 	
 	@RequestMapping(value="/concerthallInfo")

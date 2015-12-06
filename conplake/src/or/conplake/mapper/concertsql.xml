@@ -53,4 +53,7 @@
   	from concert, concerthall where con_artist=#{art_num} and con_venue=chall_num 
   	order by con_enddate desc
   </select>
+  <insert id="addNewConcert" parameterType="cvo">
+  	insert into concert values(concert_seq.nextVal,#{con_name},#{con_poster},#{con_startdate},#{con_enddate},#{con_venue},#{con_artist},#{con_link},#{con_price},#{con_tel},#{con_detailimg})
+  </insert>
   </mapper>

@@ -50,4 +50,9 @@ public class ConcertDao {
 	public List<ConcertVO> artistConcerts(int art_num){
 		return st.selectList("con.artistConcerts", art_num);
 	}
+	
+	public void addNewConcert(ConcertVO cvo){
+		// 정보 등록에서 추가한 콘서트 등록
+		st.insert("con.addNewConcert", cvo);
+	}
 }
