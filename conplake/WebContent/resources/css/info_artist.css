@@ -1,20 +1,20 @@
 
-#artistIntro { display:block;}
+#artistIntro { display:block; line-height:20px;}
 #artistConcert{ display:none;}
 #artistSong{ display:none;}
 
 .innerCards { background-color:#fff;
 	
-	border:1px solid #ddd;
-	box-shadow:2px 2px 2px #f7f7f7; 
+	border:1px solid #ccc;
+	box-shadow:1px 2px 3px #eee; 
 	margin: 0 auto;
 	position:relative;
 	}
 	
 .ul_artistSong{ width:960px; height:auto; display:inline-block;}
-.ul_artistSong li.innerCards{ float:left; width:416px; height:296px; margin-right:60px; margin-bottom:30px;}
+.ul_artistSong li.innerCards{ float:left; width:416px; height:286px; margin-right:60px; margin-bottom:30px;}
 
-.artistVideoWrap{ width:416px; height:246px; }
-.artistVideoTitle{ width:401px; padding-left:15px; height:49px; border-top:1px solid #ddd;}
-.artistVideoTitle p, .artistVideoTitle p span{ line-height:49px; font-size:14px; font-stretch:wider; color:#999;}
+.artistVideoWrap{ width:416px; height:236px; }
+.artistVideoTitle{ margin-top:10px; width:401px; padding-left:15px; height:39px; border-top:1px solid #ccc; }
+.artistVideoTitle p, .artistVideoTitle p span{ font-weight:bold; line-height:39px; font-size:14px; font-stretch:wider; color:#999;}
 	

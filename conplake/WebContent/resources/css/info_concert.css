@@ -113,7 +113,7 @@ input#write_review:hover { background:#444;}
 
 p#tLUserName, p#mdUserName{ font-weight:bold;}
 p#tLUserName span, p#mdUserName span{ font-weight:normal; float:right; font-size:11px; color:#666;}
-p#tLText, p#mdText{ word-break:break-all; max-height:39px; overflow:hidden;}
+p#tLText, p#mdText{ min-height:20px; height:auto; word-break:break-all; max-height:39px; overflow:hidden;}
 p#mdText{ float:left; width:240px; padding-right:10px;  }
 #mdDelete{ width:40px; height:20px; float:right; }
 
