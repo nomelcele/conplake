@@ -149,24 +149,24 @@ $(function(){
 
 
 	// 회원 가입 버튼 클릭 시
-	 $("#joinBtn").click(function(){
-		// 메일
-		 var mailAddr = $("#email_id").val()+"@"+$("#email_address").val();
-			$("#mem_mail").attr("value",mailAddr);
-			
-			// 주소
-			var memAddr = $("#postcode1").val()+"-"+$("#postcode2").val()+"/"+$("#addr").val()+"/"+$("#addrDetail").val();
-			$("#mem_addr").attr("value",memAddr);
-			
-			// 이미지 파일 업로드
-			var img = imgUpload();
-			alert("????????????"+img);
-			console.log("이미지 파일 업로드 완료");
-			
-			// 회원 가입 폼 제출
-			$("#joinForm").submit();
-	 });
-	 
+//	 $("#joinBtn").click(function(){
+//		// 메일
+//		 var mailAddr = $("#email_id").val()+"@"+$("#email_address").val();
+//			$("#mem_mail").attr("value",mailAddr);
+//			
+//			// 주소
+//			var memAddr = $("#postcode1").val()+"-"+$("#postcode2").val()+"/"+$("#addr").val()+"/"+$("#addrDetail").val();
+//			$("#mem_addr").attr("value",memAddr);
+//			
+//			// 이미지 파일 업로드
+//			var img = imgUpload();
+//			alert("????????????"+img);
+//			console.log("이미지 파일 업로드 완료");
+//			
+//			// 회원 가입 폼 제출
+//			$("#joinForm").submit();
+//	 });
+//	 
 	 
 	 
 	 
@@ -187,7 +187,7 @@ function imgUpload(){
 	xhr.onreadystatechange = function(){
 		// callback
 		if(xhr.readyState == 4 && xhr.status == 200){
- 			alert("사진경로"+xhr.responseText.trim());
+// 			alert("사진경로"+xhr.responseText.trim());
 			$('#mem_img').attr("value",xhr.responseText.trim());
 //			alert("사원정보가 업데이트 되었습니다.");
 
@@ -200,3 +200,27 @@ function imgUpload(){
 	xhr.send(imgFile.files[0]); // post 방식이니까 send로 파라미터 전송
 }
 
+function joinMember(type){
+	// 메일
+	 var mailAddr = $("#email_id").val()+"@"+$("#email_address").val();
+		$("#mem_mail").attr("value",mailAddr);
+		
+		// 주소
+		var memAddr = $("#postcode1").val()+"-"+$("#postcode2").val()+"/"+$("#addr").val()+"/"+$("#addrDetail").val();
+		$("#mem_addr").attr("value",memAddr);
+		
+		// 이미지 파일 업로드
+		var img = imgUpload();
+		console.log("이미지 파일 업로드 완료");
+		
+		if(type=='modify'){
+			// 개인 정보 수정 시
+			$("#joinMember").attr("action","modifyMemInfo");
+		} else {
+			// 회원 가입 시
+			$("#joinMember").attr("action","joinMember");
+		}
+		
+		// 회원 가입 폼 제출
+		$("#joinForm").submit();
+}

@@ -14,6 +14,7 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
@@ -27,8 +28,9 @@ public class JoinModel {
 	private MemberDao mdao;
 	
 	@RequestMapping(value="/joinForm")
-	public String joinForm(){
+	public String joinForm(Model model){
 		// 회원 가입 폼 이동
+		model.addAttribute("type", "join");
 		return "join.joinForm";
 	}
 	
