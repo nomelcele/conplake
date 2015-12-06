@@ -19,7 +19,7 @@
 						<li>
 							<p>
 								<span>${challResult.chall_name}</span>
-								<input class="innerButton button" id="mdSearchSelect" type="button" value="선택" onclick="selectConcerthall('${challResult.chall_name}',${challResult.chall_num})"/>
+								<input class="innerButton" id="mdSearchSelect" type="button" value="선택" onclick="selectConcerthall('${challResult.chall_name}',${challResult.chall_num})"/>
 							</p>
 						</li>
 					</c:forEach>
