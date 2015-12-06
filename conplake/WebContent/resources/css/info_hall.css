@@ -129,6 +129,8 @@ select#reviewSearchCategory{ width:130px; background-position:105px center; floa
 .ul_hallReview{ display:inline-block; height:30px; float:right;}
 .ul_hallReview li{ float:left;}
 .span_hallReviewTitle{ }
+.li_hallReviewSeat{text-align:right;}
+.li_hallReviewSeat:after{ content:"|"; padding:0 10px;}
 .li_hallReviewDate{ text-align:right; }
 .li_hallReviewDate:after{ content:"|"; padding:0 10px;}
 .li_hallReviewId{ text-align:right; }

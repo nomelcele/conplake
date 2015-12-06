@@ -2,6 +2,7 @@ package or.conplake.mvc.model;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.http.HttpSession;
 
@@ -9,6 +10,7 @@ import or.conplake.mvc.dao.ConcertDao;
 import or.conplake.mvc.dao.ConcerthallDao;
 import or.conplake.mvc.dao.PostDao;
 import or.conplake.mvc.dao.SightimgDao;
+import or.conplake.vo.PostVO;
 import or.conplake.vo.SightimgVO;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,7 +48,12 @@ public class ConcerthallModel {
 	public String concerthallInfo(int chall_num, Model model){
 		model.addAttribute("challInfo", chdao.concerthallInfo(chall_num));
 		model.addAttribute("ongoingCons", cdao.ongoingConcerts(chall_num));
-		model.addAttribute("reviews", pdao.concerthallReviews(chall_num));
+		List<PostVO> reviews = pdao.concerthallReviews(chall_num);
+		for(int i=0; i<reviews.size(); i++){
+			System.out.println("공연 이름: "+reviews.get(i).getConcertname());
+			System.out.println("작성 날짜: "+reviews.get(i).getPost_date());
+		}
+		model.addAttribute("reviews", reviews);
 		model.addAttribute("sightimgs", sidao.sightimgList(chall_num));
 		return "hall.hallInfo";
 	}
@@ -88,4 +95,10 @@ public class ConcerthallModel {
 		return "hall/sightImgList";
 	}
 	
+	@RequestMapping(value="/hallReviewList")
+	public String hallReviewList(String type, int chall_num, Model model){
+		model.addAttribute("reviews", pdao.concerthallReviews(chall_num));
+		model.addAttribute("type", type);
+		return "hall/hallReview";
+	}
 }
