@@ -71,7 +71,6 @@ $('document').ready(function(){
 
 function createRow(){ 
     rowNum+=1;
-
 	
 	var objTable = document.getElementById('table_editSetList'); 
     var objRow = objTable.insertRow();
@@ -80,7 +79,6 @@ function createRow(){
 	var cell1 = objRow.insertCell(1);
 	var cell2 = objRow.insertCell(2);
 	var cell3 = objRow.insertCell(3);
-	
 	
 	var input0= document.createElement("INPUT");
 	var label0= document.createElement("label");

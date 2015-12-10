@@ -6,8 +6,8 @@
 	  <div class="formBox">
 	  <form action="login" method="post">
 		  <div id="loginBox">
-	          <input id="id" name="mem_id" type="text" autofocus spellcheck="false" value="" placeholder="아이디" name="Email">
-	          <input id="passwd" name="mem_pwd" type="password" placeholder="비밀번호" name="Passwd">
+	          <input id="id" name="mem_id" type="text" autofocus spellcheck="false" value="" placeholder="아이디" >
+	          <input id="passwd" name="mem_pwd" type="password" placeholder="비밀번호" >
 	      </div>
 	      <div id="loginButtonBox">
 	      		<input id="signIn" type="submit" value="로그인" name="signIn">
@@ -29,7 +29,7 @@
 				<form action="sendPwdMail" method="post">
 					<p>ID <input type="text" class="inputStyle input_search" id="userId"></p>
 					<p>MAIL 	
-				            <select class="inputStyle input_category" id="email_select" autocomplete="off">
+				            <select class="inputStyle input_category" id="email_select">
 				            	<option selected>-직접입력-</option>
 				                <option >naver.com</option>
 				                <option>hanmail.net</option>

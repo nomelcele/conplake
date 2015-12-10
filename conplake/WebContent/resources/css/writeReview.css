@@ -4,13 +4,22 @@
 	float:left;
 	
 }
-#formBoxLeft { min-height:784px; width:325px; padding-right:25px; padding-top:30px; padding-bottom:30px;}
+
+#formBoxWrap{ width:900px; height:auto;display:inline-block;}
+#formBoxLeft { min-height:784px; width:325px; padding-left:25px; padding-top:30px; padding-bottom:30px;}
 #formBoxRight { min-height:838px; width:500px;  padding-right:50px; padding-bottom:30px; }
 
+#memberButtonBox {
+	width:900px; height:auto;
+	display:inline-block;
+	
+	
+	
+	}
 
 	
 .inputLabel {color:#333; font-size:12px; font-family: '나눔고딕', 'Nanum Gothic', sans-serif; height:36px; line-height:36px; float:left;}
-#formBoxLeft input {float:right; }
+#formBoxLeft input {position:absolute; right:0;}
 
 	
 .rInputStyle { background: #fff none repeat scroll 0 0;
@@ -35,7 +44,7 @@
 .rinputBox { width:100%; height:36px; margin:0 0 15px;}
 
 
-#table_RsetList{ table-layout:fixed;}
+#table_RsetList{ table-layout:fixed; display:inline-block;}
 
 #table_RsetList caption{ text-align:left; height:36px; line-height:36px; padding-top:30px;}
 
@@ -79,11 +88,6 @@
 #nextFileName { position:absolute; right:0; width:10px; height:10px; border:none; margin-top:10px; padding:0; }
 .fileBox [type="file"] {width:30px; height:30px; float:right; overflow:hidden; background:url(../img/attach.png) center center no-repeat; background-size:60%; text-indent:-9999px; overflow-x:hidden;}
 
-#memberButtonBox {
-	float:right;
-	
-	
-	}
 #memberButtonBox input {float:right; margin-bottom:50px; }
 	
 	

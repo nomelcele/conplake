@@ -2,7 +2,7 @@
 
 #concertTitle {width:900px; height:60px; line-height:30px; font-size:18px; display:inline-block;}
 
-#innerButtonBox {width:215px; height:30px; float:right; display:inline-block;}
+#innerButtonBox { position:absolute; right:0; width:215px; height:30px; float:right; display:inline-block;}
 
 
 

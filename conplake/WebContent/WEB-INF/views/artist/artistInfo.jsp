@@ -2,20 +2,20 @@
     pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>  
     <h1>ARTIST INFORMATION</h1>
-        	<h2 id="concertTitle">${artistInfo.art_name}
+        	<h2 id="concertTitle">${artistInfo.art_name}</h2>
         	<div id="innerButtonBox">
             	    <c:if test="${liked eq 'n'}">
                     	<input id="likeToGo" class="innerButton" type="button" value="좋아요" onclick="location='likeArtist?ui_member='+${sessionScope.mvo.mem_num}+'&ui_artist='+${artistInfo.art_num}"/>
                     </c:if>
                     <c:if test="${liked eq 'y'}">
-                    	<input id="likeToGo" class="innerButton" type="button" value="관심 해제" onclick="location='unlikeArtist?ui_member='+${sessionScope.mvo.mem_num}+'&ui_artist='+${artistInfo.art_num}"/>
+                    	<input class="innerButton" type="button" value="관심 해제" onclick="location='unlikeArtist?ui_member='+${sessionScope.mvo.mem_num}+'&ui_artist='+${artistInfo.art_num}"/>
                     </c:if>
-            </div></h2>
+            </div>
             	
             
             <div class="concertProfileBox profileSize">
             	<div class="concertPoster profileSize" >
-                	<img src="${artistInfo.art_img}" width="225" height="225" />
+                	<img src="${artistInfo.art_img}" width="225" height="225" alt=""/>
                 </div>
                 <div class="concertProfile profileSize">
      		        <p>국가 : <span>${artistInfo.art_country}</span></p>
@@ -73,7 +73,7 @@
             		
                 
                 <p class="p_review">
-                	<input id="write_review" class="innerButton" type="button" value="후기 작성"/>
+                	<input id="write_review" class="innerButton" type="button" value="후기 작성">
                 </p>
             </div>
             

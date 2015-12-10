@@ -6,23 +6,23 @@
 	<div class="formBox" id="formBoxLeft2">
 		<p class="rinputBox">
 		    <label class="inputLabel">아티스트 명</label>
-		    <input class="rInputStyle a_width" id="" name="art_name" type="text" maxlength="30" autofocus spellcheck="false" placeholder="">
+		    <input class="rInputStyle a_width" name="art_name" type="text" maxlength="30" autofocus spellcheck="false" >
 		</p>
 		
 		<p class="rinputBox" id="p_artistImg">
-		    <label class="inputLabel" id="">대표 사진</label>
+		    <label class="inputLabel">대표 사진</label>
 		    
-		    <label class="inputLabel rInputStyle input_fileImgBtn" id="">Browse..
-		        <input type="file" id="" name="art_file" class="rInputStyle input_fileImg"/>
+		    <label class="inputLabel rInputStyle input_fileImgBtn">Browse..
+		        <input type="file" name="art_file" class="rInputStyle input_fileImg">
 		    </label>
 		    
-		    <input type="text" class="rInputStyle a_width input_fileImgName" id="input_artistImgName" readonly/> 
+		    <input type="text" class="rInputStyle a_width input_fileImgName" id="input_artistImgName" readonly> 
 		</p>
 		  
 		
 		<p class="rinputBox">
 		    <label class="inputLabel">국가</label>
-		    <input type="text" class="rInputStyle a_width" id="" name="art_country" placeholder="예) 대한민국"/>
+		    <input type="text" class="rInputStyle a_width" name="art_country" placeholder="예) 대한민국">
 		</p>
 		
 		
@@ -43,7 +43,7 @@
 		    <select class="rInputStyle select_artist a_width" name="art_genre">
 		     	<option value="발라드">발라드</option>
 		        <option value="댄스">댄스</option>
-		        <option value="R&B/소울">R&B/소울</option>
+		        <option value="R&amp;B/소울">R&amp;B/소울</option>
 		        <option value="락">락</option>
 		        <option value="랩/힙합">랩/힙합</option>
 		        <option value="일렉트로니카">일렉트로니카</option>
@@ -61,13 +61,13 @@
 		
 		<p class="rinputBox">
 		        <label class="inputLabel">SNS</label>
-		        <input type="text" class="rInputStyle a_width" id="" name="art_sns" placeholder="예) http://twitter.com/"/>
+		        <input type="text" class="rInputStyle a_width" name="art_sns" placeholder="예) http://twitter.com">
 		</p>
 		    
 		
 		<p class="rinputBox">
 		        <label class="inputLabel">공식사이트</label>
-		        <input type="text" class="rInputStyle a_width" id="" name="art_official" placeholder="예) http://official.com/"/>
+		        <input type="text" class="rInputStyle a_width" name="art_official" placeholder="예) http://official.com">
 		</p>
 	</div>
   

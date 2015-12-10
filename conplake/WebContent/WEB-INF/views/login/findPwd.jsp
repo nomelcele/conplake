@@ -5,9 +5,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>비밀번호 찾기</title>
-<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-<script src="js/login.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="js/login.js"></script>
 
 <link href="resources/css/findPwd.css" rel="stylesheet" type="text/css"/>
 
@@ -21,7 +21,7 @@
 		MAIL: 	<input class="inputStyle input_search" id="email_id" type="text" maxlength="30">
 	            <span>@</span>
 	            <input class="inputStyle input_search" id="email_address" type="text" maxlength="30">
-	            <select class="inputStyle input_category" id="email_select" autocomplete="off">
+	            <select class="inputStyle input_category" id="email_select">
 	            	<option selected>-직접입력-</option>
 	                <option >naver.com</option>
 	                <option>hanmail.net</option>
