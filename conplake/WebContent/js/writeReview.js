@@ -13,8 +13,6 @@ var imgArr = new Array(1); // 업로드할 파일 이름을 저장하는 배열
         	
         	
         	
-        	
-        	$("#formBoxLeft").height($("#formBoxRight").height()) ;
 //        	$("#imgFile").change(
 //        			function(){
 //	        		// 변화가 있을 때 function을 호출한다.

@@ -8,7 +8,8 @@
 	<input type="hidden" id="post_sightsound" name="post_sightsound">
 	<input type="hidden" id="post_facility" name="post_facility">
 	<input type="hidden" id="post_perform" name="post_perform">
-	
+
+<div id="formBoxWrap">	
 	<div class="formBox" id="formBoxRight">
         	<p class="p_write" id="p_write_first">리뷰 제목</p>
         	<p class="rinputBox" id="p_reviewTitle"><input class="rInputStyle" id="reviewTitle" type="text" autofocus spellcheck="false" value="" placeholder="리뷰 제목을 입력하세요." name="post_title"></p>
@@ -94,7 +95,7 @@
           
         </Table>
   </div>
-  
+</div>
  <div id="memberButtonBox">
             <input id="writeReviewBtn" onclick="writeReview()" class="rButton" type="button" value="확인" name="mem_submit">
 		</div>
