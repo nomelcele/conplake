@@ -1,10 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<input type="hidden" id="inboxSent" value="${inboxSent}">
 <Table id="table_list">
 	<tr class="tr_list">
 	    <th id="noteSelect"><p>
-	    	<input class="input_check" id="input_n_check0" name="s_checkAll" type="checkbox"/>
+	    	<input class="input_check" id="input_n_check0" onclick="checkAll(this)" name="s_checkAll" type="checkbox"/>
 	    	<label class="label_check" for="input_n_check0"></label>
 	    </p></th>
 	    <th id="noteTo"><p>
@@ -16,7 +17,6 @@
 	    
 	</tr>
 	
-	<!-- id="input_n_check1" 숫자바꾸기귀찮아서 내비둠 데헷 -->
 	<c:forEach var="noteList" items="${noteList}">
 	    <tr class="tr_list">
 	        <td id="noteSelect"><p>
@@ -35,15 +35,6 @@
 	        <td id="noteDate"><p>${noteList.note_date}</p></td>
 	    </tr>
 	</c:forEach>    
-<!-- 	    <tr class="tr_list"> -->
-<!-- 	        <td id="noteSelect"><p> -->
-<!-- 	        	<input class="input_check" id="input_n_check2" name="s_check" type="checkbox"/> -->
-<!-- 	         <label class="label_check" for="input_n_check2"></label> -->
-<!-- 	        </p></td> -->
-<!-- 	        <td id="noteTo"><p><a href="#">sdfa</a></p></td> -->
-<!-- 	        <td id="noteTitle"><p>asd</p></td> -->
-<!-- 	        <td id="noteDate"><p>sd</p></td> -->
-<!-- 	    </tr> -->
 	</Table>
 	
 	<p class="p_review" id="p_note">

@@ -36,7 +36,7 @@
             	</div>
             	
             	
-            	<div class="modalWindowWrap">
+            	<div class="modalWindowWrap" id="modalWindowWrap_comm">
             		<div class="modalWindow">	
             			<div class="mdHeader">
             				<p>REPLY<input class="mdClose" type="button" value="X" onclick="mdClose()"/></p>
