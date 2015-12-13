@@ -25,9 +25,9 @@
 
 		String uploadFileName = fileName.substring(0,fileName.lastIndexOf(".")) +ext; // 중복 방지를 위해 파일 이름에 시간을 추가해줬다.
 
-		System.out.println("redad"+application.getRealPath("/resources/memberImg"));
-// 		File uploadDir = new File(application.getRealPath("/resources/memberImg")); // 임시 경로
-		File uploadDir = new File("C:\\conplake\\ws\\conplake\\WebContent\\resources\\memberImg");
+		System.out.println(application.getRealPath("/resources/memberImg"));
+		File uploadDir = new File(application.getRealPath("/resources/memberImg")); // 임시 경로
+// 		File uploadDir = new File("C:\\conplake\\ws\\conplake\\WebContent\\resources\\memberImg");
 
 		// 업로드하기 위한 파일 객체 생성
 		System.out.println("-------------------------"+uploadDir.getAbsolutePath());
@@ -41,9 +41,6 @@
 		OutputStream outFile = new FileOutputStream(uploadFile);
 		// 파일 작성
 		byte[] buf = new byte[1024*2];
-		// 바이트 빼고 뭘 쓸 수 있나
-		// 이건 버퍼 기능인데
-		// 바이프 빼고 BufferedOutputStream 
 		int size=0;
 		while((size=in.read(buf)) != -1){
 			outFile.write(buf,0,size);

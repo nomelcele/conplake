@@ -17,8 +17,11 @@
   	update member set 
   		<if test="mem_pwd != null">
   			mem_pwd=#{mem_pwd},
-  		</if>	 
-  		mem_addr=#{mem_addr}, mem_intro=#{mem_intro}, mem_img=#{mem_img} 
+  		</if>
+  		<if test="mem_img != null">
+  			mem_img=#{mem_img}, 
+  		</if>
+  		mem_addr=#{mem_addr}, mem_intro=#{mem_intro} 
   		where mem_num=#{mem_num}
   </update>
   <select id="myProfile" parameterType="int" resultType="mvo">
