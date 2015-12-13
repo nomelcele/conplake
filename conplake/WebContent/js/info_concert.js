@@ -91,10 +91,10 @@ function readTimelineComm(comm_tl){
 		},
 		success : function(result) {
 			$('#modalWindowWrap_comm').html(result);
+			$("#modalWindowWrap_comm").css('display', 'block');
 		}
 	});
 	
-	$("#modalWindowWrap_comm").css('display', 'block');
 	
 }
 

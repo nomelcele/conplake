@@ -104,4 +104,11 @@ public class NoteModel {
 		
 		
 	}
+	
+	@RequestMapping(value="/deleteNote")
+	public String deleteNote(String type, HttpSession session){
+		int mem_num = ((MemberVO)(session.getAttribute("mvo"))).getMem_num();
+		return "redirect:/inbox?mem_num="+mem_num;
+
+	}
 }

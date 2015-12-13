@@ -74,16 +74,19 @@ function deleteFriend(ui_member,ui_friend,type){
 
 function addFriend(ui_member,ui_friend){
 	// 친구 추가
-	$.ajax({
-		type: "POST",
-		url: "addFriend",
-		data: {
-			ui_member: ui_member,
-			ui_friend: ui_friend
-		},
-		success: function(result){
-			$(".mainBox").html(result);
-		}
-	});
-
+	if(!confirm("친구로 추가하시겠습니까?")){
+		return;
+	} else {
+		$.ajax({
+			type: "POST",
+			url: "addFriend",
+			data: {
+				ui_member: ui_member,
+				ui_friend: ui_friend
+			},
+			success: function(result){
+				$(".mainBox").html(result);
+			}
+		});
+	}
 }

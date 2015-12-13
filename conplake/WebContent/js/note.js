@@ -34,35 +34,40 @@ function sentNotesList(mem_num){
 	
 }
 
-
-$('document').ready(function(){
-	$('#input_n_check0').click(function(event) {   
-		if(this.checked == true) {
-			// Iterate each checkbox
-			$(':checkbox').each(function() {
-				this.checked = true;                        
-			});
-		}
-		
-		else if(this.checked == false) {
-			// Iterate each checkbox
-			$(':checkbox').each(function() {
-				this.checked = false;                        
-			});
-		}
-	});
+function checkAll(obj){
+	// 체크박스 전체 선택(해제)을 해주는 메서드
+	var chkArr = document.getElementsByName("s_check");
+	var len = chkArr.length;
 	
-});
-
+	for(var i=0; i<len; i++){
+		if(obj.checked){
+			chkArr[i].checked = true;
+		} else {
+			chkArr[i].checked = false;
+		}
+	}
+}
 
 function removeNote(){ 
-	
-	
-	$(".input_check:checked").not($("#input_n_check0")).parent().siblings().remove();
-	$(".input_check:checked").not($("#input_n_check0")).parent().parent().parent().remove();
-	
-	$("#input_n_check0").prop("checked",false);  
-
+	// 쪽지 삭제
+	if(!confirm("쪽지를 삭제하시겠습니까?")){
+		return;
+	} else {
+		$.ajax({
+			type: "POST",
+			url: "deleteNote",
+			data: {
+				type: $("#inboxSent").val()
+			},
+			success: function(result){
+				$("#mdBody_right").html(result);
+			}
+		});
+	}
+//	$(".input_check:checked").not($("#input_n_check0")).parent().siblings().remove();
+//	$(".input_check:checked").not($("#input_n_check0")).parent().parent().parent().remove();
+//	
+//	$("#input_n_check0").prop("checked",false);  
 }
 
 function writeNoteForm(){
