@@ -3,6 +3,7 @@
 	<name>conplake</name>
 	<comment></comment>
 	<projects>
+		<project>spring-web-4.1.6.RELEASE</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

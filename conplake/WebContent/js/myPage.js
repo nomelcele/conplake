@@ -51,21 +51,25 @@ $( document ).ready(function() {
 
 function deleteFriend(ui_member,ui_friend,type){
 	// 친구 삭제
-	$.ajax({
-		type: "POST",
-		url: "deleteFriend",
-		data: {
-			ui_member: ui_member,
-			ui_friend: ui_friend,
-			type: type
-		},
-		success: function(result){
-			if(type == 'myFriends')
-				$("#modalWindowWrap_fri_header").html(result);
-			if(type == 'myPage')
-				$(".mainBox").html(result);
-		}
-	});
+	if(!confirm("친구 목록에서 삭제하시겠습니까?")){
+		return;
+	} else {
+		$.ajax({
+			type: "POST",
+			url: "deleteFriend",
+			data: {
+				ui_member: ui_member,
+				ui_friend: ui_friend,
+				type: type
+			},
+			success: function(result){
+				if(type == 'myFriends')
+					$("#modalWindowWrap_fri_header").html(result);
+				if(type == 'myPage')
+					$(".mainBox").html(result);
+			}
+		});
+	}
 }
 
 function addFriend(ui_member,ui_friend){

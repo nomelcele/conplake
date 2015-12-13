@@ -89,14 +89,6 @@
 	    	<span>
 	        	<a href="#" class="mPage" id="mPage_prev"><</a>
 	        	<a href="#">1</a>
-	            <a href="#">2</a> 
-	             <a href="#">3</a> 
-	             <a href="#">4</a> 
-	             <a href="#">5</a> 
-	             <a href="#">6</a> 
-	             <a href="#">7</a> 
-	             <a href="#">8</a> 
-	             <a href="#">9</a> 
 	            <a href="#" class="mPage" id="mPage_next">></a>
 	        </span>
 	    

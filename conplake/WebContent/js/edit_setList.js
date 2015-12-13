@@ -173,5 +173,7 @@ function setSearchQuery(artistName, order){
 	var linkId = "#searchLink"+order;
 	console.log("linkId: "+linkId);
 	var titleId = "#input_setListTitle"+order;
-	$(linkId).attr("href","http://www.youtube.com/results?search_query="+artistName+"+"+$(titleId).val());
+	$(linkId).attr("href","http://www.youtube.com/results?search_query="
+			+artistName+"+"+$(titleId).val());
 }
+
