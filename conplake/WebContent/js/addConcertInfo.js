@@ -47,6 +47,5 @@
  }
  
  function addNewConcert(){
-	 alert("제발");
 	 $("#addNewConcertForm").submit();
  }

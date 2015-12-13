@@ -9,7 +9,7 @@
   </insert>
   <select id="reviewList" parameterType="map" resultType="pvo">
   	select p.post_num, p.post_title, p.post_author, m.mem_name authorname, p.post_date, p.post_hit 
-  	from post p, member m where p.post_author=m.mem_num and p.post_concert=#{con_num} 
+  	from post p, member m where p.post_author=m.mem_num and p.post_concert=#{con_num} and p.post_type='review' 
   		<if test="post_title != null">
   			and p.post_title like '%'||#{post_title}||'%'
   		</if>
@@ -31,7 +31,7 @@
   </select>
   <select id="myReviews" parameterType="int" resultType="pvo">
   	select post_num, post_concert, con_name concertname, post_title, to_char(post_date,'yyyy-mm-dd') post_date from post, concert 
-  	where post_author=#{mem_num} and post_concert=con_num and post_type='review' order by post_date desc
+  	where post_author=#{mem_num} and post_concert=con_num and post_type='review' order by post_num desc
   </select>
   <select id="concerthallReviews" parameterType="int" resultType="pvo">
   	select post_num, post_author, mem_name authorname, to_char(post_date,'yyyy-mm-dd') post_date, post_concert, 

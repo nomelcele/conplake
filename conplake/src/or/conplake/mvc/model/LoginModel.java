@@ -222,17 +222,17 @@ public class LoginModel {
 			String content = memInfo.getMem_name()+"님, 비밀번호 찾기 인증 번호는 "+code+
 					"입니다. \n 인증 번호 입력 후 비밀번호를 변경해 주세요.";
 			
-			//정보를 담기 위한 객체
+			// 정보를 담기 위한 객체
 			Properties p = new Properties();
-			//SMTP 서버의 계정 설정
-			//Naver와 연결할 경우 네이버 아이디 지정
-			//Google과 연결할 경우 본인의 Gmail 주소
+			// SMTP 서버의 계정 설정
+			// Naver와 연결할 경우 네이버 아이디 지정
+			// Google과 연결할 경우 본인의 Gmail 주소
 			p.put("mail.smtp.user", sender);
-			//SMTP 서버 정보 설정
-			//네이버일 경우 smtp.naver.com
-			//Google일 경우 smtp.gmail.com
+			// SMTP 서버 정보 설정
+			// 네이버일 경우 smtp.naver.com
+			// Google일 경우 smtp.gmail.com
 			p.put("mail.smtp.host", "smtp.gmail.com");
-			//아래 정보는 네이버와 구글이 동일하므로 수정하지 마세요.
+			// 아래 정보는 네이버와 구글이 동일
 			p.put("mail.smtp.port", "465");
 			p.put("mail.smtp.starttls.enable", "true");
 			p.put("mail.smtp.auth", "true");
@@ -250,21 +250,21 @@ public class LoginModel {
 					}
 				};
 				Session ses = Session.getInstance(p, auth);
-				// 메일을 전송할 때 상세한 상황을 콘솔에 출력한다.
+				// 메일을 전송할 때 상세한 상황을 콘솔에 출력
 				ses.setDebug(true);
 				// 메일의 내용을 담기 위한 객체
 				MimeMessage msg = new MimeMessage(ses);
 				// 제목 설정
 				msg.setSubject(subject);
-				// 보내는 사람의 메일주소
+				// 보내는 사람의 메일 주소
 				Address fromAddr = new InternetAddress(sender);
 				msg.setFrom(fromAddr);
-				// 받는 사람의 메일주소
+				// 받는 사람의 메일 주소
 				Address toAddr = new InternetAddress(recipient);
 				msg.addRecipient(Message.RecipientType.TO, toAddr);
 				// 메시지 본문의 내용과 형식, 캐릭터 셋 설정
 				msg.setContent(content, "text/html;charset=UTF-8");
-				// 발송하기
+				// 발송
 				Transport.send(msg);
 			} catch (Exception mex) {
 				mex.printStackTrace();
@@ -276,7 +276,6 @@ public class LoginModel {
 			throw new Exception("아이디나 메일 주소가 틀렸습니다. 다시 확인해 주세요.");
 		}
 		
-		System.out.println("???????");
 		return "login/enterCode";
 	}
 	

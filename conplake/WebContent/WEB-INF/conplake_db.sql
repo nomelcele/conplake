@@ -356,3 +356,7 @@ create table sightimg(
   	select post_num, post_title, post_author, mem_name authorname, post_date, post_hit, post_concert,
   	post_cont, post_subtype from post, member where post_author=mem_num 
   	and post_type='with' and post_concert=10000001 order by post_date desc;
+  	
+  	update concert set con_detailimg='<p><img src="http://ticketimage.interpark.com/Play/image/etc/15/15013394-02.jpg" alt="" width="700" height="4149"></p>' where con_num=104565;
+  	
+  	update post set post_facility=' 매점이 공연장 면적에 비해 좀 작지 않나 싶다. 공연 시작 2시간 전 김밥을 사러 갔는데 사람들로 미어 터져서 한참을 기다렸다. 그리고 화장실 이용에 대한 안내가 미흡한 것 같다. 입장 시작 30분 전부터 화장실 입장을 통제한다는데 나는 제대로 된 안내를 받지 못했다. 그래서 공연 시작 전에 화장실을 가려던 많은 사람들이 불편을 호소하기도 했다.' where post_num=72;

@@ -55,8 +55,9 @@
             <div class="contentView" id="hallSeat">
             	
             	<div id="div_seatPic">
+            	<c:if test="${challInfo.chall_seatsimg ne null}"> 
             		<img src="resources/seatsImg/${challInfo.chall_seatsimg}" />
-            
+            	</c:if>
             	</div>
             	<p>
             		<input id="btn_Hallseat" class="rButton" type="button" onclick="uploadSeatReviewPic()" value="사진 등록"/>
