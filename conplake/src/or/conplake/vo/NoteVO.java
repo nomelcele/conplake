@@ -3,7 +3,7 @@ package or.conplake.vo;
 public class NoteVO {
 	private int note_num, note_from, note_to;
 	private String note_cont, note_date,
-	fromname, toname, fromid, toid;
+	fromname, toname, fromid, toid, notetype;
 	
 	public String getFromid() {
 		return fromid;
@@ -58,6 +58,12 @@ public class NoteVO {
 	}
 	public void setNote_date(String note_date) {
 		this.note_date = note_date;
+	}
+	public String getNotetype() {
+		return notetype;
+	}
+	public void setNotetype(String notetype) {
+		this.notetype = notetype;
 	}
 	
 	

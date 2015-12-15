@@ -31,6 +31,9 @@ public class NoteDao {
 	}
 	
 	// 삭제
+	public void deleteNote(NoteVO nvo){
+		st.update("note.deleteNote", nvo);
+	}
 	
 	// 보낸 쪽지함
 	public List<NoteVO> sent(int mem_num){
