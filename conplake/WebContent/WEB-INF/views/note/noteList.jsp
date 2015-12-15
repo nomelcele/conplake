@@ -20,7 +20,7 @@
 	<c:forEach var="noteList" items="${noteList}">
 	    <tr class="tr_list">
 	        <td id="noteSelect"><p>
-	        	<input class="input_check" id="input_n_check${noteList.note_num}" name="s_check" type="checkbox"/>
+	        	<input class="input_check" id="input_n_check${noteList.note_num}" name="s_check" value="${noteList.note_num}" type="checkbox"/>
 	         <label class="label_check" for="input_n_check${noteList.note_num}"></label>
 	        </p></td>
 	        <td id="noteTo"><p>

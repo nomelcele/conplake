@@ -48,7 +48,17 @@ function checkAll(obj){
 	}
 }
 
+// ajax 데이터로 배열을 보내기 위한 설정
+jQuery.ajaxSettings.traditional = true;
+
 function removeNote(){ 
+	var chkArr = $(".input_check:checked");
+	var noteNums = [];
+	
+	for(var i=0; i<chkArr.length; i++){
+		noteNums.push(chkArr[i].value);
+	}
+	
 	// 쪽지 삭제
 	if(!confirm("쪽지를 삭제하시겠습니까?")){
 		return;
@@ -57,7 +67,8 @@ function removeNote(){
 			type: "POST",
 			url: "deleteNote",
 			data: {
-				type: $("#inboxSent").val()
+				type: $("#inboxSent").val(),
+				noteNums: noteNums
 			},
 			success: function(result){
 				$("#mdBody_right").html(result);
