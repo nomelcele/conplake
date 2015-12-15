@@ -127,7 +127,14 @@ public class ConcertModel {
 	}
 
 	@RequestMapping(value = "/readReview")
-	public String readReview(int post_num, Model model) {
+	public String readReview(int post_num, Model model, HttpSession session) {
+		// 리뷰 읽기
+		PostVO pvo = new PostVO();
+		pvo.setPost_num(post_num);
+		int post_author = ((MemberVO)session.getAttribute("mvo")).getMem_num(); // 현재 접속한 유저 번호
+		pvo.setPost_author(post_author);
+		pdao.increaseHit(pvo); // 조회수 증가 => 작성자가 아닌 유저가 조회할 때만 조회수가 증가해야 함
+		
 		model.addAttribute("reviewDetail", pdao.readReview(post_num));
 		model.addAttribute("commList", cmdao.postCommList(post_num));
 		return "concert.readReview";
@@ -252,7 +259,13 @@ public class ConcertModel {
 	}
 	
 	@RequestMapping(value="/readLetsgo")
-	public String readLetsgo(int post_num, Model model){
+	public String readLetsgo(int post_num, Model model, HttpSession session){
+		PostVO pvo = new PostVO();
+		pvo.setPost_num(post_num);
+		int post_author = ((MemberVO)session.getAttribute("mvo")).getMem_num(); // 현재 접속한 유저 번호
+		pvo.setPost_author(post_author);
+		pdao.increaseHit(pvo); // 조회수 증가 => 작성자가 아닌 유저가 조회할 때만 조회수가 증가해야 함
+		
 		model.addAttribute("post", pdao.readLetsgo(post_num));
 		return "concert/readLetsGo";
 	}

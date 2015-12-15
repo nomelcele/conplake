@@ -49,4 +49,8 @@ public class PostDao {
 	public PostVO readLetsgo(int post_num){
 		return st.selectOne("post.readLetsgo", post_num);
 	}
+	
+	public void increaseHit(PostVO pvo){
+		st.update("post.increaseHit", pvo);
+	}
 }
