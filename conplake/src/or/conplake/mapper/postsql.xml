@@ -54,4 +54,8 @@
   	select post_num, post_title, post_author, mem_name authorname, post_date, post_hit, 
   	post_concert, post_cont, post_subtype from post, member where post_num=#{post_num} and mem_num=post_author
   </select>
+  <update id="increaseHit" parameterType="pvo">
+  	update post set post_hit=(select post_hit from post where post_num=#{post_num})+1 
+  	where post_num=#{post_num} and post_author!=#{post_author}
+  </update>
   </mapper>
