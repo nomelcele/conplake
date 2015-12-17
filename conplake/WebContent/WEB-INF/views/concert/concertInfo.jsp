@@ -25,11 +25,11 @@
                     <p>일시 : <span>${conInfo.con_startdate} ~ ${conInfo.con_enddate}</span></p>
                     <p>장소 : <span><a href="concerthallInfo?chall_num=${conInfo.con_venue}">${conInfo.venuename}</a></span></p>
                     <p>출연 : <span><a href="artistInfo?art_num=${conInfo.con_artist}">
-                    	<c:if test="${!empty conInfo.artistname}">
+                    	<c:if test="${conInfo.con_artist ne 0}">
                     	${conInfo.artistname}
                     	</c:if>
-                    	<c:if test="${empty conInfo.artistname}">
-                    	${conInfo.con_artist}
+                    	<c:if test="${conInfo.con_artist eq 0}">
+                    	${conInfo.artistname}
                     	</c:if>
                     </a></span></p>
                     <p>관람료 : <span>${conInfo.con_price}</span></p>

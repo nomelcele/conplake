@@ -73,7 +73,7 @@
             		
                 
                 <p class="p_review">
-                	<input id="write_review" class="innerButton" type="button" value="후기 작성">
+<!--                 	<input id="write_review" class="innerButton" type="button" value="후기 작성"> -->
                 </p>
             </div>
             

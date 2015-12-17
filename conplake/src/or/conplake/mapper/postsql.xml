@@ -36,7 +36,7 @@
   <select id="concerthallReviews" parameterType="int" resultType="pvo">
   	select post_num, post_author, mem_name authorname, to_char(post_date,'yyyy-mm-dd') post_date, post_concert, 
   	post_seat, post_sightsound, post_facility, con_name concertname from post, member, concert 
-  	where post_concert=con_num and post_author=mem_num and con_venue=#{chall_num} order by post_date desc
+  	where post_concert=con_num and post_author=mem_num and con_venue=#{chall_num} and post_type='review' order by post_date desc
   </select>
   <delete id="deleteReview" parameterType="int">
   	delete from post where post_num=#{post_num}

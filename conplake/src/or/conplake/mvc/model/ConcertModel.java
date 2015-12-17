@@ -96,7 +96,7 @@ public class ConcertModel {
 	}
 
 	@RequestMapping(value = "/writeReview")
-	public String writeReview(PostVO pvo) {
+	public String writeReview(PostVO pvo, HttpSession session) {
 		List<MultipartFile> files = pvo.getFiles(); // 업로드할 파일들이 저장된 List
 
 		if (null != files & files.size() > 0) {
@@ -105,7 +105,7 @@ public class ConcertModel {
 				String fileName = multipartFile.getOriginalFilename(); // 파일의 이름
 
 				if (fileName != "") {
-					String path = "C:\\conplake\\ws\\conplake\\WebContent\\upload\\"
+					String path = session.getServletContext().getRealPath("/")+"upload\\"
 							+ fileName;
 					// 파일을 저장할 경로
 					System.out.println("File Upload Path: " + path);
