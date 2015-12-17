@@ -44,32 +44,27 @@
 <p class="p_reply p_replyLetsGo">REPLY</p>
 	
 <table class="table_reply table_replyLetsGo"> <!-- 유저 댓글 보이는 목록 -->                        
-	<!-- 유저 댓글내용 
-	<tr class="tr_readReply tr_reply" > 
-	    <td class="td_readReply" id="td_replyId" >
-	    	<img src="resources/memberImg/${commList.authorimg}" width="60" height="60"/>
-	    </td>
-	    
-	    <td class="td2_readReply" id="td_replyContent">
-	    	<p id="p_replyId">아이디</p>
-	    	<p id="p_replyContent">sdffsda</p>
-	    </td>
-	    <td class="td_readReply" id="td_replyDate">
-	    	<p id="p_replyDate">2015.05.05</p>
-	    	<p><input id="deleteReply" class="innerButton" type="button" value="삭제" onclick=""/></p>
-	    	
-	    </td>
-	</tr>
-	 -->
-	    
+                        <c:forEach var="commList" items="${commList}">
+	                        <tr class="tr_readReply tr_reply" > <!-- 유저 댓글 2 -->
+	                            <td class="td_readReply" id="td_replyId" ><img src="resources/memberImg/${commList.authorimg}" width="60" height="60"/></td>
+	                            <td class="td2_readReply" id="td_replyContent">
+	                            	<p id="p_replyId">${commList.authorname}</p>
+	                            	<p id="p_replyContent">${commList.comm_cont}</p>
+	                            </td>
+	                            <td class="td_readReply" id="td_replyDate">
+	                            	<p id="p_replyDate">${commList.comm_date}</p>
+	                            	<c:if test="${sessionScope.mvo.mem_num eq commList.comm_author}">
+	                            		<p><input id="deleteReply" class="innerButton" type="button" value="삭제" onclick="deleteLetsgoComm(${commList.comm_num},${commList.comm_post})"/></p>
+	                            	</c:if>
+	                            </td>
+	                        </tr>
+                        </c:forEach>
 </table>
 	
 	
-<form id="writeReviewCommForm" action="writePostComm" method="post">
 	<input type="hidden" id="comm_author" name="comm_author" value="${sessionScope.mvo.mem_num}">
-	<input type="hidden" id="comm_post" name="comm_post" value="${reviewDetail.post_num}">
+	<input type="hidden" id="comm_post" name="comm_post" value="${post.post_num}">
 	<div class="div_inputReply div_inputReplyLetsGo"> <!-- 고정부분 댓글 입력 -->
        	<textarea name="comm_cont" id="comm_cont" class="inputStyle input_search" placeholder="댓글 내용을 입력하세요." ></textarea>
-       	<input id="writeReviewCommBtn" class="innerButton" type="button" value="입력"/>
+       	<input class="innerButton" type="button" value="입력" onclick="writeLetsgoComm()"/>
 	</div>
-</form>

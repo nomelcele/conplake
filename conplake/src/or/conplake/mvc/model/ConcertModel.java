@@ -183,6 +183,7 @@ public class ConcertModel {
 		switch(type){
 			case "post": url = "redirect:/readReview?post_num="+cmvo.getComm_post();
 			case "timeline": url = "redirect:/readTimelineComm?comm_tl="+cmvo.getComm_tl();
+			case "letsgo": url = "redirect:/readLetsgo?post_num="+cmvo.getComm_post();
 		}
 		return url;
 	}
@@ -267,6 +268,15 @@ public class ConcertModel {
 		pdao.increaseHit(pvo); // 조회수 증가 => 작성자가 아닌 유저가 조회할 때만 조회수가 증가해야 함
 		
 		model.addAttribute("post", pdao.readLetsgo(post_num));
+		model.addAttribute("commList", cmdao.postCommList(post_num));
 		return "concert/readLetsGo";
 	}
+	
+	@RequestMapping(value="/writeLetsgoComm")
+	public String writeLetsgoComm(CommVO commvo){
+		cmdao.writePostComm(commvo);
+		return "redirect:/readLetsgo?post_num="+commvo.getComm_post();
+	}
+
+	
 }
