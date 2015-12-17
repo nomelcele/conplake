@@ -244,3 +244,33 @@ function readLetsgo(post_num){
 	});
 	
 }
+
+function writeLetsgoComm(){
+	$.ajax({
+		type : "POST",
+		url : "writeLetsgoComm",
+		data : {
+			comm_author: $("#comm_author").val(),
+			comm_post: $("#comm_post").val(),
+			comm_cont: $("#comm_cont").val()
+		},
+		success : function(result) {
+			$('.mdBody').html(result);
+		}
+	});
+}
+
+function deleteLetsgoComm(comm_num,comm_post){
+	$.ajax({
+		type : "POST",
+		url : "deleteComm",
+		data : {
+			comm_num: comm_num,
+			comm_post: comm_post,
+			type: 'letsgo'
+		},
+		success : function(result) {
+			$('.mdBody').html(result);
+		}
+	});	
+}
