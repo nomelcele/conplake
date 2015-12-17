@@ -287,16 +287,11 @@ alter table artist add(art_official varchar2(200));
 alter table artist drop(art_sns);
 alter table artist add(art_sns varchar2(200));
 
-select count(*) cnt from comm where comm_tl=tl_num;
-update member set mem_img='kristen-stewart-advice-t.jpg' where mem_name='크리스틴';
-
-delete from comm;
 
 -- 12/2 song 테이블 컬럼 추가
 -- 비디오 링크
 alter table song add(song_link varchar2(200));
 
-delete from song;
 
 -- artist 테이블 컬럼 추가
 -- 국가, 활동 유형, 장르
@@ -325,19 +320,6 @@ create table sightimg(
   references concerthall(chall_num)
   );
   
-  insert into userinteraction values(userinteraction_seq.nextVal,94,'add_friend',null,null,61);
-  insert into userinteraction values(userinteraction_seq.nextVal,94,'add_friend',null,null,42);
-  insert into userinteraction values(userinteraction_seq.nextVal,94,'add_friend',null,null,21);
-  insert into userinteraction values(userinteraction_seq.nextVal,94,'add_friend',null,null,95);
-  insert into userinteraction values(userinteraction_seq.nextVal,94,'add_friend',null,null,96);
-
-  insert into note values(note_seq.nextVal,'test',61,94,sysdate,1,1);
-  insert into note values(note_seq.nextVal,'test2',42,94,sysdate,1,1);
-  insert into note values(note_seq.nextVal,'test3',21,94,sysdate,1,1);
-  insert into note values(note_seq.nextVal,'test4',61,94,sysdate,1,1);
-  insert into note values(note_seq.nextVal,'test5',94,21,sysdate,1,1);
-  insert into note values(note_seq.nextVal,'test6',94,95,sysdate,1,1);
-  
   -- 12/6 콘서트 시퀀스 시작 번호 변경
   drop sequence concert_seq;
   create sequence concert_seq increment by 1 start with 10000000;
@@ -345,18 +327,3 @@ create table sightimg(
   -- post 테이블 컬럼 추가
   -- 함께 가요 게시판 말머리
   alter table post add(post_subtype varchar2(50));
-  
-  
-  insert into post values(post_seq.nextVal,'test',94,sysdate,0,10000001,'with',null,null,null,null,'test',null,'같이가요');
-  insert into post values(post_seq.nextVal,'test',94,sysdate,0,10000001,'with',null,null,null,null,'test',null,'같이가요');
-  insert into post values(post_seq.nextVal,'test',94,sysdate,0,10000001,'with',null,null,null,null,'test',null,'같이가요');
-  insert into post values(post_seq.nextVal,'test',94,sysdate,0,10000001,'with',null,null,null,null,'test',null,'같이가요');
-
-  
-  	select post_num, post_title, post_author, mem_name authorname, post_date, post_hit, post_concert,
-  	post_cont, post_subtype from post, member where post_author=mem_num 
-  	and post_type='with' and post_concert=10000001 order by post_date desc;
-  	
-  	update concert set con_detailimg='<p><img src="http://ticketimage.interpark.com/Play/image/etc/15/15013394-02.jpg" alt="" width="700" height="4149"></p>' where con_num=104565;
-  	
-  	update post set post_facility=' 매점이 공연장 면적에 비해 좀 작지 않나 싶다. 공연 시작 2시간 전 김밥을 사러 갔는데 사람들로 미어 터져서 한참을 기다렸다. 그리고 화장실 이용에 대한 안내가 미흡한 것 같다. 입장 시작 30분 전부터 화장실 입장을 통제한다는데 나는 제대로 된 안내를 받지 못했다. 그래서 공연 시작 전에 화장실을 가려던 많은 사람들이 불편을 호소하기도 했다.' where post_num=72;

@@ -127,6 +127,7 @@ public class LoginModel {
 								cvo.setCon_startdate(detail.getChildText("startDate")); // 시작일
 								cvo.setCon_enddate(detail.getChildText("endDate")); // 종료일
 							    cvo.setCon_venue(chdao.searchConcerthallByName(detail.getChildText("place"))); // 공연 장소
+							    cvo.setCon_artist(0);
 								cvo.setCon_link(detail.getChildText("url")); // 공연 예매 링크
 								cvo.setCon_detailimg(detail.getChildText("contents1")); // 공연 상세 소개
 								cvo.setCon_price(detail.getChildText("price")); // 공연 관람료
